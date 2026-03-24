@@ -1,0 +1,6076 @@
+2020-AYT/Matematik
+MATEMATİK TESTİ
+1. Bu testte 40 soru vardır.
+2. Cevaplarınızı, cevap kâğıdının Matematik Testi için ayrılan kısmına işaretleyiniz.
+Aşağıdaki kutuların içine 1’den 9’a kadar olan            
+tam sayılardan 6 tanesi her kutuya farklı bir sayı gelecek
+şekilde yerleştirildiğinde tüm eşitlikler sağlanmaktadır.
+Buna göre, kullanılmayan tam sayıların toplamı
+kaçtır?
+23
+21
+19
+17
+15
+a, b ve c asal sayılar olmak üzere,
+eşitlikleri veriliyor.
+Buna göre,  
+toplamı kaçtır?
+22
+26
+30
+32
+38
+1.
+A)
+B)
+C)
+D)
+E)
+2.
+A)
+B)
+C)
+D)
+E)
+x ve y tam sayıları için
+ 
+eşitliği sağlanmaktadır.
+Buna göre,  
+  toplamı kaçtır?
+3
+4
+5
+6
+7
+İçinde bir A doğal sayısının yazılı olduğu n kenarlı
+çokgen sembolünün değeri,
+çarpımına eşittir.
+Örnek:  
+Buna göre,
+bölümünün değerini gösteren sembol
+aşağıdakilerden hangisidir?
+3.
+A)
+B)
+C)
+D)
+E)
+4.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+23
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2020-AYT/Matematik
+a, b ve c gerçel sayıları için
+eşitsizliği veriliyor.
+Buna göre,
+I.
+II.
+ 
+III.
+ifadelerinden hangileri her zaman doğrudur?
+Yalnız I
+Yalnız II
+I ve II
+I ve III
+II ve III
+x ve y tam sayılar olmak üzere,
+ 
+eşitliği sağlanmaktadır.
+Buna göre, y’nin alabileceği değerler toplamı kaçtır?
+Üç basamaklı ABA doğal sayısının iki basamaklı        
+A1 doğal sayısı ile bölümünden elde edilen bölüm 13,
+kalan ise 19 oluyor.
+Buna göre,  
+toplamı kaçtır?
+8
+9
+10
+11
+12
+5.
+A)
+B)
+C)
+D)
+E)
+6.
+A)
+B)
+C)
+D)
+E)
+7.
+A)
+B)
+C)
+D)
+E)
+A, B ve C kümeleriyle ilgili
+ 
+olduğu biliniyor.
+Buna göre,
+I.
+ 
+  kümesi en az 3 elemanlıdır.
+II.
+  kümesi en az 3 elemanlıdır.
+III.
+  kümesi en az 3 elemanlıdır.
+ifadelerinden hangileri her zaman doğrudur?
+Yalnız I
+Yalnız II
+Yalnız III
+I ve II
+I ve III
+Her elemanı bir pozitif tam sayı olan bir kümenin 
+eleman sayısı, bu kümenin en küçük elemanının
+değerinden bir fazla ise bu kümeye geniş küme denir.
+A, B ve C geniş kümeler olmak üzere, 
+
+
+
+
+olduğu biliniyor.
+Buna göre,  C  kümesi aşağıdakilerden hangisidir?
+8.
+A)
+B)
+C)
+D)
+E)
+9.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+24
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2020-AYT/Matematik
+Karmaşık sayılar kümesinde
+işleminin sonucu kaçtır?
+2
+5
+10
+2i
+5i
+z  karmaşık sayısının eşleniği  
+olmak üzere,
+ 
+eşitliğini sağlayan  z  karmaşık sayılarının toplamı
+kaçtır?
+ 
+10.
+A)
+B)
+C)
+D)
+E)
+11.
+A)
+B)
+C)
+D)
+E)
+a ve b asal sayılar olmak üzere,
+
+  değeri, a ve b’nin kuvvetlerinin çarpımı
+olarak yazılabilecek en büyük iki basamaklı doğal
+sayı
+
+  değeri, a ve b’nin kuvvetlerinin çarpımı
+olarak yazılabilecek en küçük üç basamaklı doğal
+sayı
+olarak tanımlanıyor.
+Örnek:
+Buna göre,
+işleminin sonucu kaçtır?
+22
+29
+35
+42
+47
+a ve b sıfırdan farklı birer tam sayı olmak üzere, gerçel
+sayılar kümesi üzerinde bir  f  fonksiyonu
+biçiminde tanımlanıyor.
+olduğuna göre,  
+değeri kaçtır?
+7
+8
+9
+10
+11
+12.
+A)
+B)
+C)
+D)
+E)
+13.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+25
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2020-AYT/Matematik
+Dik koordinat düzleminde  
+  kapalı aralığında
+tanımlı bir  f  fonksiyonunun grafiği şekilde verilmiştir.
+Bu fonksiyonun tanım kümesinde yer alan birbirinden
+farklı a, b, c ve d sayıları için
+eşitlikleri sağlanmaktadır.
+Buna göre a, b, c ve d sayılarının sıralamasıyla ilgili
+I.
+II.
+III.
+eşitsizliklerinden hangileri doğru olabilir?
+Yalnız I
+Yalnız II
+I ve II
+II ve III
+I, II ve III
+14.
+A)
+B)
+C)
+D)
+E)
+ve 
+sabit olmayan birer polinom, 
+ ise 
+birinci dereceden bir polinom olmak üzere,
+eşitliği sağlanmaktadır.
+Buna göre,
+I.
+ 
+ ve 
+ polinomlarının sabit terimleri aynıdır.
+II.
+’in grafiği bir parabol ise 
+’in grafiği bir
+doğrudur.
+III.
+ polinomunun her kökü 
+ polinomunun da
+bir köküdür.
+ifadelerinden hangileri her zaman doğrudur?
+Yalnız II
+Yalnız III
+I ve II
+I ve III
+II ve III
+Her birinin en yüksek dereceli teriminin katsayısı 1 olan
+üçüncü dereceden gerçel katsayılı 
+ve 
+polinomları için 2 ve 6 ortak köklerdir. 
+polinomu  
+ile bölündüğünde kalan 10 olmaktadır.
+Buna göre ,  
+değeri kaçtır?
+24
+27
+30
+33
+36
+15.
+A)
+B)
+C)
+D)
+E)
+16.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+26
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2020-AYT/Matematik
+m ve n tam sayılar olmak üzere,
+ifadesinin açılımında terimlerden biri  
+olduğuna göre,  
+toplamı kaçtır?
+56
+64
+72
+86
+94
+a ve b pozitif gerçel sayılar olmak üzere,
+denkleminin kökleri a ve b’dir.
+Buna göre,  
+ toplamı kaçtır?
+5
+6 
+10
+12
+15
+17.
+A)
+B)
+C)
+D)
+E)
+18.
+A)
+B)
+C)
+D)
+E)
+a, b ve c gerçel sayılar olmak üzere,
+parabolü  
+doğrusuyla B ve C noktalarında,    
+  doğrusuyla ise sadece A noktasında
+kesişmektedir. Dik koordinat düzleminde A, B ve C
+noktalarının yerleri aşağıdaki şekilde gösterilmiştir.
+Buna göre a, b ve c sayılarının işaretleri sırasıyla
+aşağıdakilerden hangisidir?
+Bir çubuk eşit uzunlukta 4 parçaya bölündüğünde her bir
+parçanın uzunluğu  
+  birim, eşit uzunlukta         
+10 parçaya bölündüğünde her bir parçanın uzunluğu 
+  birim olmaktadır.
+Buna göre, çubuğun uzunluğu kaç birimdir?
+5
+8
+10
+12
+15
+19.
+A)
+B)
+C)
+D)
+E)
+20.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+27
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2020-AYT/Matematik
+n bir tam sayı ve  
+  olmak üzere,
+ifadesinin değeri bir pozitif tam sayıya eşittir.
+Buna göre,  n  sayısının alabileceği değerler toplamı
+kaçtır?
+36
+45
+63
+72
+90
+a ve b, 1’den farklı pozitif gerçel sayılar olmak üzere,
+ 
+eşitsizliği sağlanmaktadır.
+Buna göre,
+I.
+II.
+III.
+ifadelerinden hangileri her zaman doğrudur?
+Yalnız I
+Yalnız II
+I ve II
+I ve III
+I, II ve III
+21.
+A)
+B)
+C)
+D)
+E)
+22.
+A)
+B)
+C)
+D)
+E)
+ gerçel sayılar dizisi her n pozitif tam sayısı için
+eşitliğini sağlamaktadır.
+olduğuna göre,  
+ kaçtır?
+4
+8
+16
+32
+64
+Bütün terimleri pozitif ve ortak çarpanı  r  olan             
+bir  
+  geometrik dizisi için
+eşitlikleri veriliyor.
+Buna göre,  
+kaçtır?
+180
+200
+240
+280
+320
+23.
+A)
+B)
+C)
+D)
+E)
+24.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+28
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2020-AYT/Matematik
+5 Ekim 2020 Pazartesi ile 18 Ekim 2020 Pazar günleri
+arasındaki günler ve bu iki gün de dahil olmak üzere, 
+bu 14 gün içinden iki farklı günde birer toplantı
+yapılacaktır.
+Toplantılardan en az biri hafta içi olacak biçimde bir
+düzenleme yapılmak istendiğine göre, bu dü zenleme
+kaç farklı şekilde yapılabilir?
+70
+75
+80
+85
+90
+Sözel ve sayısal bölümlerinde 4’er soru olmak üzere
+toplam 8 sorudan oluşan bir sınavın kitapçığında
+“Sınavı geçmek için sözel ve sayısal bölümlerin     
+her birinden en az 2’şer soru olmak üzere         
+toplam en az 5 soruyu doğru cevaplamalısınız.”
+ifadesi yer almaktadır.
+Bu ifadeyi eksik okuyan Sevcan, sınavdaki 8 sorudan
+rastgele 5’ini seçmiş ve seçtiği her bir soruyu doğru
+cevaplamıştır.
+Buna göre, Sevcan’ın sınavı  geçme olasılığı kaçtır?
+25.
+A)
+B)
+C)
+D)
+E)
+26.
+A)
+B)
+C)
+D)
+E)
+ifadesinin sadeleştirilmiş biçimi aşağıdakilerden
+hangisidir?
+1
+Dar açılı bir ABC üçgeninin iç açılarının ölçüleri derece
+türünden x, y ve z olmak üzere,  
+ olduğu
+biliniyor.
+Buna göre,
+sayılarının doğru sıralanışı aşağıdakilerden
+hangisidir?
+27.
+A)
+B)
+C)
+D)
+E)
+28.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+29
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2020-AYT/Matematik
+olmak üzere, 
+olduğuna göre,  
+değeri kaçtır?
+Dik koordinat düzleminde O merkezli yarıçapı 1 birim
+olan yarım çember ile B ve D noktaları bu yarım çember
+üzerinde olan OAB ve OCD dik üçgenleri aşağıda
+gösterilmiştir.
+Şekilde [OA] ve [OD] doğru parçaları dik kesişmektedir.
+Buna göre, OAB üçgeninin alanının OCD üçgeninin
+alanına oranının  
+türünden eşiti aşağıdakilerden
+hangisidir?
+29.
+A)
+B)
+C)
+D)
+E)
+30.
+A)
+B)
+C)
+D)
+E)
+Bir aracın arkasındaki sensör, araç geri giderken
+sensörün bir cisme olan uzaklığına göre ötmektedir.
+Başlangıçta Şekil 1’deki gibi arkasındaki duvara dik
+konumda duran aracın sensörü ile çubuk arasındaki
+mesafe 170 santimetredir. Daha sonra araç,
+doğrultusunu değiştirmeden 60 santimetre geri gittiğinde
+sensör ötmeye başladığı için araç Şekil 2’deki gibi
+durmuştur. Son durumda sensörle çubuk arasındaki
+mesafe 130 santimetredir.
+ 
+Buna göre, son durumda çubuğun araca olan dik
+uzaklığı kaç santimetredir?
+40
+50
+60
+70
+80
+31.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+30
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2020-AYT/Matematik
+Ders kitabından aşağıdaki soruyu çözmek isteyen
+Engin, sayfanın bir kısmı yırtık olduğu için uzunlukları
+birbirine eşit, farklı üç doğru parçasından bir ucu          
+E olan sonuncu doğru parçasının hangisi olduğunu
+anlayamıyor.
+Bu yüzden bu doğru parçası yerine bir ucu E diğer ucu
+A, D ve C’den biri olan rastgele bir doğru parçası
+seçiyor ve bu seçime göre işlem hatası yapmadan
+soruyu çözüyor. Cevap anahtarına baktığında ise
+bulduğu sonucun doğru olmadığını görüyor.
+Cevap anahtarı hatalı olmadığına göre, Engin’in
+bulduğu sonuç ile doğru cevap arasındaki fark    
+kaç derecedir?
+30
+31
+32
+33
+34
+32.
+A)
+B)
+C)
+D)
+E)
+Kenar uzunlukları 30 ve 40 birim olan dikdörtgen
+şeklindeki bir çerçeve dört köşesine çivi çakılarak       
+AB kenarı yere paralel ve yerden yüksekliği h birim
+olacak biçimde Şekil 1’deki gibi duvara asılıyor.     
+Sonra, A köşesindeki çivi hariç diğer çiviler gevşeyip
+düşüyor ve A köşesi etrafında dönen çerçeve C köşesi
+yere değdiğinde Şekil 2’deki gibi tüm köşeleri duvara
+değecek biçimde dengede kalıyor.
+Bu denge durumunda B ve D köşelerinin yerden
+yükseklikleri birbirine eşit olduğuna göre, h kaç
+birimdir?
+42
+48
+54
+60
+64
+33.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+31
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2020-AYT/Matematik
+Şekilde birer kenarları ortak olan bir düzgün altıgen ve
+bir kare verilmiştir. Bir kenarı düzgün altıgen, bir kenarı
+da kare ile ortak olan bir düzgün çokgen şekildeki gibi
+çizilmek isteniyor.
+Buna göre, çizilmek istenen düzgün çokgenin kenar
+sayısı kaçtır?
+10
+12
+15
+16
+18
+Yukarıdaki şekilde A merkezli 
+ yarıçaplı yarım
+çember ve B merkezli 
+ yarıçaplı yarım çember
+verilmiştir. B noktası A merkezli çemberin, A noktası ise
+B merkezli çemberin üzerindedir.
+Buna göre, boyalı bölgenin alanı kaç birimkaredir?
+34.
+A)
+B)
+C)
+D)
+E)
+35.
+A)
+B)
+C)
+D)
+E)
+Bir lunaparkta şekildeki gibi düz bir zeminde bulunan
+özdeş kabinlerden oluşan dairesel bir dönme dolap
+sadece bir yöne doğru dönmektedir. Bu dönme dolabın
+bir kabinine, kabin yere en yakın olduğu durumdayken
+binilmektedir.
+Meryem bir kabine binip dönme dolap  
+ döndükten
+sonra Nisa da bir kabine binmiştir.
+Buna göre, Nisa kabine bindikten sonra Meryem ve
+Nisa’nın bulundukları kabinlerin zeminden
+yükseklikleri ilk kez aynı olduğunda dönme dolap
+kaç derece dönmüştür?
+130
+138
+144
+150
+156
+36.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+32
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2020-AYT/Matematik
+Dik koordinat düzleminde iki köşesi  
+noktaları olan  ABCD  karesi aşağıda verilmiştir.
+ABCD karesinin C köşesi  
+ doğrusu üzerindedir.
+olduğuna göre,  D  noktasının
+koordinatları toplamı kaçtır?
+14
+18
+21
+24
+27
+Dik koordinat düzleminde bir d doğrusunun  
+noktasından geçtiği ve  
+ doğrusuna dik
+olduğu biliniyor.
+d  doğrusunun x-eksenini kestiği nokta  
+ve
+y-eksenini kestiği nokta  
+olduğuna göre,
+toplamı kaçtır?
+0
+1
+3
+37.
+A)
+B)
+C)
+D)
+E)
+38.
+A)
+B)
+C)
+D)
+E)
+Dik koordinat düzleminde  
+  ve  
+  noktaları
+x-ekseni boyunca pozitif yönde 3 birim ötelenerek
+sırasıyla D ve C noktaları elde ediliyor.
+Buna göre köşeleri A, B, C ve D noktaları olan
+dörtgenin alanı kaç birimkaredir?
+9
+10
+11
+12
+13
+İçi tamamen su dolu silindir biçimindeki bir kap ile
+yüksekliği bu kabın yüksekliğinin yarısına eşit olan
+silindir biçimindeki bir mermer blok aşağıda verilmiştir.
+Mermer blok, tamamı suya batacak biçimde kabın içine
+konulduğunda kaptaki suyun 
+'si taşmaktadır.
+Buna göre, kabın taban yarıçapının mermer bloğun
+taban yarıçapına oranı kaçtır?
+2
+3
+4
+39.
+A)
+B)
+C)
+D)
+E)
+40.
+A)
+B)
+C)
+D)
+E)
+MATEMATİK TESTİ BİTTİ.
+FEN BİLİMLERİ TESTİNE GEÇİNİZ.
+33
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2020 ALAN YETERLİLİK TESTLERİ (AYT)
+YKS 2. OTURUM ALAN YETERLİLİK TESTLERİ (AYT)
+28-06-2020
+TÜRK DİLİ VE
+EDEBİYATI-SOSYAL
+BİLİMLER-1 TESTİ
+1.   D
+2.   B
+3.   C
+4.   E
+5.   D
+6.   C
+7.   A
+8.   B
+9.   D
+10.   B
+11.   C
+12.   A
+13.   E
+14.   A
+15.   E
+16.   D
+17.   E
+18.   B
+19.   C
+20.   A
+21.   D
+22.   C
+23.   E
+24.   A
+25.   D
+26.   C
+27.   A
+28.   E
+29.   A
+30.   E
+31.   C
+32.   E
+33.   B
+34.   D
+35.   D
+36.   A
+37.   B
+38.   C
+39.   D
+40.   E
+SOSYAL BİLİMLER-2 TESTİ
+1.   A
+2.   E
+3.   D
+4.   A
+5.   C
+6.   D
+7.   E
+8.   C
+9.   B
+10.   B
+11.   C
+12.   A
+13.   E
+14.   D
+15.   B
+16.   A
+17.   B
+18.   E
+19.   D
+20.   C
+21.   C
+22.   D
+23.   E
+24.   C
+25.   B
+26.   E
+27.   B
+28.   A
+29.   B
+30.   D
+31.   B
+32.   D
+33.   C
+34.   C
+35.   B
+36.   C
+37.   A
+38.   C
+39.   E
+40.   D
+41.   B
+42.   A
+43.   C
+44.   D
+45.   E
+46.   D
+MATEMATİK TESTİ
+1.   B
+2.   B
+3.   E
+4.   D
+5.   D
+6.   B
+7.   D
+8.   A
+9.   E
+10.   B
+11.   D
+12.   B
+13.   D
+14.   C
+15.   E
+16.   A
+17.   E
+18.   C
+19.   E
+20.   A
+21.   E
+22.   C
+23.   D
+24.   E
+25.   D
+26.   D
+27.   A
+28.   A
+29.   D
+30.   E
+31.   D
+32.   C
+33.   B
+34.   B
+35.   C
+36.   E
+37.   C
+38.   A
+39.   A
+40.   C
+FEN BİLİMLERİ TESTİ
+1.   C
+2.   C
+3.   C
+4.   D
+5.   E
+6.   C
+7.   A
+8.   B
+9.   A
+10.   A
+11.   B
+12.   C
+13.   A
+14.   A
+15.   D
+16.   D
+17.   D
+18.   C
+19.   B
+20.   C
+21.   B
+22.   A
+23.   E
+24.   A
+25.   E
+26.   D
+27.   D
+28.   B
+29.   E
+30.   C
+31.   B
+32.   E
+33.   C
+34.   B
+35.   E
+36.   E
+37.   C
+38.   C
+39.   B
+40.   D
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2021-AYT/Matematik
+MATEMATİK TESTİ
+1. Bu testte 40 soru vardır.
+2. Cevaplarınızı, cevap kâğıdının Matematik Testi için ayrılan kısmına işaretleyiniz.
+Birbirinden farklı a, b ve c doğal sayıları için
+ifadesi bir tam sayıya eşittir.
+Buna göre, aşağıdaki sıralamalardan hangisi
+doğrudur?
+p ve r birbirinden farklı asal sayılar olmak üzere,
+sayısı p sayısının bir tam sayı katıdır.
+Buna göre, p asal sayısı aşağıdaki sayılardan
+hangisini kesinlikle tam böler?
+ 
+ 
+ 
+ 
+ 
+1.
+A)
+B)
+C)
+D)
+E)
+2.
+A)
+B)
+C)
+D)
+E)
+x ve y pozitif gerçel sayılar olmak üzere,
+olduğuna göre, 
+çarpımı kaçtır?
+2
+4
+6
+8
+10
+m ve n pozitif tam sayılar olmak üzere,
+olduğu biliniyor.
+Buna göre, 
+toplamı kaçtır?
+41
+43
+45
+47
+49
+3.
+A)
+B)
+C)
+D)
+E)
+4.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+24
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2021-AYT/Matematik
+a, b, c ve d gerçel sayılar olmak üzere,
+eşitsizlik sisteminin çözüm kümesini bulmak için
+aşağıdaki tablo yapılarak çözüm kümesi
+olarak bulunuyor.
+Buna göre, 
+toplamı kaçtır?
+15
+16
+17
+18
+19
+a, b ve c gerçel sayılar olmak üzere, dik koordinat
+düzleminde 
+,
+ve
+fonksiyonlarının grafikleri şekilde verilmiştir.
+Buna göre a, b ve c sayılarının işaretleri sırasıyla
+aşağıdakilerden hangisidir?
+5.
+A)
+B)
+C)
+D)
+E)
+6.
+A)
+B)
+C)
+D)
+E)
+Dik koordinat düzleminde  
+ kapalı aralığında tanımlı
+f(x) fonksiyonunun grafiği şekilde verilmiştir.
+fonksiyonu en büyük değerini 
+noktasında aldığına göre, a sayısı aşağıdaki
+açık aralıklardan hangisindedir?
+(0, 1)
+(1, 2)
+(2, 3)
+(3, 4)
+(4, 5)
+İki basamaklı bir AB doğal sayısı ile ilgili
+p: AB sayısı çifttir.
+q: AB sayısı asaldır.
+r :
+önermeleri veriliyor.
+ 
+önermesi doğru olduğuna göre, 
+çarpımı
+kaçtır?
+18
+20
+24
+28
+30
+7.
+A)
+B)
+C)
+D)
+E)
+8.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+25
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2021-AYT/Matematik
+denkleminin diskriminantı aynı zamanda bu
+denklemin bir kökü olduğuna göre, c gerçel
+sayısının alabileceği değerlerin çarpımı kaçtır?
+1
+2
+4
+Gerçel katsayılı ve dördüncü dereceden olan 
+bir P(x) polinomu, her x gerçel sayısı için
+eşitsizliğini sağlıyor.
+olduğuna göre,  P(4) kaçtır?
+20
+22
+24
+26
+28
+9.
+A)
+B)
+C)
+D)
+E)
+10.
+A)
+B)
+C)
+D)
+E)
+a ve b birer rakam olmak üzere,
+kümeleri veriliyor.
+ 
+kartezyen çarpımının eleman sayısı 28 olduğuna
+göre, 
+toplamı kaçtır?
+5
+6
+8
+9
+11
+Bir
+aritmetik dizisi için
+ 
+eşitlikleri veriliyor.
+Buna göre, 
+kaçtır?
+6
+7
+8
+9
+10
+11.
+A)
+B)
+C)
+D)
+E)
+12.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+26
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2021-AYT/Matematik
+Bir hesap makinesinde işlem yapıldığında makine;
+işlemin sonucu tam sayı ise o sayıyı, ondalıklı sayı ise
+bu sayının tam kısmı ile birlikte virgülden sonraki ilk iki
+basamağını görüntülemektedir.
+Nevzat, bu hesap makinesine ln(9,6) işlemini
+yaptırdığında ekranda 2,26 değerini, ln(0,3) işlemini
+yaptırdığında ise ekranda –1,20 değerini görüyor.
+Nevzat, bu hesap makinesine ln(0,5) işlemini
+yaptırdığında ekranda hangi değeri görür?
+–0,61
+–0,65
+–0,69
+–0,73
+–0,77
+kümesindeki rakamlardan
+birbirinden farklı rastgele iki tanesi seçiliyor.
+Seçilen rakamların çarpımının çift sayı olduğu
+bilindiğine göre, bu rakamların toplamının da       
+çift sayı olma olasılığı kaçtır?
+ 
+ 
+ 
+ 
+13.
+A)
+B)
+C)
+D)
+E)
+14.
+A)
+B)
+C)
+D)
+E)
+100 kişilik bir proje ekibinin elinde belirli sayıda proje
+vardır ve ekipteki herkes bu projelerin bir kısmında
+görevlendirilecektir. Ekipteki herkesin eşit sayıda
+projede görev alması ancak herhangi iki kişinin görev
+aldığı projelerin tamamen aynı olmaması istenmektedir.
+Bu durum, herkes 3 projede görev alırsa
+sağlanamamakta fakat herkes 4 projede görev alırsa
+sağlanabilmektedir.
+Buna göre, ekibin elindeki proje sayısı kaçtır?
+6
+7
+8
+9
+10
+n bir doğal sayı olmak üzere,
+ifadesinin açılımındaki tüm katsayıların aritmetik
+ortalaması 0,2 olduğuna göre, bu açılımdaki
+li
+terimin katsayısı kaçtır?
+12
+16
+24
+32
+40
+15.
+A)
+B)
+C)
+D)
+E)
+16.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+27
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2021-AYT/Matematik
+1’den büyük gerçel sayılar kümesi üzerinde 
+bir f fonksiyonu
+biçiminde tanımlanıyor.
+Buna göre,
+limitinin değeri kaçtır?
+30
+36
+60
+64
+72
+a ve b birer gerçel sayı olmak üzere, gerçel sayılar
+kümesi üzerinde sürekli olan bir f fonksiyonu
+biçiminde tanımlanıyor.
+Buna göre, 
+ toplamı kaçtır?
+4
+5
+6
+7
+8
+17.
+A)
+B)
+C)
+D)
+E)
+18.
+A)
+B)
+C)
+D)
+E)
+a ve b gerçel sayılar olmak üzere, pozitif gerçel sayılar
+kümesi üzerinde bir f fonksiyonu
+biçiminde tanımlanıyor.
+olduğuna göre,
+kaçtır?
+44
+46
+48
+50
+52
+Bir bilgisayar programında f(x) ve 
+ fonksiyonlarının
+grafikleri çizdirildikten sonra koordinat eksenleri silinmiş
+ve arka plana eş karelerden oluşan bir ızgara
+yerleştirildiğinde aşağıdaki görüntü elde edilmiştir.
+Buna göre f(x)’in alabileceği en küçük değer kaçtır?
+ 
+19.
+A)
+B)
+C)
+D)
+E)
+20.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+28
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2021-AYT/Matematik
+Saatte V kilometre sabit hızla hareket eden bir roketin 
+1 saatte tükettiği yakıt miktarı, birim türünden
+fonksiyonu ile hesaplanmaktadır.
+Buna göre, bu roketin sabit bir hızla gideceği 
+100 kilometre yol için tüketmesi gereken yakıt
+miktarı en az kaç birimdir?
+1000
+2000
+3000
+4000
+5000
+a ve b gerçel sayılar olmak üzere,
+polinomunun
+
+aralığında artan,
+
+aralığında azalan,
+
+aralığında artan
+olduğu bilinmektedir.
+Buna göre, f(2) kaçtır?
+0
+3
+6
+9
+12
+21.
+A)
+B)
+C)
+D)
+E)
+22.
+A)
+B)
+C)
+D)
+E)
+ 
+integralinin değeri aşağıdakilerden hangisine
+eşittir?
+(c keyfî bir sabittir.)
+ 
+23.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+29
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2021-AYT/Matematik
+Dik koordinat düzleminde, f fonksiyonunun türevi olan
+ fonksiyonunun grafiğinin 
+ kapalı aralığındaki
+görünümü verilmiştir. Bu grafikle x-ekseni arasında
+kalan bölgelerin alanları aşağıdaki şekilde gösterilmiştir.
+olduğuna göre,
+ aralığında f fonksiyonunun
+kaç farklı kökü vardır?
+1
+2
+3
+4
+5
+a ve b gerçel sayılar olmak üzere, gerçel sayılar kümesi
+üzerinde sürekli bir f fonksiyonu
+biçiminde tanımlanıyor.
+ 
+ 
+olduğuna göre, 
+ toplamı kaçtır?
+1
+2
+3
+4
+5
+24.
+A)
+B)
+C)
+D)
+E)
+25.
+A)
+B)
+C)
+D)
+E)
+Dik koordinat düzleminde,
+fonksiyonlarının grafikleri ile x-ekseni arasında kalan
+boyalı bölge aşağıda verilmiştir.
+Buna göre, boyalı bölgenin alanı kaç birimkaredir? 
+ 
+ 
+ 
+26.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+30
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2021-AYT/Matematik
+ olmak üzere,
+sayılarının doğru sıralanışı aşağıdakilerden
+hangisidir?
+Ali, bir pergelin sivri ucunu kâğıt üzerindeki bir noktaya
+koyup pergelin açıklığını bozmadan çapı 21 cm olan bir
+çember çiziyor.
+Ali’nin kullandığı pergelin kollarının uzunlukları 
+7,5 ve 12 cm olduğuna göre, pergelin kolları
+arasındaki açının ölçüsü kaç derecedir?
+30
+45
+60
+90
+120
+27.
+A)
+B)
+C)
+D)
+E)
+28.
+A)
+B)
+C)
+D)
+E)
+ifadesinin eşiti aşağıdakilerden hangisidir?
+olmak üzere,
+eşitliğini sağlayan x değerlerinin toplamı kaçtır?
+29.
+A)
+B)
+C)
+D)
+E)
+30.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+31
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2021-AYT/Matematik
+Şekilde verilen O merkezli birim çemberin üzerindeki
+ve 
+noktaları ile RO doğru parçasının 
+x-ekseniyle yaptığı pozitif yönlü 
+ açısı kullanılarak
+tanımlanan yeni trigonometrik fonksiyonlar aşağıdaki
+gibidir:
+ 
+Buna göre,
+ 
+ifadesi, tanımlı olduğu 
+değerleri için
+aşağıdakilerden hangisine eşittir?
+31.
+A)
+B)
+C)
+D)
+E)
+Dik koordinat düzleminde bir köşesi orijinde olan        
+bir üçgenin, ağırlık merkezi 
+ noktası, diklik merkezi
+ise 
+ noktasıdır.
+Buna göre, bu üçgenin alanı kaç birimkaredir? 
+18
+21
+24
+27
+30
+Dik koordinat düzleminde
+doğrusu üzerinde
+bulunan A ve B noktaları arasındaki uzaklık 3 birimdir.
+doğru parçasının orta noktasının koordinatları
+ olduğuna göre, A ve B noktaları analitik
+düzlemin hangi bölgelerindedir?
+Her ikisi de II. bölgede
+Her ikisi de III. bölgede
+Biri I. bölgede, diğeri II. bölgede
+Biri I. bölgede, diğeri III. bölgede
+Biri II. bölgede, diğeri III. bölgede
+32.
+A)
+B)
+C)
+D)
+E)
+33.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+32
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2021-AYT/Matematik
+Dik koordinat düzleminde, 
+ noktasında dik
+kesişen iki doğrunun eğimleri toplamı 
+ olarak
+hesaplanıyor.
+Bu iki doğrunun x-eksenini kestiği noktalar B ve C
+noktaları olduğuna göre, ABC üçgeninin alanı kaç
+birimkaredir?
+24
+20
+16
+12
+8
+Ayşe ve Ferhat, pizza satın almak için bir dükkâna
+giriyor. Bu dükkânda satılan 13 daire dilimine ayrılmış
+daire şeklindeki bir bütün pizzadan; Ayşe’nin satın aldığı
+2 dilim birbiriyle özdeşken, Ferhat’ın satın aldığı 11 dilim
+de birbiriyle özdeştir.
+Daha sonra bu dilimlerden üç tanesini birleştirerek yarım
+daire şeklinde bir pizza elde ediyorlar.
+Buna göre, büyük dilimlerden birinin merkez
+açısının ölçüsü kaç derecedir?
+90
+81
+75
+72
+60
+34.
+A)
+B)
+C)
+D)
+E)
+35.
+A)
+B)
+C)
+D)
+E)
+Mehmet, deseni özdeş şekillerden oluşan bir tel örgüye
+yarıçapı 2 cm olan küre şeklindeki tenis topunu
+fırlattığında top tel örgünün içinden tel örgüye
+değmeden geçmiştir.
+Buna göre, bu tel örgünün görünümü
+I.
+II.
+III.
+şekillerinden hangileri olabilir?
+Yalnız I
+Yalnız II
+Yalnız III
+I ve II
+I ve III
+36.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+33
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2021-AYT/Matematik
+Selim’in gün batımını izlerken çektiği Şekil 1’deki
+fotoğrafta denizin üstünde yarım daire biçiminde
+görünen güneşin en üst noktasının denize uzaklığı 
+3,9 cm olarak ölçülüyor.
+Selim, Şekil 1’deki fotoğrafı çektikten bir süre sonra aynı
+noktadan Şekil 2’deki fotoğrafı çekiyor. Bu fotoğrafta
+güneşin en üst noktasının denize uzaklığı 0,3 cm olarak
+ölçülüyor.
+Buna göre, Şekil 2’de ? ile gösterilen uzunluk kaç
+cm’dir?
+2
+2,5
+3
+3,5
+4
+Dik koordinat düzleminde 
+noktasının        
+noktasından geçen bir doğruya göre simetriği
+olan nokta 
+olduğuna göre, a sayısının
+alabileceği değerlerin çarpımı kaçtır?
+–24
+–16
+–8
+16
+32
+37.
+A)
+B)
+C)
+D)
+E)
+38.
+A)
+B)
+C)
+D)
+E)
+Dik koordinat düzleminde
+doğrusu,
+çemberini iki farklı noktada kesmektedir.
+Buna göre, m sayısının alabileceği tüm değerleri
+gösteren aralık aşağıdakilerden hangisidir?
+Uçlarından biri açılmış olan bir kurşun kalemin şekilde
+görüldüğü gibi açılmamış olan kısmı dik dairesel silindir,
+açılmış olan ucu ise yüksekliği 1 birim olan bir dik
+dairesel koni şeklindedir.
+Kalemin diğer ucu, açılmış olan ucuyla özdeş olacak ve
+kalemin uzunluğu değişmeyecek biçimde açıldığında
+kalemin toplam hacmi % 5 oranında azalıyor.
+Buna göre, kalemin toplam uzunluğu kaç birimdir?
+12
+14
+16
+18
+20
+39.
+A)
+B)
+C)
+D)
+E)
+40.
+A)
+B)
+C)
+D)
+E)
+                                                      MATEMATİK TESTİ BİTTİ.
+                         FEN BİLİMLERİ TESTİNE GEÇİNİZ.
+34
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2021 ALAN YETERLİLİK TESTLERİ (AYT)
+YKS 2. OTURUM ALAN YETERLİLİK TESTLERİ (AYT)
+27-06-2021
+TÜRK DİLİ VE
+EDEBİYATI-SOSYAL
+BİLİMLER-1 TESTİ
+1.   C
+2.   A
+3.   A
+4.   C
+5.   D
+6.   E
+7.   D
+8.   E
+9.   A
+10.   D
+11.   C
+12.   C
+13.   A
+14.   A
+15.   B
+16.   E
+17.   B
+18.   D
+19.   A
+20.   A
+21.   B
+22.   C
+23.   D
+24.   A
+25.   B
+26.   C
+27.   A
+28.   C
+29.   E
+30.   D
+31.   C
+32.   C
+33.   E
+34.   A
+35.   D
+36.   A
+37.   B
+38.   E
+39.   B
+40.   D
+SOSYAL BİLİMLER-2 TESTİ
+1.   A
+2.   D
+3.   E
+4.   C
+5.   E
+6.   D
+7.   A
+8.   A
+9.   D
+10.   D
+11.   C
+12.   E
+13.   A
+14.   C
+15.   A
+16.   B
+17.   E
+18.   E
+19.   B
+20.   D
+21.   D
+22.   E
+23.   B
+24.   A
+25.   D
+26.   E
+27.   D
+28.   D
+29.   C
+30.   B
+31.   B
+32.   E
+33.   A
+34.   C
+35.   B
+36.   B
+37.   A
+38.   C
+39.   E
+40.   B
+41.   B
+42.   D
+43.   C
+44.   C
+45.   E
+46.   C
+MATEMATİK TESTİ
+1.   E
+2.   D
+3.   A
+4.   A
+5.   A
+6.   C
+7.   C
+8.   E
+9.   D
+10.   B
+11.   A
+12.   C
+13.   C
+14.   D
+15.   D
+16.   C
+17.   E
+18.   A
+19.   E
+20.   E
+21.   B
+22.   B
+23.   B
+24.   C
+25.   D
+26.   E
+27.   D
+28.   C
+29.   D
+30.   E
+31.   D
+32.   D
+33.   D
+34.   B
+35.   B
+36.   A
+37.   C
+38.   A
+39.   D
+40.   B
+FEN BİLİMLERİ TESTİ
+1.   B
+2.   C
+3.   E
+4.   D
+5.   B
+6.   A
+7.   B
+8.   A
+9.   C
+10.   D
+11.   A
+12.   B
+13.   B
+14.   C
+15.   A
+16.   D
+17.   C
+18.   B
+19.   A
+20.   E
+21.   D
+22.   B
+23.   A
+24.   B
+25.   D
+26.   C
+27.   E
+28.   E
+29.   B
+30.   D
+31.   C
+32.   A
+33.   E
+34.   B
+35.   D
+36.   A
+37.   C
+38.   E
+39.   B
+40.   A
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2022-AYT/MAT
+MATEMATİK TESTİ
+1. Bu testte 40 soru vardır.
+2. Cevaplarınızı, cevap kâğıdının Matematik Testi için ayrılan kısmına işaretleyiniz.
+a, b ve c pozitif tam sayıları için
+eşitlikleri veriliyor.
+Buna göre, 
+toplamı kaçtır?
+7
+8
+9
+10
+11 
+a, b, c ve d ardışık tam sayılar ve 
+ olmak
+üzere,
+ 
+ifadeleri veriliyor.
+Buna göre,  
+toplamı kaçtır? 
+2
+6
+8
+1.
+A)
+B)
+C)
+D)
+E)
+2.
+A)
+B)
+C)
+D)
+E)
+eşitlikleri veriliyor. 
+Buna göre,  EKOK(A, B)  ifadesinin değeri kaçtır?
+ 
+n doğal sayısı iki asal sayının çarpımına eşit olmak
+üzere,
+ ve 
+ sayılarının asal bölenlerinin sayısı
+sırasıyla 5 ve 3’tür.
+Buna göre,  n  sayısının rakamları toplamı kaçtır?
+8
+9
+11
+14
+15
+3.
+A)
+B)
+C)
+D)
+E)
+4.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+24
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2022-AYT/MAT
+a bir tam sayı olmak üzere,
+eşitsizliğini sağlayan yalnızca 2 tane  x  tam sayısı
+bulunmaktadır. 
+Buna göre, a sayısının alabileceği değerler çarpımı
+kaçtır? 
+6
+7
+9
+12
+14
+a pozitif bir gerçel sayı olmak üzere, gerçel sayılar
+kümesi üzerinde tanımlı f ve g fonksiyonları
+eşitliklerini sağlamaktadır. 
+Buna göre,  
+değeri kaçtır? 
+38
+40
+42
+44
+46
+5.
+A)
+B)
+C)
+D)
+E)
+6.
+A)
+B)
+C)
+D)
+E)
+Dik koordinat düzleminde; 
+ kapalı aralığında
+tanımlı ve sürekli f, g ve h fonksiyonlarının grafiklerinin
+bir kısmı şekildeki gibi gösterilmiştir.  
+ 
+Bu fonksiyonlar için
+eşitsizlikleri verilmiştir.
+Buna göre; I, II ve III numaralı grafiklere karşılık
+gelen fonksiyonlar sırasıyla aşağıdakilerin
+hangisinde doğru olarak verilmiştir?
+f – h – g
+g – f – h
+g – h – f
+h – f – g
+h – g – f
+İki basamaklı bir AB doğal sayısı ile ilgili
+p : AB sayısı 3’e tam bölünür.
+q :
+toplamı 5’e tam bölünür.
+r :
+çarpımı 7’ye tam bölünür.
+önermeleri veriliyor.   
+önermesi yanlış olduğuna göre,  
+çarpımı
+kaçtır? 
+42
+45
+48
+54
+56
+7.
+A)
+B)
+C)
+D)
+E)
+8.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+25
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2022-AYT/MAT
+Gerçel katsayılı ve baş katsayısı 1 olan ikinci dereceden
+bir P(x) polinomu veriliyor. a ve b pozitif gerçel sayılar
+olmak üzere,
+polinomunun yalnızca bir kökü varken
+ 
+polinomunun kökleri 
+ ve b olmaktadır. 
+ 
+ 
+olduğuna göre,  
+toplamı kaçtır?
+6
+7
+8
+9
+10
+a ve b gerçel sayılar olmak üzere,
+ 
+denklemleri verilmektedir. 
+Birinci denklemin kökler toplamının ikinci denklemin   
+bir kökü, ikinci denklemin kökler çarpımının ise birinci
+denklemin bir kökü olduğu bilinmektedir.  
+Buna göre,  
+ toplamı kaçtır?
+9.
+A)
+B)
+C)
+D)
+E)
+10.
+A)
+B)
+C)
+D)
+E)
+  ve  
+  aritmetik dizileri için
+eşitlikleri veriliyor.
+Buna göre,  k  kaçtır?
+20
+19
+18
+17
+16
+A, B ve C kümeleri için 
+ ve 
+ olmak
+üzere, dik koordinat düzleminde  
+kartezyen
+kümesinin grafiği şekilde gösterilmiştir.
+Buna göre,  
+kartezyen kümesinin
+eleman sayısı kaçtır?
+4
+6
+8
+10
+12
+11.
+A)
+B)
+C)
+D)
+E)
+12.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+26
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2022-AYT/MAT
+a pozitif bir gerçel sayı olmak üzere,
+ifadesinin açılımındaki
+li terimin katsayısı, 
+li terimin katsayısının 16 katıdır.
+Buna göre, a kaçtır?
+1
+2
+4
+8
+16
+Aslı, saklama kapasitesi tamamen dolu olan telefonuna
+4 GB büyüklüğünde bir uygulama indirmek istemektedir.
+Aslı’nın telefonunda; 
+
+her biri 1 GB büyüklüğünde olan 5 tane, 
+
+her biri 2 GB büyüklüğünde olan 4 tane,
+
+her biri 3 GB büyüklüğünde olan 3 tane 
+olmak üzere, toplam 12 farklı uygulama bulunmaktadır. 
+Aslı, bu 12 uygulamadan yalnızca 2 tanesini silerek
+telefonunda en az 4 GB büyüklüğünde yer açacaktır.
+Buna göre Aslı, sileceği 2 uygulamayı kaç farklı
+şekilde seçebilir?
+36
+40
+42
+48
+50
+13.
+A)
+B)
+C)
+D)
+E)
+14.
+A)
+B)
+C)
+D)
+E)
+Aşağıdaki şekilde; 1 adet büyük boy, 2 adet orta boy, 
+3 adet küçük boy tencere ile büyük, orta ve küçük boy
+tencerelere ait birer kapak verilmiştir.
+Bu kapaklar, ait oldukları boydaki bir tencerenin veya ait
+oldukları boydan daha küçük boydaki bir tencerenin
+üstünü kapatabiliyorlarken ait oldukları boydan daha
+büyük boydaki bir tencerenin üstünü kapatamıyorlar.   
+Buna göre; rastgele seçilen bir kapağın, rastgele
+seçilen bir tencerenin üstünü kapatabiliyor
+olma olasılığı kaçtır? 
+15.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+27
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2022-AYT/MAT
+Kenar uzunlukları x ve y birim olan bir dikdörtgenin alanı
+A birimkare olmak üzere,
+eşitliği sağlanıyorsa bu dikdörtgene logaritmik
+dikdörtgen denir.
+Buna göre, kare şeklindeki bir logaritmik
+dikdörtgenin çevresi kaç birimdir?
+a bir tam sayı olmak üzere, 
+ kapalı
+aralığında bulunan tam sayılar ile 
+ kapalı
+aralığında bulunan tam sayılar aynıdır.  
+Buna göre,  a  sayısının alabileceği değerler toplamı
+kaçtır?
+253
+291
+329
+347
+375
+16.
+A)
+B)
+C)
+D)
+E)
+17.
+A)
+B)
+C)
+D)
+E)
+a, b ve c gerçel sayılar olmak üzere, gerçel sayılar
+kümesinin birer alt kümesi üzerinde
+ 
+fonksiyonları tanımlanıyor.
+ 
+ 
+olduğuna göre,  
+   toplamı kaçtır? 
+6
+7
+8
+9
+10 
+a ve b birer gerçel sayı olmak üzere, gerçel sayılar
+kümesi üzerinde sürekli olan f ve g fonksiyonları
+biçiminde tanımlanıyor.
+Buna göre,  
+  çarpımı kaçtır?
+9
+10
+12
+15
+16
+18.
+A)
+B)
+C)
+D)
+E)
+19.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+28
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2022-AYT/MAT
+Dik koordinat düzleminde, gerçel sayılar kümesi
+üzerinde tanımlı ve türevlenebilir f ve g fonksiyonları için
+f doğrusal fonksiyonunun grafiği ile g’nin türevi olan
+ doğrusal fonksiyonunun grafiği şekilde gösterilmiştir.
+Buna göre,
+  değeri kaçtır?
+1
+2
+3
+4
+5
+Dik koordinat düzleminde, pozitif gerçel sayılar kümesi
+üzerinde tanımlı ve pozitif değerler alan türevlenebilir 
+bir  f fonksiyonunun grafiği şekilde gösterilmiştir.
+Bir  g  fonksiyonu; her  x  pozitif gerçel sayısındaki
+değeri, köşeleri
+ ve 
+ noktaları olan dik
+üçgenin alanına eşit olacak biçimde tanımlanmaktadır.
+olduğuna göre,  
+ değeri kaçtır? 
+5
+6
+8
+9
+11 
+20.
+A)
+B)
+C)
+D)
+E)
+21.
+A)
+B)
+C)
+D)
+E)
+a ve b gerçel sayılar olmak üzere, dik koordinat
+düzleminde  
+  doğrusu  
+fonksiyonunun grafiğine  (1, f(1))  noktasında teğettir.
+Buna göre,  
+   toplamı kaçtır? 
+4
+5
+6
+7
+8 
+Dik koordinat düzleminde, gerçel sayılar kümesi
+üzerinde tanımlı g ve h fonksiyonlarının türevleri olan
+ve
+fonksiyonlarının grafikleri şekilde gösterilmiştir.
+ 
+olmak üzere,  
+  eşitliği sağlanmaktadır.
+Buna göre; f(2), g(2) ve h(2) değerlerinin doğru
+sıralanışı aşağıdakilerden hangisidir?
+ 
+ 
+ 
+22.
+A)
+B)
+C)
+D)
+E)
+23.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+29
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2022-AYT/MAT
+a bir gerçel sayı olmak üzere,
+eşitliği veriliyor.
+Buna göre, a kaçtır?
+3
+4
+5
+6
+7
+m pozitif bir gerçel sayı olmak üzere, dik koordinat
+düzleminde 
+ doğrusu ile 
+ eğrisi tarafından
+sınırlandırılan bölge,
+  doğrusu ile şekildeki gibi
+iki bölgeye ayrılmıştır.
+Şekilde;  
+  bölgesinin alanı,  
+  bölgesinin alanının 
+7 katıdır.   
+Buna göre,  m  kaçtır?
+3
+4
+5
+24.
+A)
+B)
+C)
+D)
+E)
+25.
+A)
+B)
+C)
+D)
+E)
+Dik koordinat düzleminde verilen  f  fonksiyonunun
+grafiği ile x-ekseni arasında kalan alan dört bölgeye
+ayrıldıktan sonra üç bölge şekildeki gibi boyanmıştır.
+Mavi bölgenin alanı 5, kırmızı bölgenin alanı 6 ve      
+sarı bölgenin alanı 1 birimkaredir.
+ 
+olduğuna göre,  
+integralinin değeri
+kaçtır?
+7
+8
+9
+10
+11
+26.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+30
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2022-AYT/MAT
+Dik koordinat düzleminde, 
+ kapalı aralığında
+tanımlı, sürekli ve artan bir  f  fonksiyonunun grafiği
+şekilde gösterilmiştir.
+Buna göre, 
+ kapalı aralığında  f  fonksiyonunun
+grafiği ile x-ekseni arasında kalan bölgenin alanı
+I.
+II.
+III.
+değerlerinin hangilerinden küçüktür?
+Yalnız II
+Yalnız III
+I ve II
+I ve III
+I, II ve III
+olmak üzere,
+olduğuna göre; x, y ve z değerlerinin işaretleri
+sırasıyla aşağıdakilerden hangisidir?
+27.
+A)
+B)
+C)
+D)
+E)
+28.
+A)
+B)
+C)
+D)
+E)
+ifadesinin sadeleştirilmiş biçimi aşağıdakilerden
+hangisidir?
+Mavi renkli bir üçgenin uzunlukları 12 ve 18 birim olan
+kenarları arasındaki açının ölçüsü, kırmızı renkli bir
+üçgenin uzunlukları 8 ve 9 birim olan kenarları
+arasındaki açının ölçüsünün 2 katına eşittir.
+Bu üçgenlerin alanları eşit olduğuna göre, kırmızı
+renkli üçgenin çevresi kaç birimdir?
+27
+28 
+29
+30
+31
+29.
+A)
+B)
+C)
+D)
+E)
+30.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+31
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2022-AYT/MAT
+Dik koordinat düzleminin birinci bölgesinde,  
+fonksiyonunun grafiği üzerinde bulunan K ve L noktaları
+şekilde gösterilmiştir. 
+ 
+olduğuna göre,  tan a  değeri kaçtır?
+31.
+A)
+B)
+C)
+D)
+E)
+Bir müzede sergilenen bir tablonun asılı olduğu bir
+duvara A ve B lazer cihazları yerleştirilmiştir. Bu
+cihazlardan her biri, birinci ışınını duvar yüzeyi boyunca,
+yere dik ve yukarı yönde göndermekte, sonraki her
+seferde o cihaza özel sabit bir açı kadar dönüp duvar
+yüzeyi boyunca bir sonraki ışınını göndermektedir. 
+Aşağıdaki şekildeki gibi A cihazı saat yönünde, B cihazı
+ise saat yönünün tersi yönde hareket ederek her bir
+cihaz toplam 
+döndükten sonra son ışınını
+göndermiş ve durmuştur.
+A cihazından çıkan 2. ışınla B cihazından çıkan 3. ışın
+birbirine dik; A cihazından çıkan 8. ışınla B cihazından
+çıkan 5. ışın birbirine dik olmuştur.  
+Buna göre, A cihazından çıkan toplam ışın sayısı
+kaçtır?
+9
+11
+13
+16
+19
+a ve b gerçel sayılar olmak üzere; dik koordinat
+düzleminde, birbirine dik olan
+doğruları y-ekseni üzerindeki bir noktada kesişmektedir.
+Buna göre,  
+  toplamı kaçtır?
+16
+19
+20
+21
+24
+32.
+A)
+B)
+C)
+D)
+E)
+33.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+32
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2022-AYT/MAT
+Dik koordinat düzleminin birinci bölgesinde bulunan ve
+kenarları koordinat eksenlerine paralel olan bir karenin
+köşegenleri (3, 6) noktasında kesişmektedir. 
+Bu karenin orijine en uzak köşesinin koordinatları
+toplamı 14 olduğuna göre, karenin alanı kaç
+birimkaredir?
+4
+9
+16
+25
+36
+Eda, bilgisayarındaki bir resim çizme programında,
+başlangıçta şekildeki gibi farklı büyüklüklerde iki çember
+çiziyor.
+Çemberlerin merkezlerini değiştirmeyen Eda;
+başlangıçta çizdiği çemberlerin yarıçaplarını 2 katına
+çıkardığında elde ettiği iki çemberin sadece bir noktada
+kesiştiğini, başlangıçta çizdiği çemberlerin yarıçaplarını
+3 katına çıkardığında elde ettiği iki çemberin yine
+sadece bir noktada kesiştiğini fark ediyor.  
+Buna göre, Eda’nın başlangıçta çizdiği büyük
+çemberin yarıçapı küçük çemberin yarıçapının kaç
+katına eşittir?
+4
+4,5
+5
+5,5
+6
+34.
+A)
+B)
+C)
+D)
+E)
+35.
+A)
+B)
+C)
+D)
+E)
+Daire biçimindeki bir saat ekranında; 1’den 12’ye kadar
+sayıları gösteren, birer uçları ekranın çerçevesinde
+olacak şekilde eşit aralıklarla çizilen 12 adet eş çizgi
+bulunmaktadır. Bu ekranda 1 ile 5 ve 7 ile 11 sayılarına
+karşılık gelen çizgilerin çerçeve üzerindeki uçlarını
+birleştiren doğrular, ebatları aynı olan dikdörtgen
+biçimindeki iki saat kordonunun uzun kenarları ile aynı
+hizada olmaktadır.  
+Her bir kordonun kısa kenarlarından biri ekrana
+şekildeki gibi teğettir. Her bir kordonun kısa kenarı 2 cm,
+saatin tamamının uzunluğu 25 cm olarak verilmiştir.
+Buna göre, her bir kordonun uzun kenarı kaç
+cm’dir?
+9,5
+9,75
+10
+10,25
+10,5
+36.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+33
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2022-AYT/MAT
+Dik koordinat düzleminde, x ve y-eksenlerine teğet olan
+ve birinci bölgede bulunan iki farklı çember şekildeki gibi
+A(1, 2) noktasından geçmektedir.  
+Buna göre, bu çemberlerin yarıçapları toplamı kaç
+birimdir?
+4
+6
+7
+9
+11
+Dik koordinat düzleminde, bir kenarı x-ekseni üzerinde
+bulunan bir ABC eşkenar üçgeni çizilmiştir. Bu üçgenin
+köşe noktalarının y-eksenine göre simetriği alındıktan
+sonra x-ekseni boyunca pozitif yönde 9 birim
+ötelendiğinde elde edilen üç nokta, bir köşesi orijinde
+olan bir üçgenin köşelerini oluşturmaktadır.
+Bu iki üçgenin de içinde kalan bölge, bir kenar uzunluğu
+1 birim olan bir eşkenar üçgendir. 
+Buna göre, ABC üçgeninin çevresi kaç birimdir?
+9
+12
+15
+18
+21
+37.
+A)
+B)
+C)
+D)
+E)
+38.
+A)
+B)
+C)
+D)
+E)
+Ayrıt uzunlukları 6, 8 ve 10 birim olan dikdörtgenler
+prizması biçimindeki oyuncak, şekildeki gibi iki özdeş
+parçaya ayrılmıştır.  
+Sonra, ayrılan bu iki parça boşluk kalmadan şekildeki
+gibi birleştirilerek aşağıdaki dikdörtgenler prizması elde
+edilmiştir. 
+Buna göre, son durumda oluşan dikdörtgenler
+prizmasının yüzey alanı kaç birimkaredir?
+296
+320
+354
+416
+424
+39.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+34
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2022-AYT/MAT
+Hacimleri birbirine eşit olan dik dairesel koni biçimindeki
+iki külah, tabanları zemine paralel olacak şekilde
+aşağıdaki gibi yerleştirilmiştir.
+Külahların tabanlarının zemine olan uzaklıkları 8 ve 12
+birim olarak ölçülmüştür.  
+Buna göre, üstteki külahın tepe noktasının zemine
+olan uzaklığı kaç birimdir?
+26
+29
+32
+35
+38
+40.
+A)
+B)
+C)
+D)
+E)
+MATEMATİK TESTİ BİTTİ.
+FEN BİLİMLERİ TESTİNE GEÇİNİZ.
+35
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2022 ALAN YETERLİLİK TESTLERİ (AYT)
+2022 YKS 2. OTURUM ALAN YETERLİLİK TESTLERİ (AYT)
+19-06-2022
+TÜRK DİLİ VE
+EDEBİYATI-SOSYAL
+BİLİMLER-1 TESTİ
+1.   A
+2.   D
+3.   D
+4.   C
+5.   A
+6.   E
+7.   C
+8.   E
+9.   C
+10.   E
+11.   E
+12.   C
+13.   B
+14.   C
+15.   E
+16.   B
+17.   A
+18.   D
+19.   B
+20.   B
+21.   C
+22.   B
+23.   D
+24.   D
+25.   B
+26.   A
+27.   A
+28.   D
+29.   C
+30.   A
+31.   E
+32.   D
+33.   A
+34.   A
+35.   C
+36.   B
+37.   C
+38.   A
+39.   C
+40.   E
+SOSYAL BİLİMLER-2 TESTİ
+1.   E
+2.   A
+3.   A
+4.   C
+5.   B
+6.   A
+7.   D
+8.   B
+9.   B
+10.   B
+11.   E
+12.   D
+13.   C
+14.   E
+15.   D
+16.   D
+17.   E
+18.   A
+19.   A
+20.   C
+21.   C
+22.   B
+23.   D
+24.   A
+25.   D
+26.   B
+27.   C
+28.   A
+29.   E
+30.   D
+31.   D
+32.   C
+33.   B
+34.   C
+35.   C
+36.   D
+37.   A
+38.   E
+39.   A
+40.   B
+41.   B
+42.   D
+43.   D
+44.   A
+45.   A
+46.   D
+MATEMATİK TESTİ
+1.   C
+2.   B
+3.   C
+4.   A
+5.   E
+6.   A
+7.   B
+8.   D
+9.   B
+10.   D
+11.   E
+12.   C
+13.   C
+14.   A
+15.   C
+16.   A
+17.   A
+18.   D
+19.   D
+20.   B
+21.   E
+22.   B
+23.   D
+24.   A
+25.   B
+26.   B
+27.   C
+28.   C
+29.   A
+30.   B
+31.   E
+32.   B
+33.   A
+34.   D
+35.   C
+36.   E
+37.   B
+38.   C
+39.   E
+40.   D
+FEN BİLİMLERİ TESTİ
+1.   D
+2.   D
+3.   A
+4.   A
+5.   A
+6.   B
+7.   E
+8.   E
+9.   C
+10.   A
+11.   E
+12.   D
+13.   D
+14.   A
+15.   C
+16.   D
+17.   B
+18.   E
+19.   B
+20.   E
+21.   A
+22.   E
+23.   D
+24.   A
+25.   B
+26.   C
+27.   D
+28.   D
+29.   E
+30.   C
+31.   E
+32.   B
+33.   E
+34.   A
+35.   B
+36.   C
+37.   C
+38.   B
+39.   B
+40.   D
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2023-AYT/MAT
+MATEMATİK TESTİ
+1. Bu testte 40 soru vardır.
+2. Cevaplarınızı, cevap kâğıdının Matematik Testi için ayrılan kısmına işaretleyiniz.
+Köşelerinde çemberler ve içinde bir A doğal sayısının
+yazılı olduğu n kenarlı çokgen sembolünün değeri,
+köşelerinde bulunan çemberlerin içinde yazılı olan
+doğal sayıların toplamının n katı ile A sayısının
+toplamına eşittir.
+Örnek:
+olduğuna göre,  x  kaçtır?
+10
+11
+12
+13
+14
+a, b ve c birbirinden farklı rakamlar olmak üzere,
+ifadeleri veriliyor.
+Buna göre,
+ toplamı kaçtır?
+9
+11
+13
+15
+17
+1.
+A)
+B)
+C)
+D)
+E)
+2.
+A)
+B)
+C)
+D)
+E)
+x ve y tam sayıları için
+eşitliği veriliyor.
+Buna göre,
+çarpımı kaçtır?
+4
+8
+p, q ve r asal sayılar olmak üzere,
+eşitliği veriliyor.
+Buna göre,
+toplamı kaçtır?
+14
+15
+16
+17
+18
+3.
+A)
+B)
+C)
+D)
+E)
+4.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+23
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2023-AYT/MAT
+x ve y gerçel sayılar olmak üzere,
+ 
+eşitsizliği veriliyor.
+Buna göre,
+I.
+II.
+ 
+III.
+ 
+ifadelerinden hangileri doğrudur?
+Yalnız I
+Yalnız II
+I ve III
+II ve III
+I, II ve III
+a, b ve c gerçel sayıları için
+olduğuna göre,
+çarpımı kaçtır?
+48
+50
+52
+56
+60
+5.
+A)
+B)
+C)
+D)
+E)
+6.
+A)
+B)
+C)
+D)
+E)
+A, B, C ve D birer rakam olmak üzere;
+
+dört basamaklı ABCD sayısı 20,
+
+üç basamaklı ADB sayısı 18,
+
+üç basamaklı CDA sayısı 15
+ile tam bölünmektedir.
+ Buna göre,
+ toplamı kaçtır?
+10
+11
+12
+13
+15
+A, B ve C sıfırdan ve birbirinden farklı rakamlar olmak
+üzere, iki basamaklı AB ve BC doğal sayılarının 
+her ikisi de asal sayı ise üç basamaklı ABC doğal
+sayısına asalsı sayı denir.
+ Buna göre, en küçük asalsı sayı ile en büyük
+asalsı sayının toplamı kaçtır?
+1034
+1050
+1110
+1154
+1170
+7.
+A)
+B)
+C)
+D)
+E)
+8.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+24
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2023-AYT/MAT
+A, B ve C kümeleri ile ilgili
+eşitlikleri veriliyor.
+Buna göre,
+ kümesinin eleman sayısı kaçtır?
+1
+2
+3
+4
+5
+İki basamaklı bir AB doğal sayısı için
+ 
+önermeleri veriliyor.
+ 
+önermesi yanlış olduğuna göre,
+AB sayısının alabileceği değerlerin toplamı kaçtır?
+106
+125
+144
+163
+182
+9.
+A)
+B)
+C)
+D)
+E)
+10.
+A)
+B)
+C)
+D)
+E)
+a ve b gerçel sayılar olmak üzere, gerçel sayılar kümesi
+üzerinde tanımlı f ve g fonksiyonları için
+ 
+eşitlikleri sağlanıyor.
+Buna göre,
+farkı kaçtır?
+17
+ 
+18 
+ 
+19
+a bir pozitif gerçel sayı olmak üzere,
+ifadesinin açılımında 
+ li terimin katsayısı 
+’dır.
+Buna göre, a kaçtır?
+9
+12
+13
+15
+18
+11.
+A)
+B)
+C)
+D)
+E)
+12.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+25
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2023-AYT/MAT
+Bir manav, satacağı altı meyveden her birinin kilogram
+satış fiyatını aşağıdaki gibi belirlemiştir.
+Manav, altı bölmeden oluşan bir tezgâhın arka orta
+bölmesine muzları şekildeki gibi yerleştirmiştir. 
+Manav; çırağından, kalan beş çeşit meyveyi tezgâhın
+boş kalan bölmelerine, her bir bölmede farklı bir çeşit
+meyve olacak ve önde olan her bir bölmedeki meyvenin
+fiyatı hemen arkasındaki bölmedeki meyvenin fiyatından
+daha ucuz olacak şekilde yerleştirmesini istemiştir.
+Buna göre, çırak bu meyveleri tezgâha kaç farklı
+şekilde yerleştirebilir?
+18
+24
+30
+36
+42
+13.
+A)
+B)
+C)
+D)
+E)
+Veysel Bey’in elinde bir giyim mağazasına ait 200, 400,
+600 ve 800 TL’lik birer hediye çeki bulunmaktadır.
+Veysel Bey, bu giyim mağazasından alışveriş yapmak
+isteyen Yasemin ve Zehra isimli iki kızına, elindeki 
+dört hediye çekinden birer tanesini rastgele veriyor.
+Farklı günlerde bu mağazaya giden kızlardan 
+Yasemin 300, Zehra ise 500 TL’lik bir elbise beğeniyor.
+Buna göre, her iki kızın da sadece babalarından
+aldıkları hediye çekiyle beğendikleri elbiseyi
+alabilme olasılığı kaçtır?
+x ve y gerçel sayılar olmak üzere,
+ 
+olduğuna göre,
+ çarpımı kaçtır?
+3
+4
+5
+6
+7
+14.
+A)
+B)
+C)
+D)
+E)
+15.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+26
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2023-AYT/MAT
+a ve b birer pozitif tam sayı olmak üzere,
+ 
+eşitsizlik sistemi veriliyor.
+ olmak üzere bu eşitsizlik sisteminin
+çözüm kümesinde 16 tane tam sayı olduğuna göre,
+ çarpımı kaçtır?
+7
+10
+12
+15
+1 6
+Gerçel sayılar kümesi üzerinde  f  ve  g  fonksiyonları
+biçiminde tanımlanıyor.
+olduğuna göre,
+ çarpımı
+kaçtır?
+4
+16
+16.
+A)
+B)
+C)
+D)
+E)
+17.
+A)
+B)
+C)
+D)
+E)
+Baş katsayısı 3 olan üçüncü dereceden gerçel katsayılı
+bir
+ polinomunun sadece 2 farklı gerçel kökü
+olduğu biliniyor.
+  olduğuna göre,
+ değeri
+I. 6
+II. 12
+III.18
+sayılarından hangilerine eşit olabilir?
+Yalnız I
+Yalnız II
+Yalnız III
+I ve II
+II ve III
+a ve b tam sayılar olmak üzere,
+polinomunun sadece bir tane gerçel kökü olduğu
+biliniyor.
+olduğuna göre,  a tam sayısının
+alabileceği en küçük değer kaçtır?
+ 
+ 
+ 
+ 
+18.
+A)
+B)
+C)
+D)
+E)
+19.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+27
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2023-AYT/MAT
+Ahmet Amca; kenar uzunlukları
+ ve
+metre olan dikdörtgen biçimindeki tarlasının bir kenar
+uzunluğu  x  metre olan kare biçimindeki kısmında
+şekildeki gibi ayçiçeği yetiştirmiştir.
+Tarlanın geriye kalan kısmının alanı 1400 metrekare
+olduğuna göre, tarlanın tamamının çevresi kaç
+metredir?
+148
+154
+160
+166
+172
+20.
+A)
+B)
+C)
+D)
+E)
+a, b ve c gerçel sayıları için
+ olmak üzere,
+gerçel sayılar kümesi üzerinde bir  f  fonksiyonu
+biçiminde tanımlanıyor.
+Buna göre,  f  fonksiyonunun grafiği
+I.
+II.
+III.
+grafiklerinden hangileri olabilir?
+Yalnız I
+Yalnız II
+I ve III
+II ve III
+I, II ve III
+21.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+28
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2023-AYT/MAT
+Bir baba, matematik sınavına hazırlanan oğlu Kerem’i
+ders çalışmaya teşvik etmek için, evlerindeki kablosuz
+internetin şifresini değiştirerek modemin yanına
+aşağıdaki notu bırakmıştır.
+Buna göre, bu internet şifresi kaçtır?
+45
+47
+51
+57
+63
+Dik koordinat düzleminde,
+ ve
+fonksiyonlarının grafikleri şekilde
+verilmiştir. A ve D noktaları f fonksiyonunun grafiği,     
+B ve C noktaları ise g fonksiyonunun grafiği üzerindedir.
+Şekilde hem (4,0) noktasından geçen
+doğru parçası hem de
+ doğru parçası
+x-eksenine dik olup ABC üçgeninin alanı 6 birimkaredir.
+Buna göre, ACD üçgeninin alanı kaç birimkaredir?
+12
+11
+10
+9
+8
+22.
+A)
+B)
+C)
+D)
+E)
+23.
+A)
+B)
+C)
+D)
+E)
+x  bir pozitif gerçel sayı olmak üzere,
+ 
+eşitliğini sağlayan  x  sayısı kaçtır?
+ 
+gerçel sayılar dizisi her n pozitif tam sayısı için
+eşitliğini sağlamaktadır.
+ olduğuna göre,
+toplamı
+kaçtır?
+6
+8
+12
+16
+20
+İlk iki terimi
+ve
+olan 
+geometrik
+dizisi ile ortak farkı bu geometrik dizinin ortak çarpanı
+olan
+aritmetik dizisi veriliyor.
+ olduğuna göre,
+ kaçtır?
+24.
+A)
+B)
+C)
+D)
+E)
+25.
+A)
+B)
+C)
+D)
+E)
+26.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+29
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2023-AYT/MAT
+olmak üzere,
+eşitlikleri veriliyor.
+Buna göre; x, y ve z değerlerinin işaretleri sırasıyla
+aşağıdakilerden hangisidir?
+ifadesinin sadeleştirilmiş biçimi aşağıdakilerden
+hangisidir?
+27.
+A)
+B)
+C)
+D)
+E)
+28.
+A)
+B)
+C)
+D)
+E)
+Şekil 1’de iki kenarının uzunlukları 4 birim ve 8 birim
+olan ve bu kenarlar arasındaki açının ölçüsü  x  derece
+olan bir paralelkenar, Şekil 2’de ise iki kenarının
+uzunlukları 4 birim ve 6 birim olan ve bu kenarlar
+arasındaki açının ölçüsü  2x derece olan bir
+paralelkenar verilmiştir.
+Şekil 1’deki paralelkenarın alanı 24 birimkare
+olduğuna göre, Şekil 2’deki paralelkenarın alanı
+kaç birimkaredir?
+ 
+ 
+olmak üzere,
+denklemini sağlayan  x  gerçel sayılarının toplamı
+kaçtır?
+29.
+A)
+B)
+C)
+D)
+E)
+30.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+30
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2023-AYT/MAT
+Şekilde, O merkezli ve AD çaplı yarım çember ile 
+ABCD dikdörtgeni ve OEF üçgeni verilmiştir. C, F, E, B
+noktaları doğrusal; E ve F noktaları çember üzerindedir.
+Buna göre, ABCD dikdörtgeninin alanının 
+OEF üçgeninin alanına oranının x türünden eşiti
+aşağıdakilerden hangisidir?
+Bir okulda, her sınıfa asılmak üzere eşkenar üçgen
+biçiminde bir poster hazırlanmıştır. Şekildeki gibi
+tabanına paralel iki doğruyla üç bölmeye ayrılan bu
+posterde bölmelerin yükseklikleri birbirine eşittir.
+Daha sonra, okul müdürü posterdeki bölmelerin
+alanlarının bölmelerde yazan yüzde değerleri ile
+doğru orantılı olmasını istemiştir. Bunun üzerine
+posterin alanı değişmeyecek şekilde bölmeler yeniden
+düzenlenmiştir. Son durumda, "Davranış" bölmesinin
+alanının ilk duruma göre 24 birimkare arttığı
+hesaplanmıştır.
+ Buna göre, posterin alanı kaç birimkaredir?
+270
+300
+320
+360
+400
+31.
+A)
+B)
+C)
+D)
+E)
+32.
+A)
+B)
+C)
+D)
+E)
+Işıl; mavi, pembe ve sarı renkli üç eş ikizkenar üçgeni
+dikdörtgen biçimindeki bir kâğıt üzerine yapıştırmak
+istiyor. Önce mavi üçgeni, kâğıdın alt kenarıyla 
+ açı
+yapacak biçimde şekildeki gibi yapıştırıyor. 
+Sonra pembe üçgenin bir kenarının bir kısmı 
+mavi üçgenin bir kenarının bir kısmıyla çakışacak,
+sarı üçgenin bir kenarının bir kısmı ise pembe üçgenin
+bir kenarının bir kısmıyla çakışacak biçimde üçgenleri
+şekildeki gibi yapıştırıyor.
+Son durumda sarı üçgenin eşit uzunluktaki
+kenarlarından biri kâğıdın üst kenarına paralel
+olduğuna göre, sarı üçgenin eş olan açılarından biri
+kaç derecedir?
+72
+76
+78
+80
+82
+33.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+31
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2023-AYT/MAT
+Ön ve arka yüzleri kare biçiminde eş beyaz birer
+kartondan, tabanı ise dikdörtgen biçiminde turuncu bir
+kartondan oluşan Şekil 1’deki masa takviminin
+yüksekliği 12 cm’dir.
+Bu takvim tabanındaki kartonun ortasında bulunan
+kesikli çizgi boyunca Şekil 2’de gösterilen ok yönünde
+dışa doğru katlandığında Şekil 3’teki görünüm elde
+edilmektedir. Şekil 3’te; ön yüzdeki beyaz kartonun
+çevre uzunluğu, turuncu renkli kartonun çevre
+uzunluğundan 12 cm fazladır.
+Buna göre, Şekil 1’deki turuncu kartonun
+çevre uzunluğu kaç cm’dir?
+46
+54
+66
+82
+104
+34.
+A)
+B)
+C)
+D)
+E)
+Yarıçapı  r birim olan çeyrek daire şeklinde bir kâğıt
+parçası Şekil 1’de gösterilen ve bu çeyrek daireyi iki eş
+parçaya bölen doğru boyunca kesilerek bir parçası
+atılıyor. Sonra, kalan parça Şekil 2’de gösterilen doğru
+boyunca kesilerek Şekil 3’teki gibi iki parça elde ediliyor.
+Elde edilen bu parçalardan büyük olanın üst yüzeyi
+maviye, küçük olanın üst yüzeyi ise sarıya boyanıyor.
+Buna göre, maviye boyalı alanın sarıya boyalı alana
+oranı kaçtır?
+ 
+ 
+Üzerinde A, B, C ve D noktaları işaretlenmiş olan
+Şekil 1’deki çemberde BC ve CD kirişleri diktir. 
+Bu çemberi AB, BC, CD ve DA kirişleri boyunca keserek
+elde edilen Şekil 2’deki parçalarda kiriş ve yayların 
+orta noktalarını birleştiren kırmızı renkli doğru
+parçalarının uzunlukları sırayla 1, 5, 10 ve x birimdir.
+Buna göre, x kaçtır?
+14
+15
+16
+17
+18
+35.
+A)
+B)
+C)
+D)
+E)
+36.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+32
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2023-AYT/MAT
+Bir mahalleye ait birim karelerden oluşan krokide    
+okul, belediye, hastane, market, park ve kütüphanenin
+konumlarını belirten altı nokta aşağıda gösterilmiştir.  
+Bu kroki üzerinde işaretli noktalarla ilgili aşağıdakiler
+bilinmektedir.
+
+Aralarındaki uzaklık en fazla olan iki nokta hastane
+ve kütüphaneye aittir.
+
+Belediyeyi gösteren nokta, okul ve parkı gösteren
+noktalara eşit uzaklıktadır.
+
+Parkı gösteren nokta, market ve kütüphaneyi
+gösteren noktalara eşit uzaklıktadır.
+Buna göre; belediye ve okulu gösteren noktalar
+arasındaki uzaklığın, market ve kütüphaneyi
+gösteren noktalar arasındaki uzaklığa oranı kaçtır?
+37.
+A)
+B)
+C)
+D)
+E)
+Dik koordinat düzleminde 
+ doğrusu ile 
+bir d doğrusu 
+ noktasında kesişmektedir.
+Bu iki doğru, merkezi
+noktası olan her daireyi
+eşit alanlı dört bölgeye ayırmaktadır. 
+Buna göre, d doğrusunun denklemi
+aşağıdakilerden hangisidir?
+ 
+ 
+ 
+ 
+Mavi ve kırmızı kenarları eşit uzunlukta olan ikizkenar
+üçgen biçimindeki bir “Dikkat Köpek Var!” levhası,
+bir köşesinde bulunan çiviyle dikdörtgen biçimindeki
+bahçe duvarına şekildeki gibi asılmıştır.
+Çivi etrafında dönebilen bu levha, şekildeki
+konumundan
+
+saat yönünde
+ döndürülürse siyah kenarı,
+
+saat yönünün tersine
+ döndürülürse mavi
+kenarı,
+
+saat yönünde
+döndürülürse kırmızı kenarı
+ilk defa duvarın üst kenarına paralel olmaktadır.
+Buna göre,  x  kaçtır?
+5
+10
+15
+20
+25
+38.
+A)
+B)
+C)
+D)
+E)
+39.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+33
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2023-AYT/MAT
+Bir kargo paketi hazırlamak isteyen Zeynep, 
+üst yüzeyinde Şekil 1’deki gibi kapağı bulunan ve
+tabanı kare olan dik prizma şeklinde bir karton kutu
+alıyor.
+Zeynep, göndermek istediklerini kutuya yerleştirdikten
+sonra kutuyu kapatmak için genişlikleri 1’er birim olan
+mavi renkli iki bant kullanıyor. Bu iki bant Şekil 2’deki
+gibi prizmanın ayrıtlarına paraleldir ve her biri alt yüzey
+hariç iki yan yüz ile üst yüzü tamamen dolaşmaktadır.
+Bantların, prizmanın yüzeyleri üzerinde kapladığı
+toplam alan 25 birimkaredir.
+Bu kutunun dış yüzeyinin toplam alanı 
+182 birimkare olduğuna göre, kutunun hacmi       
+kaç birimküptür?
+100
+108
+147
+192
+196
+40.
+A)
+B)
+C)
+D)
+E)
+MATEMATİK TESTİ BİTTİ.
+FEN BİLİMLERİ TESTİNE GEÇİNİZ.
+34
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2023 ALAN YETERLİLİK TESTLERİ (AYT)
+2023 YKS 2. OTURUM ALAN YETERLİLİK TESTLERİ (AYT)
+18-06-2023
+TÜRK DİLİ VE
+EDEBİYATI-SOSYAL
+BİLİMLER-1 TESTİ
+1.   B
+2.   C
+3.   C
+4.   D
+5.   A
+6.   A
+7.   E
+8.   C
+9.   B
+10.   E
+11.   A
+12.   C
+13.   D
+14.   B
+15.   D
+16.   B
+17.   C
+18.   A
+19.   A
+20.   D
+21.   E
+22.   C
+23.   E
+24.   C
+25.   E
+26.   B
+27.   C
+28.   C
+29.   A
+30.   A
+31.   C
+32.   A
+33.   C
+34.   E
+35.   D
+36.   B
+37.   C
+38.   B
+39.   E
+40.   A
+SOSYAL BİLİMLER-2 TESTİ
+1.   E
+2.   A
+3.   D
+4.   E
+5.   B
+6.   B
+7.   A
+8.   B
+9.   C
+10.   C
+11.   D
+12.   D
+13.   B
+14.   B
+15.   A
+16.   E
+17.   B
+18.   A
+19.   E
+20.   D
+21.   A
+22.   C
+23.   D
+24.   D
+25.   B
+26.   B
+27.   D
+28.   B
+29.   D
+30.   E
+31.   C
+32.   B
+33.   B
+34.   C
+35.   D
+36.   A
+37.   A
+38.   E
+39.   A
+40.   C
+41.   E
+42.   C
+43.   C
+44.   E
+45.   B
+46.   B
+MATEMATİK TESTİ
+1.   E
+2.   B
+3.   A
+4.   A
+5.   D
+6.   E
+7.   D
+8.   C
+9.   A
+10.   E
+11.   D
+12.   A
+13.   B
+14.   B
+15.   D
+16.   A
+17.   E
+18.   D
+19.   D
+20.   C
+21.   C
+22.   A
+23.   D
+24.   B
+25.   B
+26.   D
+27.   B
+28.   C
+29.   D
+30.   B
+31.   C
+32.   A
+33.   E
+34.   C
+35.   B
+36.   E
+37.   A
+38.   E
+39.   B
+40.   C
+FEN BİLİMLERİ TESTİ
+1.   D
+2.   C
+3.   A
+4.   D
+5.   C
+6.   D
+7.   E
+8.   B
+9.   D
+10.   C
+11.   C
+12.   B
+13.   D
+14.   C
+15.   C
+16.   B
+17.   D
+18.   D
+19.   B
+20.   A
+21.   B
+22.   E
+23.   A
+24.   A
+25.   B
+26.   B
+27.   A
+28.   E
+29.   D
+30.   A
+31.   E
+32.   E
+33.   C
+34.   C
+35.   A
+36.   A
+37.   C
+38.   D
+39.   D
+40.   E
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2024-AYT/MAT
+MATEMATİK TESTİ
+1. Bu testte 40 soru vardır.
+2. Cevaplarınızı, cevap kâğıdının Matematik Testi için ayrılan kısmına işaretleyiniz.
+A, D, T ve Y rakamları için
+toplama işlemi veriliyor.
+olduğuna göre 
+ çarpımı kaçtır?
+48
+64
+80
+96
+112
+a, x ve y pozitif gerçel sayıları için
+olduğuna göre  
+  oranı kaçtır?
+1
+ 
+2
+3
+1.
+A)
+B)
+C)
+D)
+E)
+2.
+A)
+B)
+C)
+D)
+E)
+a bir rakam olmak üzere 
+ sayısının 
+sayısına bölümünden kalan 
+olduğuna göre        
+a kaçtır?
+2
+3
+4
+5
+6
+x, y ve z birbirinden farklı birer asal sayı olmak üzere
+eşitliği veriliyor.
+Buna göre 
+ toplamı kaçtır?
+12
+14
+16
+18
+20
+3.
+A)
+B)
+C)
+D)
+E)
+4.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+24
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2024-AYT/MAT
+a bir tam sayı olmak üzere
+eşitsizliğini sağlayan yalnızca 4 tane x tam sayısı vardır.
+Buna göre a tam sayısının alabileceği farklı
+değerlerin toplamı kaçtır?
+33
+36
+39
+42
+45
+Dik koordinat düzleminde [0,1] kapalı aralığında tanımlı 
+f ve g fonksiyonları ile 
+ doğrusunun grafikleri
+aşağıda verilmiştir.
+(0,1) açık aralığındaki a, b ve c gerçel sayıları için
+eşitsizlikleri sağlandığına göre aşağıdaki
+sıralamalardan hangisi doğrudur?
+5.
+A)
+B)
+C)
+D)
+E)
+6.
+A)
+B)
+C)
+D)
+E)
+Dik koordinat düzleminde f, g ve h doğrusal
+fonksiyonlarının grafikleri şekilde gösterilmiştir.           
+Bu fonksiyonlarla ilgili
+eşitlikleri verilmiştir.
+Buna göre f(0), g(0) ve h(0) değerleri için aşağıdaki
+sıralamalardan hangisi doğrudur?
+ 
+A ve B kümeleri ile ilgili
+ 
+eşitlikleri verilmiştir.
+Buna göre 
+kümesinin eleman sayısı kaçtır?
+17
+19
+21
+23
+25
+7.
+A)
+B)
+C)
+D)
+E)
+8.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+25
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2024-AYT/MAT
+A ve B kümeleri ile ilgili
+ p:  
+ q:   
+ r:   
+önermeleri için
+önermesinin yanlış olduğu biliniyor.
+Buna göre 
+ kümesinin eleman sayısı kaçtır?
+8
+7
+6
+5
+4
+a ve b pozitif gerçel sayılar olmak üzere
+denklemlerinin her birinin kökler toplamı, kökler
+çarpımından 1 fazladır.
+Buna göre kökleri a ve b olan ikinci dereceden
+denklem aşağıdakilerden hangisi olabilir?
+9.
+A)
+B)
+C)
+D)
+E)
+10.
+A)
+B)
+C)
+D)
+E)
+a ve b gerçel sayılar olmak üzere gerçel sayılar kümesi
+üzerinde
+biçiminde tanımlanan f fonksiyonu; pozitif gerçel
+sayılarda pozitif, negatif gerçel sayılarda negatif
+değerler almaktadır.
+Buna göre a sayısının alabileceği en küçük tam sayı
+değeri kaçtır?
+9
+13
+17
+21
+25
+Ortak farkı r olan bir 
+ aritmetik dizisi için
+eşitsizlikleri veriliyor.
+Buna göre r sayısının alabileceği tam sayı
+değerlerinin toplamı kaçtır?
+49
+56
+64
+72
+84
+11.
+A)
+B)
+C)
+D)
+E)
+12.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+26
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2024-AYT/MAT
+a, x ve y pozitif gerçel sayılar olmak üzere küçükten
+büyüğe doğru sıralanmış
+sayıları ardışık tam sayılar olduğuna göre
+ ifadesinin değeri kaçtır?
+2
+3
+4
+Melisa; her birinin yarıçapı farklı bir doğal sayı olacak
+biçimde yarıçapları 
+olan
+daire biçimindeki 10 kartonu bir masanın üzerine
+merkezleri çakışacak şekilde üst üste dizecektir.
+Melisa bu dizilimi, üstten bakıldığında dairelerden
+yalnızca biri hiç görünmeyecek biçimde kaç farklı
+şekilde yapabilir?
+36
+40
+45
+48
+54
+13.
+A)
+B)
+C)
+D)
+E)
+14.
+A)
+B)
+C)
+D)
+E)
+Duru’nun evinin yakınında bulunan otobüs durağına
+belirli bir otobüs 
+ olasılıkla saat tam 09.02’de,    
+ olasılıkla ise saat tam 09.03’te gelmektedir. Bu
+otobüse binmek için saat tam 09.00’da evden çıkan
+Duru’nun bu durağa varması 
+ olasılıkla 100 saniye,
+ olasılıkla 150 saniye, 
+ olasılıkla ise 250 saniye
+sürmektedir.
+Buna göre otobüs durağa geldiği anda Duru’nun
+durakta bulunma olasılığı kaçtır?
+ 
+ 
+ 
+ 
+m ve n doğal sayılar olmak üzere
+ifadesinin açılımındaki sabit terim 60 olduğuna göre
+ toplamı kaçtır?
+36
+35
+31
+27
+23
+15.
+A)
+B)
+C)
+D)
+E)
+16.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+27
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2024-AYT/MAT
+limitinin değeri kaçtır?
+1
+Dik koordinat düzleminde bir f fonksiyonunun grafiği
+aşağıda verilmiştir.
+Gerçel sayılar kümesi üzerinde tanımlı olan bir              
+g fonksiyonunun tanımlı olduğu tüm noktalarda limiti
+vardır ve 
+ olarak hesaplanmıştır.
+ fonksiyonu gerçel sayılar kümesinde sürekli
+olduğuna göre g(3) değeri kaçtır?
+4
+6
+8
+10
+12
+17.
+A)
+B)
+C)
+D)
+E)
+18.
+A)
+B)
+C)
+D)
+E)
+a ve b gerçel sayılar olmak üzere dik koordinat
+düzleminde 
+ parabolü, x-eksenine ve
+ doğrusuna teğettir.
+Buna göre 
+çarpımı kaçtır?
+ 
+ 
+ 
+ 
+ 
+a ve b gerçel sayılar olmak üzere
+ 
+biçiminde tanımlanan f fonksiyonu daima artandır.
+ 
+olduğuna göre b sayısının alabileceği
+farklı tam sayı değerlerinin toplamı kaçtır?
+11
+13
+15
+17
+19
+19.
+A)
+B)
+C)
+D)
+E)
+20.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+28
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2024-AYT/MAT
+k ve m gerçel sayılar olmak üzere gerçel sayılar kümesi
+üzerinde f ve g fonksiyonları
+biçiminde tanımlanmaktadır.
+f ve g fonksiyonlarının 
+ noktasında yerel
+ekstremumu vardır.
+Buna göre 
+ toplamı kaçtır?
+31
+33
+35
+37
+39
+21.
+A)
+B)
+C)
+D)
+E)
+Dik koordinat düzleminde 
+ ve 
+doğruları ile pozitif x ve y-eksenleri arasında kalan
+boyalı bölge aşağıda verilmiştir.
+Bu bölgede bir kenarı x-ekseni üzerinde, birer köşesi ise
+ ve 
+ doğruları üzerinde olan
+dikdörtgenler oluşturuluyor.
+Buna göre bu dikdörtgenlerden alanı en büyük
+olanın x-ekseni üzerindeki kenarının uzunluğu kaç
+birimdir?
+6
+7
+integralinin değeri kaçtır?
+22.
+A)
+B)
+C)
+D)
+E)
+23.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+29
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2024-AYT/MAT
+Dik koordinat düzleminde yukarıda grafiği verilen           
+f fonksiyonu için
+eşitlikleri sağlanmaktadır.
+Buna göre
+ 
+integralinin değeri kaçtır?
+ 
+24.
+A)
+B)
+C)
+D)
+E)
+a bir gerçel sayı olmak üzere dik koordinat düzleminde
+ ve 
+ fonksiyonlarının grafikleri aşağıda
+verilmiştir.
+Mavi boyalı bölgenin alanı 
+, sarı boyalı bölgenin
+alanı 
+ olmak üzere
+ 
+olduğuna göre a kaçtır?
+2
+3
+4
+5
+6
+Gerçel sayılar kümesi üzerinde tanımlı ve türevlenebilir 
+f ve g fonksiyonları
+ , (C sabit)
+eşitliklerini sağlıyor.
+ olduğuna göre 
+türevinin değeri kaçtır?
+1
+5
+9
+13
+17
+25.
+A)
+B)
+C)
+D)
+E)
+26.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+30
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2024-AYT/MAT
+ 
+olduğuna göre a, b ve c sayılarının doğru sıralanışı
+aşağıdakilerden hangisidir?
+ 
+ 
+ifadesinin sadeleştirilmiş biçimi aşağıdakilerden
+hangisidir?
+27.
+A)
+B)
+C)
+D)
+E)
+28.
+A)
+B)
+C)
+D)
+E)
+olmak üzere
+ 
+eşitliğini sağlayan a değeri için aşağıdakilerden
+hangisi doğrudur?
+ 
+ 
+ 
+ olmak üzere
+eşitliğini sağlayan x değerlerinin toplamı kaçtır?
+ 
+29.
+A)
+B)
+C)
+D)
+E)
+30.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+31
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2024-AYT/MAT
+C ve D noktaları O merkezli yarım çember üzerindedir.
+Buna göre ABCD dikdörtgeninin bir köşegeninin
+uzunluğu x türünden aşağıdakilerden hangisine
+eşittir?
+Bir ABC üçgeninin AB kenarının uzunluğu, BC kenarının
+uzunluğunun yarısına eşittir.
+ Bu üçgenin yüksekliklerinden ikisinin uzunlukları    
+4 birim ve 10 birim olduğuna göre diğer
+yüksekliğinin uzunluğu
+I.
+ 2 birim,
+II. 5 birim,
+III. 8 birim
+ değerlerinden hangileri olabilir?
+Yalnız I
+Yalnız II
+Yalnız III
+I ve II
+II ve III
+31.
+A)
+B)
+C)
+D)
+E)
+32.
+A)
+B)
+C)
+D)
+E)
+Bir restorandaki her bir pizza için önce daire biçiminde
+bir pizza hamuru açılmaktadır. Daha sonra bu hamurla
+eş merkezli bir daire oluşturacak biçimde turuncu
+renkteki malzemeli kısım oluşturulmaktadır.                
+Bu restorana giden Ali ve Ayşe’nin sipariş ettikleri
+pizzanın üstten görünümü şekilde verilmiştir.
+Şekilde verilen pizzayı 8 eş dilime ayıran Ayşe; bu
+dilimlerden 3’ünü almış, 5’ini de Ali’ye vermiştir. Ali
+kendi dilimlerinin tamamını yerken Ayşe ise kendi
+dilimlerinin sadece şekilde turuncu ile gösterilen
+kısımlarını yemiştir.
+Son durumda bu pizzanın üstten görünümünde yer alan
+dilimlerden Ali’nin yediği kısımların alanı, Ayşe’nin yediği
+kısımların alanının 2,4 katı olarak hesaplanmıştır.
+Buna göre bu pizzanın yarıçapının, turuncu kısmının
+yarıçapına oranı kaçtır?
+33.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+32
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2024-AYT/MAT
+Merkez açısı 
+ olan çember yayı biçimindeki bir telin
+uçları, dikdörtgen biçimindeki bir tablonun üst kenarına
+monte ediliyor. Bu tablo duvardaki bir çiviye, Şekil 1’deki
+gibi telin orta noktası çiviye denk gelecek biçimde
+asıldığında tablonun uzun kenarları zemine paralel
+oluyor.
+Sonra bu tel çıkartılıp bükülerek yarım çember şekline
+getiriliyor ve tekrar tabloya monte ediliyor. Tablo aynı
+çiviye, yine telin orta noktası çiviye denk gelecek
+biçimde Şekil 2’deki gibi asıldığında tablonun uzun
+kenarları yine zemine paralel oluyor.  Son durumda
+tablonun zeminden yüksekliği ilk duruma göre 8 birim
+azalıyor.
+Buna göre telin uzunluğu kaç birimdir?
+Bir dik koordinat düzleminde 
+, 
+, ,
+, 
+ ve  noktaları verilmiştir.
+ABC üçgeninin ağırlık merkezi ile DEF üçgeninin
+ağırlık merkezi aynı nokta olduğuna göre C ve         
+F noktaları arasındaki uzaklık kaç birimdir?
+10
+13
+15
+17
+20
+34.
+A)
+B)
+C)
+D)
+E)
+35.
+A)
+B)
+C)
+D)
+E)
+Aşağıdaki dik koordinat düzleminde verilen bir kenarı
+y-ekseninde olan kırmızı renkli kare ile bir kenarı
+x-ekseninde olan mavi renkli karenin birer köşeleri
+ortaktır.
+Kırmızı ve mavi renkli karelerin birer köşesi
+ doğrusunun üzerinde yer almaktadır.
+Buna göre kırmızı renkli karenin bir kenar uzunluğu
+kaç birimdir?
+ 
+Dik koordinat düzleminde 
+, 
+ve 
+doğrularının sınırladığı üçgensel
+bölgenin alanı kaç birimkaredir?
+9
+12
+15
+18
+21
+36.
+A)
+B)
+C)
+D)
+E)
+37.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+33
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2024-AYT/MAT
+Dik koordinat düzleminde 
+ noktasının; 
+noktasına göre simetriği C noktası, y-eksenine göre
+simetriği ise D noktasıdır.
+C ve D noktalarından geçen doğrunun denklemi
+olduğuna göre
+toplamı kaçtır?
+7
+13
+15
+19
+24
+Dik koordinat düzleminde 
+ noktası, 
+doğrusuna 
+ noktasında teğet olan bir çemberin  
+iç bölgesinde yer almaktadır.
+Buna göre bu çemberin yarıçapının birim türünden
+alabileceği en küçük tam sayı değeri kaçtır?
+6
+8
+10
+12
+14
+38.
+A)
+B)
+C)
+D)
+E)
+39.
+A)
+B)
+C)
+D)
+E)
+Küp biçiminde verilen Şekil 1’deki blok, kesikli çizgiler
+boyunca kesiliyor ve bu bloktan dikdörtgenler prizması
+biçiminde bir parça çıkarılıyor. Bu parçanın
+çıkarılmasıyla Şekil 2’deki görünüm elde ediliyor. Son
+durumda bloğun yüzey alanı 40 birimkare, hacmi ise
+180 birimküp azalıyor.
+Çıkarılan parçanın ayrıt uzunlukları birim türünden
+birer tam sayı olduğuna göre bu parçanın yüzey
+alanı kaç birimkaredir?
+202
+216
+222
+234
+256
+40.
+A)
+B)
+C)
+D)
+E)
+MATEMATİK TESTİ BİTTİ.
+FEN BİLİMLERİ TESTİNE GEÇİNİZ.
+34
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2024 ALAN YETERLİLİK TESTLERİ (AYT)
+2024 YKS 2. OTURUM ALAN YETERLİLİK TESTLERİ (AYT)
+09-06-2024
+TÜRK DİLİ VE
+EDEBİYATI-SOSYAL
+BİLİMLER-1 TESTİ
+1.   B
+2.   E
+3.   B
+4.   D
+5.   C
+6.   D
+7.   C
+8.   E
+9.   B
+10.   E
+11.   B
+12.   A
+13.   B
+14.   A
+15.   E
+16.   B
+17.   E
+18.   D
+19.   A
+20.   C
+21.   D
+22.   E
+23.   B
+24.   C
+25.   A
+26.   E
+27.   C
+28.   A
+29.   B
+30.   D
+31.   C
+32.   A
+33.   E
+34.   A
+35.   C
+36.   A
+37.   D
+38.   E
+39.   B
+40.   D
+SOSYAL BİLİMLER-2 TESTİ
+1.   C
+2.   A
+3.   D
+4.   A
+5.   D
+6.   B
+7.   D
+8.   C
+9.   B
+10.   A
+11.   E
+12.   B
+13.   E
+14.   B
+15.   C
+16.   A
+17.   E
+18.   E
+19.   A
+20.   D
+21.   C
+22.   D
+23.   A
+24.   E
+25.   B
+26.   B
+27.   C
+28.   D
+29.   B
+30.   A
+31.   A
+32.   D
+33.   B
+34.   D
+35.   A
+36.   B
+37.   C
+38.   D
+39.   B
+40.   E
+41.   C
+42.   A
+43.   A
+44.   C
+45.   C
+46.   E
+MATEMATİK TESTİ
+1.   D
+2.   C
+3.   E
+4.   D
+5.   C
+6.   B
+7.   D
+8.   A
+9.   B
+10.   E
+11.   D
+12.   A
+13.   D
+14.   C
+15.   B
+16.   E
+17.   D
+18.   C
+19.   E
+20.   C
+21.   D
+22.   B
+23.   A
+24.   A
+25.   B
+26.   E
+27.   B
+28.   A
+29.   C
+30.   D
+31.   B
+32.   B
+33.   D
+34.   C
+35.   E
+36.   E
+37.   C
+38.   A
+39.   B
+40.   A
+FEN BİLİMLERİ TESTİ
+1.   D
+2.   E
+3.   B
+4.   B
+5.   E
+6.   B
+7.   A
+8.   A
+9.   C
+10.   B
+11.   C
+12.   A
+13.   B
+14.   C
+15.   C
+16.   D
+17.   A
+18.   B
+19.   C
+20.   B
+21.   A
+22.   D
+23.   E
+24.   D
+25.   C
+26.   B
+27.   B
+28.   E
+29.   E
+30.   B
+31.   C
+32.   D
+33.   D
+34.   E
+35.   D
+36.   A
+37.   B
+38.   E
+39.   C
+40.   A
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2025-AYT/MAT
+MATEMATİK TESTİ
+1. Bu testte 40 soru vardır.
+2. Cevaplarınızı, cevap kâğıdının Matematik Testi için ayrılan kısmına işaretleyiniz.
+Aşağıdaki kutuların içine 2, 3, 4, 5, 6, 7, 8 ve 9 sayıları,
+her kutuya farklı bir sayı gelecek biçimde
+yerleştirildiğinde tüm eşitlikler sağlanmaktadır.
+Buna göre  
+ toplamı kaçtır?
+13
+14
+15
+16
+17
+a, b ve c birbirinden farklı rakamlar olmak üzere
+eşitsizlikleri sağlanmaktadır.
+Buna göre
+toplamı kaçtır?
+17
+18
+19
+20
+21
+1.
+A)
+B)
+C)
+D)
+E)
+2.
+A)
+B)
+C)
+D)
+E)
+x, y, A ve B gerçel sayılarının sayı doğrusu üzerindeki
+gösterimi şekildeki gibidir.
+Şekilde art arda bulunan noktalar arasındaki uzaklıklar
+birbirine eşit olmak üzere
+eşitlikleri sağlanıyor.
+Buna göre  
+toplamı kaçtır?
+4
+5
+6
+7
+8
+a, b, c ve d pozitif tam sayılar olmak üzere
+ 
+tam sayıları için
+eşitlikleri veriliyor. 
+Buna göre  
+toplamı kaçtır?
+8
+9
+10
+11
+12
+3.
+A)
+B)
+C)
+D)
+E)
+4.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+24
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2025-AYT/MAT
+Birbirinden farklı beş tane asal sayının toplamları 100’e,
+çarpımları ise altı basamaklı ABCABC doğal sayısına
+eşittir.
+Buna göre  
+toplamı kaçtır?
+8
+11
+14
+17
+20
+x sayısı   1, 0 ve 1’den farklı bir gerçel sayı olmak
+üzere
+ 
+ 
+kümesinin elemanları küçükten büyüğe doğru
+sıralandığında hangi eleman hiçbir zaman tam
+ortada yer almaz?
+5.
+A)
+B)
+C)
+D)
+E)
+6.
+A)
+B)
+C)
+D)
+E)
+a ve b gerçel sayılar olmak üzere gerçel sayılar kümesi
+üzerinde
+biçiminde tanımlanan f ve g fonksiyonları için
+eşitlikleri sağlanmaktadır.
+Buna göre  
+değeri kaçtır?
+ 
+ 
+7.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+25
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2025-AYT/MAT
+Dik koordinat düzleminde  
+  kapalı aralığında
+tanımlı  f  ve  g  fonksiyonları için  
+  ve  
+fonksiyonlarının grafikleri aşağıda gösterilmiştir.
+ kapalı aralığındaki a, b ve c gerçel sayıları için
+
+değerlerinin pozitif,
+
+değerlerinin negatif
+olduğu biliniyor.
+Buna göre a, b ve c sayılarının doğru sıralanışı
+aşağıdakilerden hangisidir?
+8.
+A)
+B)
+C)
+D)
+E)
+Doğal sayılar kümesinin A, B ve C alt kümeleri ile ilgili
+ 
+önermeleri veriliyor.
+önermesi doğru olduğuna göre
+I.
+II.
+III.
+ 
+ifadelerinden hangileri doğrudur?
+Yalnız I
+Yalnız III
+I ve II
+II ve III
+I, II ve III
+A, B, C, K ve L kümeleri ile ilgili
+eşitlikleri veriliyor.
+ olduğuna
+göre  
+kümesi aşağıdakilerden hangisidir?
+9.
+A)
+B)
+C)
+D)
+E)
+10.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+26
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2025-AYT/MAT
+a ve b pozitif gerçel sayılar olmak üzere
+denklemleri veriliyor.
+Bu denklemlerden her birinin çözüm kümesinin
+eleman sayısı 1 olduğuna göre 
+toplamının
+alabileceği farklı değerlerin çarpımı kaçtır?
+24
+32
+45
+72
+120
+ ve 
+ gerçel katsayılı polinomlar olmak üzere
+  toplamının ikinci dereceden bir polinom
+olduğu ve
+ 
+eşitliklerinin sağlandığı bilinmektedir.
+Buna göre  
+ değeri kaçtır?
+12
+24
+36
+48
+54
+11.
+A)
+B)
+C)
+D)
+E)
+12.
+A)
+B)
+C)
+D)
+E)
+Bir  
+  aritmetik dizisi için
+eşitlikleri veriliyor.
+Buna göre  
+  çarpımı kaçtır?
+28
+35
+42
+49
+56
+n bir pozitif tam sayı olmak üzere
+ifadesinin açılımında hem  
+ li terimin hem de  
+ li terimin katsayısı k pozitif tam sayısına eşittir.
+Buna göre  k  kaçtır?
+6
+12
+15
+18
+21
+13.
+A)
+B)
+C)
+D)
+E)
+14.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+27
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2025-AYT/MAT
+Sena, belirli altı akşamın her birinde farklı bir film izlemek
+için üç filmden oluşan A serisi ile yine üç filmden oluşan  
+B serisini seçmiştir. Sena her bir seri için o serinin birinci
+filmini izlemeden ikincisini, o serinin ikinci filmini
+izlemeden de üçüncüsünü izlemeyecektir.
+Buna göre Sena bu altı filmi hangi sırayla
+izleyeceğini kaç farklı şekilde belirleyebilir?
+20
+24
+27
+30
+32
+İki kapısı bulunan bir alışveriş merkezinin birinci
+kapısının önünde Mavi ve Kırmızı isimli 2 otopark, ikinci
+kapısının önünde Sarı, Turuncu ve Yeşil isimli 3 otopark
+bulunmaktadır. Bu alışveriş merkezine gelen Kartal,
+kapılardan rastgele birinin önüne gelip o kapının
+önündeki otoparklardan rastgele birine arabasını park
+ederek alışveriş merkezine girmiştir. Kartal, alışveriş
+merkezinden çıkarken arabasını hangi otoparka park
+ettiğini ve alışveriş merkezine hangi kapıdan girdiğini
+unuttuğu için kapıların rastgele birinden çıkıp o kapının
+önündeki otoparklardan rastgele birinde arabasını
+aramıştır.
+ Buna göre Kartal’ın, arabasını aradığı otoparkın
+arabasını park ettiği otopark olma olasılığı kaçtır?
+15.
+A)
+B)
+C)
+D)
+E)
+16.
+A)
+B)
+C)
+D)
+E)
+a ve b ardışık olmayan pozitif tam sayılar olmak üzere
+eşitliği sağlanmaktadır.
+Buna göre
+toplamı kaçtır?
+10
+13
+15
+18
+20
+a, b, c ve d birbirinden farklı pozitif gerçel sayılar olmak
+üzere A ve B kümeleri
+biçiminde tanımlanıyor.
+olduğuna göre  
+toplamı kaçtır?
+20
+22
+24
+26
+28
+17.
+A)
+B)
+C)
+D)
+E)
+18.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+28
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2025-AYT/MAT
+a sıfırdan farklı bir gerçel sayı, b ve c gerçel sayılar
+olmak üzere gerçel sayılar kümesi üzerinde 
+  biçiminde tanımlanan  f  fonksiyonu ve  
+bu fonksiyonun tersi olan 
+fonksiyonu ile ilgili
+eşitlikleri veriliyor.
+Buna göre  c  sayısının alabileceği farklı değerlerin
+toplamı kaçtır?
+6
+7
+10
+11
+14
+a ve b gerçel sayılar olmak üzere gerçel sayılar kümesi
+üzerinde 
+biçiminde tanımlanan  f  fonksiyonunun, tanım kümesi
+üzerinde sürekli olduğu biliniyor.
+Buna göre  
+çarpımı kaçtır?
+4
+6
+8
+10
+12
+19.
+A)
+B)
+C)
+D)
+E)
+20.
+A)
+B)
+C)
+D)
+E)
+n bir pozitif tam sayı ve a sıfırdan farklı bir gerçel sayı
+olmak üzere derecesi n, baş katsayısı a olan bir             
+f  polinom fonksiyonu için
+eşitliği sağlanıyor.
+Buna göre  
+çarpımı kaçtır?
+1
+2
+Dik koordinat düzleminde  
+  fonksiyonunun 
+
+  noktasındaki teğet doğrusu  
+
+  noktasındaki teğet doğrusu  
+olarak veriliyor.
+Buna göre
+ 
+biçiminde tanımlanan  g  fonksiyonu için  
+değeri kaçtır?
+64
+72
+80
+88
+96
+21.
+A)
+B)
+C)
+D)
+E)
+22.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+29
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2025-AYT/MAT
+Dik koordinat düzleminde gerçel sayılar kümesi üzerinde
+tanımlı ve sürekli bir  f  fonksiyonunun türevi olan
+fonksiyonunun grafiği şekilde gösterilmiştir.
+ 
+olduğuna göre  f  fonksiyonunun yerel minimum
+değeri kaçtır?
+a bir pozitif gerçel sayı olmak üzere
+  
+eşitliği veriliyor.
+Buna göre  a  kaçtır?
+ 
+ 
+23.
+A)
+B)
+C)
+D)
+E)
+24.
+A)
+B)
+C)
+D)
+E)
+Gerçel sayılar kümesi üzerinde tanımlı ve sürekli bir       
+f  fonksiyonu ile  
+  biçiminde tanımlanan   
+g  fonksiyonu için
+eşitlikleri sağlanıyor.
+Buna göre  
+  integralinin değeri kaçtır?
+20
+23
+26
+29
+32
+m bir pozitif gerçel sayı olmak üzere dik koordinat
+düzleminde verilen, 
+ kapalı aralığında tanımlı bir
+f  fonksiyonunun grafiği ile x-ekseni arasında kalan alan
+dört bölgeye ayrıldıktan sonra bu bölgeler şekildeki gibi
+boyanmıştır. Alanları birbirinden farklı olan bu bölgelerin
+alanları şekildeki gibi A, B, C ve D ile gösterilmiştir.
+ 
+olduğuna göre
+integralinin değeri
+aşağıdakilerden hangisine eşittir?
+25.
+A)
+B)
+C)
+D)
+E)
+26.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+30
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2025-AYT/MAT
+ifadesinin sadeleştirilmiş biçimi aşağıdakilerden
+hangisidir?
+x, y ve z sayıları
+kümesinin farklı
+birer elemanı olmak üzere
+olduğu bilinmektedir.
+Buna göre x, y ve z sayılarının doğru sıralanışı
+aşağıdakilerden hangisidir?
+ 
+ 
+ 
+27.
+A)
+B)
+C)
+D)
+E)
+28.
+A)
+B)
+C)
+D)
+E)
+Bir ABC üçgeninin kenar uzunlukları
+birim,
+birim ve
+ birim olmak üzere
+eşitliği sağlanıyor.
+  olmak üzere
+değeri kaçtır?
+ 
+ 
+ 
+ olmak üzere
+olduğuna göre  
+değeri kaçtır?
+ 
+ 
+29.
+A)
+B)
+C)
+D)
+E)
+30.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+31
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2025-AYT/MAT
+a ve b pozitif gerçel sayılar olmak üzere dik koordinat
+düzleminde gösterilen  
+  ve  
+  doğrularının x-ekseni
+ile yaptıkları dar açıların ölçüleri şekildeki gibi sırasıyla  
+A ve B olmaktadır.
+ 
+Buna göre  
+oranının A ve B türünden eşiti
+aşağıdakilerden hangisidir?
+ 
+Kenarları kırmızı renkli bir eşkenar üçgen ile kenarları
+mavi renkli bir eşkenar üçgen, her birinin bir köşesi diğer
+üçgenin bir kenarı üzerinde olacak biçimde şekildeki gibi
+çizilmiştir.
+Oluşan bu şekilde sarıya boyalı üçgenin alanı, griye
+boyalı üçgenin alanının 4 katına eşittir.
+ Buna göre kenarları kırmızı renkli olan üçgenin
+alanının kenarları mavi renkli olan üçgenin alanına
+oranı kaçtır?
+ 
+31.
+A)
+B)
+C)
+D)
+E)
+32.
+A)
+B)
+C)
+D)
+E)
+Duvar üzerinde, yerden yükseklikleri eşit ve aralarındaki
+uzaklık 48 birim olan iki çiviye, özdeş iki mavi ipin birer
+uçları bağlanmıştır. Sonra daire biçiminde bir plak,      
+bu iplerin diğer uçları plağın çevresindeki iki noktaya
+gelecek ve ipler yere dik olacak biçimde Şekil 1’deki
+gibi iplere asılmıştır. Daha sonra bu iplerden birisi
+kopmuş ve plak kalan ipe asılı olarak sarktığında ipin
+yere dik olduğu Şekil 2’deki görünüm elde edilmiş ve
+plağın yerden yüksekliği ilk duruma göre 16 birim
+azalmıştır.
+ 
+Buna göre bu plağın yarıçapı kaç birimdir?
+25
+26
+29
+30
+32
+33.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+32
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2025-AYT/MAT
+Şekilde C noktası 
+ doğru parçasının, D noktası   
+ çaplı yarım çemberin üzerinde olup     
+ dir.
+Şekilde sarıya boyalı bölgenin alanı maviye boyalı
+bölgenin alanının 4 katına eşit olduğuna göre    
+oranı kaçtır?
+ 
+Dik koordinat düzleminde köşe noktalarından biri
+orijinde, diğer ikisi eksenler üzerinde olan OAB üçgeni ile
+ ve 
+ noktalarını birleştiren 
+ doğru
+parçası çizilmiştir. 
+ doğru parçası hem 
+ hem de
+ doğru parçasının orta noktasından geçmektedir.
+Buna göre  OAB  üçgeninin alanı kaç birimkaredir?
+36
+42
+48
+54
+60
+34.
+A)
+B)
+C)
+D)
+E)
+35.
+A)
+B)
+C)
+D)
+E)
+a ve b pozitif gerçel sayılar olmak üzere dik koordinat
+düzleminde  
+  ve  
+  doğruları ile
+x-ekseni arasında kalan eşkenar üçgen biçimindeki
+bölgenin alanı  
+  birimkaredir.
+Buna göre  
+ çarpımı kaçtır?
+18
+24
+27
+30
+36
+Dik koordinat düzleminde çizilen bir çemberin 
+
+  doğrusu ile bir ortak
+noktası olduğu,
+
+  doğrusu ile iki ortak 
+noktası olduğu,
+
+  doğrusu ile ortak      
+noktası olmadığı
+biliniyor.
+Buna göre bu çemberin yarıçapı birim türünden
+aşağıdakilerden hangisi olabilir?
+11
+13 
+15
+17
+19
+36.
+A)
+B)
+C)
+D)
+E)
+37.
+A)
+B)
+C)
+D)
+E)
+Diğer sayfaya geçiniz.
+33
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2025-AYT/MAT
+Dik koordinat düzleminde bir A noktasının x-ekseni
+boyunca negatif yönde 15 birim ötelenmesi ile elde
+edilen nokta,  
+  doğrusu üzerinde
+olmaktadır.
+Buna göre A noktası y-ekseni boyunca pozitif yönde
+kaç birim ötelenirse elde edilen nokta  d  doğrusu
+üzerinde olur?
+9
+12
+16
+20
+25
+m ve n gerçel sayılar olmak üzere dik koordinat
+düzleminde
+ noktasından geçen 
+ 
+çemberi çiziliyor. Düzlemde çizilen  
+ doğrusu,  
+bu çemberi B ve C noktalarında kesiyor.
+ olduğuna göre
+ toplamı
+kaçtır?
+8
+9
+10
+11
+12
+38.
+A)
+B)
+C)
+D)
+E)
+39.
+A)
+B)
+C)
+D)
+E)
+Luna gezegeninde kurulması planlanan araştırma
+laboratuvarları için yarıçapları ve hacimleri aynı olan;  
+biri yarım dik dairesel silindir, diğeri yarım küre
+biçimindeki tamamen kapalı iki bina, zemin üzerine
+yerleştirilecek biçimde, şekildeki gibi tasarlanmıştır.
+Buna göre yarım dik dairesel silindir biçimindeki
+binanın zemini hariç yüzey alanının yarım küre
+biçimindeki binanın zemini hariç yüzey alanına oranı
+kaçtır?
+ 
+ 
+40.
+A)
+B)
+C)
+D)
+E)
+MATEMATİK TESTİ BİTTİ.
+FEN BİLİMLERİ TESTİNE GEÇİNİZ.
+34
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 
+
+
+---PAGE---
+
+2025 ALAN YETERLİLİK TESTLERİ (AYT)
+2025 YKS 2. OTURUM ALAN YETERLİLİK TESTLERİ (AYT)
+22-06-2025
+TÜRK DİLİ VE
+EDEBİYATI-SOSYAL
+BİLİMLER-1 TESTİ
+1.   C
+2.   C
+3.   E
+4.   C
+5.   D
+6.   E
+7.   E
+8.   C
+9.   B
+10.   D
+11.   A
+12.   E
+13.   D
+14.   A
+15.   B
+16.   B
+17.   E
+18.   E
+19.   D
+20.   A
+21.   C
+22.   D
+23.   A
+24.   B
+25.   C
+26.   B
+27.   E
+28.   D
+29.   D
+30.   B
+31.   A
+32.   C
+33.   A
+34.   B
+35.   A
+36.   E
+37.   B
+38.   D
+39.   C
+40.   B
+SOSYAL BİLİMLER-2 TESTİ
+1.   A
+2.   B
+3.   C
+4.   B
+5.   E
+6.   D
+7.   B
+8.   D
+9.   C
+10.   A
+11.   E
+12.   D
+13.   E
+14.   A
+15.   C
+16.   E
+17.   C
+18.   B
+19.   D
+20.   A
+21.   E
+22.   B
+23.   D
+24.   A
+25.   D
+26.   E
+27.   D
+28.   B
+29.   D
+30.   A
+31.   E
+32.   E
+33.   C
+34.   E
+35.   E
+36.   B
+37.   C
+38.   A
+39.   C
+40.   B
+41.   B
+42.   D
+43.   E
+44.   C
+45.   A
+46.   C
+MATEMATİK TESTİ
+1.   C
+2.   E
+3.   E
+4.   C
+5.   A
+6.   D
+7.   B
+8.   D
+9.   D
+10.   D
+11.   C
+12.   B
+13.   C
+14.   E
+15.   A
+16.   B
+17.   C
+18.   E
+19.   C
+20.   B
+21.   B
+22.   C
+23.   A
+24.   A
+25.   D
+26.   B
+27.   B
+28.   D
+29.   E
+30.   A
+31.   E
+32.   D
+33.   B
+34.   B
+35.   C
+36.   A
+37.   B
+38.   D
+39.   E
+40.   D
+FEN BİLİMLERİ TESTİ
+1.   E
+2.   A
+3.   E
+4.   A
+5.   B
+6.   D
+7.   A
+8.   D
+9.   B
+10.   B
+11.   A
+12.   E
+13.   E
+14.   B
+15.   B
+16.   E
+17.   E
+18.   A
+19.   A
+20.   C
+21.   E
+22.   A
+23.   A
+24.   D
+25.   B
+26.   E
+27.   C
+28.   C
+29.   E
+30.   D
+31.   D
+32.   E
+33.   C
+34.   D
+35.   C
+36.   B
+37.   D
+38.   C
+39.   B
+40.   D
+ 
+ 
+ 
+ Ö S Y M 
+Bu soruların telif hakları ÖSYM’ye aittir. Sorular ÖSYM’nin yazılı izni olmaksızın    
+hiçbir kişi, kurum veya kuruluş tarafından kullanılamaz. 
+ 

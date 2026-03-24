@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YKS Atlas — Soru Bankası</title>
+<meta name="description" content="TYT Geometri ve AYT Matematik gerçek sınav sorularını yıl ve konuya göre filtrele, çöz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">YKS Atlas <span>Soru Bankası</span></div>
+  <div class="nav-tabs">
+    <button class="nav-tab active" id="tab-tyt" onclick="showPage('tyt')">TYT Geometri</button>
+    <button class="nav-tab" id="tab-meb" onclick="showPage('meb')">MEB Kazanımlar</button>
+    <button class="nav-tab" id="tab-aytmat" onclick="showPage('aytmat')">AYT Matematik</button>
+    <button class="nav-tab locked" title="Yakında">AYT Geometri</button>
+  </div>
+  <div class="nav-right">
+    <a class="btn-dl" href="/tytgeometri.pdf" download><span class="ic">⬇</span> TYT PDF</a>
+    <a class="btn-dl" href="/aytmat.pdf" download><span class="ic">⬇</span> AYT Mat PDF</a>
+    <a class="btn-dl" href="/mebkazanim2026.pdf" download><span class="ic">⬇</span> MEB 2026</a>
+  </div>
+</nav>
+
+<!-- TYT GEO PAGE -->
+<div class="page active" id="page-tyt">
+  <div class="tgt-layout">
+    <aside class="sidebar" id="tyt-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-label">Yıl</div>
+        <div class="year-btns" id="tyt-year-btns">
+          <button class="year-btn all-btn active" onclick="filterYear('all','tyt')">Tümü</button>
+          <button class="year-btn" onclick="filterYear('2020','tyt')">2020</button>
+          <button class="year-btn" onclick="filterYear('2021','tyt')">2021</button>
+          <button class="year-btn" onclick="filterYear('2022','tyt')">2022</button>
+          <button class="year-btn" onclick="filterYear('2023','tyt')">2023</button>
+          <button class="year-btn" onclick="filterYear('2024','tyt')">2024</button>
+          <button class="year-btn" onclick="filterYear('2025','tyt')">2025</button>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Konu</div>
+        <div id="tyt-topicList"></div>
+      </div>
+    </aside>
+    <main class="main-area">
+      <div class="main-header">
+        <div>
+          <h1 class="main-title">TYT Geometri</h1>
+          <p class="main-sub">2020–2025 arası gerçek sınav sorularına tıklayarak eriş</p>
+        </div>
+        <div class="stats-chips">
+          <span class="chip" id="tyt-countChip">60 soru</span>
+          <span class="chip accent" id="tyt-filterChip">Tüm yıllar</span>
+        </div>
+      </div>
+      <div id="tyt-qGrid" class="q-grid"></div>
+    </main>
+  </div>
+</div>
+
+<!-- MEB PAGE -->
+<div class="page" id="page-meb">
+  <div class="meb-page">
+    <div class="meb-hero">
+      <div class="meb-icon">📋</div>
+      <div class="meb-hero-text">
+        <h2>MEB 2026 Kazanım Kitabı — Geometri</h2>
+        <p>ÖSYM'nin 2026 YKS sınavlarına esas kazanım ve açıklamalar kitabından alınan geometri konuları. Her kazanımın altında gerçek TYT sorularıyla eşleşmesi gösterilmiştir.</p>
+      </div>
+    </div>
+    <div class="meb-grid" id="mebGrid"></div>
+  </div>
+</div>
+
+<!-- AYT MAT PAGE -->
+<div class="page" id="page-aytmat">
+  <div class="tgt-layout">
+    <aside class="sidebar" id="aytmat-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-label">Yıl</div>
+        <div class="year-btns" id="aytmat-year-btns">
+          <button class="year-btn all-btn active" onclick="filterYear('all','aytmat')">Tümü</button>
+          <button class="year-btn" onclick="filterYear('2020','aytmat')">2020</button>
+          <button class="year-btn" onclick="filterYear('2021','aytmat')">2021</button>
+          <button class="year-btn" onclick="filterYear('2022','aytmat')">2022</button>
+          <button class="year-btn" onclick="filterYear('2023','aytmat')">2023</button>
+          <button class="year-btn" onclick="filterYear('2024','aytmat')">2024</button>
+          <button class="year-btn" onclick="filterYear('2025','aytmat')">2025</button>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Konu</div>
+        <div id="aytmat-topicList"></div>
+      </div>
+    </aside>
+    <main class="main-area">
+      <div class="main-header">
+        <div>
+          <h1 class="main-title">AYT Matematik</h1>
+          <p class="main-sub">Gerçek sınav sorularına tıklayarak eriş</p>
+        </div>
+        <div class="stats-chips">
+          <span class="chip" id="aytmat-countChip">— soru</span>
+          <span class="chip accent" id="aytmat-filterChip">Tüm yıllar</span>
+        </div>
+      </div>
+      <div id="aytmat-qGrid" class="q-grid"></div>
+    </main>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLB(event)">
+  <div class="lb-inner" onclick="e=>e.stopPropagation()">
+    <div class="lb-top">
+      <div class="lb-info">
+        <span class="q-year" id="lb-year-badge" style="padding:3px 10px;border-radius:6px;font-family:DM Mono,monospace;font-size:12px;font-weight:600"></span>
+        <div>
+          <div class="lb-title" id="lb-title"></div>
+          <div class="lb-sub" id="lb-sub"></div>
+        </div>
+      </div>
+      <button class="lb-close" onclick="closeLightbox()">✕ Kapat</button>
+    </div>
+    <div class="lb-img-wrap">
+      <img id="lb-img" src="" alt="Soru">
+    </div>
+    <!-- Answer choices -->
+    <div class="lb-choices" id="lb-choices">
+      <button class="choice-btn" data-choice="A" onclick="checkAnswer('A')">A</button>
+      <button class="choice-btn" data-choice="B" onclick="checkAnswer('B')">B</button>
+      <button class="choice-btn" data-choice="C" onclick="checkAnswer('C')">C</button>
+      <button class="choice-btn" data-choice="D" onclick="checkAnswer('D')">D</button>
+      <button class="choice-btn" data-choice="E" onclick="checkAnswer('E')">E</button>
+    </div>
+    <div class="lb-answer-msg" id="lb-answer-msg"></div>
+    <div class="lb-footer">
+      <div class="lb-tags" id="lb-tags"></div>
+      <div class="lb-nav">
+        <button class="lb-nav-btn" onclick="lbNav(-1)">← Önceki</button>
+        <button class="lb-nav-btn" onclick="lbNav(1)">Sonraki →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

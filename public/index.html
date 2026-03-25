@@ -141,18 +141,29 @@ nav{
 .lb-sub{font-size:10px;color:var(--t2);margin-top:1px}
 .lb-close{background:var(--bg4);border:1px solid var(--border2);color:var(--t2);padding:5px 11px;border-radius:6px;cursor:pointer;font-size:12px;font-family:'Inter',sans-serif;flex-shrink:0}
 .lb-close:hover{background:var(--red);color:#fff;border-color:var(--red)}
-.lbimg{overflow:auto;flex:1;background:#eee;display:flex;align-items:flex-start}
-.lbimg img{width:100%;display:block}
+.lbimg{overflow:auto;flex:1;background:#eee}
+#lbimg-scaler{position:relative;width:100%;transition:width .15s}
+.lbimg img{width:100%;display:block;user-select:none}
+#lb-canvas{position:absolute;top:0;left:0;width:100%;height:100%;cursor:crosshair;pointer-events:auto;touch-action:none}
 .lbbot{
   padding:8px 14px;display:flex;align-items:center;gap:8px;
   border-top:1px solid var(--border);background:var(--bg3);flex-shrink:0;flex-wrap:wrap;
 }
 .lb-tags{display:flex;gap:4px;flex-wrap:wrap;flex:1}
 .lb-tag{font-size:9px;padding:2px 6px;border-radius:3px;background:var(--bg4);color:var(--t2);border:1px solid var(--border)}
+.lb-ans-area{display:flex;align-items:center;gap:6px}
+.lb-ans-toggle{padding:4px 11px;border-radius:6px;font-size:11px;font-weight:500;cursor:pointer;border:1px solid var(--border2);background:var(--bg4);color:var(--a1);font-family:'Inter',sans-serif;transition:all .13s}
+.lb-ans-toggle:hover{background:rgba(245,200,66,.15);border-color:var(--a1)}
+.lb-ans-badge{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;padding:3px 9px;border-radius:5px}
 .lb-nav{display:flex;gap:5px}
 .lb-nbtn{padding:4px 11px;border-radius:6px;font-size:11px;font-weight:500;cursor:pointer;border:1px solid var(--border2);background:var(--bg4);color:var(--t2);font-family:'Inter',sans-serif}
 .lb-nbtn:hover{background:var(--a1);color:#000;border-color:var(--a1)}
-.lb-ans-badge{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;padding:3px 9px;border-radius:5px}
+.draw-toolbar{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.clr-btn{width:18px;height:18px;border-radius:50%;border:2px solid transparent;cursor:pointer;padding:0;transition:all .12s}
+.clr-btn.active,.clr-btn:hover{border-color:#fff;transform:scale(1.2)}
+.draw-sep{width:1px;height:16px;background:var(--border2);margin:0 2px}
+.draw-tool-btn{padding:3px 8px;border-radius:5px;font-size:11px;cursor:pointer;border:1px solid var(--border);background:var(--bg4);color:var(--t2);font-family:'Inter',sans-serif;transition:all .12s}
+.draw-tool-btn:hover,.draw-tool-btn.active{background:var(--bg3);border-color:var(--border2);color:var(--t1)}
 
 /* ─── ANALYSIS PAGE ─── */
 .anal-page{padding:22px;max-width:1100px}
@@ -228,8 +239,11 @@ nav{
     <button class="ntab" onclick="showPage('aytaz')" id="nt-aytaz">
       <span class="dot" style="background:#9b7fe8"></span> AYT Mat Analiz
     </button>
-    <button class="ntab locked" title="AYT Geometri PDF bekleniyor">
-      <span class="dot" style="background:#f08040"></span> AYT Geometri <span class="lk">🔒</span>
+    <button class="ntab" onclick="showPage('aytgeo')" id="nt-aytgeo">
+      <span class="dot" style="background:#f08040"></span> AYT Geometri
+    </button>
+    <button class="ntab" onclick="showPage('aytgeokaz')" id="nt-aytgeokaz">
+      <span class="dot" style="background:#f08040"></span> AYT Geo Analiz
     </button>
   </div>
   <div class="nav-r">
@@ -342,6 +356,58 @@ nav{
   </div>
 </div>
 
+<!-- AYT GEO SORULAR -->
+<div class="page" id="page-aytgeo">
+  <div class="split">
+    <aside class="sb" id="sb-aytgeo">
+      <div class="sb-section">
+        <div class="sb-label">Yıl</div>
+        <div class="yr-row">
+          <button class="yr-btn yr-all active" onclick="filter('aytgeo','year','all',this)">Tümü</button>
+          <button class="yr-btn" onclick="filter('aytgeo','year','2020',this)">2020</button>
+          <button class="yr-btn" onclick="filter('aytgeo','year','2021',this)">2021</button>
+          <button class="yr-btn" onclick="filter('aytgeo','year','2022',this)">2022</button>
+          <button class="yr-btn" onclick="filter('aytgeo','year','2023',this)">2023</button>
+          <button class="yr-btn" onclick="filter('aytgeo','year','2024',this)">2024</button>
+          <button class="yr-btn" onclick="filter('aytgeo','year','2025',this)">2025</button>
+        </div>
+      </div>
+      <div class="sb-hr"></div>
+      <div class="sb-section">
+        <div class="sb-label">Konu</div>
+        <div id="aytgeo-topics"></div>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="mhead">
+        <div>
+          <h1 class="mtitle">AYT Geometri</h1>
+          <p class="msub">2020–2025 · AYT Mat'ın geometri konulu soruları</p>
+        </div>
+        <div class="chips">
+          <span class="chip" id="aytgeo-cnt">– soru</span>
+          <span class="chip hi" id="aytgeo-filter">Tüm yıllar</span>
+        </div>
+      </div>
+      <div class="qgrid" id="aytgeo-grid"></div>
+    </main>
+  </div>
+</div>
+
+<!-- AYT GEO ANALİZ -->
+<div class="page" id="page-aytgeokaz">
+  <div class="anal-page">
+    <div class="anal-hero">
+      <div class="anal-hero-icon">🔺</div>
+      <div>
+        <h2>AYT Geometri — MEB 2026 Kazanım Haritası</h2>
+        <p>§9.4 Üçgenler, §10.5 Dörtgenler, §11.5–11.6 Çember & Katı Cisimler kapsamında alt kazanımlar ve 2020–2025 gerçek sınav soruları.</p>
+      </div>
+    </div>
+    <div class="kaz-grid" id="aytgeo-kaz"></div>
+  </div>
+</div>
+
 <!-- LİGHTBOX -->
 <div class="lb" id="lb" onclick="lbBgClick(event)">
   <div class="lbbox" onclick="e=>e.stopPropagation()">
@@ -353,10 +419,28 @@ nav{
       </div>
       <button class="lb-close" onclick="closeLB()">✕ Kapat</button>
     </div>
-    <div class="lbimg"><img id="lb-img" src="" alt="Soru"></div>
+    <div class="lbimg" id="lbimg-wrap"><div id="lbimg-scaler"><img id="lb-img" src="" alt="Soru"><canvas id="lb-canvas"></canvas></div></div>
     <div class="lbbot">
       <div class="lb-tags" id="lb-tags"></div>
-      <span class="lb-ans-badge" id="lb-ans-badge"></span>
+      <div class="lb-ans-area">
+        <button class="lb-ans-toggle" id="lb-ans-toggle" onclick="toggleAns()">Cevabı Gör</button>
+        <span class="lb-ans-badge" id="lb-ans-badge" style="display:none"></span>
+      </div>
+      <div class="draw-toolbar" id="draw-toolbar">
+        <button class="clr-btn active" id="clr-red" onclick="setDrawColor('#e05555')" style="background:#e05555" title="Kırmızı"></button>
+        <button class="clr-btn" id="clr-blue" onclick="setDrawColor('#4b9ef8')" style="background:#4b9ef8" title="Mavi"></button>
+        <button class="clr-btn" id="clr-yellow" onclick="setDrawColor('#f5c842')" style="background:#f5c842" title="Sarı"></button>
+        <button class="clr-btn" id="clr-green" onclick="setDrawColor('#3ecf8e')" style="background:#3ecf8e" title="Yeşil"></button>
+        <button class="clr-btn" id="clr-white" onclick="setDrawColor('#f0f2f8')" style="background:#f0f2f8;border-color:#555" title="Beyaz"></button>
+        <span class="draw-sep"></span>
+        <button class="draw-tool-btn active" id="btn-pen" onclick="setEraser(false)" title="Kalem">✏️</button>
+        <button class="draw-tool-btn" id="btn-eraser" onclick="setEraser(true)" title="Silgi">⌫</button>
+        <button class="draw-tool-btn" onclick="clearCanvas()" title="Hepsini Sil">🗑</button>
+        <span class="draw-sep"></span>
+        <button class="draw-tool-btn" onclick="shiftPage(-1)" title="Önceki Sayfa">◀ Sayfa</button>
+        <button class="draw-tool-btn" onclick="shiftPage(1)" title="Sonraki Sayfa">Sayfa ▶</button>
+        <button class="draw-tool-btn" onclick="resetZoom()" title="Zoom Sıfırla">⊙ ×1</button>
+      </div>
       <div class="lb-nav">
         <button class="lb-nbtn" onclick="lbNav(-1)">← Önceki</button>
         <button class="lb-nbtn" onclick="lbNav(1)">Sonraki →</button>
@@ -853,13 +937,55 @@ const AYT_KAZ = [
 ];
 
 // ════════════════════════════════════════
+// DATA — AYT GEO
+// ════════════════════════════════════════
+const AYTGEO_TOPICS = [
+  {id:'all',name:'Tümü',dot:'#f08040'},
+];
+
+const AYTGEO_KAZ = [
+  {icon:'△',bg:'#2d0d0d',clr:'#e05555',name:'Üçgenler (§9.4)',cnt:12,subs:[
+    {name:'Üçgen: açı, kenar, benzerlik & alan (9.4.1–9.4.5)',code:'9.4',
+     desc:'İç/dış açı toplamı, kenar-açı ilişkisi, K.A.K./K.K.K./A.A. benzerliği, Thales teoremi, Pisagor+Öklid teoremi, trigonometrik alan (½ab·sinC).',
+     tip:'Sınav: Her yıl 2–3 soru. AYT\'de üçgen soruları gerçek bağlamlı (alan, trigonometri, benzerlik) ve Sinüs/Kosinüs teoremiyle birleşik gelir.',
+     refs:[{yr:2020,n:28},{yr:2021,n:30},{yr:2022,n:30},{yr:2023,n:29},{yr:2024,n:32},{yr:2025,n:32}]},
+    {name:'Sinüs & Kosinüs Teoremi (11.1.2.2–11.1.2.3)',code:'11.1.2.2',
+     desc:'Kosinüs teoremi: c²=a²+b²−2ab·cosC; Sinüs teoremi: a/sinA=b/sinB=c/sinC=2R. Üçgen alanı = (1/2)ab·sinC. Gerçek hayat bağlamı.',
+     tip:'Sınav: Her yıl 1–3 soru. Sinüs teoremi gerçek hayat (ölçüm, mesafe) bağlamında, kosinüs teoremi ise 3 kenar/2 kenar+1 açı verildiğinde çıkıyor.',
+     refs:[{yr:2020,n:28},{yr:2021,n:29},{yr:2022,n:28},{yr:2023,n:29},{yr:2024,n:29},{yr:2025,n:29}]},
+    {name:'Özel dörtgenler (10.5.3)',code:'10.5.3',
+     desc:'Yamuk (paralel kenar, yükseklik, alan), ikizkenar yamuk, paralelkenar, eşkenar dörtgen (d₁×d₂/2), dikdörtgen, kare; hiyerarşi ve çevresel eleman.',
+     refs:[{yr:2020,n:39},{yr:2021,n:39},{yr:2022,n:38},{yr:2023,n:39},{yr:2024,n:39},{yr:2025,n:39}]},
+  ]},
+  {icon:'◯',bg:'#0d2744',clr:'#4b9ef8',name:'Çember & Daire (§11.5)',cnt:8,subs:[
+    {name:'Çemberde açılar: merkez, çevre, teğet-kiriş (11.5.1–11.5.3)',code:'11.5.2',
+     desc:'Merkez açı = 2×çevre açı; aynı yaya dayanan çevre açıları eşit; iç/dış açı özellikleri; teğet-kiriş açısı; dıştan teğet parçaları eşit; kiriş-orta dikme.',
+     tip:'Sınav: Her yıl 1–2 soru. "Merkez açısı = 2 × çevre açısı" + çevre açısını çaptan görme (90°) kombinasyonu en sık çıkan soru tipi.',
+     refs:[{yr:2020,n:35},{yr:2022,n:35},{yr:2023,n:31},{yr:2024,n:35},{yr:2025,n:35}]},
+    {name:'Dairenin çevresi, alanı & yay (11.5.4)',code:'11.5.4',
+     desc:'Çevre C=2πr, alan A=πr², yay uzunluğu l=rθ (θ radyan), daire dilimi alanı A=r²θ/2, yarım daire/çeyrek daire, halkalar.',
+     refs:[{yr:2020,n:36},{yr:2021,n:36},{yr:2022,n:36},{yr:2023,n:35},{yr:2024,n:36},{yr:2025,n:36}]},
+  ]},
+  {icon:'▲',bg:'#0a2420',clr:'#38b6a8',name:'Katı Cisimler (§11.6)',cnt:6,subs:[
+    {name:'Küre, silindir & koni (hacim & yüzey) (11.6.1)',code:'11.6.1',
+     desc:'V(silindir)=πr²h, V(koni)=πr²h/3, V(küre)=4πr³/3; yanal alan ve yüzey alanı formülleri; su doldurma/boşaltma problemleri.',
+     tip:'Sınav: Her yıl 1–2 soru. Silindir + koni + küre hacminin birleşimi (örn. bir hacim diğerine dönüştürme) yaygın. π iptal eden sorular hızlı çözülür.',
+     refs:[{yr:2020,n:40},{yr:2022,n:40},{yr:2023,n:40},{yr:2024,n:40},{yr:2025,n:40}]},
+  ]},
+];
+
+// ════════════════════════════════════════
 // APP STATE
 // ════════════════════════════════════════
 let state = {
   tyt:{ year:'all', topic:'all' },
   ayt:{ year:'all', topic:'all' },
+  aytgeo:{ year:'all', topic:'all' },
 };
-let lbQ = null, lbList = [], lbIdx = 0;
+let lbQ = null, lbList = [], lbIdx = 0, lbBank = '';
+let imgZoom = 1;
+let pgOffsets = {};
+let drawColor = '#e05555', drawSize = 3, isEraser = false, isDrawing = false, drawCtx = null, lastX = 0, lastY = 0;
 
 // ════════════════════════════════════════
 // PAGE SWITCHING
@@ -871,6 +997,7 @@ function showPage(id) {
   document.getElementById('nt-'+id).classList.add('active');
   if(id==='tytaz') buildKaz('tyt-kaz', TYT_KAZ, 'tyt');
   if(id==='aytaz') buildKaz('ayt-kaz', AYT_KAZ, 'ayt');
+  if(id==='aytgeokaz') buildKaz('aytgeo-kaz', AYTGEO_KAZ, 'aytgeo');
 }
 
 // ════════════════════════════════════════
@@ -878,9 +1005,9 @@ function showPage(id) {
 // ════════════════════════════════════════
 function buildTopics(containerId, topicList, bank) {
   const el = document.getElementById(containerId);
+  const baseQ = bank==='tyt' ? TYT_Q : (bank==='aytgeo' ? AYT_Q.filter(q=>q.topic==='geo') : AYT_Q);
   el.innerHTML = topicList.map(t => {
-    const cnt = t.id==='all' ? (bank==='tyt'?TYT_Q:AYT_Q).length
-                             : (bank==='tyt'?TYT_Q:AYT_Q).filter(q=>q.topic===t.id).length;
+    const cnt = t.id==='all' ? baseQ.length : baseQ.filter(q=>q.topic===t.id).length;
     return `<div class="ti ${t.id==='all'?'active':''}" id="ti-${bank}-${t.id}" onclick="filterTopic('${bank}','${t.id}')">
       <div class="tdot" style="background:${t.dot}"></div>
       <span class="tname">${t.name}</span>
@@ -909,15 +1036,15 @@ function filterTopic(bank, tid) {
 }
 
 function getVisible(bank) {
-  const Qs = bank==='tyt' ? TYT_Q : AYT_Q;
-  const {year, topic} = state[bank];
+  const Qs = bank==='aytgeo' ? AYT_Q.filter(q=>q.topic==='geo') : (bank==='tyt' ? TYT_Q : AYT_Q);
+  const {year, topic} = state[bank] || {year:'all',topic:'all'};
   return Qs.filter(q => (year==='all'||q.yr==year) && (topic==='all'||q.topic===topic));
 }
 
 function renderGrid(bank) {
   const vis = getVisible(bank);
-  const {year, topic} = state[bank];
-  const tops = bank==='tyt' ? TYT_TOPICS : AYT_TOPICS;
+  const {year, topic} = state[bank] || {year:'all',topic:'all'};
+  const tops = bank==='tyt' ? TYT_TOPICS : (bank==='aytgeo' ? AYTGEO_TOPICS : AYT_TOPICS);
   const tlabel = topic==='all' ? 'Tüm konular' : tops.find(t=>t.id===topic)?.name||'';
   document.getElementById(`${bank}-cnt`).textContent = `${vis.length} soru`;
   document.getElementById(`${bank}-filter`).textContent = (year==='all'?'Tüm yıllar':year) + ' · ' + tlabel;
@@ -946,6 +1073,7 @@ function renderGrid(bank) {
 // LIGHTBOX
 // ════════════════════════════════════════
 function openLB(bank, idx) {
+  lbBank = bank;
   lbList = getVisible(bank);
   lbIdx = idx;
   showLB();
@@ -960,14 +1088,30 @@ function showLB() {
   badge.style.background = bg; badge.style.color = clr;
   document.getElementById('lb-title').textContent = q.title;
   document.getElementById('lb-sub').textContent = q.sub;
-  document.getElementById('lb-img').src = q.pg;
+  // Apply page offset if any
+  const pgKey = q.yr+'-'+q.num+'-'+(lbBank||'');
+  const offset = pgOffsets[pgKey]||0;
+  const imgSrc = offset ? q.pg.replace(/(_p)(\d+)(\.jpg)$/, (_,a,n,c)=>a+String(+n+offset).padStart(2,'0')+c) : q.pg;
+  document.getElementById('lb-img').src = imgSrc;
   document.getElementById('lb-img').alt = `${q.yr} Soru ${q.num}`;
   document.getElementById('lb-tags').innerHTML = q.tags.map(t=>`<span class="lb-tag">${t}</span>`).join('');
   const ab = document.getElementById('lb-ans-badge');
   ab.textContent = 'Cevap: ' + q.ans;
   ab.style.background = bg; ab.style.color = clr;
+  ab.style.display = 'none';
+  document.getElementById('lb-ans-toggle').textContent = 'Cevabı Gör';
+  resetZoom();
+  clearCanvas();
   document.getElementById('lb').classList.add('open');
   document.body.style.overflow = 'hidden';
+}
+
+function toggleAns() {
+  const ab = document.getElementById('lb-ans-badge');
+  const t = document.getElementById('lb-ans-toggle');
+  const shown = ab.style.display !== 'none';
+  ab.style.display = shown ? 'none' : '';
+  t.textContent = shown ? 'Cevabı Gör' : 'Gizle';
 }
 
 function closeLB() {
@@ -1010,8 +1154,8 @@ function buildKaz(containerId, data, bank) {
         <div class="qrefs">${refsHtml}</div>
       </div>`;
     }).join('');
-    return `<div class="kcard" id="kc-${si}">
-      <div class="kcard-head" onclick="toggleKard(${si})">
+    return `<div class="kcard" id="kc-${bank}-${si}">
+      <div class="kcard-head" onclick="toggleKard('${bank}',${si})">
         <div class="kcard-ic" style="background:${sec.bg};color:${sec.clr}">${sec.icon}</div>
         <div class="kcard-meta">
           <div class="kcard-name">${sec.name}</div>
@@ -1025,12 +1169,14 @@ function buildKaz(containerId, data, bank) {
   }).join('');
 }
 
-function toggleKard(i) {
-  document.getElementById('kc-'+i).classList.toggle('open');
+function toggleKard(bank, i) {
+  document.getElementById('kc-'+bank+'-'+i).classList.toggle('open');
 }
 
 function jumpToQ(bank, yr, num) {
-  showPage(bank==='tyt'?'tyt':'ayt');
+  const pageId = bank==='tyt' ? 'tyt' : (bank==='aytgeo' ? 'aytgeo' : 'ayt');
+  showPage(pageId);
+  if (!state[bank]) state[bank] = {year:'all',topic:'all'};
   state[bank].year = String(yr);
   state[bank].topic = 'all';
   document.querySelectorAll(`#sb-${bank} .yr-btn`).forEach(b=>{
@@ -1042,8 +1188,118 @@ function jumpToQ(bank, yr, num) {
   setTimeout(()=>{
     const vis = getVisible(bank);
     const idx = vis.findIndex(q=>q.yr==yr&&q.num==num);
-    if(idx>=0) { lbList=vis; lbIdx=idx; showLB(); }
+    if(idx>=0) { lbBank=bank; lbList=vis; lbIdx=idx; showLB(); }
   }, 80);
+}
+
+// ════════════════════════════════════════
+// ZOOM
+// ════════════════════════════════════════
+function applyZoom() {
+  document.getElementById('lbimg-scaler').style.width = (imgZoom * 100) + '%';
+}
+function resetZoom() {
+  imgZoom = 1;
+  applyZoom();
+}
+(function initZoom(){
+  const wrap = document.getElementById('lbimg-wrap');
+  wrap.addEventListener('wheel', e=>{
+    if (!document.getElementById('lb').classList.contains('open')) return;
+    e.preventDefault();
+    imgZoom = Math.min(4, Math.max(1, imgZoom * (e.deltaY < 0 ? 1.1 : 0.9)));
+    applyZoom();
+  }, {passive:false});
+  // Touch pinch
+  let t0, t1, baseZoom;
+  wrap.addEventListener('touchstart', e=>{
+    if (e.touches.length===2) { t0=e.touches[0]; t1=e.touches[1]; baseZoom=imgZoom; e.preventDefault(); }
+  },{passive:false});
+  wrap.addEventListener('touchmove', e=>{
+    if (e.touches.length===2) {
+      const d = Math.hypot(e.touches[0].clientX-e.touches[1].clientX, e.touches[0].clientY-e.touches[1].clientY);
+      const d0 = Math.hypot(t0.clientX-t1.clientX, t0.clientY-t1.clientY);
+      imgZoom = Math.min(4, Math.max(1, baseZoom * d / d0));
+      applyZoom(); e.preventDefault();
+    }
+  },{passive:false});
+})();
+
+// ════════════════════════════════════════
+// DRAWING
+// ════════════════════════════════════════
+(function initCanvas(){
+  const canvas = document.getElementById('lb-canvas');
+  const img = document.getElementById('lb-img');
+  function syncCanvas() {
+    canvas.width = img.naturalWidth || img.clientWidth || 800;
+    canvas.height = img.naturalHeight || img.clientHeight || 600;
+    drawCtx = canvas.getContext('2d');
+  }
+  img.addEventListener('load', syncCanvas);
+  canvas.addEventListener('pointerdown', e=>{
+    e.preventDefault();
+    isDrawing=true;
+    canvas.setPointerCapture(e.pointerId);
+    const r=canvas.getBoundingClientRect();
+    const scl=canvas.width/r.width;
+    lastX=(e.clientX-r.left)*scl; lastY=(e.clientY-r.top)*scl;
+    if (!drawCtx) syncCanvas();
+    drawCtx.beginPath();
+    drawCtx.arc(lastX, lastY, drawSize/2, 0, Math.PI*2);
+    if (isEraser) { drawCtx.globalCompositeOperation='destination-out'; drawCtx.fillStyle='rgba(0,0,0,1)'; }
+    else { drawCtx.globalCompositeOperation='source-over'; drawCtx.fillStyle=drawColor; }
+    drawCtx.fill();
+  });
+  canvas.addEventListener('pointermove', e=>{
+    if (!isDrawing || !drawCtx) return;
+    e.preventDefault();
+    const r=canvas.getBoundingClientRect();
+    const scl=canvas.width/r.width;
+    const x=(e.clientX-r.left)*scl, y=(e.clientY-r.top)*scl;
+    drawCtx.beginPath();
+    drawCtx.moveTo(lastX, lastY);
+    drawCtx.lineTo(x, y);
+    if (isEraser) { drawCtx.globalCompositeOperation='destination-out'; drawCtx.strokeStyle='rgba(0,0,0,1)'; drawCtx.lineWidth=drawSize*4; }
+    else { drawCtx.globalCompositeOperation='source-over'; drawCtx.strokeStyle=drawColor; drawCtx.lineWidth=drawSize; }
+    drawCtx.lineCap='round'; drawCtx.lineJoin='round';
+    drawCtx.stroke();
+    lastX=x; lastY=y;
+  });
+  canvas.addEventListener('pointerup', ()=>{ isDrawing=false; });
+  canvas.addEventListener('pointercancel', ()=>{ isDrawing=false; });
+})();
+function setDrawColor(c) {
+  drawColor=c; isEraser=false;
+  document.querySelectorAll('.clr-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.draw-tool-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('btn-pen').classList.add('active');
+  // highlight active color btn
+  const map={'#e05555':'clr-red','#4b9ef8':'clr-blue','#f5c842':'clr-yellow','#3ecf8e':'clr-green','#f0f2f8':'clr-white'};
+  if(map[c]) document.getElementById(map[c]).classList.add('active');
+}
+function setEraser(v) {
+  isEraser=v;
+  document.getElementById('btn-pen').classList.toggle('active',!v);
+  document.getElementById('btn-eraser').classList.toggle('active',v);
+}
+function clearCanvas() {
+  if (!drawCtx) return;
+  const c=document.getElementById('lb-canvas');
+  drawCtx.clearRect(0,0,c.width,c.height);
+}
+
+// ════════════════════════════════════════
+// PAGE SHIFT
+// ════════════════════════════════════════
+function shiftPage(d) {
+  const q = lbList[lbIdx];
+  if (!q) return;
+  const key = q.yr+'-'+q.num+'-'+(lbBank||'');
+  pgOffsets[key] = (pgOffsets[key]||0) + d;
+  const offset = pgOffsets[key];
+  const imgSrc = q.pg.replace(/(_p)(\d+)(\.jpg)$/, (_,a,n,c)=>a+String(+n+offset).padStart(2,'0')+c);
+  document.getElementById('lb-img').src = imgSrc;
 }
 
 // ════════════════════════════════════════
@@ -1051,8 +1307,10 @@ function jumpToQ(bank, yr, num) {
 // ════════════════════════════════════════
 buildTopics('tyt-topics', TYT_TOPICS, 'tyt');
 buildTopics('ayt-topics', AYT_TOPICS, 'ayt');
+buildTopics('aytgeo-topics', AYTGEO_TOPICS, 'aytgeo');
 renderGrid('tyt');
 renderGrid('ayt');
+renderGrid('aytgeo');
 </script>
 </body>
 </html>

@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YKS Atlas — Soru Bankası</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080b12;--bg2:#0e1420;--bg3:#141c2e;--bg4:#1a2438;
+  --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.14);--border3:rgba(255,255,255,.22);
+  --t1:#f0f2f8;--t2:#8892aa;--t3:#485270;
+  --a1:#f5c842;--a2:#e0a820;
+  --blue:#4b9ef8;--green:#3ecf8e;--red:#e05555;--purple:#9b7fe8;--teal:#38b6a8;--orange:#f08040;
+  --r:10px;--rl:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);min-height:100vh;overflow-x:hidden}
+
+/* ─── NAV ─── */
+nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(8,11,18,.95);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:0;padding:0 20px;height:52px;
+}
+.logo{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--a1);margin-right:28px;letter-spacing:-.5px;white-space:nowrap}
+.logo sup{font-size:9px;font-weight:400;color:var(--t3);letter-spacing:.1em;text-transform:uppercase;margin-left:4px;vertical-align:top;margin-top:4px}
+.nav-tabs{display:flex;gap:2px;flex:1;overflow-x:auto;scrollbar-width:none}
+.nav-tabs::-webkit-scrollbar{display:none}
+.ntab{
+  display:flex;align-items:center;gap:6px;
+  padding:5px 14px;border-radius:8px;font-size:12px;font-weight:500;
+  cursor:pointer;border:none;background:none;color:var(--t3);transition:all .14s;white-space:nowrap;
+  font-family:'Inter',sans-serif;
+}
+.ntab:hover{background:var(--bg3);color:var(--t2)}
+.ntab.active{background:rgba(245,200,66,.12);color:var(--a1)}
+.ntab.locked{opacity:.35;cursor:not-allowed}
+.ntab .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.ntab .lk{font-size:9px}
+.nav-r{display:flex;gap:6px;margin-left:auto;flex-shrink:0}
+.dl-btn{
+  display:flex;align-items:center;gap:5px;padding:5px 12px;border-radius:7px;
+  font-size:11px;font-weight:500;text-decoration:none;
+  border:1px solid var(--border2);color:var(--t2);transition:all .14s;background:none;cursor:pointer;
+  font-family:'Inter',sans-serif;
+}
+.dl-btn:hover{background:var(--bg3);color:var(--t1);border-color:var(--border3)}
+
+/* ─── PAGE SYSTEM ─── */
+.page{display:none}
+.page.active{display:flex;flex-direction:column}
+
+/* ─── LAYOUT ─── */
+.split{display:grid;grid-template-columns:220px 1fr;min-height:calc(100vh - 52px)}
+
+/* ─── SIDEBAR ─── */
+.sb{
+  background:var(--bg2);border-right:1px solid var(--border);
+  padding:16px 12px;overflow-y:auto;
+  position:sticky;top:52px;height:calc(100vh - 52px);
+}
+.sb-label{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:8px;padding-left:6px}
+.sb-section{margin-bottom:20px}
+.yr-row{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:4px}
+.yr-btn{
+  padding:3px 9px;border-radius:6px;font-size:11px;font-weight:500;cursor:pointer;
+  border:1px solid var(--border);background:none;color:var(--t3);transition:all .13s;
+  font-family:'IBM Plex Mono',monospace;
+}
+.yr-btn:hover{border-color:var(--border2);color:var(--t2)}
+.yr-btn.active{background:rgba(245,200,66,.15);border-color:var(--a1);color:var(--a1)}
+.yr-btn.yr-all.active{background:rgba(75,158,248,.15);border-color:var(--blue);color:var(--blue)}
+.ti{
+  display:flex;align-items:center;gap:7px;padding:6px 8px;border-radius:7px;
+  cursor:pointer;transition:background .12s;margin-bottom:1px;border:1px solid transparent;
+}
+.ti:hover{background:var(--bg3)}
+.ti.active{background:rgba(245,200,66,.08);border-color:rgba(245,200,66,.2)}
+.ti .tdot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.ti .tname{font-size:11px;color:var(--t3);flex:1;line-height:1.3}
+.ti.active .tname{color:var(--t1)}
+.ti .tcnt{font-size:9px;color:var(--t3);font-family:'IBM Plex Mono',monospace}
+.sb-hr{height:1px;background:var(--border);margin:8px 0}
+
+/* ─── MAIN ─── */
+.main{padding:22px 22px;overflow-y:auto;flex:1}
+.mhead{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+.mtitle{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:var(--t1)}
+.msub{font-size:12px;color:var(--t2);margin-top:3px}
+.chips{display:flex;gap:5px;flex-wrap:wrap}
+.chip{font-size:10px;padding:2px 9px;border-radius:20px;background:var(--bg3);border:1px solid var(--border);color:var(--t2);font-family:'IBM Plex Mono',monospace}
+.chip.hi{background:rgba(245,200,66,.1);border-color:rgba(245,200,66,.25);color:var(--a1)}
+
+/* ─── QUESTION GRID ─── */
+.qgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.qcard{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);
+  padding:14px;cursor:pointer;transition:all .16s;position:relative;overflow:hidden;
+}
+.qcard:hover{border-color:var(--border3);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.qcard-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.qyr{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;padding:2px 7px;border-radius:4px}
+.qn{font-family:'IBM Plex Mono',monospace;font-size:16px;font-weight:600;color:var(--t1)}
+.qns{font-size:10px;color:var(--t3)}
+.qans{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.qtitle{font-size:12px;font-weight:500;color:var(--t1);margin-bottom:4px;line-height:1.4}
+.qdesc{font-size:10px;color:var(--t2);line-height:1.5;margin-bottom:8px}
+.qtags{display:flex;flex-wrap:wrap;gap:3px}
+.qtag{font-size:9px;padding:1px 6px;border-radius:3px;background:var(--bg4);color:var(--t3);border:1px solid var(--border)}
+.qhover{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(8,11,18,.75);opacity:0;transition:opacity .16s;backdrop-filter:blur(2px);
+}
+.qcard:hover .qhover{opacity:1}
+.qhover span{font-size:11px;font-weight:500;color:var(--a1);background:rgba(245,200,66,.12);border:1px solid rgba(245,200,66,.3);padding:6px 14px;border-radius:7px}
+.qcard[data-hidden="1"]{display:none}
+
+/* ─── LIGHTBOX ─── */
+.lb{
+  position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.88);
+  display:flex;align-items:center;justify-content:center;padding:16px;
+  opacity:0;pointer-events:none;transition:opacity .18s;
+}
+.lb.open{opacity:1;pointer-events:all}
+.lbbox{
+  background:var(--bg2);border:1px solid var(--border2);border-radius:var(--rl);
+  width:100%;max-width:800px;max-height:92vh;display:flex;flex-direction:column;
+  transform:scale(.96);transition:transform .18s;overflow:hidden;
+}
+.lb.open .lbbox{transform:scale(1)}
+.lbtop{
+  padding:10px 14px;display:flex;align-items:center;gap:10px;
+  border-bottom:1px solid var(--border);flex-shrink:0;background:var(--bg3);
+}
+.lb-badge{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;padding:3px 9px;border-radius:5px}
+.lb-info{flex:1;min-width:0}
+.lb-title{font-size:13px;font-weight:500;color:var(--t1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lb-sub{font-size:10px;color:var(--t2);margin-top:1px}
+.lb-close{background:var(--bg4);border:1px solid var(--border2);color:var(--t2);padding:5px 11px;border-radius:6px;cursor:pointer;font-size:12px;font-family:'Inter',sans-serif;flex-shrink:0}
+.lb-close:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.lbimg{overflow:auto;flex:1;background:#eee;display:flex;align-items:flex-start}
+.lbimg img{width:100%;display:block}
+.lbbot{
+  padding:8px 14px;display:flex;align-items:center;gap:8px;
+  border-top:1px solid var(--border);background:var(--bg3);flex-shrink:0;flex-wrap:wrap;
+}
+.lb-tags{display:flex;gap:4px;flex-wrap:wrap;flex:1}
+.lb-tag{font-size:9px;padding:2px 6px;border-radius:3px;background:var(--bg4);color:var(--t2);border:1px solid var(--border)}
+.lb-nav{display:flex;gap:5px}
+.lb-nbtn{padding:4px 11px;border-radius:6px;font-size:11px;font-weight:500;cursor:pointer;border:1px solid var(--border2);background:var(--bg4);color:var(--t2);font-family:'Inter',sans-serif}
+.lb-nbtn:hover{background:var(--a1);color:#000;border-color:var(--a1)}
+.lb-ans-badge{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;padding:3px 9px;border-radius:5px}
+
+/* ─── ANALYSIS PAGE ─── */
+.anal-page{padding:22px;max-width:1100px}
+.anal-hero{
+  background:linear-gradient(135deg,var(--bg2),var(--bg3));
+  border:1px solid var(--border2);border-radius:var(--rl);
+  padding:20px;margin-bottom:24px;display:flex;gap:16px;align-items:flex-start;
+}
+.anal-hero-icon{font-size:36px;flex-shrink:0}
+.anal-hero h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin-bottom:6px}
+.anal-hero p{font-size:12px;color:var(--t2);line-height:1.65}
+.kaz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden}
+.kcard-head{display:flex;align-items:center;gap:10px;padding:14px;cursor:pointer;user-select:none}
+.kcard-head:hover{background:var(--bg3)}
+.kcard-ic{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.kcard-meta{flex:1}
+.kcard-name{font-size:13px;font-weight:600;margin-bottom:1px}
+.kcard-sub{font-size:10px;color:var(--t2)}
+.kcard-badge{font-size:10px;padding:2px 7px;border-radius:12px;font-family:'IBM Plex Mono',monospace;font-weight:600;flex-shrink:0}
+.kcard-chev{color:var(--t3);font-size:10px;transition:transform .18s;flex-shrink:0}
+.kcard.open .kcard-chev{transform:rotate(180deg)}
+.kcard-body{display:none;border-top:1px solid var(--border)}
+.kcard.open .kcard-body{display:block}
+.ksub{padding:10px 14px;border-bottom:1px solid var(--border)}
+.ksub:last-child{border-bottom:none}
+.ksub-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:4px}
+.ksub-name{font-size:11px;font-weight:600;line-height:1.3;flex:1}
+.ksub-code{font-size:9px;font-family:'IBM Plex Mono',monospace;color:var(--t3);background:var(--bg4);padding:2px 6px;border-radius:3px;flex-shrink:0;margin-top:1px}
+.ksub-desc{font-size:10px;color:var(--t2);line-height:1.55;margin-bottom:6px}
+.ksub-tip{font-size:10px;color:var(--t3);background:var(--bg4);border-left:2px solid var(--border2);padding:5px 8px;margin-bottom:6px;line-height:1.55}
+.ksub-tip strong{color:var(--a1);font-weight:500}
+.qrefs{display:flex;flex-wrap:wrap;gap:4px}
+.qref{
+  font-size:9px;padding:2px 7px;border-radius:4px;cursor:pointer;
+  font-family:'IBM Plex Mono',monospace;font-weight:500;border:1px solid transparent;transition:opacity .13s;
+}
+.qref:hover{opacity:.75}
+.qref.none{color:var(--t3);font-style:italic;cursor:default}
+
+/* ─── COMING SOON ─── */
+.cs{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 52px);gap:14px;text-align:center;padding:40px}
+.cs-icon{font-size:56px;margin-bottom:4px}
+.cs h2{font-family:'Syne',sans-serif;font-size:28px;font-weight:700}
+.cs p{font-size:13px;color:var(--t2);max-width:360px;line-height:1.7}
+.cs-tag{background:var(--bg3);border:1px solid var(--border2);padding:5px 16px;border-radius:20px;font-size:12px;color:var(--t3)}
+
+/* ─── SECTION HEADER ─── */
+.sh{display:flex;align-items:center;gap:8px;margin:20px 0 12px}
+.sh h3{font-size:12px;font-weight:600;color:var(--t2);white-space:nowrap}
+.sh-hr{flex:1;height:1px;background:var(--border)}
+
+/* ─── ANIM ─── */
+@keyframes fu{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.qcard{animation:fu .2s ease backwards}
+@media(max-width:680px){.split{grid-template-columns:1fr}.sb{display:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">YKS Atlas <sup>beta</sup></div>
+  <div class="nav-tabs">
+    <button class="ntab active" onclick="showPage('tyt')" id="nt-tyt">
+      <span class="dot" style="background:#3ecf8e"></span> TYT Geometri
+    </button>
+    <button class="ntab" onclick="showPage('tytaz')" id="nt-tytaz">
+      <span class="dot" style="background:#f5c842"></span> TYT Geo Analiz
+    </button>
+    <button class="ntab" onclick="showPage('ayt')" id="nt-ayt">
+      <span class="dot" style="background:#4b9ef8"></span> AYT Matematik
+    </button>
+    <button class="ntab" onclick="showPage('aytaz')" id="nt-aytaz">
+      <span class="dot" style="background:#9b7fe8"></span> AYT Mat Analiz
+    </button>
+    <button class="ntab locked" title="AYT Geometri PDF bekleniyor">
+      <span class="dot" style="background:#f08040"></span> AYT Geometri <span class="lk">🔒</span>
+    </button>
+  </div>
+  <div class="nav-r">
+    <a class="dl-btn" href="tytgeometri.pdf" download>⬇ TYT PDF</a>
+    <a class="dl-btn" href="aytmat.pdf" download>⬇ AYT Mat PDF</a>
+  </div>
+</nav>
+
+<!-- TYT GEO SORULAR -->
+<div class="page active" id="page-tyt">
+  <div class="split">
+    <aside class="sb" id="sb-tyt">
+      <div class="sb-section">
+        <div class="sb-label">Yıl</div>
+        <div class="yr-row">
+          <button class="yr-btn yr-all active" onclick="filter('tyt','year','all',this)">Tümü</button>
+          <button class="yr-btn" onclick="filter('tyt','year','2020',this)">2020</button>
+          <button class="yr-btn" onclick="filter('tyt','year','2021',this)">2021</button>
+          <button class="yr-btn" onclick="filter('tyt','year','2022',this)">2022</button>
+          <button class="yr-btn" onclick="filter('tyt','year','2023',this)">2023</button>
+          <button class="yr-btn" onclick="filter('tyt','year','2024',this)">2024</button>
+          <button class="yr-btn" onclick="filter('tyt','year','2025',this)">2025</button>
+        </div>
+      </div>
+      <div class="sb-hr"></div>
+      <div class="sb-section">
+        <div class="sb-label">Konu</div>
+        <div id="tyt-topics"></div>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="mhead">
+        <div>
+          <h1 class="mtitle">TYT Geometri</h1>
+          <p class="msub">2020–2025 · Soru üzerine tıkla, gerçek sınav görüntüsünü gör</p>
+        </div>
+        <div class="chips">
+          <span class="chip" id="tyt-cnt">60 soru</span>
+          <span class="chip hi" id="tyt-filter">Tüm yıllar</span>
+        </div>
+      </div>
+      <div class="qgrid" id="tyt-grid"></div>
+    </main>
+  </div>
+</div>
+
+<!-- TYT GEO ANALİZ -->
+<div class="page" id="page-tytaz">
+  <div class="anal-page">
+    <div class="anal-hero">
+      <div class="anal-hero-icon">🗺️</div>
+      <div>
+        <h2>TYT Geometri — MEB Kazanım Haritası</h2>
+        <p>2026 YKS Kazanım Kitabına göre her konunun alt dalları ve 2020–2025 gerçek sınav soruları. Soru piline tıkla → soruyu aç.</p>
+      </div>
+    </div>
+    <div class="kaz-grid" id="tyt-kaz"></div>
+  </div>
+</div>
+
+<!-- AYT MAT SORULAR -->
+<div class="page" id="page-ayt">
+  <div class="split">
+    <aside class="sb" id="sb-ayt">
+      <div class="sb-section">
+        <div class="sb-label">Yıl</div>
+        <div class="yr-row">
+          <button class="yr-btn yr-all active" onclick="filter('ayt','year','all',this)">Tümü</button>
+          <button class="yr-btn" onclick="filter('ayt','year','2020',this)">2020</button>
+          <button class="yr-btn" onclick="filter('ayt','year','2021',this)">2021</button>
+          <button class="yr-btn" onclick="filter('ayt','year','2022',this)">2022</button>
+          <button class="yr-btn" onclick="filter('ayt','year','2023',this)">2023</button>
+          <button class="yr-btn" onclick="filter('ayt','year','2024',this)">2024</button>
+          <button class="yr-btn" onclick="filter('ayt','year','2025',this)">2025</button>
+        </div>
+      </div>
+      <div class="sb-hr"></div>
+      <div class="sb-section">
+        <div class="sb-label">Konu</div>
+        <div id="ayt-topics"></div>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="mhead">
+        <div>
+          <h1 class="mtitle">AYT Matematik</h1>
+          <p class="msub">2020–2025 · 40 soruluk tam sınav — konu ve yıl filtrele, tıkla gör</p>
+        </div>
+        <div class="chips">
+          <span class="chip" id="ayt-cnt">240 soru</span>
+          <span class="chip hi" id="ayt-filter">Tüm yıllar</span>
+        </div>
+      </div>
+      <div class="qgrid" id="ayt-grid"></div>
+    </main>
+  </div>
+</div>
+
+<!-- AYT MAT ANALİZ -->
+<div class="page" id="page-aytaz">
+  <div class="anal-page">
+    <div class="anal-hero">
+      <div class="anal-hero-icon">📐</div>
+      <div>
+        <h2>AYT Matematik — Konu Analizi & Kazanım Haritası</h2>
+        <p>AYT Matematik'teki 8 ana konu alanı, 30+ alt dal ve 2020–2025 sınav örüntüsü. Her konunun sınavdaki ağırlığını ve nasıl sorulduğunu gör.</p>
+      </div>
+    </div>
+    <div class="kaz-grid" id="ayt-kaz"></div>
+  </div>
+</div>
+
+<!-- LİGHTBOX -->
+<div class="lb" id="lb" onclick="lbBgClick(event)">
+  <div class="lbbox" onclick="e=>e.stopPropagation()">
+    <div class="lbtop">
+      <span class="lb-badge" id="lb-badge"></span>
+      <div class="lb-info">
+        <div class="lb-title" id="lb-title"></div>
+        <div class="lb-sub" id="lb-sub"></div>
+      </div>
+      <button class="lb-close" onclick="closeLB()">✕ Kapat</button>
+    </div>
+    <div class="lbimg"><img id="lb-img" src="" alt="Soru"></div>
+    <div class="lbbot">
+      <div class="lb-tags" id="lb-tags"></div>
+      <span class="lb-ans-badge" id="lb-ans-badge"></span>
+      <div class="lb-nav">
+        <button class="lb-nbtn" onclick="lbNav(-1)">← Önceki</button>
+        <button class="lb-nbtn" onclick="lbNav(1)">Sonraki →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ════════════════════════════════════════
+// DATA — TYT GEO
+// ════════════════════════════════════════
+const YC = {
+  2020:['#3ecf8e','#0a2d1e'],
+  2021:['#4b9ef8','#0d2744'],
+  2022:['#f5c842','#2d2300'],
+  2023:['#e05555','#2d0d0d'],
+  2024:['#9b7fe8','#1a1040'],
+  2025:['#38b6a8','#0a2420'],
+};
+
+const TYT_TOPICS = [
+  {id:'all',name:'Tümü',dot:'#4b9ef8'},
+  {id:'acil',name:'Açılar',dot:'#f5c842'},
+  {id:'ucgen',name:'Üçgen Özellikleri',dot:'#3ecf8e'},
+  {id:'pisakor',name:'Pisagor & Benzerlik',dot:'#9b7fe8'},
+  {id:'dortgen',name:'Dörtgenler',dot:'#e05555'},
+  {id:'yamuk',name:'Yamuk',dot:'#38b6a8'},
+  {id:'cokgen',name:'Düzgün Çokgen',dot:'#f5c842'},
+  {id:'alan',name:'Alan (karma)',dot:'#4b9ef8'},
+  {id:'cevre',name:'Çevre Hesabı',dot:'#3ecf8e'},
+  {id:'kati',name:'Katı Cisimler',dot:'#e05555'},
+  {id:'analitik',name:'Analitik Geometri',dot:'#9b7fe8'},
+];
+
+const TYT_Q = [
+  {yr:2020,num:31,pg:'imgs/tyt_p01.jpg',title:'ABC Kartonu Köşe Açısı',desc:'ABC kartonu A köşelerinde 3, B köşelerinde 9 adet birleşiyor. C köşelerinde kaç adet?',ans:'D',topic:'acil',sub:'Açılar & Köşe Toplamı',tags:['açı toplamı','360° bölme','köşe']},
+  {yr:2020,num:32,pg:'imgs/tyt_p02.jpg',title:'Döndürülen Dik Üçgenler',desc:'5 özdeş ikizkenar dik üçgen sıralandı; ABC döndürülünce B,C,D doğrusal. C ile D arası?',ans:'C',topic:'pisakor',sub:'Pisagor & Benzerlik',tags:['Pisagor','döndürme','benzerlik']},
+  {yr:2020,num:33,pg:'imgs/tyt_p02.jpg',title:'Tahterevalli Yamuğu',desc:'Tahterevallinin sol ucu yere değince sağda dik yamuk oluşuyor. Yamuğun çevresi?',ans:'A',topic:'yamuk',sub:'Yamuk & Çevre',tags:['yamuk','çevre','Pisagor']},
+  {yr:2020,num:34,pg:'imgs/tyt_p02.jpg',title:'Havlu Alan Oranı',desc:'Havlu askıya asılınca üst üste gelmeyen kısım 6 cm ve 12 cm; alan oranı 5/4. Uzun kenar?',ans:'D',topic:'dortgen',sub:'Dikdörtgen Alanı',tags:['dikdörtgen','alan','oran']},
+  {yr:2020,num:35,pg:'imgs/tyt_p03.jpg',title:'Dolap Bölmesi Oranı',desc:'5 bölmeli dolap önden kare; kapaklar eşit alanlı dikdörtgen. Uzun/kısa kenar oranı?',ans:'E',topic:'dortgen',sub:'Dikdörtgen Oranı',tags:['dikdörtgen','oran','görsel']},
+  {yr:2020,num:36,pg:'imgs/tyt_p03.jpg',title:'Özdeş Yamukların Çevresi',desc:'3 özdeş ikizkenar yamuk köşeleri çakışınca büyük üçgen kenarı 6, küçük üçgen 3. Yamuk çevresi?',ans:'C',topic:'cevre',sub:'Yamuk Çevresi',tags:['yamuk','çevre','birleştirme']},
+  {yr:2020,num:37,pg:'imgs/tyt_p03.jpg',title:'ABCD Kare Katlama',desc:'|DE|=6, |BF|=9; [CE] ve [CF] boyunca katlanınca BC ve DC çakışıyor. ABCD karesinin çevresi?',ans:'C',topic:'dortgen',sub:'Kare Katlama & Çevre',tags:['kare','katlama','Pisagor','çevre']},
+  {yr:2020,num:38,pg:'imgs/tyt_p03.jpg',title:'Üçgenden Altıgen Çevresi',desc:'Üçgen parçadan 3 üçgen çıkarılınca düzgün altıgen. Çıkarılan çevre toplamı 36. Altıgen çevresi?',ans:'B',topic:'cokgen',sub:'Düzgün Altıgen',tags:['düzgün altıgen','çevre','çıkarma']},
+  {yr:2020,num:39,pg:'imgs/tyt_p04.jpg',title:'Kare Prizmadan Küp Çıkarma',desc:'Taban=2×yükseklik prizma; küp çıkarılınca yüzey alanı 8 arttı. İlk hacim?',ans:'A',topic:'kati',sub:'Prizma Hacim & Yüzey',tags:['prizma','hacim','yüzey alanı','küp']},
+  {yr:2020,num:40,pg:'imgs/tyt_p04.jpg',title:'Su Kabı Hacmi',desc:'360 birimküp su; kap farklı yüzlere konulunca su yüksekliği 2, 4, 5 birim. Kabın hacmi?',ans:'E',topic:'kati',sub:'Prizma Hacim (Su)',tags:['prizma','hacim','su','3 boyut']},
+
+  {yr:2021,num:31,pg:'imgs/tyt_p06.jpg',title:"Ali'nin Dönme Açısı",desc:'Ali kuzeyden 5 m gidip 126° dönerek Berk\'e ulaşıyor. 10 m gidince en az kaç derece dönmeli?',ans:'D',topic:'acil',sub:'Dönme & Yön Açıları',tags:['dönme açısı','yön','mesafe']},
+  {yr:2021,num:32,pg:'imgs/tyt_p06.jpg',title:'Ortalama Üçgen',desc:'Bir kenarı diğer ikisinin aritmetik ortalaması olan üçgen. I, II, III\'ten hangileri?',ans:'B',topic:'ucgen',sub:'Üçgen Kenar Özellikleri',tags:['ortalama üçgen','kenar eşitsizliği']},
+  {yr:2021,num:33,pg:'imgs/tyt_p06.jpg',title:'Tahterevalli Destek',desc:'Sol uç yerde: sağ uç 180 cm; sağ uç yerde: sol uç 90 cm. Destek uzunluğu?',ans:'C',topic:'pisakor',sub:'Benzerlik & Orantı',tags:['benzerlik','orantı','tahterevalli']},
+  {yr:2021,num:34,pg:'imgs/tyt_p07.jpg',title:'ABC Üçgeninde D Noktası',desc:'AB üzerinde D; 4 ifadeden 2 doğru 2 yanlış. Doğru ifadeler? (AB⊥CD, |AD|=|BD|...)',ans:'E',topic:'ucgen',sub:'Yardımcı Elemanlar',tags:['açıortay','yükseklik','yardımcı elemanlar']},
+  {yr:2021,num:35,pg:'imgs/tyt_p07.jpg',title:'Gerilen Lastiğin Açısı',desc:'Lastik yukarı çekilince açılar 120°→90°→60°. x, y, z sıralaması?',ans:'B',topic:'acil',sub:'Açı Değişimi',tags:['açı','simetri','lastik']},
+  {yr:2021,num:36,pg:'imgs/tyt_p07.jpg',title:'Düzgün Dokuzgen Açısı',desc:'Düzgün dokuzgen; P∈[FB], |FD|=|FP|, m(APB)=x. x kaç derece?',ans:'C',topic:'cokgen',sub:'Düzgün Çokgen İç Açı',tags:['düzgün çokgen','iç açı','dokuzgen']},
+  {yr:2021,num:37,pg:'imgs/tyt_p07.jpg',title:'Arsa İmar Alanı',desc:'Arsa çevresi 42 m; her kenardan 2 m bırakılınca imar alanı 24 m². Köşegen uzunluğu?',ans:'B',topic:'dortgen',sub:'Dikdörtgen Alan & Köşegen',tags:['dikdörtgen','alan','köşegen','çevre']},
+  {yr:2021,num:38,pg:'imgs/tyt_p08.jpg',title:'Deltoid Gemi',desc:'Alanı 48 br² deltoid katlanarak gemi. İki uzunluk eşit. Görünen yüz alanı?',ans:'B',topic:'alan',sub:'Deltoid & Katlama',tags:['deltoid','katlama','alan']},
+  {yr:2021,num:39,pg:'imgs/tyt_p08.jpg',title:'İki Prizma Yüzey Alanı',desc:'Özdeş 2 prizma 3 farklı birleşimde; yüzey alanları 18, 20, 22. Bir prizmanın yüzey alanı?',ans:'A',topic:'kati',sub:'Prizma Yüzey Alanı',tags:['prizma','yüzey alanı','birleştirme']},
+  {yr:2021,num:40,pg:'imgs/tyt_p08.jpg',title:'Prizma Boyama Hacmi',desc:'Kare dik prizma: 3 yüzü beyaz (76 br²), 3 yüzü kırmızı (12 br²). Hacim?',ans:'B',topic:'kati',sub:'Prizma Hacim',tags:['kare prizma','yüzey alanı','hacim']},
+
+  {yr:2022,num:31,pg:'imgs/tyt_p10.jpg',title:'Paralel Kenarlı Açı Sıralaması',desc:'Aynı renk kenarlar paralel; a<b<60°. x,y,z açılarını küçükten büyüğe sırala.',ans:'D',topic:'acil',sub:'Paralel Doğrular & Açılar',tags:['paralel doğrular','açı sıralaması']},
+  {yr:2022,num:32,pg:'imgs/tyt_p10.jpg',title:'Bariyer Yüksekliği',desc:'Fabrika girişi: otobüs (2,6m) + tır (2m, 3,6m) için aynı bariyer konumu. Otobüs yüksekliği?',ans:'A',topic:'pisakor',sub:'Benzerlik & Orantı',tags:['benzerlik','orantılı kesim','bariyer']},
+  {yr:2022,num:33,pg:'imgs/tyt_p10.jpg',title:'Makas Uzunluğu',desc:'2 makas: kapalı ve 120° açık; mavi kısım 9 birim, gri uçlar 13 birim fark. Bağlantı noktasından uzaklık?',ans:'B',topic:'pisakor',sub:'Pisagor & Benzerlik',tags:['Pisagor','makas','benzerlik']},
+  {yr:2022,num:34,pg:'imgs/tyt_p11.jpg',title:'Kayan Bayrak Alanı',desc:'2 dik üçgen bayrak; sağdaki 4 birim kayınca toplam alan 88 m². 2 birim daha kayarsa?',ans:'B',topic:'alan',sub:'Kesişen Üçgen Alanı',tags:['üçgen alanı','kayan şekil','kesişim']},
+  {yr:2022,num:35,pg:'imgs/tyt_p11.jpg',title:'Dikdörtgen Karton Çevresi',desc:'9 cm + eşit alanlı 6 cm uzun kenarlı 3 dikdörtgen birleşince çevre 56 cm. Küçük dikdörtgen çevresi?',ans:'C',topic:'cevre',sub:'Dikdörtgen Çevresi',tags:['dikdörtgen','çevre','eşit alan']},
+  {yr:2022,num:36,pg:'imgs/tyt_p12.jpg',title:'Eşkenar Dörtgen Ayna Alanı',desc:'Aynı kenarlı 2 eşkenar dörtgen ayna: köşegen 26→alan 26; köşegen 22→alan?',ans:'E',topic:'dortgen',sub:'Eşkenar Dörtgen Alanı',tags:['eşkenar dörtgen','köşegen','alan','Pisagor']},
+  {yr:2022,num:37,pg:'imgs/tyt_p12.jpg',title:'Altıgen Çerçeve Plaka Alanı',desc:'Düzgün altıgen aynaya dikdörtgen plakalar; ayna çevre 24, çerçeve 57. Plaka alanı?',ans:'B',topic:'cokgen',sub:'Düzgün Altıgen',tags:['düzgün altıgen','plaka','alan']},
+  {yr:2022,num:38,pg:'imgs/tyt_p13.jpg',title:'Su Dökme Prizma',desc:'Küp oluşturan 2 prizma; su dökülünce biri 3/4, diğeri 1/3 dolu. Başlangıçta boş kabın hacmi?',ans:'C',topic:'kati',sub:'Prizma Hacim (Su)',tags:['prizma','hacim','su','kesir']},
+  {yr:2022,num:39,pg:'imgs/tyt_p13.jpg',title:'Silindir Mum Yüksekliği',desc:'4 özdeş silindir mum (r=2); içte yükseklik toplamı 80, dışta hacim toplamı 80π. Mum yüksekliği?',ans:'E',topic:'kati',sub:'Silindir Hacmi',tags:['silindir','πr²h','hacim']},
+  {yr:2022,num:40,pg:'imgs/tyt_p14.jpg',title:'Kamera Görüş Noktası',desc:'Birim karelerde A noktasında kamera; 5 noktadan hangisiyle tüm bahçe görüntüleniyor?',ans:'C',topic:'analitik',sub:'Analitik Düzlem',tags:['analitik düzlem','görüş açısı']},
+
+  {yr:2023,num:31,pg:'imgs/tyt_p16.jpg',title:'Defter Katlama Açısı',desc:'Sayfanın sağ üst köşesinden katlama; satır çizgileri üst kenara paralel. x kaç derece?',ans:'E',topic:'acil',sub:'Katlama Açıları',tags:['katlama','paralel doğrular','açı']},
+  {yr:2023,num:32,pg:'imgs/tyt_p17.jpg',title:'Dik Üçgenler Sarı Açı',desc:'3 dik üçgen hipotenüsleri aynı doğruda; mavi açılar 115°. Sarı açı?',ans:'B',topic:'acil',sub:'Dış Açı & Paralel Doğrular',tags:['dış açı','paralel doğrular']},
+  {yr:2023,num:33,pg:'imgs/tyt_p17.jpg',title:'Üçgen 3. Kenar Uzunluğu',desc:'İç açısı diğer ikisinin ortalaması olan üçgen; en kısa kenar 10, en uzun 16. 3. kenar?',ans:'D',topic:'ucgen',sub:'Kenar-Açı İlişkisi',tags:['kenar-açı ilişkisi','ortalama üçgen']},
+  {yr:2023,num:34,pg:'imgs/tyt_p17.jpg',title:'Duvarın Kalınlığı',desc:'Uzayabilen merdiven; dışarıdan pencerey eriyor, içeriden 3,5 m daha az uzatıyor. Duvar kalınlığı?',ans:'C',topic:'pisakor',sub:'Pisagor Uygulaması',tags:['Pisagor','merdiven','gerçek bağlam']},
+  {yr:2023,num:35,pg:'imgs/tyt_p18.jpg',title:'Ses Uygulaması Yüksekliği',desc:'60→70 birim ses arttığında dik üçgen alanı 260 arttı. "?" yüksekliği kaç birim?',ans:'C',topic:'alan',sub:'Dik Üçgen Alanı',tags:['dik üçgen','alan','oran']},
+  {yr:2023,num:36,pg:'imgs/tyt_p18.jpg',title:'Kare Tablolar Çevresi',desc:'3 kare tablo (çevre 12, 16, 28) birleşince yeni tablonun çevresi?',ans:'A',topic:'cevre',sub:'Birleşik Şekil Çevresi',tags:['kare','çevre','birleştirme']},
+  {yr:2023,num:37,pg:'imgs/tyt_p18.jpg',title:'Yamuk Karton Alanı',desc:'Yükseklik 30, üst kenar 20 birim yamuk; yükseklik 12 azalınca alt kenar 6 azaldı. Yeni alan?',ans:'C',topic:'yamuk',sub:'Yamuk Alan',tags:['yamuk','alan','benzerlik']},
+  {yr:2023,num:38,pg:'imgs/tyt_p18.jpg',title:'Yamuk Ayna Altıgen',desc:'Çevresi 28 olan 6 ikizkenar yamuk aynadan düzgün altıgen; kırmızı+mavi altigen çevre toplamı 96. Ayna alanı?',ans:'B',topic:'cokgen',sub:'Düzgün Altıgen & Yamuk',tags:['düzgün altıgen','yamuk','alan']},
+  {yr:2023,num:39,pg:'imgs/tyt_p19.jpg',title:'Küp Kesme Hacim Oranı',desc:'Küp bir yüzeye paralel kesilince büyük parça küçüğün 2 katı yüzey alanı. Büyüğün hacmi küçüğün kaç katı?',ans:'D',topic:'kati',sub:'Küp Hacim & Yüzey',tags:['küp','kesme','yüzey alanı','hacim oranı']},
+  {yr:2023,num:40,pg:'imgs/tyt_p19.jpg',title:'Küp Kutuların Hacim Farkı',desc:'Kırmızı, mavi, sarı küp kutular üst üste; sarı 16, mavi 20, kırmızı 45 br². Hacim farkı?',ans:'D',topic:'kati',sub:'Küp Hacim',tags:['küp','hacim','üstten görünüm']},
+
+  {yr:2024,num:31,pg:'imgs/tyt_p26.jpg',title:'Lazer Işın Açısı',desc:'Lazer sabit açıyla dönerek 6. ışın 1. ile çakışıyor; 2. ve 3. ışının dar açıları eşit. 4. ışın kaç derece?',ans:'D',topic:'acil',sub:'Dönme & Açı Bölme',tags:['dönme açısı','dar açı','lazer']},
+  {yr:2024,num:32,pg:'imgs/tyt_p26.jpg',title:'İkizkenar Üçgen x Açısı',desc:'Eş ABC ve DEF ikizkenar üçgenleri; A noktası [EF] üzerinde, [AC]∥[DE], 88°. x açısı?',ans:'E',topic:'acil',sub:'Açı & Paralel Kenar',tags:['ikizkenar üçgen','paralel kenar','açı']},
+  {yr:2024,num:33,pg:'imgs/tyt_p26.jpg',title:'Kaykay Direği Uzunluğu',desc:'Bağlantı direği 60 cm iken ip uç uzaklığı 50 cm; uzatılınca 80 cm. Fark kaç cm?',ans:'C',topic:'pisakor',sub:'Pisagor Uygulaması',tags:['Pisagor','kaykay','değişen uzunluk']},
+  {yr:2024,num:34,pg:'imgs/tyt_p27.jpg',title:'Şanslı Üçgen',desc:'İç açısı 30°, kenarları 4 ve 6 cm olan üçgenlerden hangileri "şanslı üçgen" (alan tam sayı)?',ans:'A',topic:'alan',sub:'Trigonometrik Alan',tags:['sin 30°','alan','tam sayı']},
+  {yr:2024,num:35,pg:'imgs/tyt_p27.jpg',title:'Dağ Yamacı Halat',desc:'Siyah ve mavi halat aynı noktadan yamaca; kırmızı halat siyah üzerinde. Açılar eşit. Noktalar arası mesafe?',ans:'D',topic:'pisakor',sub:'Benzerlik & Açı Eşitliği',tags:['benzerlik','açı eşitliği','halat']},
+  {yr:2024,num:36,pg:'imgs/tyt_p27.jpg',title:'Fotoğraf Görünmeyen Alan',desc:'3 fotoğraf kartpostale yerleştiriliyor. İlk ikinin görünmeyen kısım toplamı?',ans:'D',topic:'alan',sub:'Görünmeyen Alan',tags:['dikdörtgen','kesişim','görünmeyen alan']},
+  {yr:2024,num:37,pg:'imgs/tyt_p28.jpg',title:'Yamuk Vitray Alanı',desc:'4 özdeş yamuk cam aralarında boşluksuz birleşince dikdörtgen vitray (çevre 40). Bir camın alanı?',ans:'A',topic:'yamuk',sub:'Yamuk Alan',tags:['yamuk','alan','dikdörtgen']},
+  {yr:2024,num:38,pg:'imgs/tyt_p28.jpg',title:'İç İçe Düzgün Çokgen',desc:'Birer kenarları ortak 3 düzgün çokgen: içteki 6, ortadaki 10; 2 açı eşit. En dıştaki kaç kenarlı?',ans:'E',topic:'cokgen',sub:'Düzgün Çokgen Dış Açı',tags:['dış açı','düzgün çokgen','iç içe']},
+  {yr:2024,num:39,pg:'imgs/tyt_p28.jpg',title:'12 Blok Küp',desc:'12 özdeş dikdörtgen prizma blok birleşince küp. Küp yüzey / blok yüzey oranı?',ans:'B',topic:'kati',sub:'Prizma & Küp Yüzey',tags:['prizma','küp','yüzey alanı','oran']},
+  {yr:2024,num:40,pg:'imgs/tyt_p28.jpg',title:'Etiket Kaplama Prizma',desc:'4 cm kare etiketler; bir yüzeye 2, diğerine 3 etiket tam kaplıyor. Prizmanın hacmi?',ans:'C',topic:'kati',sub:'Prizma Boyut & Hacim',tags:['prizma','etiket','boyut','hacim']},
+
+  {yr:2025,num:31,pg:'imgs/tyt_p21.jpg',title:'Orantılı Açılar (MOR)',desc:'O noktasından 8 doğru; açılar 8 ardışık tam sayıyla orantılı. K,O,R doğrusal. MOR açısı?',ans:'D',topic:'acil',sub:'Orantılı Açılar',tags:['orantılı açılar','ardışık tam sayı']},
+  {yr:2025,num:32,pg:'imgs/tyt_p22.jpg',title:'Çeşitkenar Tam Sayı Üçgen',desc:'Tüm kenarları farklı tam sayı olan üçgenin en küçük çevre uzunluğu?',ans:'D',topic:'ucgen',sub:'Üçgen Eşitsizliği',tags:['üçgen eşitsizliği','tam sayı','çevre']},
+  {yr:2025,num:33,pg:'imgs/tyt_p22.jpg',title:'Yelpaze Tepe Açısı',desc:'3 ikizkenar üçgen yelpaze; açıkken 10° ve 7° görünüyor, kapanınca bir kenar masada. Mavi tepe açısı?',ans:'E',topic:'acil',sub:'İkizkenar Üçgen Açıları',tags:['ikizkenar üçgen','tepe açısı','yelpaze']},
+  {yr:2025,num:34,pg:'imgs/tyt_p22.jpg',title:'Orantılı Dik Üçgenler',desc:'Alanları 1:2:3 orantılı 3 dik üçgen; sarı hipotenüs 11, mavi 13. Kırmızı hipotenüs?',ans:'D',topic:'pisakor',sub:'Pisagor & Alan Orantısı',tags:['Pisagor','alan orantısı','hipotenüs']},
+  {yr:2025,num:35,pg:'imgs/tyt_p22.jpg',title:'Reklam Panosu Lamba',desc:'2 lamba panonun alt kenarını 3 eşe bölerek üçgensel aydınlatıyor. 1 lamba/2 lamba karanlık alan oranı?',ans:'A',topic:'alan',sub:'Üçgen Alan & Kesişim',tags:['üçgen alanı','kesişim','oran']},
+  {yr:2025,num:36,pg:'imgs/tyt_p23.jpg',title:'Tarihî Eser Yamuk Çevresi',desc:'Dik yamuk parça: alan 10 m²; orijinali kare, eksik dik üçgen 6 m². Yamuğun çevresi?',ans:'E',topic:'cevre',sub:'Dik Yamuk Çevresi',tags:['dik yamuk','çevre','Pisagor','kare']},
+  {yr:2025,num:37,pg:'imgs/tyt_p23.jpg',title:'3 Eş Kare Alan',desc:'3 eş kare yerleştirilmiş; mavi ve kırmızı bölge birer kare, sarı bölgeler 24, 66, 80 birimkare. Bir karenin alanı?',ans:'B',topic:'dortgen',sub:'İç İçe Kare Alan',tags:['kare','iç içe','alan','denklem']},
+  {yr:2025,num:38,pg:'imgs/tyt_p24.jpg',title:'k Kenarlı Düzgün Çokgen',desc:'k kenarlı çokgenin her kenarına eşkenar üçgen çizilip köşeler birleşince yeni çokgen ve 42°. k kaç?',ans:'C',topic:'cokgen',sub:'Düzgün Çokgen İç Açı',tags:['düzgün çokgen','iç açı','eşkenar üçgen']},
+  {yr:2025,num:39,pg:'imgs/tyt_p24.jpg',title:'Prizma Kısa/Uzun Ayrıt Oranı',desc:'6 özdeş prizma (hacim 75 br³) birleşip blok; bir parça diğerinin üstüne koyulunca yüzey 60 arttı. Kısa/uzun ayrıt oranı?',ans:'D',topic:'kati',sub:'Prizma Yüzey & Oran',tags:['kare prizma','yüzey alanı','oran']},
+  {yr:2025,num:40,pg:'imgs/tyt_p24.jpg',title:'Kare Prizma Ayrıt & Hacim',desc:'2 ayrıt toplamı 24, diğer ayrıtlar toplamı 52 olan kare dik prizmanın hacmi?',ans:'B',topic:'kati',sub:'Prizma Hacim',tags:['kare prizma','ayrıt','hacim']},
+];
+
+// ════════════════════════════════════════
+// DATA — AYT MAT
+// ════════════════════════════════════════
+const AYT_TOPICS = [
+  {id:'all',name:'Tümü',dot:'#4b9ef8'},
+  {id:'sayilar',name:'Sayılar & Bölünebilme',dot:'#f5c842'},
+  {id:'kume',name:'Kümeler',dot:'#3ecf8e'},
+  {id:'pol',name:'Polinomlar & Denklemler',dot:'#9b7fe8'},
+  {id:'fon',name:'Fonksiyonlar',dot:'#e05555'},
+  {id:'trigon',name:'Trigonometri',dot:'#38b6a8'},
+  {id:'analitik',name:'Analitik Geometri',dot:'#f08040'},
+  {id:'limit',name:'Limit & Türev',dot:'#4b9ef8'},
+  {id:'integral',name:'İntegral',dot:'#3ecf8e'},
+  {id:'dizi',name:'Diziler',dot:'#9b7fe8'},
+  {id:'sayma',name:'Sayma & Olasılık',dot:'#e05555'},
+  {id:'geo',name:'Geometri (AYT)',dot:'#38b6a8'},
+];
+
+// AYT Mat answer key
+const AYT_ANS = {
+  2020:{1:'A',2:'E',3:'D',4:'A',5:'C',6:'D',7:'E',8:'C',9:'B',10:'B',11:'C',12:'A',13:'E',14:'D',15:'B',16:'A',17:'B',18:'E',19:'D',20:'C',21:'C',22:'D',23:'E',24:'C',25:'B',26:'E',27:'B',28:'A',29:'B',30:'D',31:'B',32:'D',33:'C',34:'C',35:'B',36:'C',37:'A',38:'C',39:'E',40:'D'},
+  2021:{1:'E',2:'D',3:'A',4:'A',5:'A',6:'C',7:'C',8:'E',9:'D',10:'B',11:'A',12:'C',13:'C',14:'D',15:'D',16:'C',17:'E',18:'A',19:'E',20:'E',21:'B',22:'B',23:'B',24:'C',25:'D',26:'E',27:'D',28:'C',29:'D',30:'E',31:'D',32:'D',33:'D',34:'B',35:'B',36:'A',37:'C',38:'A',39:'D',40:'B'},
+  2022:{1:'A',2:'D',3:'D',4:'C',5:'A',6:'E',7:'C',8:'E',9:'C',10:'E',11:'E',12:'C',13:'B',14:'C',15:'E',16:'B',17:'A',18:'D',19:'B',20:'B',21:'C',22:'B',23:'D',24:'D',25:'B',26:'A',27:'A',28:'D',29:'C',30:'A',31:'E',32:'D',33:'A',34:'A',35:'C',36:'B',37:'C',38:'A',39:'C',40:'E'},
+  2023:{1:'E',2:'B',3:'A',4:'A',5:'D',6:'E',7:'D',8:'C',9:'A',10:'E',11:'D',12:'A',13:'B',14:'B',15:'D',16:'A',17:'E',18:'D',19:'D',20:'C',21:'C',22:'A',23:'D',24:'B',25:'B',26:'D',27:'B',28:'C',29:'D',30:'B',31:'C',32:'A',33:'E',34:'C',35:'B',36:'E',37:'A',38:'E',39:'B',40:'C'},
+  2024:{1:'D',2:'C',3:'E',4:'D',5:'C',6:'B',7:'D',8:'A',9:'B',10:'E',11:'D',12:'A',13:'D',14:'C',15:'B',16:'E',17:'D',18:'C',19:'E',20:'C',21:'D',22:'B',23:'A',24:'A',25:'B',26:'E',27:'B',28:'A',29:'C',30:'D',31:'B',32:'B',33:'D',34:'C',35:'E',36:'E',37:'C',38:'A',39:'B',40:'A'},
+  2025:{1:'C',2:'E',3:'E',4:'C',5:'A',6:'D',7:'B',8:'D',9:'D',10:'D',11:'C',12:'B',13:'C',14:'E',15:'A',16:'B',17:'C',18:'E',19:'C',20:'B',21:'B',22:'C',23:'A',24:'A',25:'D',26:'B',27:'B',28:'D',29:'E',30:'A',31:'E',32:'D',33:'B',34:'B',35:'C',36:'A',37:'B',38:'D',39:'E',40:'D'},
+};
+
+// Page-to-question mapping for AYT Mat
+const AYT_PG = {
+  2020:{1:'p01',2:'p01',3:'p01',4:'p01',5:'p02',6:'p02',7:'p02',8:'p02',9:'p02',10:'p03',11:'p03',12:'p03',13:'p03',14:'p04',15:'p04',16:'p04',17:'p05',18:'p05',19:'p05',20:'p05',21:'p06',22:'p06',23:'p06',24:'p06',25:'p07',26:'p07',27:'p07',28:'p07',29:'p08',30:'p08',31:'p08',32:'p09',33:'p09',34:'p10',35:'p10',36:'p10',37:'p11',38:'p11',39:'p11',40:'p11'},
+  2021:{1:'p13',2:'p13',3:'p13',4:'p13',5:'p14',6:'p14',7:'p14',8:'p14',9:'p15',10:'p15',11:'p15',12:'p15',13:'p16',14:'p16',15:'p16',16:'p16',17:'p17',18:'p17',19:'p17',20:'p17',21:'p18',22:'p18',23:'p19',24:'p19',25:'p19',26:'p19',27:'p20',28:'p20',29:'p20',30:'p20',31:'p21',32:'p21',33:'p21',34:'p22',35:'p22',36:'p22',37:'p23',38:'p23',39:'p23',40:'p23'},
+  2022:{1:'p25',2:'p25',3:'p25',4:'p25',5:'p26',6:'p26',7:'p26',8:'p26',9:'p27',10:'p27',11:'p27',12:'p27',13:'p28',14:'p28',15:'p28',16:'p29',17:'p29',18:'p29',19:'p29',20:'p30',21:'p30',22:'p30',23:'p30',24:'p31',25:'p31',26:'p31',27:'p32',28:'p32',29:'p32',30:'p32',31:'p32',32:'p33',33:'p33',34:'p34',35:'p34',36:'p34',37:'p35',38:'p35',39:'p35',40:'p36'},
+  2023:{1:'p38',2:'p38',3:'p38',4:'p38',5:'p39',6:'p39',7:'p39',8:'p39',9:'p40',10:'p40',11:'p40',12:'p40',13:'p41',14:'p41',15:'p41',16:'p42',17:'p42',18:'p42',19:'p42',20:'p43',21:'p43',22:'p44',23:'p44',24:'p44',25:'p45',26:'p45',27:'p45',28:'p45',29:'p45',30:'p45',31:'p46',32:'p46',33:'p46',34:'p47',35:'p47',36:'p47',37:'p48',38:'p48',39:'p48',40:'p49'},
+  2024:{1:'p51',2:'p51',3:'p51',4:'p51',5:'p52',6:'p52',7:'p52',8:'p52',9:'p53',10:'p53',11:'p53',12:'p53',13:'p54',14:'p54',15:'p54',16:'p54',17:'p55',18:'p55',19:'p55',20:'p55',21:'p56',22:'p56',23:'p56',24:'p57',25:'p57',26:'p57',27:'p58',28:'p58',29:'p58',30:'p59',31:'p59',32:'p59',33:'p59',34:'p60',35:'p60',36:'p60',37:'p60',38:'p61',39:'p61',40:'p61'},
+  2025:{1:'p63',2:'p63',3:'p63',4:'p63',5:'p64',6:'p64',7:'p64',8:'p65',9:'p65',10:'p65',11:'p66',12:'p66',13:'p66',14:'p66',15:'p67',16:'p67',17:'p67',18:'p67',19:'p68',20:'p68',21:'p68',22:'p68',23:'p69',24:'p69',25:'p69',26:'p69',27:'p70',28:'p70',29:'p70',30:'p70',31:'p71',32:'p71',33:'p71',34:'p72',35:'p72',36:'p72',37:'p72',38:'p73',39:'p73',40:'p73'},
+};
+
+// Topic classification for AYT Mat questions
+const AYT_TOPIC_MAP = {
+  sayilar:[1,2,3,4,7,12,25,27],
+  kume:[8,9,10],
+  pol:[5,6,9,10,11,13,14,15,16],
+  fon:[17,18,19,20,21,22,23,24,25,26],
+  trigon:[27,28,29,30],
+  analitik:[31,32,33,34,35,36,37,38,39,40],
+  limit:[20,21,22,23,24,25,26],
+  integral:[27,28,29,30],
+  dizi:[24,25,26],
+  sayma:[15,16,17],
+  geo:[34,35,36,37,38,39,40],
+};
+
+// Curated AYT Mat question info (key questions with titles/descriptions)
+const AYT_Q_INFO = {
+  // 2020 key geometry/analysis questions
+  '2020-28':{ title:'Dar Açılı Üçgen Trigonometri',desc:'Dar açılı ABC üçgeninin iç açıları derece cinsinden tam sayılar ve bir koşul. Trigonometrik değer?',topic:'trigon',tags:['trigonometri','üçgen açıları','tam sayı']},
+  '2020-30':{ title:'Yarıçap 1 Birim Çember',desc:'Dik koordinat düzleminde O merkezli r=1 çemberde bir nokta sorunu.',topic:'analitik',tags:['çember','analitik geometri','koordinat']},
+  '2020-34':{ title:'Düzgün Altıgen & Kare',desc:'Birer kenarları ortak düzgün altıgen ve kare; kenar uzunlukları ile ilgili soru.',topic:'geo',tags:['düzgün altıgen','kare','kenar']},
+  '2020-36':{ title:'Lunapark Tahterevalli',desc:'Düz zeminde tahterevalli; geometrik ilişkiler sorgulanıyor.',topic:'geo',tags:['trigonometri','geometri','tahterevalli']},
+  '2020-37':{ title:'ABCD Kare Koordinat',desc:'Dik koordinat düzleminde iki köşesi verilmiş ABCD karesi.',topic:'analitik',tags:['kare','koordinat','analitik geometri']},
+  '2020-40':{ title:'Silindir-Su İlişkisi',desc:'İçi tamamen su dolu silindir ile başka bir kap; su boşaltılınca.',topic:'geo',tags:['silindir','hacim','su']},
+
+  '2021-30':{ title:'Daire-Çember Geometri',desc:'Mavi üçgenin 12 ve 18 birim kenarları ile çember ilişkisi.',topic:'geo',tags:['çember','üçgen','kenar']},
+  '2021-31':{ title:'Müze Tablosu',desc:'Müzede bir tablonun asılı olduğu düzlem ile seyirci mesafesi.',topic:'analitik',tags:['analitik geometri','koordinat','uzaklık']},
+  '2021-37':{ title:'f\'nin Grafiği & Türev',desc:'Dik koordinat düzleminde f fonksiyonunun türevinin grafiği verilmiş.',topic:'limit',tags:['türev','grafik yorumlama','fonksiyon']},
+
+  '2022-16':{ title:'Dikdörtgen Alan Optimizasyonu',desc:'x ve y kenar uzunluklu dikdörtgenin alanı A; optimizasyon uygulaması.',topic:'limit',tags:['türev','optimizasyon','dikdörtgen']},
+  '2022-30':{ title:'Mavi Üçgen & Çember',desc:'Kenarları 12 ve 18 birim mavi üçgen; çember ilişkisi.',topic:'geo',tags:['üçgen','çember','kenar']},
+  '2022-34':{ title:'Koordinat Düzleminde Kare',desc:'1. bölgede koordinat eksenlerine paralel kare.',topic:'analitik',tags:['kare','koordinat','1. bölge']},
+  '2022-37':{ title:'İki Çember Teğet',desc:'x ve y eksenlerine teğet, 1. bölgede iki farklı çember.',topic:'analitik',tags:['çember','teğet','koordinat']},
+  '2022-39':{ title:'Dikdörtgenler Prizması Hacim',desc:'Ayrıt uzunlukları 6, 8, 10 birim olan dikdörtgenler prizması.',topic:'geo',tags:['prizma','hacim','Pisagor']},
+  '2022-40':{ title:'Koni Şeklinde Külahlar',desc:'Hacimleri eşit iki koni külah tabanları zemine paralel.',topic:'geo',tags:['koni','hacim','eşit']},
+
+  '2023-20':{ title:'Ahmet Amca\'nın Tarlası',desc:'Kenar uzunlukları olan dikdörtgen tarla; belirli koşullar.',topic:'geo',tags:['dikdörtgen','kenar','koşul']},
+  '2023-29':{ title:'Şekil 1: 4 ve 8 Birim Kenar',desc:'İki kenarın uzunlukları 4 ve 8 birim olan şekle ait soru.',topic:'geo',tags:['geometri','kenar uzunluğu']},
+  '2023-31':{ title:'Yarım Çember & Dikdörtgen',desc:'O merkezli AD çaplı yarım çember ile ABCD dikdörtgeni ve OEF üçgeni.',topic:'geo',tags:['yarım çember','dikdörtgen','üçgen']},
+  '2023-33':{ title:'Işıl\'ın Eş Üçgenleri',desc:'Mavi, pembe, sarı eş ikizkenar üçgenler birleştiriliyor.',topic:'geo',tags:['ikizkenar üçgen','eş şekil','birleştirme']},
+  '2023-35':{ title:'Çeyrek Daire Kağıt',desc:'Yarıçapı r birim çeyrek daire şeklinde kâğıt; kat ve kesimleri.',topic:'geo',tags:['çeyrek daire','katlama','alan']},
+  '2023-37':{ title:'Mahalle Krokisi',desc:'Birim karelerden oluşan krokide kurumların yerleri.',topic:'analitik',tags:['koordinat','konum','birim kare']},
+  '2023-40':{ title:'Kargo Paketi (Zeynep)',desc:'Kargo paketi hazırlamak için dikdörtgenler prizması şeklinde kutu.',topic:'geo',tags:['prizma','hacim','yüzey']},
+
+  '2024-31':{ title:'Pizza & Çember',desc:'Restorandaki pizza için daire şeklinde hamur; kesim geometrisi.',topic:'geo',tags:['daire','çember','kesim']},
+  '2024-32':{ title:'ABC Üçgeni & Kenар',desc:'ABC üçgeninin AB kenarının uzunluğu BC kenarının koşulu.',topic:'geo',tags:['üçgen','kenar ilişkisi']},
+  '2024-34':{ title:'Merkez Açısı',desc:'Merkez açısı ile ilgili çember sorusu.',topic:'geo',tags:['çember','merkez açısı']},
+  '2024-36':{ title:'Dik Koordinat Düzleminde Kare',desc:'Bir kenarı x-ekseni üzerinde bulunan kare.',topic:'analitik',tags:['kare','x-ekseni','koordinat']},
+  '2024-38':{ title:'A Noktasının Ötelemesi',desc:'Dik koordinat düzleminde noktanın ötelenmesi.',topic:'analitik',tags:['öteleme','dönüşüm','koordinat']},
+
+  '2025-29':{ title:'ABC Üçgeni Kenar Uzunlukları',desc:'ABC üçgeninin kenar uzunlukları ile ilgili koşul.',topic:'geo',tags:['üçgen','kenar uzunluğu']},
+  '2025-32':{ title:'Eşkenar Üçgen & Kırmızı Kenar',desc:'Kenarları kırmızı renkli eşkenar üçgen ile başka bir eşkenar üçgen.',topic:'geo',tags:['eşkenar üçgen','kenar','geometri']},
+  '2025-33':{ title:'Duvardaki Lambalar',desc:'Duvar üzerinde yerden yükseklikleri eşit, aralarındaki mesafe sabit lambalar.',topic:'analitik',tags:['koordinat','uzaklık','lamba']},
+  '2025-34':{ title:'C Noktası Şekil',desc:'Şekilde C noktasının koordinat düzlemindeki konumu.',topic:'analitik',tags:['analitik geometri','koordinat','nokta']},
+  '2025-37':{ title:'Çember Denklemi',desc:'Dik koordinat düzleminde çizilen çemberin analitik incelenmesi.',topic:'analitik',tags:['çember','denklem','koordinat']},
+  '2025-38':{ title:'A Noktası Öteleme & Çevirme',desc:'A noktasının x-ekseni boyunca ötelenmesi sonrası koşul.',topic:'analitik',tags:['öteleme','simetri','dönüşüm']},
+};
+
+// Build AYT Q array
+const AYT_Q = [];
+const AYT_TITLES = {
+  sayilar:['Sayı Problemi','Tam Sayı Koşulu','Asal Sayılar','Doğal Sayı','Rakam Problemi','Bölünebilme'],
+  kume:['Kümeler','Küme İşlemleri','Alt Küme'],
+  pol:['Polinom','2. Derece Denklem','Kök Bağıntısı','Rasyonel İfade','Çarpanlara Ayırma'],
+  fon:['Fonksiyon','Bileşke Fonksiyon','Ters Fonksiyon','Fonksiyon Grafiği','Parçalı Fonksiyon'],
+  trigon:['Trigonometri','Sinüs/Kosinüs','Trigonometrik Denklem','Birim Çember'],
+  analitik:['Analitik Geometri','Doğru Denklemi','Koordinat','Doğruya Uzaklık'],
+  limit:['Limit & Süreklilik','Türev','Türev Uygulaması','Ekstremum','Artan-Azalan'],
+  integral:['İntegral','Alan Hesabı','Belirsiz İntegral','Belirli İntegral'],
+  dizi:['Aritmetik Dizi','Geometrik Dizi','Dizi Terimi'],
+  sayma:['Permütasyon','Kombinasyon','Olasılık','Sayma'],
+  geo:['Geometri','Analitik Geometri','Çember','Üçgen'],
+};
+
+function getAYTtopic(num) {
+  if ([1,2,3,4].includes(num)) return 'sayilar';
+  if ([8,9].includes(num)) return 'kume';
+  if ([5,6,10,11,12].includes(num)) return 'pol';
+  if ([13,14,15,16,17,18,19,20,21,22].includes(num)) return 'fon';
+  if ([23,24,25,26].includes(num)) return num<=24?'limit':'dizi';
+  if ([27,28,29,30].includes(num)) return 'trigon';
+  if ([31,32,33].includes(num)) return 'limit';
+  if ([34,35,36,37,38,39,40].includes(num)) return 'analitik';
+  return 'fon';
+}
+
+[2020,2021,2022,2023,2024,2025].forEach(yr=>{
+  for(let n=1;n<=40;n++){
+    const info = AYT_Q_INFO[`${yr}-${n}`];
+    const pg = AYT_PG[yr]?.[n] || 'p01';
+    const topic = info?.topic || getAYTtopic(n);
+    const titlist = AYT_TITLES[topic] || ['Matematik'];
+    const title = info?.title || `${titlist[n % titlist.length]} (S${n})`;
+    AYT_Q.push({
+      yr, num:n,
+      pg:`imgs/ayt_${pg}.jpg`,
+      title,
+      desc:info?.desc || `${yr} AYT Matematik ${n}. soru`,
+      ans:AYT_ANS[yr]?.[n]||'?',
+      topic,
+      sub: info?.title || title,
+      tags:info?.tags||[topic],
+    });
+  }
+});
+
+// ════════════════════════════════════════
+// KAZANIM DATA
+// ════════════════════════════════════════
+const TYT_KAZ = [
+  {icon:'△',bg:'#0a2d1e',clr:'#3ecf8e',name:'Üçgenler (§9.4)',cnt:16,subs:[
+    {name:'Temel kavramlar & açı özellikleri',code:'9.4.1',desc:'İç açı toplamı, dış açı, kenar-açı ilişkisi, üçgen eşitsizliği, eşkenar/ikizkenar üçgen.',tip:'TYT\'de asla soyuk değil: katlanan kağıt, dönen kartonu, lastik gibi gerçek nesneler içinde.',refs:[{yr:2021,n:32},{yr:2023,n:33},{yr:2025,n:32}]},
+    {name:'Eşlik & Benzerlik (KAK, KKK, AA, Thales)',code:'9.4.2',desc:'Benzerlik oranları, Thales teoremi, paralel kesme doğrusu.',tip:'Gerçek bağlam: merdiven, halat, kaykay, tahterevalli. Pisagor ile el ele gelir.',refs:[{yr:2020,n:32},{yr:2021,n:33},{yr:2022,n:32},{yr:2023,n:34},{yr:2024,n:33},{yr:2024,n:35},{yr:2025,n:34}]},
+    {name:'Yardımcı elemanlar (açıortay, yükseklik)',code:'9.4.3',desc:'Açıortayın oransal özellikleri, ağırlık/diklik merkezi.',tip:'Genellikle açıortay + benzerlik veya açı + yardımcı eleman birlikte çıkıyor.',refs:[{yr:2021,n:34}]},
+    {name:'Pisagor & Dik Üçgen Trigonometri',code:'9.4.4',desc:'Pisagor teoremi, Öklid teoremi, sin/cos/tan, 30-60-90 ve 45-45-90 üçgenleri.',tip:'TYT\'de trigonometri sormaz ama sin30°=0,5 bilmek alan sorularını çözdürür.',refs:[{yr:2023,n:34},{yr:2024,n:33},{yr:2025,n:34}]},
+    {name:'Üçgenin Alanı',code:'9.4.5',desc:'Taban × yükseklik / 2, trigonometrik alan, kesişen/kaydırılan şekil alanları.',tip:'Alan genellikle kesişen veya kaydırılan şekillerin üçgen kısmı olarak çıkıyor.',refs:[{yr:2022,n:34},{yr:2024,n:34},{yr:2025,n:35}]},
+  ]},
+  {icon:'◻',bg:'#2d2300',clr:'#f5c842',name:'Dörtgenler & Özel Şekiller (§10.5)',cnt:9,subs:[
+    {name:'Yamuk & ikizkenar yamuk alanı',code:'10.5.3',desc:'Paralel kenarlar, yükseklik, alan=(a+b)/2×h, ikizkenar yamukta eşit bacaklar.',tip:'TYT\'de yamuk çoğu zaman büyük şeklin içine gömülü gelir.',refs:[{yr:2020,n:33},{yr:2023,n:37},{yr:2024,n:37},{yr:2025,n:36}]},
+    {name:'Eşkenar dörtgen (baklava)',code:'10.5.3',desc:'Alan = d₁ × d₂ / 2. Kenar ile köşegen arası Pisagor.',refs:[{yr:2022,n:36}]},
+    {name:'Dikdörtgen & kare alanı/çevresi',code:'10.5.3',desc:'Kare-dikdörtgen dönüşümü, katlandığında ortaklaşan kenarlar.',tip:'Birleşim/kesişim bölgesinin hangi kenarlarını saydığına dikkat et.',refs:[{yr:2020,n:34},{yr:2020,n:35},{yr:2020,n:37},{yr:2021,n:37},{yr:2025,n:37}]},
+  ]},
+  {icon:'⬡',bg:'#1a1040',clr:'#9b7fe8',name:'Düzgün Çokgen (§10.5.1)',cnt:7,subs:[
+    {name:'İç açı = (n–2)·180°/n, dış açı = 360°/n',code:'10.5.1.1',desc:'Formül her yıl soruda verilir. Asıl zorluk: n kenarın bağlamdan çıkarılması.',tip:'Formülü ezberlemek yetmez. Bağlamdaki çokgeni teşhis etmek asıl beceri.',refs:[{yr:2020,n:38},{yr:2021,n:36},{yr:2022,n:37},{yr:2023,n:38},{yr:2024,n:38},{yr:2025,n:38}]},
+  ]},
+  {icon:'▣',bg:'#0a2d1e',clr:'#3ecf8e',name:'Katı Cisimler (§10.6 & §11.6)',cnt:12,subs:[
+    {name:'Dik prizma — hacim & yüzey alanı',code:'10.6.1.1',desc:'V = taban × yükseklik. Yüzey = 2×taban + yanal. Su, küp çıkarma, birleştirme.',tip:'Formül her yıl verilir. Ama soru küp çıkarma, su doldurma, iki prizma karşılaştırma şeklinde gelir.',refs:[{yr:2020,n:39},{yr:2020,n:40},{yr:2021,n:39},{yr:2021,n:40},{yr:2022,n:38},{yr:2023,n:39},{yr:2023,n:40},{yr:2024,n:39},{yr:2024,n:40},{yr:2025,n:39},{yr:2025,n:40}]},
+    {name:'Silindir, Küre, Koni',code:'11.6.1.1',desc:'V(silindir) = πr²h. Küre ve koni formülleri. TYT\'de sadece silindir çıkmıştır.',refs:[{yr:2022,n:39}]},
+  ]},
+  {icon:'∠',bg:'#2d0d0d',clr:'#e05555',name:'Açılar & Paralel Doğrular',cnt:10,subs:[
+    {name:'Paralel doğrular, katlama, döndürme',code:'9.4.1+',desc:'Paralel doğrularda açılar, katlama açıları, döndürme açısı.',tip:'Her yıl 1–2 soru. Açı her zaman bir nesnenin içinde: kağıt katlama, lazer, tahterevalli, yelpaze.',refs:[{yr:2020,n:31},{yr:2021,n:31},{yr:2021,n:35},{yr:2022,n:31},{yr:2023,n:31},{yr:2023,n:32},{yr:2024,n:31},{yr:2024,n:32},{yr:2025,n:31},{yr:2025,n:33}]},
+  ]},
+];
+
+const AYT_KAZ = [
+  {icon:'∑',bg:'#0d2744',clr:'#4b9ef8',name:'Sayılar & Sayı Teorisi (§9.3)',cnt:24,subs:[
+    {name:'Tam sayı, bölünebilme, asal sayılar',code:'9.3.2',desc:'Bölünebilme kuralları, EBOB/EKOK, asal çarpanlar, rakam problemleri.',tip:'Her yıl 3–4 soru garantili. Genellikle 1–4. sorular bu kümeden geliyor.',refs:[{yr:2020,n:1},{yr:2021,n:1},{yr:2022,n:1},{yr:2023,n:1},{yr:2024,n:1},{yr:2025,n:1}]},
+    {name:'Mutlak değer & eşitsizlikler',code:'9.3.3',desc:'Mutlak değer denklem/eşitsizliği, gerçek sayı aralıkları.',refs:[{yr:2020,n:3},{yr:2021,n:3},{yr:2022,n:4},{yr:2023,n:5},{yr:2024,n:5},{yr:2025,n:6}]},
+    {name:'Üslü & köklü ifadeler',code:'9.3.4',desc:'Üslü denklemler, köklü ifadeler, rasyonel kuvvetler.',refs:[{yr:2020,n:6},{yr:2021,n:6},{yr:2022,n:5},{yr:2023,n:6},{yr:2024,n:6},{yr:2025,n:5}]},
+  ]},
+  {icon:'f(x)',bg:'#0a2d1e',clr:'#3ecf8e',name:'Fonksiyonlar & İkinci Derece (§10.2–10.4)',cnt:30,subs:[
+    {name:'Fonksiyon kavramı, bileşke, ters',code:'10.2.1',desc:'Tanım/görüntü kümesi, bire bir-örten, bileşke ve ters fonksiyon işlemleri.',tip:'AYT\'de her yıl 4–6 soru. Bileşke ve ters fonksiyon kombinasyonları en sık.',refs:[{yr:2020,n:17},{yr:2021,n:17},{yr:2022,n:17},{yr:2023,n:17},{yr:2024,n:21},{yr:2025,n:19}]},
+    {name:'Polinomlar & çarpanlara ayırma',code:'10.3.1',desc:'Polinom bölme, Horner şeması, kök bağıntısı, rasyonel ifadeler.',refs:[{yr:2020,n:13},{yr:2021,n:13},{yr:2022,n:13},{yr:2023,n:18},{yr:2024,n:13},{yr:2025,n:11}]},
+    {name:'İkinci dereceden denklem & kökler',code:'10.4.1',desc:'Diskriminant, kök-katsayı bağıntısı, karmaşık sayılar giriş.',refs:[{yr:2020,n:10},{yr:2021,n:9},{yr:2022,n:9},{yr:2023,n:11},{yr:2024,n:11},{yr:2025,n:11}]},
+    {name:'Logaritma & üstel fonksiyon',code:'12.1.1',desc:'Üstel fonksiyon grafiği, logaritma özellikleri, üstel/logaritmik denklemler.',tip:'AYT\'de yoğun: her yıl 2–4 soru, genellikle 11–16. sorular arasında.',refs:[{yr:2020,n:22},{yr:2021,n:22},{yr:2022,n:20},{yr:2023,n:16},{yr:2024,n:16},{yr:2025,n:14}]},
+  ]},
+  {icon:'≋',bg:'#2d2300',clr:'#f5c842',name:'Trigonometri & Analitik (§11.1 & §11.2)',cnt:18,subs:[
+    {name:'Trigonometrik fonksiyonlar',code:'11.1.2',desc:'Sinüs/kosinüs teoremi, periyodik fonksiyonlar, grafik çizimi.',tip:'Her yıl 2–4 soru. Sinüs teoremi gerçek hayat bağlamında geliyor.',refs:[{yr:2020,n:28},{yr:2021,n:30},{yr:2022,n:30},{yr:2023,n:28},{yr:2024,n:29},{yr:2025,n:29}]},
+    {name:'Analitik geometri — doğru',code:'11.2.1',desc:'İki nokta arası uzaklık, noktanın doğruya uzaklığı, eğim, paralel/dik koşullar.',refs:[{yr:2020,n:14},{yr:2021,n:22},{yr:2022,n:22},{yr:2023,n:23},{yr:2024,n:22},{yr:2025,n:22}]},
+    {name:'Çemberin analitik incelenmesi',code:'12.7.1',desc:'Çember denklemi, merkez ve yarıçap, doğru-çember durumları.',tip:'AYT\'de her yıl 1–2 soru garantili. x/y eksenlerine teğet çember sorular yaygın.',refs:[{yr:2020,n:30},{yr:2022,n:37},{yr:2023,n:36},{yr:2024,n:34},{yr:2025,n:37}]},
+  ]},
+  {icon:"∫",bg:'#0a2420',clr:'#38b6a8',name:'Limit, Türev & İntegral (§12.5–12.6)',cnt:24,subs:[
+    {name:'Limit & süreklilik',code:'12.5.1',desc:'Tek taraflı limitler, limit hesabı, kesintisizlik.',refs:[{yr:2020,n:21},{yr:2021,n:24},{yr:2022,n:24},{yr:2023,n:24},{yr:2024,n:24},{yr:2025,n:24}]},
+    {name:'Türev & uygulamaları',code:'12.5.2',desc:'Türev kuralları, zincir kuralı, artan-azalan aralıklar, ekstremum.',tip:'Her yıl 4–6 soru. Grafik yorumlama soruları özellikle zor.',refs:[{yr:2020,n:24},{yr:2021,n:24},{yr:2022,n:20},{yr:2023,n:27},{yr:2024,n:26},{yr:2025,n:25}]},
+    {name:'İntegral & alan',code:'12.6.2',desc:'Belirsiz/belirli integral, alan hesabı, Riemann toplamı.',tip:'AYT\'de integral her yıl 2–3 soru. Alan problemleri fonksiyon grafiğiyle birleşik geliyor.',refs:[{yr:2020,n:33},{yr:2021,n:33},{yr:2022,n:33},{yr:2023,n:33},{yr:2024,n:33},{yr:2025,n:33}]},
+  ]},
+  {icon:'n!',bg:'#1a1040',clr:'#9b7fe8',name:'Sayma & Olasılık (§10.1 & §11.7)',cnt:12,subs:[
+    {name:'Permütasyon & kombinasyon',code:'10.1.1',desc:'Çarpma ilkesi, faktöriyel, tekrarlı permütasyon, binom açılımı.',tip:'Her yıl 2–3 soru. Gerçek yaşam problemi formatında (film sırası, oturma düzeni...).',refs:[{yr:2020,n:26},{yr:2021,n:23},{yr:2022,n:26},{yr:2023,n:22},{yr:2024,n:20},{yr:2025,n:16}]},
+    {name:'Olasılık & koşullu olasılık',code:'11.7.1',desc:'Bağımlı/bağımsız olaylar, bileşik olay, koşullu olasılık.',refs:[{yr:2020,n:27},{yr:2021,n:28},{yr:2022,n:29},{yr:2023,n:28},{yr:2024,n:28},{yr:2025,n:28}]},
+  ]},
+  {icon:'△',bg:'#2d0d0d',clr:'#e05555',name:'Geometri (AYT Özel) (§11.5 & §11.6)',cnt:18,subs:[
+    {name:'Çemberde açılar & teğet',code:'11.5.2',desc:'Merkez, çevre, iç-dış, teğet-kiriş açıları. Kirişin özellikleri.',tip:'Her yıl 1–2 soru. Merkez açısı = 2 × çevre açısı ilişkisi sık kullanılıyor.',refs:[{yr:2020,n:30},{yr:2022,n:35},{yr:2023,n:31},{yr:2024,n:34},{yr:2025,n:37}]},
+    {name:'Küre, silindir, koni (hacim & alan)',code:'11.6.1.1',desc:'V(silindir)=πr²h, V(koni)=πr²h/3, V(küre)=4πr³/3.',refs:[{yr:2020,n:40},{yr:2022,n:40},{yr:2023,n:40},{yr:2025,n:40}]},
+    {name:'Üçgen & dik üçgen uygulamaları',code:'9.4',desc:'Trigonometrik alan, benzerlik, Pisagor AYT bağlamında.',refs:[{yr:2020,n:28},{yr:2021,n:30},{yr:2022,n:30},{yr:2023,n:29},{yr:2024,n:32},{yr:2025,n:32}]},
+    {name:'Dönüşümler (öteleme, dönme, simetri)',code:'12.4.1',desc:'Koordinatı verilen noktanın dönüşüm sonrası koordinatı.',refs:[{yr:2025,n:38}]},
+  ]},
+];
+
+// ════════════════════════════════════════
+// APP STATE
+// ════════════════════════════════════════
+let state = {
+  tyt:{ year:'all', topic:'all' },
+  ayt:{ year:'all', topic:'all' },
+};
+let lbQ = null, lbList = [], lbIdx = 0;
+
+// ════════════════════════════════════════
+// PAGE SWITCHING
+// ════════════════════════════════════════
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.ntab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  document.getElementById('nt-'+id).classList.add('active');
+  if(id==='tytaz') buildKaz('tyt-kaz', TYT_KAZ, 'tyt');
+  if(id==='aytaz') buildKaz('ayt-kaz', AYT_KAZ, 'ayt');
+}
+
+// ════════════════════════════════════════
+// SIDEBAR TOPICS
+// ════════════════════════════════════════
+function buildTopics(containerId, topicList, bank) {
+  const el = document.getElementById(containerId);
+  el.innerHTML = topicList.map(t => {
+    const cnt = t.id==='all' ? (bank==='tyt'?TYT_Q:AYT_Q).length
+                             : (bank==='tyt'?TYT_Q:AYT_Q).filter(q=>q.topic===t.id).length;
+    return `<div class="ti ${t.id==='all'?'active':''}" id="ti-${bank}-${t.id}" onclick="filterTopic('${bank}','${t.id}')">
+      <div class="tdot" style="background:${t.dot}"></div>
+      <span class="tname">${t.name}</span>
+      <span class="tcnt">${cnt}</span>
+    </div>`;
+  }).join('');
+}
+
+// ════════════════════════════════════════
+// FILTERING
+// ════════════════════════════════════════
+function filter(bank, type, val, btn) {
+  state[bank][type] = val;
+  const group = btn.parentElement;
+  group.querySelectorAll('.yr-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderGrid(bank);
+}
+
+function filterTopic(bank, tid) {
+  state[bank].topic = tid;
+  const prefix = `ti-${bank}-`;
+  document.querySelectorAll(`[id^="${prefix}"]`).forEach(el=>el.classList.remove('active'));
+  document.getElementById(`${prefix}${tid}`)?.classList.add('active');
+  renderGrid(bank);
+}
+
+function getVisible(bank) {
+  const Qs = bank==='tyt' ? TYT_Q : AYT_Q;
+  const {year, topic} = state[bank];
+  return Qs.filter(q => (year==='all'||q.yr==year) && (topic==='all'||q.topic===topic));
+}
+
+function renderGrid(bank) {
+  const vis = getVisible(bank);
+  const {year, topic} = state[bank];
+  const tops = bank==='tyt' ? TYT_TOPICS : AYT_TOPICS;
+  const tlabel = topic==='all' ? 'Tüm konular' : tops.find(t=>t.id===topic)?.name||'';
+  document.getElementById(`${bank}-cnt`).textContent = `${vis.length} soru`;
+  document.getElementById(`${bank}-filter`).textContent = (year==='all'?'Tüm yıllar':year) + ' · ' + tlabel;
+
+  const grid = document.getElementById(`${bank}-grid`);
+  grid.innerHTML = vis.map((q, i) => {
+    const [clr, bg] = YC[q.yr]||['#999','#111'];
+    const tags = q.tags.slice(0,3).map(t=>`<span class="qtag">${t}</span>`).join('');
+    return `<div class="qcard" style="animation-delay:${Math.min(i,20)*0.025}s" onclick="openLB('${bank}',${i})">
+      <div class="qcard-top">
+        <span class="qyr" style="background:${bg};color:${clr}">${q.yr}</span>
+        <div style="display:flex;align-items:center;gap:4px">
+          <span class="qns">S</span><span class="qn">${q.num}</span>
+        </div>
+        <span class="qans" style="background:${bg};color:${clr}">${q.ans}</span>
+      </div>
+      <div class="qtitle">${q.title}</div>
+      <div class="qdesc">${q.desc}</div>
+      <div class="qtags">${tags}</div>
+      <div class="qhover"><span>Soruyu Gör →</span></div>
+    </div>`;
+  }).join('');
+}
+
+// ════════════════════════════════════════
+// LIGHTBOX
+// ════════════════════════════════════════
+function openLB(bank, idx) {
+  lbList = getVisible(bank);
+  lbIdx = idx;
+  showLB();
+}
+
+function showLB() {
+  const q = lbList[lbIdx];
+  if (!q) return;
+  const [clr, bg] = YC[q.yr]||['#999','#111'];
+  const badge = document.getElementById('lb-badge');
+  badge.textContent = `${q.yr} · S${q.num}`;
+  badge.style.background = bg; badge.style.color = clr;
+  document.getElementById('lb-title').textContent = q.title;
+  document.getElementById('lb-sub').textContent = q.sub;
+  document.getElementById('lb-img').src = q.pg;
+  document.getElementById('lb-img').alt = `${q.yr} Soru ${q.num}`;
+  document.getElementById('lb-tags').innerHTML = q.tags.map(t=>`<span class="lb-tag">${t}</span>`).join('');
+  const ab = document.getElementById('lb-ans-badge');
+  ab.textContent = 'Cevap: ' + q.ans;
+  ab.style.background = bg; ab.style.color = clr;
+  document.getElementById('lb').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLB() {
+  document.getElementById('lb').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function lbBgClick(e) { if(e.target.id==='lb') closeLB(); }
+function lbNav(d) { lbIdx=(lbIdx+d+lbList.length)%lbList.length; showLB(); }
+
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lb').classList.contains('open')) return;
+  if (e.key==='Escape') closeLB();
+  if (e.key==='ArrowRight') lbNav(1);
+  if (e.key==='ArrowLeft') lbNav(-1);
+});
+
+// ════════════════════════════════════════
+// KAZANIM BUILDER
+// ════════════════════════════════════════
+function buildKaz(containerId, data, bank) {
+  const el = document.getElementById(containerId);
+  if (el.children.length > 0) return; // already built
+  el.innerHTML = data.map((sec,si) => {
+    const subsHtml = sec.subs.map(sub => {
+      const refsHtml = sub.refs && sub.refs.length
+        ? sub.refs.map(r => {
+            const [clr,bg] = YC[r.yr]||['#999','#111'];
+            return `<span class="qref" style="background:${bg};color:${clr};border-color:${clr}22"
+              onclick="jumpToQ('${bank}',${r.yr},${r.n})">${r.yr}·S${r.n}</span>`;
+          }).join('')
+        : '<span class="qref none">henüz soru çıkmadı</span>';
+      const tip = sub.tip ? `<div class="ksub-tip"><strong>Sınav:</strong> ${sub.tip}</div>` : '';
+      return `<div class="ksub">
+        <div class="ksub-head">
+          <span class="ksub-name">${sub.name}</span>
+          <span class="ksub-code">${sub.code}</span>
+        </div>
+        <div class="ksub-desc">${sub.desc}</div>
+        ${tip}
+        <div class="qrefs">${refsHtml}</div>
+      </div>`;
+    }).join('');
+    return `<div class="kcard" id="kc-${si}">
+      <div class="kcard-head" onclick="toggleKard(${si})">
+        <div class="kcard-ic" style="background:${sec.bg};color:${sec.clr}">${sec.icon}</div>
+        <div class="kcard-meta">
+          <div class="kcard-name">${sec.name}</div>
+          <div class="kcard-sub">${sec.subs.length} alt konu</div>
+        </div>
+        <span class="kcard-badge" style="background:${sec.bg};color:${sec.clr}">${sec.cnt} soru</span>
+        <span class="kcard-chev">▼</span>
+      </div>
+      <div class="kcard-body">${subsHtml}</div>
+    </div>`;
+  }).join('');
+}
+
+function toggleKard(i) {
+  document.getElementById('kc-'+i).classList.toggle('open');
+}
+
+function jumpToQ(bank, yr, num) {
+  showPage(bank==='tyt'?'tyt':'ayt');
+  state[bank].year = String(yr);
+  state[bank].topic = 'all';
+  document.querySelectorAll(`#sb-${bank} .yr-btn`).forEach(b=>{
+    b.classList.toggle('active', b.textContent.trim()==String(yr));
+  });
+  document.querySelectorAll(`[id^="ti-${bank}-"]`).forEach(el=>el.classList.remove('active'));
+  document.getElementById(`ti-${bank}-all`)?.classList.add('active');
+  renderGrid(bank);
+  setTimeout(()=>{
+    const vis = getVisible(bank);
+    const idx = vis.findIndex(q=>q.yr==yr&&q.num==num);
+    if(idx>=0) { lbList=vis; lbIdx=idx; showLB(); }
+  }, 80);
+}
+
+// ════════════════════════════════════════
+// INIT
+// ════════════════════════════════════════
+buildTopics('tyt-topics', TYT_TOPICS, 'tyt');
+buildTopics('ayt-topics', AYT_TOPICS, 'ayt');
+renderGrid('tyt');
+renderGrid('ayt');
+</script>
+</body>
+</html>

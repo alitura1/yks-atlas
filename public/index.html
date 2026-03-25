@@ -1056,6 +1056,10 @@ function showPage(id) {
   if(id==='tytaz') buildKaz('tyt-kaz', TYT_KAZ, 'tyt');
   if(id==='aytaz') buildKaz('ayt-kaz', AYT_KAZ, 'ayt');
   if(id==='aytgeokaz') buildKaz('aytgeo-kaz', AYTGEO_KAZ, 'aytgeo');
+  // mobile
+  const bankMap = {tyt:'tyt',tytaz:'tyt',ayt:'ayt',aytaz:'ayt',aytgeo:'aytgeo',aytgeokaz:'aytgeo'};
+  mobBank = bankMap[id] || 'tyt';
+  updateMobFab(mobBank);
 }
 
 // ════════════════════════════════════════
@@ -1093,6 +1097,8 @@ function filterTopic(bank, tid) {
   renderGrid(bank);
 }
 
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+
 function getVisible(bank) {
   const Qs = bank==='aytgeo'
     ? AYT_Q.filter(q=>q.topic==='geo'||q.topic==='analitik')
@@ -1112,7 +1118,7 @@ function renderGrid(bank) {
   const grid = document.getElementById(`${bank}-grid`);
   grid.innerHTML = vis.map((q, i) => {
     const [clr, bg] = YC[q.yr]||['#999','#111'];
-    const tags = q.tags.slice(0,3).map(t=>`<span class="qtag">${t}</span>`).join('');
+    const tags = q.tags.slice(0,3).map(t=>`<span class="qtag">${esc(t)}</span>`).join('');
     return `<div class="qcard" style="animation-delay:${Math.min(i,20)*0.025}s" onclick="openLB('${bank}',${i})">
       <div class="qcard-top">
         <span class="qyr" style="background:${bg};color:${clr}">${q.yr}</span>
@@ -1121,8 +1127,8 @@ function renderGrid(bank) {
         </div>
         <span class="qns" style="opacity:.45;font-size:9px">cevabı gör →</span>
       </div>
-      <div class="qtitle">${q.title}</div>
-      <div class="qdesc">${q.desc}</div>
+      <div class="qtitle">${esc(q.title)}</div>
+      <div class="qdesc">${esc(q.desc)}</div>
       <div class="qtags">${tags}</div>
       <div class="qhover"><span>Soruyu Gör →</span></div>
     </div>`;
@@ -1448,15 +1454,6 @@ function updateMobFab(bank) {
   const vis = getVisible(bank);
   const el = document.getElementById('mob-fab-cnt');
   if (el) el.textContent = vis.length + ' soru';
-}
-
-// Watch page changes to update mob bank
-const _origShowPage = showPage;
-function showPage(id) {
-  _origShowPage(id);
-  const map = {tyt:'tyt',tytaz:'tyt',ayt:'ayt',aytaz:'ayt',aytgeo:'aytgeo',aytgeokaz:'aytgeo'};
-  mobBank = map[id] || 'tyt';
-  updateMobFab(mobBank);
 }
 
 </script>

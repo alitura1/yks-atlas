@@ -219,7 +219,60 @@ nav{
 /* ─── ANIM ─── */
 @keyframes fu{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 .qcard{animation:fu .2s ease backwards}
-@media(max-width:680px){.split{grid-template-columns:1fr}.sb{display:none}}
+
+/* ─── LIGHTBOX COUNTER ─── */
+.lb-counter{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--t3);background:var(--bg4);border:1px solid var(--border);padding:3px 8px;border-radius:5px;flex-shrink:0;white-space:nowrap}
+
+/* ─── MOBILE ─── */
+.mob-filter-btn{
+  display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
+  background:var(--a1);color:#000;padding:10px 22px;border-radius:24px;
+  font-size:13px;font-weight:700;border:none;cursor:pointer;z-index:300;
+  box-shadow:0 4px 20px rgba(245,200,66,.45);font-family:'Inter',sans-serif;
+  align-items:center;gap:7px;white-space:nowrap;
+}
+.mob-fab-cnt{background:rgba(0,0,0,.2);color:#000;font-size:10px;font-weight:700;border-radius:10px;padding:1px 6px}
+.mob-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:400}
+.mob-overlay.open{display:block}
+.mob-drawer{
+  position:fixed;bottom:0;left:0;right:0;background:var(--bg2);
+  border-radius:18px 18px 0 0;padding:12px 16px 30px;z-index:401;
+  max-height:80vh;overflow-y:auto;
+  transform:translateY(100%);transition:transform .28s cubic-bezier(.22,1,.36,1);
+}
+.mob-drawer.open{transform:translateY(0)}
+.mob-handle{width:38px;height:4px;background:var(--border2);border-radius:2px;margin:0 auto 14px}
+.mob-drawer-title{font-size:14px;font-weight:700;color:var(--t1);margin-bottom:14px;font-family:'Syne',sans-serif}
+.mob-sec{margin-bottom:16px}
+.mob-sec-label{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:8px}
+.mob-yr-row{display:flex;flex-wrap:wrap;gap:5px}
+.mob-topic-list{display:flex;flex-direction:column;gap:4px}
+.mob-ti{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;cursor:pointer;border:1px solid transparent;transition:all .12s}
+.mob-ti:hover,.mob-ti.active{background:rgba(245,200,66,.08);border-color:rgba(245,200,66,.2)}
+.mob-ti .tdot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.mob-ti .tname{font-size:12px;color:var(--t2);flex:1}
+.mob-ti.active .tname{color:var(--t1)}
+.mob-ti .tcnt{font-size:10px;color:var(--t3);font-family:'IBM Plex Mono',monospace}
+
+@media(max-width:680px){
+  .split{grid-template-columns:1fr}
+  .sb{display:none}
+  .mob-filter-btn{display:flex}
+  .main{padding:14px}
+  .mhead{margin-bottom:14px}
+  .mtitle{font-size:18px}
+  .qgrid{grid-template-columns:1fr}
+  .lbbox{max-height:96vh;border-radius:14px 14px 0 0}
+  .lb{padding:0;align-items:flex-end}
+  .lbbot{flex-wrap:wrap;gap:6px}
+  .draw-toolbar{display:none}
+  .lb-nav{margin-left:auto}
+  nav{padding:0 12px;height:48px}
+  .logo{font-size:16px;margin-right:12px}
+  .ntab{padding:4px 10px;font-size:11px}
+  .nav-r{display:none}
+  .lb-counter{display:none}
+}
 </style>
 </head>
 <body>
@@ -418,6 +471,9 @@ nav{
         <div class="lb-sub" id="lb-sub"></div>
       </div>
       <button class="lb-close" onclick="closeLB()">✕ Kapat</button>
+    </div>
+    <div class="lb-counter-bar" style="display:flex;align-items:center;justify-content:center;padding:4px 0;border-bottom:1px solid var(--border);background:var(--bg3);flex-shrink:0">
+      <span class="lb-counter" id="lb-counter" style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--t3)">1 / 1</span>
     </div>
     <div class="lbimg" id="lbimg-wrap"><div id="lbimg-scaler"><img id="lb-img" src="" alt="Soru"><canvas id="lb-canvas"></canvas></div></div>
     <div class="lbbot">
@@ -941,6 +997,8 @@ const AYT_KAZ = [
 // ════════════════════════════════════════
 const AYTGEO_TOPICS = [
   {id:'all',name:'Tümü',dot:'#f08040'},
+  {id:'geo',name:'Geometri',dot:'#e05555'},
+  {id:'analitik',name:'Analitik Geometri',dot:'#4b9ef8'},
 ];
 
 const AYTGEO_KAZ = [
@@ -1005,7 +1063,7 @@ function showPage(id) {
 // ════════════════════════════════════════
 function buildTopics(containerId, topicList, bank) {
   const el = document.getElementById(containerId);
-  const baseQ = bank==='tyt' ? TYT_Q : (bank==='aytgeo' ? AYT_Q.filter(q=>q.topic==='geo') : AYT_Q);
+  const baseQ = bank==='tyt' ? TYT_Q : (bank==='aytgeo' ? AYT_Q.filter(q=>q.topic==='geo'||q.topic==='analitik') : AYT_Q);
   el.innerHTML = topicList.map(t => {
     const cnt = t.id==='all' ? baseQ.length : baseQ.filter(q=>q.topic===t.id).length;
     return `<div class="ti ${t.id==='all'?'active':''}" id="ti-${bank}-${t.id}" onclick="filterTopic('${bank}','${t.id}')">
@@ -1036,7 +1094,9 @@ function filterTopic(bank, tid) {
 }
 
 function getVisible(bank) {
-  const Qs = bank==='aytgeo' ? AYT_Q.filter(q=>q.topic==='geo') : (bank==='tyt' ? TYT_Q : AYT_Q);
+  const Qs = bank==='aytgeo'
+    ? AYT_Q.filter(q=>q.topic==='geo'||q.topic==='analitik')
+    : (bank==='tyt' ? TYT_Q : AYT_Q);
   const {year, topic} = state[bank] || {year:'all',topic:'all'};
   return Qs.filter(q => (year==='all'||q.yr==year) && (topic==='all'||q.topic===topic));
 }
@@ -1088,12 +1148,22 @@ function showLB() {
   badge.style.background = bg; badge.style.color = clr;
   document.getElementById('lb-title').textContent = q.title;
   document.getElementById('lb-sub').textContent = q.sub;
+  // Navigation counter
+  const counter = document.getElementById('lb-counter');
+  if (counter) counter.textContent = `${lbIdx+1} / ${lbList.length}`;
   // Apply page offset if any
   const pgKey = q.yr+'-'+q.num+'-'+(lbBank||'');
   const offset = pgOffsets[pgKey]||0;
-  const imgSrc = offset ? q.pg.replace(/(_p)(\d+)(\.jpg)$/, (_,a,n,c)=>a+String(+n+offset).padStart(2,'0')+c) : q.pg;
-  document.getElementById('lb-img').src = imgSrc;
-  document.getElementById('lb-img').alt = `${q.yr} Soru ${q.num}`;
+  const newSrc = offset ? q.pg.replace(/(_p)(\d+)(\.jpg)$/, (_,a,n,c)=>a+String(+n+offset).padStart(2,'0')+c) : q.pg;
+  const imgEl = document.getElementById('lb-img');
+  // If same image URL (same PDF page), force visual refresh with brief fade
+  if (imgEl.src.endsWith(newSrc) || imgEl.getAttribute('src') === newSrc) {
+    imgEl.style.transition = 'opacity .15s';
+    imgEl.style.opacity = '0.4';
+    setTimeout(()=>{ imgEl.style.opacity = '1'; }, 150);
+  }
+  imgEl.src = newSrc;
+  imgEl.alt = `${q.yr} Soru ${q.num}`;
   document.getElementById('lb-tags').innerHTML = q.tags.map(t=>`<span class="lb-tag">${t}</span>`).join('');
   const ab = document.getElementById('lb-ans-badge');
   ab.textContent = 'Cevap: ' + q.ans;
@@ -1311,6 +1381,107 @@ buildTopics('aytgeo-topics', AYTGEO_TOPICS, 'aytgeo');
 renderGrid('tyt');
 renderGrid('ayt');
 renderGrid('aytgeo');
+
+// ════════════════════════════════════════
+// MOBILE DRAWER
+// ════════════════════════════════════════
+let mobBank = 'tyt';
+
+function openMobFilter() {
+  const bank = mobBank;
+  const drawer = document.getElementById('mob-drawer');
+  const overlay = document.getElementById('mob-overlay');
+
+  // Build year buttons
+  const years = ['all','2020','2021','2022','2023','2024','2025'];
+  const curYear = (state[bank]||{}).year || 'all';
+  document.getElementById('mob-yr-row').innerHTML = years.map(y => {
+    const label = y === 'all' ? 'Tümü' : y;
+    const active = y === curYear;
+    const cls = active ? (y==='all'?'yr-btn yr-all active':'yr-btn active') : 'yr-btn';
+    return `<button class="${cls}" onclick="mobFilterYear('${bank}','${y}',this)">${label}</button>`;
+  }).join('');
+
+  // Build topic list
+  const tops = bank==='tyt' ? TYT_TOPICS : (bank==='aytgeo' ? AYTGEO_TOPICS : AYT_TOPICS);
+  const curTopic = (state[bank]||{}).topic || 'all';
+  const baseQ = bank==='tyt' ? TYT_Q : (bank==='aytgeo' ? AYT_Q.filter(q=>q.topic==='geo'||q.topic==='analitik') : AYT_Q);
+  document.getElementById('mob-topic-list').innerHTML = tops.map(t => {
+    const cnt = t.id==='all' ? baseQ.length : baseQ.filter(q=>q.topic===t.id).length;
+    const active = t.id === curTopic;
+    return `<div class="mob-ti${active?' active':''}" onclick="mobFilterTopic('${bank}','${t.id}',this)">
+      <div class="tdot" style="background:${t.dot}"></div>
+      <span class="tname">${t.name}</span>
+      <span class="tcnt">${cnt}</span>
+    </div>`;
+  }).join('');
+
+  overlay.classList.add('open');
+  drawer.classList.add('open');
+}
+
+function closeMobFilter() {
+  document.getElementById('mob-overlay').classList.remove('open');
+  document.getElementById('mob-drawer').classList.remove('open');
+}
+
+function mobFilterYear(bank, val, btn) {
+  state[bank].year = val;
+  document.querySelectorAll('#mob-yr-row .yr-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderGrid(bank);
+  updateMobFab(bank);
+}
+
+function mobFilterTopic(bank, tid, el) {
+  state[bank].topic = tid;
+  document.querySelectorAll('#mob-topic-list .mob-ti').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  // also sync desktop sidebar
+  document.querySelectorAll(`[id^="ti-${bank}-"]`).forEach(e=>e.classList.remove('active'));
+  document.getElementById(`ti-${bank}-${tid}`)?.classList.add('active');
+  renderGrid(bank);
+  updateMobFab(bank);
+}
+
+function updateMobFab(bank) {
+  const vis = getVisible(bank);
+  const el = document.getElementById('mob-fab-cnt');
+  if (el) el.textContent = vis.length + ' soru';
+}
+
+// Watch page changes to update mob bank
+const _origShowPage = showPage;
+function showPage(id) {
+  _origShowPage(id);
+  const map = {tyt:'tyt',tytaz:'tyt',ayt:'ayt',aytaz:'ayt',aytgeo:'aytgeo',aytgeokaz:'aytgeo'};
+  mobBank = map[id] || 'tyt';
+  updateMobFab(mobBank);
+}
+
 </script>
+
+<!-- MOBİL DRAWER -->
+<div class="mob-overlay" id="mob-overlay" onclick="closeMobFilter()"></div>
+<div class="mob-drawer" id="mob-drawer">
+  <div class="mob-handle"></div>
+  <div class="mob-drawer-title">🔍 Filtrele</div>
+  <div class="mob-sec">
+    <div class="mob-sec-label">Yıl</div>
+    <div class="mob-yr-row yr-row" id="mob-yr-row"></div>
+  </div>
+  <div class="mob-sec">
+    <div class="mob-sec-label">Konu</div>
+    <div class="mob-topic-list" id="mob-topic-list"></div>
+  </div>
+  <button onclick="closeMobFilter()" style="width:100%;margin-top:8px;padding:12px;background:var(--a1);color:#000;border:none;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif">Uygula ✓</button>
+</div>
+
+<!-- MOBİL FİLTRE BUTONU -->
+<button class="mob-filter-btn" id="mob-fab" onclick="openMobFilter()">
+  🎯 Filtrele
+  <span class="mob-fab-cnt" id="mob-fab-cnt">60 soru</span>
+</button>
+
 </body>
 </html>

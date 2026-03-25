@@ -5,6 +5,7 @@
 - `public/imgs/` — soru sayfaları (103 adet JPEG)
 - `public/tytgeometri.pdf` — TYT Geometri kaynak PDF
 - `public/aytmat.pdf` — AYT Matematik kaynak PDF
+- `public/mebkazanim2026.pdf` — MEB Kazanım PDF
 
 ## Vercel'e Yükleme
 

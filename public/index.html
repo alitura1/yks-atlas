@@ -141,68 +141,79 @@ nav{
 .lb-sub{font-size:10px;color:var(--t2);margin-top:1px}
 .lb-close{background:var(--bg4);border:1px solid var(--border2);color:var(--t2);padding:5px 11px;border-radius:6px;cursor:pointer;font-size:12px;font-family:'Inter',sans-serif;flex-shrink:0}
 .lb-close:hover{background:var(--red);color:#fff;border-color:var(--red)}
-.lbimg{overflow:auto;flex:1;background:#eee}
-#lbimg-scaler{position:relative;width:100%;transition:width .15s}
-.lbimg img{width:100%;display:block;user-select:none}
-#lb-canvas{position:absolute;top:0;left:0;width:100%;height:100%;cursor:crosshair;pointer-events:auto;touch-action:none}
+.lbimg{overflow:auto;flex:1;background:#111;position:relative}
+#lbimg-scaler{position:relative;width:100%;transition:width .12s;min-height:100%}
+.lbimg img{width:100%;display:block;user-select:none;-webkit-user-select:none}
+#lb-canvas{position:absolute;top:0;left:0;width:100%;height:100%;cursor:crosshair}
+#lb-canvas.zoom-mode{cursor:zoom-in;pointer-events:none}
 .lbbot{
-  padding:8px 14px;display:flex;align-items:center;gap:8px;
+  padding:8px 12px;display:flex;align-items:center;gap:6px;
   border-top:1px solid var(--border);background:var(--bg3);flex-shrink:0;flex-wrap:wrap;
 }
-.lb-tags{display:flex;gap:4px;flex-wrap:wrap;flex:1}
+.lb-tags{display:flex;gap:4px;flex-wrap:wrap;flex:1;min-width:0}
 .lb-tag{font-size:9px;padding:2px 6px;border-radius:3px;background:var(--bg4);color:var(--t2);border:1px solid var(--border)}
-.lb-ans-area{display:flex;align-items:center;gap:6px}
-.lb-ans-toggle{padding:4px 11px;border-radius:6px;font-size:11px;font-weight:500;cursor:pointer;border:1px solid var(--border2);background:var(--bg4);color:var(--a1);font-family:'Inter',sans-serif;transition:all .13s}
+.lb-ans-area{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.lb-ans-toggle{padding:5px 13px;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;border:1px solid var(--border2);background:var(--bg4);color:var(--a1);font-family:'Inter',sans-serif;transition:all .13s}
 .lb-ans-toggle:hover{background:rgba(245,200,66,.15);border-color:var(--a1)}
-.lb-ans-badge{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;padding:3px 9px;border-radius:5px}
-.lb-nav{display:flex;gap:5px}
-.lb-nbtn{padding:4px 11px;border-radius:6px;font-size:11px;font-weight:500;cursor:pointer;border:1px solid var(--border2);background:var(--bg4);color:var(--t2);font-family:'Inter',sans-serif}
+.lb-ans-badge{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:700;padding:4px 11px;border-radius:5px}
+.lb-nav{display:flex;gap:5px;flex-shrink:0}
+.lb-nbtn{padding:5px 12px;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;border:1px solid var(--border2);background:var(--bg4);color:var(--t2);font-family:'Inter',sans-serif;transition:all .13s}
 .lb-nbtn:hover{background:var(--a1);color:#000;border-color:var(--a1)}
-.draw-toolbar{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
-.clr-btn{width:18px;height:18px;border-radius:50%;border:2px solid transparent;cursor:pointer;padding:0;transition:all .12s}
-.clr-btn.active,.clr-btn:hover{border-color:#fff;transform:scale(1.2)}
-.draw-sep{width:1px;height:16px;background:var(--border2);margin:0 2px}
-.draw-tool-btn{padding:3px 8px;border-radius:5px;font-size:11px;cursor:pointer;border:1px solid var(--border);background:var(--bg4);color:var(--t2);font-family:'Inter',sans-serif;transition:all .12s}
-.draw-tool-btn:hover,.draw-tool-btn.active{background:var(--bg3);border-color:var(--border2);color:var(--t1)}
+/* ── Draw toolbar ── */
+.draw-toolbar{display:flex;align-items:center;gap:5px;flex-wrap:wrap;width:100%;padding-top:6px;border-top:1px solid var(--border)}
+.clr-btn{width:22px;height:22px;border-radius:50%;border:2px solid transparent;cursor:pointer;padding:0;transition:all .14s;flex-shrink:0}
+.clr-btn.active,.clr-btn:hover{border-color:#fff;transform:scale(1.25)}
+.draw-sep{width:1px;height:18px;background:var(--border2);margin:0 2px;flex-shrink:0}
+.draw-tool-btn{padding:4px 10px;border-radius:6px;font-size:11px;cursor:pointer;border:1px solid var(--border);background:var(--bg4);color:var(--t2);font-family:'Inter',sans-serif;transition:all .13s;white-space:nowrap}
+.draw-tool-btn:hover,.draw-tool-btn.active{background:rgba(255,255,255,.1);border-color:var(--border2);color:var(--t1)}
+.draw-tool-btn.mode-zoom.active{background:rgba(75,158,248,.15);border-color:var(--blue);color:var(--blue)}
+.draw-tool-btn.mode-draw.active{background:rgba(245,200,66,.12);border-color:var(--a1);color:var(--a1)}
+.size-ctrl{display:flex;align-items:center;gap:4px}
+.size-btn{width:24px;height:24px;border-radius:5px;border:1px solid var(--border);background:var(--bg4);color:var(--t1);cursor:pointer;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;transition:all .13s;flex-shrink:0}
+.size-btn:hover{background:rgba(255,255,255,.1);border-color:var(--border2)}
+.size-dot{width:var(--dot-sz,8px);height:var(--dot-sz,8px);border-radius:50%;background:currentColor;display:inline-block;transition:all .15s;flex-shrink:0}
+.size-label{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--t3);min-width:18px;text-align:center}
 
 /* ─── ANALYSIS PAGE ─── */
 .anal-page{padding:22px;max-width:1100px;width:100%}
 .anal-hero{
   background:linear-gradient(135deg,var(--bg2),var(--bg3));
   border:1px solid var(--border2);border-radius:var(--rl);
-  padding:20px;margin-bottom:24px;display:flex;gap:16px;align-items:flex-start;
+  padding:22px 24px;margin-bottom:28px;display:flex;gap:18px;align-items:flex-start;
 }
-.anal-hero-icon{font-size:36px;flex-shrink:0}
-.anal-hero h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin-bottom:6px}
-.anal-hero p{font-size:12px;color:var(--t2);line-height:1.65}
-.kaz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;align-items:start}
-.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden}
-.kcard-head{display:flex;align-items:center;gap:10px;padding:14px;cursor:pointer;user-select:none}
-.kcard-head:hover{background:var(--bg3)}
-.kcard-ic{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
-.kcard-meta{flex:1}
-.kcard-name{font-size:13px;font-weight:600;margin-bottom:1px}
-.kcard-sub{font-size:10px;color:var(--t2)}
-.kcard-badge{font-size:10px;padding:2px 7px;border-radius:12px;font-family:'IBM Plex Mono',monospace;font-weight:600;flex-shrink:0}
-.kcard-chev{color:var(--t3);font-size:10px;transition:transform .18s;flex-shrink:0}
+.anal-hero-icon{font-size:38px;flex-shrink:0;margin-top:2px}
+.anal-hero h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin-bottom:7px;color:var(--t1)}
+.anal-hero p{font-size:12px;color:var(--t2);line-height:1.7}
+.kaz-grid{column-width:310px;column-gap:14px}
+.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;break-inside:avoid;display:inline-block;width:100%;margin-bottom:14px}
+.kcard-head{display:flex;align-items:center;gap:10px;padding:14px;cursor:pointer;user-select:none;transition:background .14s}
+.kcard-head:hover{background:rgba(255,255,255,.04)}
+.kcard-ic{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-weight:600}
+.kcard-meta{flex:1;min-width:0}
+.kcard-name{font-size:13px;font-weight:600;margin-bottom:2px;line-height:1.3}
+.kcard-sub{font-size:10px;color:var(--t3)}
+.kcard-badge{font-size:10px;padding:3px 9px;border-radius:12px;font-family:'IBM Plex Mono',monospace;font-weight:700;flex-shrink:0;letter-spacing:.02em}
+.kcard-chev{color:var(--t3);font-size:10px;transition:transform .2s;flex-shrink:0;margin-left:2px}
 .kcard.open .kcard-chev{transform:rotate(180deg)}
 .kcard-body{display:none;border-top:1px solid var(--border)}
 .kcard.open .kcard-body{display:block}
-.ksub{padding:10px 14px;border-bottom:1px solid var(--border)}
+.ksub{padding:11px 14px;border-bottom:1px solid var(--border);transition:background .12s}
 .ksub:last-child{border-bottom:none}
-.ksub-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:4px}
-.ksub-name{font-size:11px;font-weight:600;line-height:1.3;flex:1}
-.ksub-code{font-size:9px;font-family:'IBM Plex Mono',monospace;color:var(--t3);background:var(--bg4);padding:2px 6px;border-radius:3px;flex-shrink:0;margin-top:1px}
-.ksub-desc{font-size:10px;color:var(--t2);line-height:1.55;margin-bottom:6px}
-.ksub-tip{font-size:10px;color:var(--t3);background:var(--bg4);border-left:2px solid var(--border2);padding:5px 8px;margin-bottom:6px;line-height:1.55}
-.ksub-tip strong{color:var(--a1);font-weight:500}
+.ksub:hover{background:rgba(255,255,255,.02)}
+.ksub-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:5px}
+.ksub-name{font-size:11px;font-weight:600;line-height:1.35;flex:1;color:var(--t1)}
+.ksub-code{font-size:9px;font-family:'IBM Plex Mono',monospace;color:var(--t3);background:var(--bg4);padding:2px 6px;border-radius:3px;flex-shrink:0;margin-top:2px;border:1px solid var(--border)}
+.ksub-desc{font-size:10.5px;color:var(--t2);line-height:1.6;margin-bottom:7px}
+.ksub-tip{font-size:10px;color:var(--t2);background:rgba(245,200,66,.05);border-left:2px solid rgba(245,200,66,.35);padding:6px 9px;margin-bottom:6px;line-height:1.6;border-radius:0 4px 4px 0}
+.ksub-tip strong{color:var(--a1);font-weight:600}
 .qrefs{display:flex;flex-wrap:wrap;gap:4px}
 .qref{
-  font-size:9px;padding:2px 7px;border-radius:4px;cursor:pointer;
-  font-family:'IBM Plex Mono',monospace;font-weight:500;border:1px solid transparent;transition:opacity .13s;
+  font-size:9px;padding:2px 8px;border-radius:4px;cursor:pointer;
+  font-family:'IBM Plex Mono',monospace;font-weight:600;border:1px solid transparent;
+  transition:filter .13s, transform .1s;
 }
-.qref:hover{opacity:.75}
-.qref.none{color:var(--t3);font-style:italic;cursor:default}
+.qref:hover{filter:brightness(1.3);transform:translateY(-1px)}
+.qref.none{color:var(--t3);font-style:italic;cursor:default;filter:none;transform:none}
 
 /* ─── COMING SOON ─── */
 .cs{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 52px);gap:14px;text-align:center;padding:40px}
@@ -262,16 +273,24 @@ nav{
   .mhead{margin-bottom:14px}
   .mtitle{font-size:18px}
   .qgrid{grid-template-columns:1fr}
-  .lbbox{max-height:96vh;border-radius:14px 14px 0 0}
+  .lbbox{max-height:100vh;border-radius:14px 14px 0 0}
   .lb{padding:0;align-items:flex-end}
-  .lbbot{flex-wrap:wrap;gap:6px}
-  .draw-toolbar{display:none}
-  .lb-nav{margin-left:auto}
+  .lb-nav{width:100%;justify-content:center}
+  .lb-nbtn{flex:1;text-align:center;padding:8px}
+  .lb-tags{display:none}
+  .lb-ans-area{flex:1;justify-content:center}
+  .lb-ans-toggle{width:100%;text-align:center;padding:8px}
   nav{padding:0 12px;height:48px}
   .logo{font-size:16px;margin-right:12px}
   .ntab{padding:4px 10px;font-size:11px}
   .nav-r{display:none}
   .lb-counter{display:none}
+  .draw-toolbar{gap:6px;padding-top:8px}
+  .clr-btn{width:28px;height:28px}
+  .draw-tool-btn{padding:7px 12px;font-size:12px}
+  .size-btn{width:30px;height:30px;font-size:16px}
+  .lbtop{padding:8px 12px}
+  .lb-title{font-size:12px}
 }
 </style>
 </head>
@@ -483,19 +502,28 @@ nav{
         <span class="lb-ans-badge" id="lb-ans-badge" style="display:none"></span>
       </div>
       <div class="draw-toolbar" id="draw-toolbar">
+        <button class="draw-tool-btn mode-zoom" id="btn-zoom-mode" onclick="setMode('zoom')" title="Zoom Modu">🔍 Zoom</button>
+        <button class="draw-tool-btn mode-draw active" id="btn-draw-mode" onclick="setMode('draw')" title="Çizim Modu">✏️ Çiz</button>
+        <span class="draw-sep"></span>
         <button class="clr-btn active" id="clr-red" onclick="setDrawColor('#e05555')" style="background:#e05555" title="Kırmızı"></button>
         <button class="clr-btn" id="clr-blue" onclick="setDrawColor('#4b9ef8')" style="background:#4b9ef8" title="Mavi"></button>
         <button class="clr-btn" id="clr-yellow" onclick="setDrawColor('#f5c842')" style="background:#f5c842" title="Sarı"></button>
         <button class="clr-btn" id="clr-green" onclick="setDrawColor('#3ecf8e')" style="background:#3ecf8e" title="Yeşil"></button>
         <button class="clr-btn" id="clr-white" onclick="setDrawColor('#f0f2f8')" style="background:#f0f2f8;border-color:#555" title="Beyaz"></button>
         <span class="draw-sep"></span>
-        <button class="draw-tool-btn active" id="btn-pen" onclick="setEraser(false)" title="Kalem">✏️</button>
-        <button class="draw-tool-btn" id="btn-eraser" onclick="setEraser(true)" title="Silgi">⌫</button>
-        <button class="draw-tool-btn" onclick="clearCanvas()" title="Hepsini Sil">🗑</button>
+        <div class="size-ctrl">
+          <button class="size-btn" onclick="changePenSize(-1)" title="Küçült">−</button>
+          <span class="size-dot" id="size-dot" style="color:var(--t1)"></span>
+          <span class="size-label" id="size-label">3</span>
+          <button class="size-btn" onclick="changePenSize(1)" title="Büyüt">+</button>
+        </div>
         <span class="draw-sep"></span>
-        <button class="draw-tool-btn" onclick="shiftPage(-1)" title="Önceki Sayfa">◀ Sayfa</button>
-        <button class="draw-tool-btn" onclick="shiftPage(1)" title="Sonraki Sayfa">Sayfa ▶</button>
-        <button class="draw-tool-btn" onclick="resetZoom()" title="Zoom Sıfırla">⊙ ×1</button>
+        <button class="draw-tool-btn" id="btn-eraser" onclick="setEraser(true)" title="Silgi">⌫ Silgi</button>
+        <button class="draw-tool-btn" onclick="clearCanvas()" title="Hepsini Temizle">🗑</button>
+        <span class="draw-sep"></span>
+        <button class="draw-tool-btn" onclick="shiftPage(-1)">◀</button>
+        <button class="draw-tool-btn" onclick="shiftPage(1)">▶</button>
+        <button class="draw-tool-btn" onclick="resetZoom()" title="Zoom Sıfırla">⊙×1</button>
       </div>
       <div class="lb-nav">
         <button class="lb-nbtn" onclick="lbNav(-1)">← Önceki</button>
@@ -1270,100 +1298,199 @@ function jumpToQ(bank, yr, num) {
 }
 
 // ════════════════════════════════════════
+// MODE (zoom vs draw)
+// ════════════════════════════════════════
+let currentMode = 'draw'; // 'zoom' | 'draw'
+function setMode(m) {
+  currentMode = m;
+  const canvas = document.getElementById('lb-canvas');
+  const btnZ = document.getElementById('btn-zoom-mode');
+  const btnD = document.getElementById('btn-draw-mode');
+  if (m === 'zoom') {
+    canvas.classList.add('zoom-mode');
+    canvas.style.touchAction = 'pan-x pan-y pinch-zoom';
+    canvas.style.pointerEvents = 'none';
+    btnZ.classList.add('active'); btnD.classList.remove('active');
+  } else {
+    canvas.classList.remove('zoom-mode');
+    canvas.style.touchAction = 'none';
+    canvas.style.pointerEvents = 'auto';
+    btnD.classList.add('active'); btnZ.classList.remove('active');
+    isEraser = false;
+    document.getElementById('btn-eraser').classList.remove('active');
+  }
+}
+
+// ════════════════════════════════════════
 // ZOOM
 // ════════════════════════════════════════
 function applyZoom() {
   document.getElementById('lbimg-scaler').style.width = (imgZoom * 100) + '%';
 }
 function resetZoom() {
-  imgZoom = 1;
-  applyZoom();
+  imgZoom = 1; applyZoom();
+  const wrap = document.getElementById('lbimg-wrap');
+  wrap.scrollLeft = 0; wrap.scrollTop = 0;
 }
 (function initZoom(){
   const wrap = document.getElementById('lbimg-wrap');
+  // Mouse wheel zoom (desktop)
   wrap.addEventListener('wheel', e=>{
     if (!document.getElementById('lb').classList.contains('open')) return;
     e.preventDefault();
-    imgZoom = Math.min(4, Math.max(1, imgZoom * (e.deltaY < 0 ? 1.1 : 0.9)));
+    const oldZoom = imgZoom;
+    imgZoom = Math.min(5, Math.max(1, imgZoom * (e.deltaY < 0 ? 1.12 : 0.9)));
+    // Zoom toward cursor position
+    const rect = wrap.getBoundingClientRect();
+    const cx = e.clientX - rect.left;
+    const cy = e.clientY - rect.top;
+    const ratio = imgZoom / oldZoom;
+    wrap.scrollLeft = (wrap.scrollLeft + cx) * ratio - cx;
+    wrap.scrollTop  = (wrap.scrollTop  + cy) * ratio - cy;
     applyZoom();
   }, {passive:false});
-  // Touch pinch
-  let t0, t1, baseZoom;
+  // Touch pinch zoom (works in zoom mode AND draw mode via lbimg-wrap)
+  let t0, t1, baseZoom, baseScrollL, baseScrollT, baseMidX, baseMidY, d0;
   wrap.addEventListener('touchstart', e=>{
-    if (e.touches.length===2) { t0=e.touches[0]; t1=e.touches[1]; baseZoom=imgZoom; e.preventDefault(); }
-  },{passive:false});
-  wrap.addEventListener('touchmove', e=>{
-    if (e.touches.length===2) {
-      const d = Math.hypot(e.touches[0].clientX-e.touches[1].clientX, e.touches[0].clientY-e.touches[1].clientY);
-      const d0 = Math.hypot(t0.clientX-t1.clientX, t0.clientY-t1.clientY);
-      imgZoom = Math.min(4, Math.max(1, baseZoom * d / d0));
-      applyZoom(); e.preventDefault();
+    if (e.touches.length === 2) {
+      e.preventDefault();
+      t0 = e.touches[0]; t1 = e.touches[1];
+      d0 = Math.hypot(t0.clientX-t1.clientX, t0.clientY-t1.clientY);
+      baseZoom = imgZoom;
+      baseScrollL = wrap.scrollLeft;
+      baseScrollT = wrap.scrollTop;
+      const rect = wrap.getBoundingClientRect();
+      baseMidX = (t0.clientX + t1.clientX)/2 - rect.left;
+      baseMidY = (t0.clientY + t1.clientY)/2 - rect.top;
     }
   },{passive:false});
+  wrap.addEventListener('touchmove', e=>{
+    if (e.touches.length === 2) {
+      e.preventDefault();
+      const d = Math.hypot(e.touches[0].clientX-e.touches[1].clientX, e.touches[0].clientY-e.touches[1].clientY);
+      imgZoom = Math.min(5, Math.max(1, baseZoom * d / d0));
+      applyZoom();
+      const ratio = imgZoom / baseZoom;
+      wrap.scrollLeft = (baseScrollL + baseMidX) * ratio - baseMidX;
+      wrap.scrollTop  = (baseScrollT + baseMidY) * ratio - baseMidY;
+    }
+  },{passive:false});
+  // Double-tap to zoom in/out
+  let lastTap = 0;
+  wrap.addEventListener('touchend', e=>{
+    if (e.touches.length > 0) return;
+    const now = Date.now();
+    if (now - lastTap < 300) {
+      if (imgZoom > 1) resetZoom();
+      else { imgZoom = 2.5; applyZoom(); }
+    }
+    lastTap = now;
+  });
 })();
 
 // ════════════════════════════════════════
 // DRAWING
 // ════════════════════════════════════════
+function updateSizeUI() {
+  const sz = Math.round(drawSize);
+  document.getElementById('size-label').textContent = sz;
+  const dot = document.getElementById('size-dot');
+  const px = Math.min(22, Math.max(4, sz * 1.8));
+  dot.style.setProperty('--dot-sz', px+'px');
+  dot.style.width = px+'px'; dot.style.height = px+'px';
+  dot.style.color = isEraser ? 'var(--t3)' : drawColor;
+}
+function changePenSize(d) {
+  const sizes = [1,2,3,5,8,12,18,26];
+  const cur = sizes.findIndex(s => s >= drawSize);
+  const ni = Math.min(sizes.length-1, Math.max(0, (cur < 0 ? 2 : cur) + d));
+  drawSize = sizes[ni];
+  if (isEraser) { /* keep eraser but update display */ }
+  else { setMode('draw'); }
+  updateSizeUI();
+}
 (function initCanvas(){
   const canvas = document.getElementById('lb-canvas');
   const img = document.getElementById('lb-img');
+  // Set initial touch-action for draw mode
+  canvas.style.touchAction = 'none';
   function syncCanvas() {
-    canvas.width = img.naturalWidth || img.clientWidth || 800;
-    canvas.height = img.naturalHeight || img.clientHeight || 600;
+    const w = img.naturalWidth || img.clientWidth || 800;
+    const h = img.naturalHeight || img.clientHeight || 600;
+    // Preserve drawing across resync
+    let saved = null;
+    if (drawCtx && canvas.width > 0) {
+      saved = drawCtx.getImageData(0, 0, canvas.width, canvas.height);
+    }
+    canvas.width = w; canvas.height = h;
     drawCtx = canvas.getContext('2d');
+    if (saved) drawCtx.putImageData(saved, 0, 0);
   }
   img.addEventListener('load', syncCanvas);
   canvas.addEventListener('pointerdown', e=>{
+    if (currentMode !== 'draw') return;
     e.preventDefault();
-    isDrawing=true;
+    isDrawing = true;
     canvas.setPointerCapture(e.pointerId);
-    const r=canvas.getBoundingClientRect();
-    const scl=canvas.width/r.width;
-    lastX=(e.clientX-r.left)*scl; lastY=(e.clientY-r.top)*scl;
+    const r = canvas.getBoundingClientRect();
+    const scl = canvas.width / r.width;
+    lastX = (e.clientX - r.left) * scl;
+    lastY = (e.clientY - r.top) * scl;
     if (!drawCtx) syncCanvas();
+    // Draw a dot on click
     drawCtx.beginPath();
-    drawCtx.arc(lastX, lastY, drawSize/2, 0, Math.PI*2);
+    drawCtx.arc(lastX, lastY, (isEraser ? drawSize*3 : drawSize) / 2, 0, Math.PI*2);
     if (isEraser) { drawCtx.globalCompositeOperation='destination-out'; drawCtx.fillStyle='rgba(0,0,0,1)'; }
-    else { drawCtx.globalCompositeOperation='source-over'; drawCtx.fillStyle=drawColor; }
+    else { drawCtx.globalCompositeOperation='source-over'; drawCtx.fillStyle = drawColor; }
     drawCtx.fill();
   });
   canvas.addEventListener('pointermove', e=>{
-    if (!isDrawing || !drawCtx) return;
+    if (!isDrawing || !drawCtx || currentMode !== 'draw') return;
     e.preventDefault();
-    const r=canvas.getBoundingClientRect();
-    const scl=canvas.width/r.width;
-    const x=(e.clientX-r.left)*scl, y=(e.clientY-r.top)*scl;
+    const r = canvas.getBoundingClientRect();
+    const scl = canvas.width / r.width;
+    const x = (e.clientX - r.left) * scl;
+    const y = (e.clientY - r.top) * scl;
     drawCtx.beginPath();
     drawCtx.moveTo(lastX, lastY);
     drawCtx.lineTo(x, y);
-    if (isEraser) { drawCtx.globalCompositeOperation='destination-out'; drawCtx.strokeStyle='rgba(0,0,0,1)'; drawCtx.lineWidth=drawSize*4; }
-    else { drawCtx.globalCompositeOperation='source-over'; drawCtx.strokeStyle=drawColor; drawCtx.lineWidth=drawSize; }
-    drawCtx.lineCap='round'; drawCtx.lineJoin='round';
+    if (isEraser) {
+      drawCtx.globalCompositeOperation = 'destination-out';
+      drawCtx.strokeStyle = 'rgba(0,0,0,1)';
+      drawCtx.lineWidth = drawSize * 6;
+    } else {
+      drawCtx.globalCompositeOperation = 'source-over';
+      drawCtx.strokeStyle = drawColor;
+      drawCtx.lineWidth = drawSize;
+    }
+    drawCtx.lineCap = 'round'; drawCtx.lineJoin = 'round';
     drawCtx.stroke();
-    lastX=x; lastY=y;
+    lastX = x; lastY = y;
   });
-  canvas.addEventListener('pointerup', ()=>{ isDrawing=false; });
-  canvas.addEventListener('pointercancel', ()=>{ isDrawing=false; });
+  canvas.addEventListener('pointerup', () => { isDrawing = false; });
+  canvas.addEventListener('pointercancel', () => { isDrawing = false; });
+  // Init size UI
+  updateSizeUI();
 })();
 function setDrawColor(c) {
-  drawColor=c; isEraser=false;
-  document.querySelectorAll('.clr-btn').forEach(b=>b.classList.remove('active'));
-  document.querySelectorAll('.draw-tool-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('btn-pen').classList.add('active');
-  // highlight active color btn
-  const map={'#e05555':'clr-red','#4b9ef8':'clr-blue','#f5c842':'clr-yellow','#3ecf8e':'clr-green','#f0f2f8':'clr-white'};
-  if(map[c]) document.getElementById(map[c]).classList.add('active');
+  drawColor = c; isEraser = false;
+  setMode('draw');
+  document.querySelectorAll('.clr-btn').forEach(b => b.classList.remove('active'));
+  const map = {'#e05555':'clr-red','#4b9ef8':'clr-blue','#f5c842':'clr-yellow','#3ecf8e':'clr-green','#f0f2f8':'clr-white'};
+  if (map[c]) document.getElementById(map[c]).classList.add('active');
+  document.getElementById('btn-eraser').classList.remove('active');
+  updateSizeUI();
 }
 function setEraser(v) {
-  isEraser=v;
-  document.getElementById('btn-pen').classList.toggle('active',!v);
-  document.getElementById('btn-eraser').classList.toggle('active',v);
+  isEraser = v;
+  if (v) setMode('draw');
+  document.getElementById('btn-eraser').classList.toggle('active', v);
+  updateSizeUI();
 }
 function clearCanvas() {
   if (!drawCtx) return;
-  const c=document.getElementById('lb-canvas');
-  drawCtx.clearRect(0,0,c.width,c.height);
+  const c = document.getElementById('lb-canvas');
+  drawCtx.clearRect(0, 0, c.width, c.height);
 }
 
 // ════════════════════════════════════════

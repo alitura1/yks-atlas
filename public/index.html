@@ -166,7 +166,7 @@ nav{
 .draw-tool-btn:hover,.draw-tool-btn.active{background:var(--bg3);border-color:var(--border2);color:var(--t1)}
 
 /* ─── ANALYSIS PAGE ─── */
-.anal-page{padding:22px;max-width:1100px}
+.anal-page{padding:22px;max-width:1100px;width:100%}
 .anal-hero{
   background:linear-gradient(135deg,var(--bg2),var(--bg3));
   border:1px solid var(--border2);border-radius:var(--rl);
@@ -175,7 +175,7 @@ nav{
 .anal-hero-icon{font-size:36px;flex-shrink:0}
 .anal-hero h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin-bottom:6px}
 .anal-hero p{font-size:12px;color:var(--t2);line-height:1.65}
-.kaz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.kaz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;align-items:start}
 .kcard{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden}
 .kcard-head{display:flex;align-items:center;gap:10px;padding:14px;cursor:pointer;user-select:none}
 .kcard-head:hover{background:var(--bg3)}
@@ -402,7 +402,7 @@ nav{
       <div class="anal-hero-icon">📐</div>
       <div>
         <h2>AYT Matematik — MEB 2026 Kazanım Haritası</h2>
-        <p>ÖSYM 2026 Kazanım Kitabına göre 12 ana konu alanı, 35+ alt kazanım ve 2020–2025 gerçek sınav soruları. Her kazanımın MEB kodu, açıklaması, sınav ipuçları ve soru referansları. Pill'e tıkla → soruya atla.</p>
+        <p>ÖSYM 2026 Kazanım Kitabına göre 10 ana konu alanı, 30+ alt kazanım ve 2020–2025 gerçek sınav soruları. Her kazanımın MEB kodu, açıklaması, sınav ipuçları ve soru referansları. Pill'e tıkla → soruya atla. (Geometri & Analitik Geometri konuları AYT Geo Analiz sekmesinde.)</p>
       </div>
     </div>
     <div class="kaz-grid" id="ayt-kaz"></div>
@@ -454,7 +454,7 @@ nav{
       <div class="anal-hero-icon">🔺</div>
       <div>
         <h2>AYT Geometri — MEB 2026 Kazanım Haritası</h2>
-        <p>§9.4 Üçgenler, §10.5 Dörtgenler, §11.5–11.6 Çember & Katı Cisimler kapsamında alt kazanımlar ve 2020–2025 gerçek sınav soruları.</p>
+        <p>§9.4 Üçgenler, §10.5 Dörtgenler, §11.5–11.6 Çember & Katı Cisimler ve §11.2 & §12.4 & §12.7 Analitik Geometri kapsamında alt kazanımlar ve 2020–2025 gerçek sınav soruları.</p>
       </div>
     </div>
     <div class="kaz-grid" id="aytgeo-kaz"></div>
@@ -897,31 +897,7 @@ const AYT_KAZ = [
      refs:[{yr:2020,n:30},{yr:2021,n:30},{yr:2022,n:30},{yr:2025,n:30}]},
   ]},
 
-  // ─── 8. ANALİTİK GEOMETRİ ────────────────────────────────────────────────
-  {icon:'⊕',bg:'#0a2d1e',clr:'#3ecf8e',name:'Analitik Geometri (§11.2 & §12.4 & §12.7)',cnt:24,subs:[
-    {name:'Uzaklık, orta nokta & bölüm noktası (11.2.1.1–11.2.1.2)',code:'11.2.1',
-     desc:'|AB|=√((x₂−x₁)²+(y₂−y₁)²), orta nokta = ((x₁+x₂)/2, (y₁+y₂)/2), iç/dış bölüm noktası koordinatı, üçgenin ağırlık merkezi.',
-     tip:'Sınav: Her yıl 1–2 soru. Mesafe formülü tek başına nadir; çoğunlukla doğru/çember sorusu içinde araç olarak kullanılır.',
-     refs:[{yr:2020,n:31},{yr:2021,n:31},{yr:2022,n:31},{yr:2023,n:31},{yr:2024,n:31},{yr:2025,n:31}]},
-    {name:'Doğrunun denklemi, eğim & paralel/dik koşul (11.2.1.3–11.2.1.4)',code:'11.2.1.3',
-     desc:'Eğim m=tanα=(y₂−y₁)/(x₂−x₁), y=mx+n, ax+by+c=0. Paralel koşul m₁=m₂, dik koşul m₁·m₂=−1. Noktanın doğruya uzaklığı: d=|ax₀+by₀+c|/√(a²+b²).',
-     tip:'Sınav: Her yıl 2–3 soru. Koordinat düzleminde geometrik şekil kuran (kare, dikdörtgen, üçgen) ve uzaklık hesaplayan sorular yaygın.',
-     refs:[{yr:2020,n:14},{yr:2021,n:22},{yr:2022,n:22},{yr:2023,n:23},{yr:2024,n:22},{yr:2025,n:22}]},
-    {name:'Dönüşümler: öteleme, dönme & simetri (12.4.1)',code:'12.4.1',
-     desc:'Öteleme: A(x,y)→A\'(x+a, y+b). Eksene simetri: x-ekseni→(x,−y), y-ekseni→(−x,y), y=x→(y,x), orijine→(−x,−y). Dönme (90°, 180°, 270°) ve bileşke dönüşümler.',
-     tip:'Sınav: Her yıl 1–2 soru, son 3 yılda düzenli olarak 38. soru. Birden fazla dönüşümü sırayla uygulama ve koordinat takibi önemli.',
-     refs:[{yr:2023,n:38},{yr:2024,n:38},{yr:2025,n:38}]},
-    {name:'Çemberin analitik incelenmesi (12.7.1)',code:'12.7.1',
-     desc:'Standart denklem: (x−a)²+(y−b)²=r². Genel denklem: x²+y²+Dx+Ey+F=0, merkez=(−D/2, −E/2), r=√(D²/4+E²/4−F). Doğru-çember: kesişim, teğet, ayrık durumlar.',
-     tip:'Sınav: Her yıl 1–2 soru garantili. "Eksenlere teğet çember" (|merkez_x|=|merkez_y|=r) klasik AYT sorusu. Genel denklemi standarda çevirme hata yaptırır.',
-     refs:[{yr:2020,n:30},{yr:2022,n:37},{yr:2023,n:36},{yr:2024,n:34},{yr:2025,n:37}]},
-    {name:'Koordinat düzleminde geometrik uygulamalar (11.2.1)',code:'11.2.1',
-     desc:'Üçgen/kare/dikdörtgenin köşe koordinatlarından alan, çevre ve özelliklerini analitik hesaplama; koordinat düzleminde geometrik locus (yer) problemleri.',
-     tip:'Sınav: Her yıl 2–3 soru. "1. bölgede kare" veya "x eksenine paralel kenar" gibi kısıtlamalı koordinat soruları zor yıllarda çıkıyor.',
-     refs:[{yr:2020,n:37},{yr:2021,n:37},{yr:2022,n:34},{yr:2023,n:37},{yr:2024,n:36},{yr:2025,n:34}]},
-  ]},
-
-  // ─── 9. LİMİT & TÜREV ───────────────────────────────────────────────────
+  // ─── 8. LİMİT & TÜREV ───────────────────────────────────────────────────
   {icon:'∂',bg:'#2d2300',clr:'#f5c842',name:'Limit & Türev (§12.5)',cnt:24,subs:[
     {name:'Limit & süreklilik (12.5.1)',code:'12.5.1',
      desc:'Sağdan/soldan limit (x→a⁺, x→a⁻), iki yönlü limit, limit özellikleri, 0/0 belirsizliğini kaldırma (çarpanlara ayırma), polinom/köklü/üstel/log fonksiyon limitleri, süreklilik tanımı.',
@@ -969,27 +945,6 @@ const AYT_KAZ = [
      refs:[{yr:2020,n:16},{yr:2021,n:16},{yr:2022,n:16},{yr:2023,n:16},{yr:2024,n:16},{yr:2025,n:16}]},
   ]},
 
-  // ─── 12. GEOMETRİ (AYT) ─────────────────────────────────────────────────
-  {icon:'△',bg:'#2d0d0d',clr:'#e05555',name:'Geometri — AYT (§9.4 & §10.5 & §11.5–11.6)',cnt:18,subs:[
-    {name:'Üçgen: açı, kenar, benzerlik & alan (9.4.1–9.4.5)',code:'9.4',
-     desc:'İç/dış açı toplamı, kenar-açı ilişkisi, K.A.K./K.K.K./A.A. benzerliği, Thales teoremi, Pisagor+Öklid teoremi, trigonometrik alan (½ab·sinC).',
-     tip:'Sınav: Her yıl 2–3 soru. AYT\'de üçgen soruları gerçek bağlamlı (alan, trigonometri, benzerlik) ve Sinüs/Kosinüs teoremiyle birleşik gelir.',
-     refs:[{yr:2020,n:28},{yr:2021,n:30},{yr:2022,n:30},{yr:2023,n:29},{yr:2024,n:32},{yr:2025,n:32}]},
-    {name:'Çemberde açılar: merkez, çevre, teğet-kiriş (11.5.1–11.5.3)',code:'11.5.2',
-     desc:'Merkez açı = 2×çevre açı; aynı yaya dayanan çevre açıları eşit; iç/dış açı özellikleri; teğet-kiriş açısı; dıştan teğet parçaları eşit; kiriş-orta dikme.',
-     tip:'Sınav: Her yıl 1–2 soru. "Merkez açısı = 2 × çevre açısı" + çevre açısını çaptan görme (90°) kombinasyonu en sık çıkan soru tipi.',
-     refs:[{yr:2020,n:35},{yr:2022,n:35},{yr:2023,n:31},{yr:2024,n:35},{yr:2025,n:35}]},
-    {name:'Dairenin çevresi, alanı & yay (11.5.4)',code:'11.5.4',
-     desc:'Çevre C=2πr, alan A=πr², yay uzunluğu l=rθ (θ radyan), daire dilimi alanı A=r²θ/2, yarım daire/çeyrek daire, halkalar.',
-     refs:[{yr:2020,n:36},{yr:2021,n:36},{yr:2022,n:36},{yr:2023,n:35},{yr:2024,n:36},{yr:2025,n:36}]},
-    {name:'Küre, silindir & koni (hacim & yüzey) (11.6.1)',code:'11.6.1',
-     desc:'V(silindir)=πr²h, V(koni)=πr²h/3, V(küre)=4πr³/3; yanal alan ve yüzey alanı formülleri; su doldurma/boşaltma problemleri.',
-     tip:'Sınav: Her yıl 1–2 soru. Silindir + koni + küre hacminin birleşimi (örn. bir hacim diğerine dönüştürme) yaygın. π iptal eden sorular hızlı çözülür.',
-     refs:[{yr:2020,n:40},{yr:2022,n:40},{yr:2023,n:40},{yr:2024,n:40},{yr:2025,n:40}]},
-    {name:'Özel dörtgenler (10.5.3)',code:'10.5.3',
-     desc:'Yamuk (paralel kenar, yükseklik, alan), ikizkenar yamuk, paralelkenar, eşkenar dörtgen (d₁×d₂/2), dikdörtgen, kare; hiyerarşi ve çevresel eleman.',
-     refs:[{yr:2020,n:39},{yr:2021,n:39},{yr:2022,n:38},{yr:2023,n:39},{yr:2024,n:39},{yr:2025,n:39}]},
-  ]},
 ];
 
 // ════════════════════════════════════════
@@ -1029,6 +984,52 @@ const AYTGEO_KAZ = [
      desc:'V(silindir)=πr²h, V(koni)=πr²h/3, V(küre)=4πr³/3; yanal alan ve yüzey alanı formülleri; su doldurma/boşaltma problemleri.',
      tip:'Sınav: Her yıl 1–2 soru. Silindir + koni + küre hacminin birleşimi (örn. bir hacim diğerine dönüştürme) yaygın. π iptal eden sorular hızlı çözülür.',
      refs:[{yr:2020,n:40},{yr:2022,n:40},{yr:2023,n:40},{yr:2024,n:40},{yr:2025,n:40}]},
+  ]},
+
+  // ─── ANALİTİK GEOMETRİ ──────────────────────────────────────────────────
+  {icon:'⊕',bg:'#0a2d1e',clr:'#3ecf8e',name:'Analitik Geometri (§11.2 & §12.4 & §12.7)',cnt:24,subs:[
+    {name:'Uzaklık, orta nokta & bölüm noktası (11.2.1.1–11.2.1.2)',code:'11.2.1',
+     desc:'|AB|=√((x₂−x₁)²+(y₂−y₁)²), orta nokta = ((x₁+x₂)/2, (y₁+y₂)/2), iç/dış bölüm noktası koordinatı, üçgenin ağırlık merkezi.',
+     tip:'Sınav: Her yıl 1–2 soru. Mesafe formülü tek başına nadir; çoğunlukla doğru/çember sorusu içinde araç olarak kullanılır.',
+     refs:[{yr:2020,n:31},{yr:2021,n:31},{yr:2022,n:31},{yr:2023,n:31},{yr:2024,n:31},{yr:2025,n:31}]},
+    {name:'Doğrunun denklemi, eğim & paralel/dik koşul (11.2.1.3–11.2.1.4)',code:'11.2.1.3',
+     desc:'Eğim m=tanα=(y₂−y₁)/(x₂−x₁), y=mx+n, ax+by+c=0. Paralel koşul m₁=m₂, dik koşul m₁·m₂=−1. Noktanın doğruya uzaklığı: d=|ax₀+by₀+c|/√(a²+b²).',
+     tip:'Sınav: Her yıl 2–3 soru. Koordinat düzleminde geometrik şekil kuran (kare, dikdörtgen, üçgen) ve uzaklık hesaplayan sorular yaygın.',
+     refs:[{yr:2020,n:14},{yr:2021,n:22},{yr:2022,n:22},{yr:2023,n:23},{yr:2024,n:22},{yr:2025,n:22}]},
+    {name:'Dönüşümler: öteleme, dönme & simetri (12.4.1)',code:'12.4.1',
+     desc:'Öteleme: A(x,y)→A\'(x+a, y+b). Eksene simetri: x-ekseni→(x,−y), y-ekseni→(−x,y), y=x→(y,x), orijine→(−x,−y). Dönme (90°, 180°, 270°) ve bileşke dönüşümler.',
+     tip:'Sınav: Her yıl 1–2 soru, son 3 yılda düzenli olarak 38. soru. Birden fazla dönüşümü sırayla uygulama ve koordinat takibi önemli.',
+     refs:[{yr:2023,n:38},{yr:2024,n:38},{yr:2025,n:38}]},
+    {name:'Çemberin analitik incelenmesi (12.7.1)',code:'12.7.1',
+     desc:'Standart denklem: (x−a)²+(y−b)²=r². Genel denklem: x²+y²+Dx+Ey+F=0, merkez=(−D/2, −E/2), r=√(D²/4+E²/4−F). Doğru-çember: kesişim, teğet, ayrık durumlar.',
+     tip:'Sınav: Her yıl 1–2 soru garantili. "Eksenlere teğet çember" (|merkez_x|=|merkez_y|=r) klasik AYT sorusu. Genel denklemi standarda çevirme hata yaptırır.',
+     refs:[{yr:2020,n:30},{yr:2022,n:37},{yr:2023,n:36},{yr:2024,n:34},{yr:2025,n:37}]},
+    {name:'Koordinat düzleminde geometrik uygulamalar (11.2.1)',code:'11.2.1',
+     desc:'Üçgen/kare/dikdörtgenin köşe koordinatlarından alan, çevre ve özelliklerini analitik hesaplama; koordinat düzleminde geometrik locus (yer) problemleri.',
+     tip:'Sınav: Her yıl 2–3 soru. "1. bölgede kare" veya "x eksenine paralel kenar" gibi kısıtlamalı koordinat soruları zor yıllarda çıkıyor.',
+     refs:[{yr:2020,n:37},{yr:2021,n:37},{yr:2022,n:34},{yr:2023,n:37},{yr:2024,n:36},{yr:2025,n:34}]},
+  ]},
+
+  // ─── GEOMETRİ (AYT) ─────────────────────────────────────────────────────
+  {icon:'△',bg:'#2d0d0d',clr:'#e05555',name:'Geometri — AYT (§9.4 & §10.5 & §11.5–11.6)',cnt:18,subs:[
+    {name:'Üçgen: açı, kenar, benzerlik & alan (9.4.1–9.4.5)',code:'9.4',
+     desc:'İç/dış açı toplamı, kenar-açı ilişkisi, K.A.K./K.K.K./A.A. benzerliği, Thales teoremi, Pisagor+Öklid teoremi, trigonometrik alan (½ab·sinC).',
+     tip:'Sınav: Her yıl 2–3 soru. AYT\'de üçgen soruları gerçek bağlamlı (alan, trigonometri, benzerlik) ve Sinüs/Kosinüs teoremiyle birleşik gelir.',
+     refs:[{yr:2020,n:28},{yr:2021,n:30},{yr:2022,n:30},{yr:2023,n:29},{yr:2024,n:32},{yr:2025,n:32}]},
+    {name:'Çemberde açılar: merkez, çevre, teğet-kiriş (11.5.1–11.5.3)',code:'11.5.2',
+     desc:'Merkez açı = 2×çevre açı; aynı yaya dayanan çevre açıları eşit; iç/dış açı özellikleri; teğet-kiriş açısı; dıştan teğet parçaları eşit; kiriş-orta dikme.',
+     tip:'Sınav: Her yıl 1–2 soru. "Merkez açısı = 2 × çevre açısı" + çevre açısını çaptan görme (90°) kombinasyonu en sık çıkan soru tipi.',
+     refs:[{yr:2020,n:35},{yr:2022,n:35},{yr:2023,n:31},{yr:2024,n:35},{yr:2025,n:35}]},
+    {name:'Dairenin çevresi, alanı & yay (11.5.4)',code:'11.5.4',
+     desc:'Çevre C=2πr, alan A=πr², yay uzunluğu l=rθ (θ radyan), daire dilimi alanı A=r²θ/2, yarım daire/çeyrek daire, halkalar.',
+     refs:[{yr:2020,n:36},{yr:2021,n:36},{yr:2022,n:36},{yr:2023,n:35},{yr:2024,n:36},{yr:2025,n:36}]},
+    {name:'Küre, silindir & koni (hacim & yüzey) (11.6.1)',code:'11.6.1',
+     desc:'V(silindir)=πr²h, V(koni)=πr²h/3, V(küre)=4πr³/3; yanal alan ve yüzey alanı formülleri; su doldurma/boşaltma problemleri.',
+     tip:'Sınav: Her yıl 1–2 soru. Silindir + koni + küre hacminin birleşimi (örn. bir hacim diğerine dönüştürme) yaygın. π iptal eden sorular hızlı çözülür.',
+     refs:[{yr:2020,n:40},{yr:2022,n:40},{yr:2023,n:40},{yr:2024,n:40},{yr:2025,n:40}]},
+    {name:'Özel dörtgenler (10.5.3)',code:'10.5.3',
+     desc:'Yamuk (paralel kenar, yükseklik, alan), ikizkenar yamuk, paralelkenar, eşkenar dörtgen (d₁×d₂/2), dikdörtgen, kare; hiyerarşi ve çevresel eleman.',
+     refs:[{yr:2020,n:39},{yr:2021,n:39},{yr:2022,n:38},{yr:2023,n:39},{yr:2024,n:39},{yr:2025,n:39}]},
   ]},
 ];
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>YKS Atlas — Soruları Kazanımla İnceleme</title>
+<title>YKS Atlas — Soru Bankası</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -710,10 +710,273 @@ const AYT_TOPIC_MAP = {
   geo:[34,35,36,37,38,39,40],
 };
 
-// Curated AYT Mat question info (key questions with titles/descriptions)
+// Curated AYT Mat question info — tam Q1–Q40 açıklamaları
 const AYT_Q_INFO = {
-  // 2020 key geometry/analysis questions
-  '2020-28':{ title:'Dar Açılı Üçgen Trigonometri',desc:'Dar açılı ABC üçgeninin iç açıları derece cinsinden tam sayılar ve bir koşul. Trigonometrik değer?',topic:'geo',tags:['trigonometri','üçgen açıları','tam sayı']},
+
+  // ══════════════════════════════════════════════════════
+  // 2020
+  // ══════════════════════════════════════════════════════
+  '2020-1':{ title:'Doğal Sayı: Rakam Problemi',desc:'Basamak değerleri ve rakamları verilen bir doğal sayıyla ilgili bölünebilme veya EBOB/EKOK sorusu.',topic:'sayilar',tags:['doğal sayı','rakam','bölünebilme']},
+  '2020-2':{ title:'Sayı Kümeleri',desc:'ℕ, ℤ, ℚ, ℝ kümelerinin hiyerarşisi; bir sayının hangi kümelere ait olduğunu belirleme.',topic:'sayilar',tags:['sayı kümeleri','irrasyonel','hiyerarşi']},
+  '2020-3':{ title:'Mutlak Değer Eşitsizliği',desc:'Mutlak değer içeren bir denklem veya eşitsizliğin çözüm kümesi bulunuyor.',topic:'sayilar',tags:['mutlak değer','eşitsizlik','çözüm kümesi']},
+  '2020-4':{ title:'Oran ve Orantı Problemi',desc:'Doğru/ters orantı ya da yüzde içeren gerçek hayat problemi.',topic:'sayilar',tags:['oran','orantı','yüzde']},
+  '2020-5':{ title:'Üslü İfadeler',desc:'Üslü ifadelerin özellikleri kullanılarak sadeleştirme veya eşitlik sorunu.',topic:'sayilar',tags:['üslü ifade','kuvvet','sadeleştirme']},
+  '2020-6':{ title:'Köklü İfadeler',desc:'Köklü ifadelerin sadeleştirilmesi; iç içe veya eşlenikli köklü ifade.',topic:'sayilar',tags:['köklü ifade','rasyonalize','iç içe kök']},
+  '2020-7':{ title:'Önermeler ve De Morgan',desc:'Bileşik önermelerin doğruluk değeri; koşullu önermenin karşıtı veya De Morgan kuralları uygulaması.',topic:'kume',tags:['önerme','De Morgan','koşullu önerme']},
+  '2020-8':{ title:'Küme İşlemleri ve Venn',desc:'Birleşim, kesişim, fark ve tümleme işlemleri; Venn şemasında eleman sayısı.',topic:'kume',tags:['küme','Venn','eleman sayısı']},
+  '2020-9':{ title:'Alt Küme ve Kartezyen Çarpım',desc:'Alt küme sayısı, Kartezyen çarpım eleman sayısı veya küme eşitliği koşulu.',topic:'kume',tags:['alt küme','kartezyen','eleman sayısı']},
+  '2020-10':{ title:'2. Derece Denklem: Kök-Katsayı',desc:'ax²+bx+c=0 denkleminde diskriminant veya köklerin toplamı/çarpımı kullanarak ifade hesabı.',topic:'pol',tags:['2.derece denklem','kök-katsayı','diskriminant']},
+  '2020-11':{ title:'Polinom: Çarpanlara Ayırma',desc:'Polinom ifadesinin çarpanlarına ayrılması; x–a çarpanını bulma veya ortak çarpan alma.',topic:'pol',tags:['polinom','çarpanlara ayırma','kök']},
+  '2020-12':{ title:'2. Derece Eşitsizlik',desc:'ax²+bx+c ≷ 0 türü eşitsizliğin çözüm kümesi; parabolden işaret belirleme.',topic:'pol',tags:['2.derece eşitsizlik','işaret','parabol']},
+  '2020-13':{ title:'Polinom: Kalan Teoremi',desc:'P(x) polinomunun (x–a) ile bölümünden kalan P(a); köklere göre çarpanlara ayırma.',topic:'pol',tags:['kalan teoremi','polinom','sıfır']},
+  '2020-14':{ title:'Doğru Denklemi ve Eğim',desc:'İki nokta veya eğim-kesim noktası verilen doğrunun denklemini bulma; koordinat düzleminde alan.',topic:'analitik',tags:['doğru denklemi','eğim','koordinat']},
+  '2020-15':{ title:'Permütasyon ve Kombinasyon',desc:'Belirli koşullar altında dizme veya seçme sayısı; gerçek hayat bağlamlı sayma problemi.',topic:'sayma',tags:['permütasyon','kombinasyon','sayma']},
+  '2020-16':{ title:'Olasılık',desc:'Örnek uzaydan olay olasılığı; bağımsız/bağımlı olay ya da en az bir koşuluyla olasılık.',topic:'sayma',tags:['olasılık','bağımsız olay','tümleyen']},
+  '2020-17':{ title:'Fonksiyon Kavramı',desc:'Tanım/görüntü kümesi, bire-bir/örten fonksiyon özellikleri veya parçalı fonksiyon sorusu.',topic:'fon',tags:['fonksiyon','tanım kümesi','bire-bir']},
+  '2020-18':{ title:'Bileşke ve Ters Fonksiyon',desc:'(f∘g)(x) veya ters fonksiyon f⁻¹(x) hesabı; f∘f⁻¹ = I özdeşliği uygulaması.',topic:'fon',tags:['bileşke fonksiyon','ters fonksiyon','f⁻¹']},
+  '2020-19':{ title:'Fonksiyon Dönüşümleri',desc:'y=f(x)±k, y=f(x±h), y=–f(x) gibi grafik dönüşümlerinden birinin uygulanması.',topic:'fon',tags:['fonksiyon dönüşümü','grafik kaydırma','yansıma']},
+  '2020-20':{ title:'Parabol: 2. Derece Fonksiyon',desc:'y=ax²+bx+c parabolünün tepe noktası, simetri ekseni veya görüntü kümesi sorusu.',topic:'fon',tags:['parabol','tepe noktası','ikinci derece fonksiyon']},
+  '2020-21':{ title:'Limit ve Süreklilik',desc:'Parçalı fonksiyonda sağdan/soldan limit veya 0/0 belirsizliğini kaldırarak limit hesabı.',topic:'limit',tags:['limit','süreklilik','parçalı fonksiyon']},
+  '2020-22':{ title:'Logaritma Özellikleri',desc:'log çarpım/bölüm/kuvvet kuralları veya taban değiştirme formülü ile logaritma ifadesi sadeleştirme.',topic:'fon',tags:['logaritma','taban değiştirme','log özellikleri']},
+  '2020-23':{ title:'Logaritmik/Üstel Denklem',desc:'Logaritmik veya üstel denklem/eşitsizlik; tabana göre eşitsizlik yönü analizi.',topic:'fon',tags:['logaritmik denklem','üstel denklem','eşitsizlik']},
+  '2020-24':{ title:'Türev Kuralları',desc:'Polinom fonksiyonun türevi; toplam/çarpım kuralı veya zincir kuralı uygulaması.',topic:'limit',tags:['türev','polinom türevi','zincir kuralı']},
+  '2020-25':{ title:'Aritmetik Dizi',desc:'Ortak farkı veya belirli terimleri verilen aritmetik dizide terim sayısı ya da toplam hesabı.',topic:'dizi',tags:['aritmetik dizi','ortak fark','toplam']},
+  '2020-26':{ title:'Geometrik Dizi',desc:'Ortak oranı verilen geometrik dizide terim veya toplam hesabı; sonsuz geometrik dizi.',topic:'dizi',tags:['geometrik dizi','ortak oran','sonsuz toplam']},
+  '2020-27':{ title:'Birim Çember ve Trigonometrik Değerler',desc:'Birim çemberde açının trigonometrik değeri; bölgeye göre sin/cos/tan işaret analizi.',topic:'trigon',tags:['birim çember','trigonometri','işaret analizi']},
+  '2020-28':{ title:'Dar Açılı Üçgen: Trigonometri',desc:'Dar açılı ABC üçgeninin iç açıları derece cinsinden tam sayılar ve belirli bir koşul. Trigonometrik değer?',topic:'geo',tags:['trigonometri','üçgen açıları','tam sayı']},
+  '2020-29':{ title:'Trigonometri: Toplam-Fark Açı',desc:'sin/cos toplam-fark veya iki kat açı formüllerinin uygulanması.',topic:'trigon',tags:['toplam açı','iki kat açı','trigonometri']},
+  '2020-30':{ title:'Çember (Analitik)',desc:'Koordinat düzleminde O merkezli çemberin denklemi veya doğru-çember ilişkisi.',topic:'analitik',tags:['çember','koordinat','analitik geometri']},
+  '2020-31':{ title:'Uzaklık ve Orta Nokta',desc:'Koordinat düzleminde iki nokta arası mesafe veya orta nokta koordinatı uygulaması.',topic:'analitik',tags:['uzaklık formülü','orta nokta','koordinat']},
+  '2020-32':{ title:'Doğru Analitik Uygulama',desc:'Koordinat düzleminde doğru denklemi, paralel/dik koşul veya kesim noktası.',topic:'analitik',tags:['doğru denklemi','paralel','dik koşul']},
+  '2020-33':{ title:'Koordinat Düzleminde Alan',desc:'Köşe koordinatları verilen üçgen veya dörtgenin alanı; Shoelace formülü uygulaması.',topic:'analitik',tags:['analitik geometri','alan','koordinat']},
+  '2020-34':{ title:'Düzgün Altıgen ve Kare',desc:'Birer kenarları ortak düzgün altıgen ve karede kenar uzunluğu ilişkisi.',topic:'geo',tags:['düzgün altıgen','kare','kenar']},
+  '2020-35':{ title:'Üçgen: Sin/Cos Teoremi',desc:'Kenarları ve açısı verilen üçgende sinüs veya kosinüs teoremiyle hesaplama.',topic:'geo',tags:['sinüs teoremi','kosinüs teoremi','üçgen']},
+  '2020-36':{ title:'Çember Yay ve Alan',desc:'Düz zeminde geometrik ilişkiler; dairenin yay uzunluğu veya alan hesabı.',topic:'geo',tags:['çember','yay','alan']},
+  '2020-37':{ title:'ABCD Kare Koordinat',desc:'Koordinat düzleminde iki köşesi verilen ABCD karesinin diğer köşelerini ve çevresini hesaplama.',topic:'analitik',tags:['kare','koordinat','analitik geometri']},
+  '2020-38':{ title:'Analitik Geometri: Uzaklık',desc:'Koordinat düzleminde noktanın doğruya uzaklığı veya geometrik konum sorusu.',topic:'analitik',tags:['uzaklık','doğruya uzaklık','koordinat']},
+  '2020-39':{ title:'Analitik Geometri: Doğru',desc:'Koordinat düzleminde doğru denklemi, iki doğrunun kesişim noktası veya üçgen alanı.',topic:'analitik',tags:['analitik geometri','doğru','kesişim']},
+  '2020-40':{ title:'Silindir — Su Problemi',desc:'Su dolu silindir başka bir kaba boşaltılıyor; hacim ve yükseklik ilişkisi.',topic:'geo',tags:['silindir','hacim','su']},
+
+  // ══════════════════════════════════════════════════════
+  // 2021
+  // ══════════════════════════════════════════════════════
+  '2021-1':{ title:'Doğal Sayı: EBOB / EKOK',desc:'Asal çarpanlarına ayrılmış sayıların EBOB ve EKOK değeri veya çarpan sayısı hesabı.',topic:'sayilar',tags:['EBOB','EKOK','asal çarpan']},
+  '2021-2':{ title:'Sayı Kümeleri: İrrasyonel',desc:'Sayı kümelerinin hiyerarşisi; verilen bir sayının hangi kümelere ait olduğu.',topic:'sayilar',tags:['sayı kümeleri','irrasyonel','hiyerarşi']},
+  '2021-3':{ title:'1. Derece Denklem / Mutlak Değer',desc:'Mutlak değer içeren 1. derece denklem veya eşitsizliğin çözüm kümesi.',topic:'sayilar',tags:['mutlak değer','1. derece','çözüm kümesi']},
+  '2021-4':{ title:'Oran ve Orantı',desc:'Doğru/ters orantı ya da yüzde içeren günlük hayat problemi.',topic:'sayilar',tags:['oran','orantı','yüzde']},
+  '2021-5':{ title:'Üslü İfadeler',desc:'Üslü ifadelerin özellikleri kullanılarak sadeleştirme veya eşitlik sorunu.',topic:'sayilar',tags:['üslü ifade','kuvvet','sadeleştirme']},
+  '2021-6':{ title:'Köklü İfadeler',desc:'Köklü ifadelerin sadeleştirilmesi veya iç içe köklü ifade hesabı.',topic:'sayilar',tags:['köklü ifade','rasyonalize','sadeleştirme']},
+  '2021-7':{ title:'Önermeler: Koşullu Önerme',desc:'Koşullu önermenin karşıtı/döndürülmüşü; "ve/veya" bağlaçlı önerme doğruluk analizi.',topic:'kume',tags:['önerme','koşullu önerme','doğruluk tablosu']},
+  '2021-8':{ title:'Küme İşlemleri',desc:'Birleşim, kesişim, fark işlemleri; iki kümenin eleman sayısı formülü.',topic:'kume',tags:['küme','kesişim','eleman sayısı']},
+  '2021-9':{ title:'2. Derece Denklem: Diskriminant',desc:'ax²+bx+c=0 denkleminde köklerin özellikleri; kök-katsayı bağıntısı ile yeni ifade.',topic:'pol',tags:['2.derece denklem','diskriminant','kök-katsayı']},
+  '2021-10':{ title:'2. Derece Eşitsizlik',desc:'ax²+bx+c ≷ 0 türü eşitsizliğin çözüm aralıkları; işaret çizelgesi.',topic:'pol',tags:['2.derece eşitsizlik','işaret','çözüm kümesi']},
+  '2021-11':{ title:'Polinom: Çarpanlara Ayırma',desc:'Polinom ifadesinin çarpanlarına ayrılması; tam kare, iki kare farkı veya küp özdeşlikleri.',topic:'pol',tags:['polinom','çarpanlara ayırma','özdeşlik']},
+  '2021-12':{ title:'Polinom: Rasyonel İfade',desc:'Rasyonel ifadenin sadeleştirilmesi; kesir denklem çözümü.',topic:'pol',tags:['polinom','rasyonel ifade','sadeleştirme']},
+  '2021-13':{ title:'Polinom: Kalan Teoremi',desc:'P(x) polinomunun (x–a) ile bölümünden kalan P(a); verilen köklere göre polinom oluşturma.',topic:'pol',tags:['kalan teoremi','polinom','sıfır']},
+  '2021-14':{ title:'2. Derece Denklem Sistemi',desc:'İki bilinmeyenli 2. derece denklem sistemi veya polinom + doğru kesişimi.',topic:'pol',tags:['denklem sistemi','2. derece','kesişim']},
+  '2021-15':{ title:'Permütasyon / Kombinasyon',desc:'Tekrarlı veya koşullu sıralama; seçme sayısı sorusu gerçek hayat bağlamlı.',topic:'sayma',tags:['permütasyon','kombinasyon','koşullu sayma']},
+  '2021-16':{ title:'Olasılık',desc:'Bağımsız olayların olasılığı veya koşullu olasılık P(A|B) uygulaması.',topic:'sayma',tags:['olasılık','koşullu olasılık','bağımsız olay']},
+  '2021-17':{ title:'Fonksiyon Kavramı',desc:'Tanım/görüntü kümesi, bire-bir/örten özelliği veya parçalı fonksiyon grafiği analizi.',topic:'fon',tags:['fonksiyon','tanım kümesi','parçalı']},
+  '2021-18':{ title:'Bileşke ve Ters Fonksiyon',desc:'(f∘g)(x) ile (g∘f)(x) farkı; f⁻¹ bulma veya f∘f⁻¹ = I özdeşliği.',topic:'fon',tags:['bileşke fonksiyon','ters fonksiyon','f⁻¹']},
+  '2021-19':{ title:'Fonksiyon Dönüşümleri',desc:'Dikey/yatay kaydırma, yansıma; birden fazla dönüşüm uygulandığında grafik yorumlama.',topic:'fon',tags:['fonksiyon dönüşümü','grafik','kaydırma']},
+  '2021-20':{ title:'Parabol: 2. Derece Fonksiyon',desc:'y=ax²+bx+c parabolünde tepe noktası koordinatları, görüntü kümesi veya eksen simetrisi.',topic:'fon',tags:['parabol','tepe noktası','görüntü kümesi']},
+  '2021-21':{ title:'Üstel Fonksiyon',desc:'f(x)=aˣ fonksiyonunun grafiği; üstel denklem veya eşitsizliği taban eşitleme yöntemiyle çözme.',topic:'fon',tags:['üstel fonksiyon','taban eşitleme','grafik']},
+  '2021-22':{ title:'Logaritma Özellikleri',desc:'Logaritmanın çarpım/bölüm/kuvvet kuralları; taban değiştirme veya logₐ ve aˣ ters fonksiyon ilişkisi.',topic:'fon',tags:['logaritma','kural','taban değiştirme']},
+  '2021-23':{ title:'Logaritmik Denklem / Eşitsizlik',desc:'Logaritmik denklem çözümü; eşitsizlikte tabanın büyük/küçük olmasına göre yön analizi.',topic:'fon',tags:['logaritmik denklem','logaritmik eşitsizlik','çözüm']},
+  '2021-24':{ title:'Limit ve Süreklilik',desc:'Parçalı fonksiyonda limit; sağdan/soldan limit eşitliği ve süreklilik koşulunun sağlanması.',topic:'limit',tags:['limit','süreklilik','parçalı fonksiyon']},
+  '2021-25':{ title:'Aritmetik Dizi',desc:'Ortak fark, n. terim veya ilk n terimin toplamı Sₙ; koşul verilen aritmetik dizi problemi.',topic:'dizi',tags:['aritmetik dizi','ortak fark','toplam']},
+  '2021-26':{ title:'Geometrik Dizi',desc:'Ortak oran ve terim hesabı; |r|<1 koşulunda sonsuz geometrik dizi toplamı.',topic:'dizi',tags:['geometrik dizi','ortak oran','sonsuz toplam']},
+  '2021-27':{ title:'Trigonometrik Fonksiyonlar',desc:'Birim çemberde açının sin/cos/tan değeri; bölge analizi veya trigonometrik özdeşlik.',topic:'trigon',tags:['birim çember','trigonometri','bölge analizi']},
+  '2021-28':{ title:'Trigonometri: Grafik ve Periyot',desc:'y=a·sin(bx+c)+k türü fonksiyonun periyodu, genliği veya grafiğini yorumlama.',topic:'trigon',tags:['trigonometri','periyot','genlik']},
+  '2021-29':{ title:'Sinüs Teoremi Uygulaması',desc:'Ölçüleri verilen üçgende sinüs teoremi ile bilinmeyen kenar veya açı hesabı.',topic:'geo',tags:['sinüs teoremi','üçgen','kenar']},
+  '2021-30':{ title:'Çember ve Üçgen Geometrisi',desc:'Kenarları 12 ve 18 birim olan üçgen ile çember ilişkisi; açı veya uzunluk.',topic:'geo',tags:['çember','üçgen','kenar']},
+  '2021-31':{ title:'Analitik Geometri: Uzaklık',desc:'Müze tablosu bağlamı; noktanın doğruya uzaklığı veya iki nokta arası mesafe.',topic:'analitik',tags:['analitik geometri','uzaklık','koordinat']},
+  '2021-32':{ title:'Koordinat Düzleminde Şekil',desc:'Koordinat düzleminde geometrik şeklin (kare, dikdörtgen) analitik incelenmesi.',topic:'analitik',tags:['analitik geometri','koordinat','şekil']},
+  '2021-33':{ title:'Doğruya Uzaklık',desc:'Koordinat düzleminde noktanın doğruya uzaklığı; iki doğrunun kesişim noktası.',topic:'analitik',tags:['doğruya uzaklık','koordinat','kesişim']},
+  '2021-34':{ title:'Analitik Geometri: Doğru',desc:'Koordinat düzleminde doğru denklemi, eğim veya geometrik şekil alanı.',topic:'analitik',tags:['analitik geometri','doğru denklemi','alan']},
+  '2021-35':{ title:'Koordinat Düzleminde Alan',desc:'Koordinat düzleminde köşeleri verilen şeklin alanı veya geometrik özelliği.',topic:'analitik',tags:['analitik geometri','alan','koordinat']},
+  '2021-36':{ title:'Çember Analitik',desc:'Koordinat düzleminde çember veya çember-doğru ilişkisi analizi.',topic:'analitik',tags:['çember','analitik geometri','koordinat']},
+  '2021-37':{ title:"f'nin Grafiği ve Türev",desc:'Koordinat düzleminde f fonksiyonunun türev grafiği verilmiş; fonksiyonun özellikleri yorumlanıyor.',topic:'limit',tags:['türev','grafik','artan-azalan']},
+  '2021-38':{ title:'Dönüşüm: Öteleme / Simetri',desc:'Koordinat düzleminde noktanın öteleme veya eksene simetri dönüşümü.',topic:'analitik',tags:['öteleme','simetri','dönüşüm']},
+  '2021-39':{ title:'Analitik Geometri Uygulaması',desc:'Koordinat düzleminde geometrik uygulama; uzaklık, doğru veya şekil sorusu.',topic:'analitik',tags:['analitik geometri','koordinat']},
+  '2021-40':{ title:'Katı Cisimler: Hacim / Yüzey',desc:'Prizma, silindir, koni veya kürenin hacim ya da yüzey alanı hesabı.',topic:'geo',tags:['katı cisimler','hacim','yüzey alanı']},
+
+  // ══════════════════════════════════════════════════════
+  // 2022
+  // ══════════════════════════════════════════════════════
+  '2022-1':{ title:'Doğal Sayı: Bölünebilme',desc:'2, 3, 4, 5, 8, 9, 10 gibi kurallara göre bölünebilme; EBOB-EKOK veya asal çarpan uygulaması.',topic:'sayilar',tags:['bölünebilme','EBOB','asal çarpan']},
+  '2022-2':{ title:'Sayı Kümeleri',desc:'Sayı kümelerinin hiyerarşisi; irrasyonel sayıların sayı doğrusundaki yeri.',topic:'sayilar',tags:['sayı kümeleri','irrasyonel','hiyerarşi']},
+  '2022-3':{ title:'Oran ve Orantı',desc:'Doğru/ters orantı veya yüzde içeren gerçek hayat problemi.',topic:'sayilar',tags:['oran','orantı','yüzde']},
+  '2022-4':{ title:'Mutlak Değer Denklem / Eşitsizlik',desc:'Mutlak değer içeren denklem veya eşitsizliğin çözüm kümesi; sayı doğrusunda gösterim.',topic:'sayilar',tags:['mutlak değer','eşitsizlik','çözüm']},
+  '2022-5':{ title:'Köklü ve Üslü İfadeler',desc:'Rasyonel kuvvet, iç içe kök veya eşlenikli köklü ifadenin sadeleştirilmesi.',topic:'sayilar',tags:['köklü ifade','üslü ifade','rasyonel kuvvet']},
+  '2022-6':{ title:'Üslü İfadeler: Denklem',desc:'Üslü denklem/eşitsizlik; tabana göre üslerin eşitlenerek çözüm bulunması.',topic:'sayilar',tags:['üslü denklem','taban eşitleme','kuvvet']},
+  '2022-7':{ title:'Önermeler: De Morgan Kuralı',desc:'Bileşik önermelerin doğruluk değeri; koşullu önerme veya De Morgan kuralı uygulaması.',topic:'kume',tags:['önerme','De Morgan','koşullu önerme']},
+  '2022-8':{ title:'Küme İşlemleri: Eleman Sayısı',desc:'Birleşim, kesişim formülüyle iki veya üç kümenin eleman sayısı hesabı.',topic:'kume',tags:['küme','eleman sayısı','Venn']},
+  '2022-9':{ title:'2. Derece Denklem: Kök Bağıntısı',desc:'Diskriminant veya kök-katsayı bağıntısı kullanarak yeni ifade hesabı.',topic:'pol',tags:['2.derece denklem','kök-katsayı','diskriminant']},
+  '2022-10':{ title:'Polinom: Özdeşlik ve Katsayı',desc:'P(x) = Q(x)·bölüm + kalan biçiminde polinom özdeşliği; katsayı karşılaştırması.',topic:'pol',tags:['polinom','özdeşlik','katsayı']},
+  '2022-11':{ title:'Polinom: Çarpanlara Ayırma',desc:'Çarpanlara ayırma yöntemleriyle P(x) ifadesinin sadeleştirilmesi.',topic:'pol',tags:['polinom','çarpanlara ayırma','özdeşlik']},
+  '2022-12':{ title:'2. Derece Eşitsizlik',desc:'ax²+bx+c ≷ 0 çözüm kümesi; işaret çizelgesi ile aralık belirleme.',topic:'pol',tags:['2.derece eşitsizlik','işaret','aralık']},
+  '2022-13':{ title:'Polinom: Kalan / Sıfır Teoremi',desc:'Kalan teoremi uygulaması; P(x)\'in x–a ile bölümünde sıfır veya kalan koşulu.',topic:'pol',tags:['kalan teoremi','polinom','sıfır']},
+  '2022-14':{ title:'Polinom: Rasyonel İfade',desc:'Rasyonel cebirsel ifadenin sadeleştirilmesi veya işlem yapılması.',topic:'pol',tags:['rasyonel ifade','polinom','sadeleştirme']},
+  '2022-15':{ title:'Permütasyon / Kombinasyon',desc:'Koşullu sıralama veya seçme sayısı; dairesel permütasyon ya da binom katsayısı uygulaması.',topic:'sayma',tags:['permütasyon','kombinasyon','koşul']},
+  '2022-16':{ title:'Türev: Optimizasyon',desc:'Dikdörtgenin alanı A; kenarlar arasındaki ilişki türev yardımıyla optimize ediliyor.',topic:'limit',tags:['türev','optimizasyon','dikdörtgen']},
+  '2022-17':{ title:'Fonksiyon Kavramı',desc:'Tanım/görüntü kümesi, parçalı fonksiyon veya fonksiyon grafiğinden özellik okuma.',topic:'fon',tags:['fonksiyon','tanım kümesi','parçalı']},
+  '2022-18':{ title:'Bileşke ve Ters Fonksiyon',desc:'(f∘g)(x), (g∘f)(x) ayrımı; f⁻¹ hesabı veya y=x simetrisi ile grafik ilişkisi.',topic:'fon',tags:['bileşke fonksiyon','ters fonksiyon','f⁻¹']},
+  '2022-19':{ title:'Parabol: 2. Derece Fonksiyon',desc:'y=ax²+bx+c parabolünde tepe noktası, açılım yönü veya görüntü kümesi sorusu.',topic:'fon',tags:['parabol','tepe noktası','ikinci derece']},
+  '2022-20':{ title:'Logaritma: Tanım ve Özellikler',desc:'Logaritmanın tanım kümesi koşulları; log çarpım/bölüm/kuvvet kuralları uygulaması.',topic:'fon',tags:['logaritma','tanım kümesi','log özellikleri']},
+  '2022-21':{ title:'Üstel Fonksiyon: Grafik',desc:'f(x)=aˣ fonksiyonunun grafiği; üstel denklem çözümü veya taban koşulu analizi.',topic:'fon',tags:['üstel fonksiyon','grafik','taban']},
+  '2022-22':{ title:'Logaritmik Denklem / Eşitsizlik',desc:'Logaritmik denklem veya eşitsizlik; taban büyük/küçük olmasına göre yön değişimi tuzağı.',topic:'fon',tags:['logaritmik denklem','eşitsizlik','taban']},
+  '2022-23':{ title:'Trigonometri: Birim Çember',desc:'Birim çemberde sin/cos/tan değeri; açının esas ölçüsü veya özdeşlik uygulaması.',topic:'trigon',tags:['birim çember','trigonometri','esas ölçü']},
+  '2022-24':{ title:'Limit: 0/0 Belirsizliği',desc:'Çarpanlara ayırarak veya eşlenikle 0/0 belirsizliğini kaldırma; polinom/köklü limit.',topic:'limit',tags:['limit','0/0','belirsizlik']},
+  '2022-25':{ title:'Aritmetik Dizi: Toplam',desc:'Aritmetik dizi toplamı Sₙ; art arda terimler veya belirli koşullar altında toplam hesabı.',topic:'dizi',tags:['aritmetik dizi','toplam','koşul']},
+  '2022-26':{ title:'Geometrik Dizi',desc:'Geometrik dizi n. terimi veya toplamı; gerçek hayat modelleme uygulaması.',topic:'dizi',tags:['geometrik dizi','toplam','model']},
+  '2022-27':{ title:'Trigonometrik Özdeşlik',desc:'sin²x+cos²x=1 ve türevi özdeşlikler; tan/cot ifadesinin değeri hesabı.',topic:'trigon',tags:['trigonometrik özdeşlik','sin²+cos²=1','tan']},
+  '2022-28':{ title:'Kosinüs Teoremi',desc:'Kenarları ve bir açısı verilen üçgende kosinüs teoremiyle bilinmeyen hesabı.',topic:'geo',tags:['kosinüs teoremi','üçgen','kenar']},
+  '2022-29':{ title:'Trigonometri: Grafik Yorumlama',desc:'y=a·sin(bx+c)+k tipinde trigonometrik fonksiyon; periyot veya parametre bulma.',topic:'trigon',tags:['trigonometri','grafik','periyot']},
+  '2022-30':{ title:'Sin/Cos Teoremi: Üçgen',desc:'Kenarları 12 ve 18 birim olan üçgen; çember veya alan hesabıyla ilgili soru.',topic:'geo',tags:['sinüs teoremi','üçgen','çember']},
+  '2022-31':{ title:'Geometri: Çember ve Üçgen',desc:'Çemberde açı veya üçgenle ilgili geometri uygulaması.',topic:'geo',tags:['çember','üçgen','geometri']},
+  '2022-32':{ title:'Koordinat Düzleminde Şekil',desc:'Koordinat düzleminde geometrik şeklin analitik incelenmesi.',topic:'analitik',tags:['analitik geometri','koordinat']},
+  '2022-33':{ title:'Doğru–Çember: Analitik',desc:'Koordinat düzleminde doğru ile çemberin kesişim, teğet ya da ayrık durumları.',topic:'analitik',tags:['çember','doğru','kesişim']},
+  '2022-34':{ title:'Koordinat Düzleminde Kare',desc:'1. bölgede koordinat eksenlerine paralel kenarları olan kare sorusu.',topic:'analitik',tags:['kare','koordinat','1. bölge']},
+  '2022-35':{ title:'Analitik Geometri: Doğru',desc:'Koordinat düzleminde doğru denklemi veya alan hesabı uygulaması.',topic:'analitik',tags:['analitik geometri','koordinat']},
+  '2022-36':{ title:'Analitik Geometri: Şekil',desc:'Koordinat düzleminde geometrik şekil veya uzaklık uygulaması.',topic:'analitik',tags:['analitik geometri','koordinat']},
+  '2022-37':{ title:'İki Çember Teğet (Analitik)',desc:'x ve y eksenlerine teğet, 1. bölgede bulunan iki farklı çember sorusu.',topic:'analitik',tags:['çember','teğet','koordinat']},
+  '2022-38':{ title:'Dönüşüm: Öteleme / Simetri',desc:'Koordinat düzleminde öteleme, dönme veya simetri dönüşümü uygulaması.',topic:'analitik',tags:['dönüşüm','öteleme','simetri']},
+  '2022-39':{ title:'Dikdörtgenler Prizması',desc:'Ayrıt uzunlukları verilen dikdörtgenler prizmasının hacmi veya köşegen uzunluğu.',topic:'geo',tags:['prizma','hacim','köşegen']},
+  '2022-40':{ title:'Koni: Eşit Hacim',desc:'Hacimleri eşit iki koni külahta taban-yükseklik ilişkisi; hacim formülü uygulaması.',topic:'geo',tags:['koni','hacim','eşit']},
+
+  // ══════════════════════════════════════════════════════
+  // 2023
+  // ══════════════════════════════════════════════════════
+  '2023-1':{ title:'Doğal Sayı: Bölünebilme / EBOB',desc:'Bölünebilme kuralları veya EBOB/EKOK; asal sayı ile ilgili koşul sorusu.',topic:'sayilar',tags:['bölünebilme','EBOB','asal sayı']},
+  '2023-2':{ title:'Sayı Kümeleri: Hiyerarşi',desc:'ℕ⊂ℤ⊂ℚ⊂ℝ hiyerarşisi; bir ifadenin hangi kümelere ait olduğu sorusu.',topic:'sayilar',tags:['sayı kümeleri','hiyerarşi','irrasyonel']},
+  '2023-3':{ title:'Oran ve Orantı',desc:'Doğru/ters orantı, yüzde veya altın oran içeren uygulama problemi.',topic:'sayilar',tags:['oran','orantı','yüzde']},
+  '2023-4':{ title:'Oran ve Orantı: Uygulama',desc:'Yüzde hesabı, kâr-zarar veya hız-zaman içeren orantı problemi.',topic:'sayilar',tags:['oran','kâr-zarar','yüzde']},
+  '2023-5':{ title:'Mutlak Değer / 1. Derece Eşitsizlik',desc:'Mutlak değer içeren eşitsizlik veya 1. derece denklem sisteminin çözüm kümesi.',topic:'sayilar',tags:['mutlak değer','eşitsizlik','çözüm']},
+  '2023-6':{ title:'Üslü / Köklü İfadeler',desc:'Rasyonel kuvvet veya köklü ifade özellikleri; denklem ya da sadeleştirme sorusu.',topic:'sayilar',tags:['üslü ifade','köklü ifade','rasyonel kuvvet']},
+  '2023-7':{ title:'Üslü İfade: Denklem / Eşitsizlik',desc:'Üslü denklem ya da eşitsizlikte taban eşitleme; negatif taban analizi.',topic:'sayilar',tags:['üslü denklem','taban eşitleme','negatif taban']},
+  '2023-8':{ title:'Önermeler: Niceleyiciler',desc:'∀ (her) ve ∃ (bazı) niceleyicileri; koşullu önermenin doğruluk tablosu.',topic:'kume',tags:['önerme','niceleyici','koşullu önerme']},
+  '2023-9':{ title:'Küme İşlemleri: Venn',desc:'Birleşim/kesişim/fark; Venn şemasında üç kümenin eleman sayısı formülü.',topic:'kume',tags:['küme','Venn','eleman sayısı']},
+  '2023-10':{ title:'Polinom: Özdeşlik',desc:'P(x) = Q(x)·R(x) + r biçiminde polinom özdeşliği; katsayı karşılaştırması.',topic:'pol',tags:['polinom','özdeşlik','katsayı']},
+  '2023-11':{ title:'2. Derece: Kök-Katsayı',desc:'Köklerin toplamı ve çarpımı ile yeni ifade hesabı; diskriminant koşulu.',topic:'pol',tags:['2.derece','kök-katsayı','diskriminant']},
+  '2023-12':{ title:'Polinom: Çarpanlara Ayırma',desc:'Polinom ifadesinin çarpanlarına ayrılması; rasyonel ifade sadeleştirmesi.',topic:'pol',tags:['polinom','çarpanlara ayırma','rasyonel']},
+  '2023-13':{ title:'Polinom: Kalan Teoremi',desc:'Polinom bölmede kalan; verilen koşullara göre polinom katsayısı veya sıfır bulma.',topic:'pol',tags:['kalan teoremi','polinom','sıfır']},
+  '2023-14':{ title:'2. Derece Eşitsizlik',desc:'ax²+bx+c ≷ 0 eşitsizliğinin çözüm kümesi; işaret çizelgesi ile aralık belirleme.',topic:'pol',tags:['2.derece eşitsizlik','işaret','aralık']},
+  '2023-15':{ title:'Permütasyon / Kombinasyon',desc:'Koşullu seçme veya sıralama; nesneler arasında belirli düzenleme sayısı.',topic:'sayma',tags:['permütasyon','kombinasyon','koşul']},
+  '2023-16':{ title:'Olasılık',desc:'Koşullu olasılık P(A|B) veya en az bir nesnenin seçilmesi olasılığı; tümleyen yöntemi.',topic:'sayma',tags:['olasılık','koşullu olasılık','tümleyen']},
+  '2023-17':{ title:'Fonksiyon Kavramı',desc:'Parçalı tanımlı fonksiyonun görüntü kümesi veya grafiğinden özellik okuma.',topic:'fon',tags:['fonksiyon','parçalı','görüntü kümesi']},
+  '2023-18':{ title:'Bileşke ve Ters Fonksiyon',desc:'f∘g ve g∘f ayrımı; ters fonksiyon ve y=x simetrisi ile grafik ilişkisi.',topic:'fon',tags:['bileşke fonksiyon','ters fonksiyon','f⁻¹']},
+  '2023-19':{ title:'Fonksiyon Dönüşümleri',desc:'y=f(x)+b veya y=f(x–a) türü dönüşümlerin grafik üzerindeki etkisi.',topic:'fon',tags:['fonksiyon dönüşümü','kaydırma','grafik']},
+  '2023-20':{ title:"Ahmet Amca'nın Tarlası",desc:'Kenar uzunlukları verilen dikdörtgen tarla; belirli koşul altında alan veya çevre sorusu.',topic:'fon',tags:['fonksiyon uygulaması','dikdörtgen','koşul']},
+  '2023-21':{ title:'Logaritmik Denklem',desc:'Logaritmik denklem veya eşitsizlik; taban koşulu ve çözüm kümesi analizi.',topic:'fon',tags:['logaritmik denklem','taban','çözüm']},
+  '2023-22':{ title:'Analitik Geometri: Doğru',desc:'Koordinat düzleminde doğru denklemi, iki doğrunun kesişim noktası veya uzaklık.',topic:'analitik',tags:['doğru denklemi','koordinat','kesişim']},
+  '2023-23':{ title:'Koordinat Düzlemi: Doğru Denklemi',desc:'Analitik düzlemde doğrunun denklemi veya iki noktadan doğru denklemini kurma.',topic:'analitik',tags:['doğru denklemi','eğim','koordinat']},
+  '2023-24':{ title:'Limit: Süreklilik',desc:'Parçalı fonksiyonda limit ve süreklilik; sol/sağ limit eşitliği koşulu.',topic:'limit',tags:['limit','süreklilik','parçalı fonksiyon']},
+  '2023-25':{ title:'Türev: Artan-Azalan Aralıklar',desc:'f\'(x) işaret analizi; fonksiyonun artan-azalan aralıkları veya ekstremum noktaları.',topic:'limit',tags:['türev','artan-azalan','ekstremum']},
+  '2023-26':{ title:'Dizi: Genel Terim',desc:'Aritmetik veya geometrik dizide genel terim aₙ; koşul verilen dizi problemi.',topic:'dizi',tags:['dizi','genel terim','aritmetik']},
+  '2023-27':{ title:'Trigonometri: Özdeşlikler',desc:'Temel trigonometrik özdeşlik uygulaması; sin/cos/tan değeri hesabı.',topic:'trigon',tags:['trigonometrik özdeşlik','birim çember','değer hesabı']},
+  '2023-28':{ title:'Trigonometri: Toplam-Fark Açı',desc:'sin(α±β), cos(α±β) veya 2α iki kat açı formülleri uygulaması.',topic:'trigon',tags:['toplam açı','iki kat açı','trigonometri']},
+  '2023-29':{ title:'Sin/Cos Teoremi: Üçgen',desc:'Kenarları 4 ve 8 birim olan şekle ait sinüs veya kosinüs teoremi sorusu.',topic:'geo',tags:['sinüs teoremi','kosinüs teoremi','üçgen']},
+  '2023-30':{ title:'Trigonometri: Grafik Yorumlama',desc:'Trigonometrik fonksiyon grafiğinden periyot, genlik veya parametre bulma.',topic:'trigon',tags:['trigonometri','periyot','grafik']},
+  '2023-31':{ title:'Yarım Çember ve Dikdörtgen',desc:'O merkezli AD çaplı yarım çember ile ABCD dikdörtgeni ve OEF üçgeni ilişkisi.',topic:'geo',tags:['yarım çember','dikdörtgen','üçgen']},
+  '2023-32':{ title:'Geometri: Üçgen / Çember',desc:'Üçgen veya çemberle ilgili açı, uzunluk ya da alan sorusu.',topic:'geo',tags:['geometri','üçgen','çember']},
+  '2023-33':{ title:"Işıl'ın Eş Üçgenleri",desc:'Mavi, pembe ve sarı eş ikizkenar üçgenler birleştirilerek yeni bir şekil oluşturuluyor.',topic:'geo',tags:['ikizkenar üçgen','eş şekil','birleştirme']},
+  '2023-34':{ title:'Analitik Geometri: Doğru',desc:'Koordinat düzleminde doğru veya geometrik şeklin analitik incelenmesi.',topic:'analitik',tags:['analitik geometri','doğru','koordinat']},
+  '2023-35':{ title:'Çeyrek Daire Kağıt',desc:'Yarıçapı r birim çeyrek daire şeklinde kâğıt; katlama ve kesme sonrası alan sorusu.',topic:'geo',tags:['çeyrek daire','katlama','alan']},
+  '2023-36':{ title:'Koordinat Düzlemi: Alan',desc:'Koordinat düzleminde geometrik konum veya geometrik şekil alan hesabı.',topic:'analitik',tags:['analitik geometri','alan','koordinat']},
+  '2023-37':{ title:'Mahalle Krokisi',desc:'Birim karelerden oluşan krokide kurumların yerleri; analitik konumlama sorusu.',topic:'analitik',tags:['koordinat','konum','birim kare']},
+  '2023-38':{ title:'Dönüşüm ve Simetri',desc:'Koordinat düzleminde öteleme veya eksene simetri dönüşümleri uygulaması.',topic:'analitik',tags:['dönüşüm','simetri','koordinat']},
+  '2023-39':{ title:'Analitik Geometri',desc:'Koordinat düzleminde geometrik şeklin analitik incelenmesi.',topic:'analitik',tags:['analitik geometri','koordinat']},
+  '2023-40':{ title:'Kargo Paketi (Zeynep)',desc:'Dikdörtgenler prizması şeklinde kargo kutusu; hacim veya yüzey alanı hesabı.',topic:'geo',tags:['prizma','hacim','yüzey']},
+
+  // ══════════════════════════════════════════════════════
+  // 2024
+  // ══════════════════════════════════════════════════════
+  '2024-1':{ title:'Doğal Sayı: Bölünebilme',desc:'Bölünebilme kuralları veya EBOB/EKOK; koşul sağlayan sayı bulma.',topic:'sayilar',tags:['bölünebilme','EBOB','EKOK']},
+  '2024-2':{ title:'Sayı Kümeleri',desc:'Sayı kümelerinin hiyerarşisi; ifadenin hangi kümelere ait olduğu.',topic:'sayilar',tags:['sayı kümeleri','irrasyonel','hiyerarşi']},
+  '2024-3':{ title:'Oran / Orantı / Yüzde',desc:'Doğru/ters orantı veya yüzde değişimi içeren gerçek hayat uygulaması.',topic:'sayilar',tags:['oran','orantı','yüzde']},
+  '2024-4':{ title:'Oran ve Orantı Problemi',desc:'Kâr-zarar, hız veya karışım içeren oran-orantı problemi.',topic:'sayilar',tags:['oran','kâr-zarar','hız']},
+  '2024-5':{ title:'Mutlak Değer / 1. Derece',desc:'Mutlak değer içeren eşitsizlik; sayı doğrusunda çözüm aralığı.',topic:'sayilar',tags:['mutlak değer','eşitsizlik','sayı doğrusu']},
+  '2024-6':{ title:'Üslü / Köklü İfadeler',desc:'Üslü/köklü ifadenin sadeleştirilmesi; rasyonel kuvvet uygulaması.',topic:'sayilar',tags:['üslü ifade','köklü ifade','rasyonel kuvvet']},
+  '2024-7':{ title:'Üslü İfade: Denklem',desc:'Üslü denklemin taban eşitleme veya indirgeme yöntemiyle çözümü.',topic:'sayilar',tags:['üslü denklem','taban','kuvvet']},
+  '2024-8':{ title:'Önermeler: Koşullu Önerme',desc:'Koşullu önermenin karşıtı; bileşik önerme doğruluk değeri analizi.',topic:'kume',tags:['önerme','koşullu önerme','De Morgan']},
+  '2024-9':{ title:'Küme İşlemleri',desc:'Birleşim/kesişim/fark işlemleri; Venn şemasında eleman sayısı bulma.',topic:'kume',tags:['küme','Venn','eleman sayısı']},
+  '2024-10':{ title:'Polinom: İşlemler',desc:'Polinom toplama/çarpma veya bölme; P(x) ifadesinden belirli değer hesabı.',topic:'pol',tags:['polinom','işlemler','değer']},
+  '2024-11':{ title:'2. Derece Denklem: Kök-Katsayı',desc:'Kök bağıntıları ile x₁²+x₂² veya (x₁–x₂)² gibi ifade hesabı.',topic:'pol',tags:['2.derece denklem','kök-katsayı','diskriminant']},
+  '2024-12':{ title:'Polinom: Çarpanlara Ayırma',desc:'Polinom veya rasyonel ifadenin çarpanlarına ayrılması; sıfır bulma.',topic:'pol',tags:['polinom','çarpanlara ayırma','sıfır']},
+  '2024-13':{ title:'Polinom: Kalan Teoremi',desc:'P(x) polinomunun (x–a) ile bölümünde kalan; verilen kalan değeriyle katsayı bulma.',topic:'pol',tags:['kalan teoremi','polinom','katsayı']},
+  '2024-14':{ title:'2. Derece Eşitsizlik',desc:'ax²+bx+c ≷ 0 türü eşitsizlik çözüm kümesi; birden fazla eşitsizlik kesişimi.',topic:'pol',tags:['2.derece eşitsizlik','işaret','aralık']},
+  '2024-15':{ title:'Üstel Fonksiyon',desc:'f(x)=aˣ fonksiyonunun grafiği veya üstel denklem/eşitsizliğin çözümü.',topic:'fon',tags:['üstel fonksiyon','grafik','taban']},
+  '2024-16':{ title:'Logaritma Özellikleri',desc:'Log çarpım/bölüm/kuvvet kuralları; taban değiştirme veya logaritmik ifade hesabı.',topic:'fon',tags:['logaritma','kural','taban değiştirme']},
+  '2024-17':{ title:'Fonksiyon Kavramı',desc:'Parçalı fonksiyonun tanım/görüntü kümesi veya grafiğinden özellik okuma.',topic:'fon',tags:['fonksiyon','parçalı','görüntü kümesi']},
+  '2024-18':{ title:'Bileşke ve Ters Fonksiyon',desc:'f∘g ve g∘f hesabı; ters fonksiyon veya bileşke fonksiyon uygulaması.',topic:'fon',tags:['bileşke fonksiyon','ters fonksiyon','f⁻¹']},
+  '2024-19':{ title:'Parabol: 2. Derece Fonksiyon',desc:'y=ax²+bx+c parabolünde tepe noktası, eksen veya görüntü kümesi analizi.',topic:'fon',tags:['parabol','tepe noktası','ikinci derece']},
+  '2024-20':{ title:'Fonksiyon Dönüşümleri',desc:'y=f(x)+b, y=f(x–a) gibi dönüşümlerin ardı ardına uygulanması; grafik yorumlama.',topic:'fon',tags:['fonksiyon dönüşümü','grafik','kaydırma']},
+  '2024-21':{ title:'Logaritmik Denklem / Eşitsizlik',desc:'Logaritmik denklem ya da eşitsizlik; tanım kümesi kontrolü ve çözüm kümesi.',topic:'fon',tags:['logaritmik denklem','tanım kümesi','çözüm']},
+  '2024-22':{ title:'Analitik Geometri: Doğru',desc:'Koordinat düzleminde doğru denklemi, eğim veya iki doğru arasındaki ilişki.',topic:'analitik',tags:['doğru denklemi','eğim','koordinat']},
+  '2024-23':{ title:'Doğrular Analitik',desc:'Koordinat düzleminde birden fazla doğrunun kesişim ya da uzaklık problemi.',topic:'analitik',tags:['analitik geometri','doğru','kesişim']},
+  '2024-24':{ title:'Limit: Süreklilik',desc:'Parçalı fonksiyonda limit; süreklilik için sol-sağ limit eşitliği ve f(a) koşulları.',topic:'limit',tags:['limit','süreklilik','parçalı']},
+  '2024-25':{ title:'Türev: Artan-Azalan',desc:'f\'(x) işaret çizelgesi; fonksiyonun artan/azalan olduğu aralıklar veya yerel ekstremum.',topic:'limit',tags:['türev','artan-azalan','ekstremum']},
+  '2024-26':{ title:'Dizi: Aritmetik / Geometrik',desc:'Aritmetik veya geometrik dizide belirli koşulları sağlayan terim ya da toplam sorusu.',topic:'dizi',tags:['dizi','aritmetik','geometrik']},
+  '2024-27':{ title:'Trigonometrik Fonksiyonlar',desc:'Birim çemberde açının trigonometrik değeri; bölge veya esas ölçü analizi.',topic:'trigon',tags:['birim çember','trigonometri','bölge']},
+  '2024-28':{ title:'Toplam-Fark / İki Kat Açı',desc:'sin(α±β), cos(α±β) veya sin2α, cos2α formülleri ile trigonometrik değer hesabı.',topic:'trigon',tags:['toplam açı','iki kat açı','trigonometri']},
+  '2024-29':{ title:'Sin / Cos Teoremi',desc:'Üçgende sinüs veya kosinüs teoremiyle bilinmeyen kenar ya da açı hesabı.',topic:'geo',tags:['sinüs teoremi','kosinüs teoremi','üçgen']},
+  '2024-30':{ title:'Trigonometri: Grafik',desc:'Trigonometrik fonksiyon grafiğinin parametreleri; periyot ve genlik belirleme.',topic:'trigon',tags:['trigonometri','periyot','grafik']},
+  '2024-31':{ title:'Pizza ve Çember',desc:'Restoran pizzası için daire hamur; kesim geometrisi ve daire dilimi alan sorusu.',topic:'geo',tags:['daire','çember','dilim']},
+  '2024-32':{ title:'ABC Üçgeni: Kenar Koşulu',desc:'ABC üçgeninin AB kenarı ile diğer kenarlara ait koşul sorusu.',topic:'geo',tags:['üçgen','kenar ilişkisi','koşul']},
+  '2024-33':{ title:'Çemberde Açı',desc:'Çemberde merkez açı, çevre açısı veya teğet-kiriş açısı uygulaması.',topic:'geo',tags:['çember','açı','teğet']},
+  '2024-34':{ title:'Merkez Açısı (Analitik)',desc:'Koordinat düzleminde çemberin analitik incelenmesi; merkez veya yarıçap sorusu.',topic:'analitik',tags:['çember','merkez açısı','koordinat']},
+  '2024-35':{ title:'Analitik Geometri: Doğru / Çember',desc:'Koordinat düzleminde doğru veya çember uygulaması.',topic:'analitik',tags:['analitik geometri','doğru','çember']},
+  '2024-36':{ title:'Koordinat Düzleminde Kare',desc:'Bir kenarı x-ekseni üzerinde bulunan karenin koordinat düzleminde incelenmesi.',topic:'analitik',tags:['kare','x-ekseni','koordinat']},
+  '2024-37':{ title:'Katı Cisimler: Prizma / Koni',desc:'Prizma, silindir, koni veya kürenin hacim ya da yüzey alanı sorusu.',topic:'geo',tags:['katı cisimler','hacim','yüzey alanı']},
+  '2024-38':{ title:'A Noktasının Ötelenmesi',desc:'Koordinat düzleminde noktanın öteleme dönüşümü; koşul altında yeni konum.',topic:'analitik',tags:['öteleme','dönüşüm','koordinat']},
+  '2024-39':{ title:'Analitik Geometri: Dönüşüm',desc:'Koordinat düzleminde geometrik konum veya dönüşüm uygulaması.',topic:'analitik',tags:['analitik geometri','dönüşüm','koordinat']},
+  '2024-40':{ title:'Silindir / Koni Hacim',desc:'Silindir, koni veya kürenin hacim ya da yüzey alanı; hacimler arası dönüşüm sorusu.',topic:'geo',tags:['silindir','koni','hacim']},
+
+  // ══════════════════════════════════════════════════════
+  // 2025
+  // ══════════════════════════════════════════════════════
+  '2025-1':{ title:'Doğal Sayı: EBOB / Bölünebilme',desc:'Koşul içeren doğal sayıda EBOB/EKOK veya bölünebilme kuralı uygulaması.',topic:'sayilar',tags:['bölünebilme','EBOB','asal sayı']},
+  '2025-2':{ title:'Sayı Kümeleri: Hiyerarşi',desc:'ℕ, ℤ, ℚ, ℝ kümelerinin hiyerarşisi; verilen ifadenin ait olduğu kümeler.',topic:'sayilar',tags:['sayı kümeleri','hiyerarşi','irrasyonel']},
+  '2025-3':{ title:'1. Derece Denklem / Eşitsizlik',desc:'Birinci dereceden denklem veya eşitsizlik sistemi; çözüm kümesi sorusu.',topic:'sayilar',tags:['1.derece','eşitsizlik','sistem']},
+  '2025-4':{ title:'Oran ve Orantı',desc:'Doğru/ters orantı veya yüzde içeren uygulama problemi.',topic:'sayilar',tags:['oran','orantı','yüzde']},
+  '2025-5':{ title:'Köklü İfadeler',desc:'Köklü ifadelerin sadeleştirilmesi; eşlenikle rasyonalize ya da iç içe kök çözümü.',topic:'sayilar',tags:['köklü ifade','rasyonalize','sadeleştirme']},
+  '2025-6':{ title:'Mutlak Değer Eşitsizliği',desc:'Mutlak değer içeren eşitsizlik; çözüm aralığının sayı doğrusunda gösterimi.',topic:'sayilar',tags:['mutlak değer','eşitsizlik','aralık']},
+  '2025-7':{ title:'Üslü / Köklü: Denklem',desc:'Üslü veya köklü ifade içeren denklem; indirgeme veya kareye alma yöntemi.',topic:'sayilar',tags:['üslü','köklü','denklem']},
+  '2025-8':{ title:'Önermeler: De Morgan / Niceleyici',desc:'Bileşik önerme, niceleyici veya De Morgan kuralı ile doğruluk analizi.',topic:'kume',tags:['önerme','De Morgan','niceleyici']},
+  '2025-9':{ title:'Küme İşlemleri: Venn',desc:'Birleşim, kesişim veya fark; Venn şemasında eleman sayısı koşulu.',topic:'kume',tags:['küme','Venn','eleman sayısı']},
+  '2025-10':{ title:'2. Derece Eşitsizlik',desc:'ax²+bx+c ≷ 0 eşitsizliğinin çözüm kümesi; işaret çizelgesi uygulaması.',topic:'pol',tags:['2.derece eşitsizlik','işaret','aralık']},
+  '2025-11':{ title:'2. Derece Denklem: Kök-Katsayı',desc:'Kök-katsayı bağıntıları ile yeni ifade hesabı; diskriminant koşulu.',topic:'pol',tags:['2.derece denklem','kök-katsayı','diskriminant']},
+  '2025-12':{ title:'Polinom: Çarpanlara Ayırma',desc:'Polinom ifadesini çarpanlarına ayırma; rasyonel ifade sadeleştirmesi.',topic:'pol',tags:['polinom','çarpanlara ayırma','rasyonel']},
+  '2025-13':{ title:'Üstel Fonksiyon',desc:'f(x)=aˣ fonksiyonu; üstel denklem veya eşitsizliğin taban eşitleme yöntemiyle çözümü.',topic:'fon',tags:['üstel fonksiyon','taban','denklem']},
+  '2025-14':{ title:'Logaritma Özellikleri',desc:'Log çarpım/bölüm/kuvvet kuralları; taban değiştirme formülü uygulaması.',topic:'fon',tags:['logaritma','taban değiştirme','kural']},
+  '2025-15':{ title:'Logaritmik Denklem / Eşitsizlik',desc:'Logaritmik denklem veya eşitsizlik çözümü; tabanın 1\'den büyük/küçük olmasına göre yön.',topic:'fon',tags:['logaritmik','denklem','eşitsizlik']},
+  '2025-16':{ title:'Permütasyon / Kombinasyon',desc:'Belirli koşullar altında sıralama veya seçme sayısı; gerçek hayat bağlamlı.',topic:'sayma',tags:['permütasyon','kombinasyon','koşul']},
+  '2025-17':{ title:'Fonksiyon Kavramı',desc:'Tanım/görüntü kümesi; parçalı fonksiyon ya da dikey doğru testi sorusu.',topic:'fon',tags:['fonksiyon','tanım kümesi','parçalı']},
+  '2025-18':{ title:'Bileşke ve Ters Fonksiyon',desc:'f∘g, g∘f ayrımı; f⁻¹ hesabı veya y=x simetrisinde grafik sorusu.',topic:'fon',tags:['bileşke fonksiyon','ters fonksiyon','f⁻¹']},
+  '2025-19':{ title:'Parabol: 2. Derece Fonksiyon',desc:'y=ax²+bx+c parabolünde tepe noktası, görüntü kümesi veya a,b,c işaret analizi.',topic:'fon',tags:['parabol','tepe noktası','ikinci derece']},
+  '2025-20':{ title:'Parabol / Fonksiyon Uygulaması',desc:'2. derece fonksiyon ile gerçek hayat modelleme; ekstremum veya alan sorusu.',topic:'fon',tags:['parabol','uygulama','ekstremum']},
+  '2025-21':{ title:'Fonksiyon Dönüşümleri',desc:'Fonksiyon dönüşümlerinin uygulanması; grafik kaydırma ve yansıma analizi.',topic:'fon',tags:['fonksiyon dönüşümü','kaydırma','grafik']},
+  '2025-22':{ title:'Analitik Geometri: Doğru',desc:'Koordinat düzleminde doğru denklemi, eğim veya paralel/dik koşul sorusu.',topic:'analitik',tags:['doğru denklemi','eğim','koordinat']},
+  '2025-23':{ title:'Koordinat Düzlemi: Uygulama',desc:'Koordinat düzleminde iki nokta arası mesafe veya geometrik şekil sorusu.',topic:'analitik',tags:['analitik geometri','mesafe','koordinat']},
+  '2025-24':{ title:'Limit ve Süreklilik',desc:'Parçalı fonksiyonda limit; sağdan-soldan limit eşitliği ve süreklilik koşulları.',topic:'limit',tags:['limit','süreklilik','parçalı']},
+  '2025-25':{ title:'Türev: Artan-Azalan',desc:'f\'(x) işaret analizi; fonksiyonun monotonluk aralıkları veya ekstremum noktaları.',topic:'limit',tags:['türev','artan-azalan','ekstremum']},
+  '2025-26':{ title:'Aritmetik Dizi',desc:'Aritmetik dizinin ortak farkı veya belirli terimlerine ilişkin koşul; toplam hesabı.',topic:'dizi',tags:['aritmetik dizi','ortak fark','toplam']},
+  '2025-27':{ title:'Trigonometri: Birim Çember',desc:'Birim çemberde açının sin/cos/tan değeri; bölgeye göre işaret analizi.',topic:'trigon',tags:['birim çember','trigonometri','işaret']},
+  '2025-28':{ title:'Trigonometri: İki Kat Açı Formülü',desc:'sin2α, cos2α formülleri veya toplam-fark açı formülleri ile değer hesabı.',topic:'trigon',tags:['iki kat açı','toplam açı','trigonometri']},
+  '2025-29':{ title:'Sin / Cos Teoremi: Üçgen',desc:'Kenar ve açıları verilen üçgende sinüs veya kosinüs teoremi uygulaması.',topic:'geo',tags:['sinüs teoremi','kosinüs teoremi','üçgen']},
+  '2025-30':{ title:'Trigonometri: Denklem / Grafik',desc:'Trigonometrik denklem veya grafik yorumlama sorusu.',topic:'trigon',tags:['trigonometrik denklem','grafik','periyot']},
+  '2025-31':{ title:'Analitik Geometri: Uzaklık',desc:'Koordinat düzleminde iki nokta arası uzaklık veya orta nokta uygulaması.',topic:'analitik',tags:['uzaklık formülü','orta nokta','koordinat']},
+  '2025-32':{ title:'Eşkenar Üçgen ve Kenar',desc:'Kenarları kırmızı renkli eşkenar üçgen ile başka bir eşkenar üçgen arasındaki ilişki.',topic:'geo',tags:['eşkenar üçgen','kenar','geometri']},
+  '2025-33':{ title:'Duvardaki Lambalar',desc:'Duvar üzerinde yükseklikleri eşit, aralarındaki mesafe sabit lambalar; koordinat sorusu.',topic:'analitik',tags:['koordinat','uzaklık','lamba']},
+  '2025-34':{ title:'C Noktası Koordinat',desc:'Koordinat düzleminde C noktasının konumu; analitik geometri sorusu.',topic:'analitik',tags:['analitik geometri','koordinat','nokta']},
+  '2025-35':{ title:'Analitik Geometri: Doğru / Alan',desc:'Koordinat düzleminde doğru veya geometrik şekil alan hesabı.',topic:'analitik',tags:['analitik geometri','doğru','alan']},
+  '2025-36':{ title:'Analitik Geometri: Koordinat',desc:'Koordinat düzleminde geometrik konum veya alan hesabı.',topic:'analitik',tags:['analitik geometri','koordinat']},
+  '2025-37':{ title:'Çember Denklemi',desc:'Koordinat düzleminde çemberin standart veya genel denklemi; merkez ve yarıçap sorusu.',topic:'analitik',tags:['çember','denklem','koordinat']},
+  '2025-38':{ title:'A Noktası Öteleme ve Simetri',desc:'A noktasının x-ekseni boyunca ötelenmesi ve simetri dönüşümü; koşul sorusu.',topic:'analitik',tags:['öteleme','simetri','dönüşüm']},
+  '2025-39':{ title:'Analitik Geometri',desc:'Koordinat düzleminde geometrik uygulama sorusu.',topic:'analitik',tags:['analitik geometri','koordinat']},
+  '2025-40':{ title:'Katı Cisimler',desc:'Prizma, silindir, koni veya kürenin hacim ya da yüzey alanı sorusu.',topic:'geo',tags:['katı cisimler','hacim','yüzey alanı']},
+};
   '2020-30':{ title:'Yarıçap 1 Birim Çember',desc:'Dik koordinat düzleminde O merkezli r=1 çemberde bir nokta sorunu.',topic:'analitik',tags:['çember','analitik geometri','koordinat']},
   '2020-34':{ title:'Düzgün Altıgen & Kare',desc:'Birer kenarları ortak düzgün altıgen ve kare; kenar uzunlukları ile ilgili soru.',topic:'geo',tags:['düzgün altıgen','kare','kenar']},
   '2020-36':{ title:'Lunapark Tahterevalli',desc:'Düz zeminde tahterevalli; geometrik ilişkiler sorgulanıyor.',topic:'geo',tags:['trigonometri','geometri','tahterevalli']},
@@ -821,15 +1084,17 @@ const AYT_TITLES = {
 };
 
 function getAYTtopic(num) {
-  if ([1,2,3,4].includes(num)) return 'sayilar';
-  if ([8,9].includes(num)) return 'kume';
-  if ([5,6,10,11,12].includes(num)) return 'pol';
-  if ([13,14,15,16,17,18,19,20,21,22].includes(num)) return 'fon';
-  if ([23,24,25,26].includes(num)) return num<=24?'limit':'dizi';
-  if ([27,28,29,30].includes(num)) return 'trigon';
+  if (num <= 6) return 'sayilar';           // sayılar, üslü, köklü
+  if (num === 7) return 'kume';             // mantık
+  if ([8,9].includes(num)) return 'kume';   // kümeler
+  if (num >= 10 && num <= 14) return 'pol'; // polinom, 2. derece
+  if ([15,16].includes(num)) return 'sayma';// permütasyon, olasılık
+  if (num >= 17 && num <= 23) return 'fon'; // fonksiyon, üstel, log
+  if (num === 24) return 'limit';
+  if ([25,26].includes(num)) return 'dizi';
+  if (num >= 27 && num <= 30) return 'trigon';
   if ([31,32,33].includes(num)) return 'geo';
-  if ([34,35,36,37,38,39,40].includes(num)) return 'analitik';
-  return 'fon';
+  return 'analitik'; // 34-40
 }
 
 [2020,2021,2022,2023,2024,2025].forEach(yr=>{

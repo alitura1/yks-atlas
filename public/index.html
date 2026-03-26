@@ -18,49 +18,69 @@
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);min-height:100vh;overflow-x:hidden}
 
-/* ─── NAV ─── */
-nav{
-  position:sticky;top:0;z-index:200;
-  background:rgba(8,11,18,.95);backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--border);
-  display:flex;align-items:center;gap:0;padding:0 20px;height:52px;
+/* ─── GLOBAL NAV SIDEBAR ─── */
+#gnav{
+  position:fixed;left:0;top:0;bottom:0;width:156px;
+  background:var(--bg2);border-right:1px solid var(--border);
+  display:flex;flex-direction:column;z-index:200;overflow-y:auto;overflow-x:hidden;
 }
-.logo{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--a1);margin-right:28px;letter-spacing:-.5px;white-space:nowrap}
-.logo sup{font-size:9px;font-weight:400;color:var(--t3);letter-spacing:.1em;text-transform:uppercase;margin-left:4px;vertical-align:top;margin-top:4px}
-.nav-tabs{display:flex;gap:2px;flex:1;overflow-x:auto;scrollbar-width:none}
-.nav-tabs::-webkit-scrollbar{display:none}
+.gnav-logo{
+  padding:16px 14px 14px;
+  font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:var(--a1);
+  letter-spacing:-.4px;border-bottom:1px solid var(--border);flex-shrink:0;
+}
+.gnav-logo sup{font-size:8px;font-weight:400;color:var(--t3);letter-spacing:.1em;text-transform:uppercase;margin-left:3px;vertical-align:top;margin-top:4px}
+.ng{padding:10px 8px 4px}
+.ng-label{font-size:8.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--t3);padding:2px 6px 6px;display:block}
 .ntab{
-  display:flex;align-items:center;gap:6px;
-  padding:5px 14px;border-radius:8px;font-size:12px;font-weight:500;
-  cursor:pointer;border:none;background:none;color:var(--t3);transition:all .14s;white-space:nowrap;
+  display:flex;align-items:center;gap:7px;padding:7px 8px;border-radius:7px;
+  font-size:12px;font-weight:500;cursor:pointer;border:none;background:none;
+  color:var(--t2);transition:all .14s;width:100%;text-align:left;
   font-family:'Inter',sans-serif;
 }
-.ntab:hover{background:var(--bg3);color:var(--t2)}
+.ntab:hover{background:var(--bg3);color:var(--t1)}
 .ntab.active{background:rgba(245,200,66,.12);color:var(--a1)}
-.ntab.locked{opacity:.35;cursor:not-allowed}
 .ntab .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
-.ntab .lk{font-size:9px}
-.nav-r{display:flex;gap:6px;margin-left:auto;flex-shrink:0}
+.gnav-bottom{margin-top:auto;padding:12px 10px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:5px;flex-shrink:0}
 .dl-btn{
-  display:flex;align-items:center;gap:5px;padding:5px 12px;border-radius:7px;
-  font-size:11px;font-weight:500;text-decoration:none;
-  border:1px solid var(--border2);color:var(--t2);transition:all .14s;background:none;cursor:pointer;
+  display:flex;align-items:center;gap:5px;padding:5px 8px;border-radius:6px;
+  font-size:10px;font-weight:500;text-decoration:none;
+  border:1px solid var(--border);color:var(--t3);transition:all .14s;background:none;cursor:pointer;
   font-family:'Inter',sans-serif;
 }
-.dl-btn:hover{background:var(--bg3);color:var(--t1);border-color:var(--border3)}
+.dl-btn:hover{background:var(--bg3);color:var(--t1);border-color:var(--border2)}
+
+/* ─── MOBİL TOP BAR ─── */
+#mob-topbar{
+  display:none;align-items:center;gap:10px;
+  height:48px;padding:0 14px;
+  background:var(--bg2);border-bottom:1px solid var(--border);
+  position:sticky;top:0;z-index:150;flex-shrink:0;
+}
+#gnav-toggle{
+  background:none;border:none;color:var(--t2);font-size:20px;cursor:pointer;
+  padding:4px 6px;border-radius:6px;line-height:1;
+}
+#gnav-toggle:hover{background:var(--bg3);color:var(--t1)}
+.gnav-logo-mob{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:var(--a1)}
+#gnav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:199}
+#gnav-overlay.open{display:block}
+
+/* ─── CONTENT AREA ─── */
+#content{margin-left:156px;min-height:100vh;display:flex;flex-direction:column}
 
 /* ─── PAGE SYSTEM ─── */
-.page{display:none}
-.page.active{display:flex;flex-direction:column}
+.page{display:none;flex:1;flex-direction:column}
+.page.active{display:flex}
 
 /* ─── LAYOUT ─── */
-.split{display:grid;grid-template-columns:220px 1fr;min-height:calc(100vh - 52px)}
+.split{display:grid;grid-template-columns:220px 1fr;min-height:100vh}
 
-/* ─── SIDEBAR ─── */
+/* ─── SIDEBAR (within-page topic filter) ─── */
 .sb{
   background:var(--bg2);border-right:1px solid var(--border);
   padding:16px 12px;overflow-y:auto;
-  position:sticky;top:52px;height:calc(100vh - 52px);
+  position:sticky;top:0;height:100vh;
 }
 .sb-label{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:8px;padding-left:6px}
 .sb-section{margin-bottom:20px}
@@ -86,7 +106,7 @@ nav{
 .sb-hr{height:1px;background:var(--border);margin:8px 0}
 
 /* ─── MAIN ─── */
-.main{padding:22px 22px;overflow-y:auto;flex:1}
+.main{padding:22px;overflow-y:auto;flex:1}
 .mhead{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:20px}
 .mtitle{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:var(--t1)}
 .msub{font-size:12px;color:var(--t2);margin-top:3px}
@@ -184,8 +204,8 @@ nav{
 .anal-hero-icon{font-size:38px;flex-shrink:0;margin-top:2px}
 .anal-hero h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin-bottom:7px;color:var(--t1)}
 .anal-hero p{font-size:12px;color:var(--t2);line-height:1.7}
-.kaz-grid{column-width:310px;column-gap:14px}
-.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;break-inside:avoid;display:inline-block;width:100%;margin-bottom:14px}
+.kaz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;align-items:start}
+.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden}
 .kcard-head{display:flex;align-items:center;gap:10px;padding:14px;cursor:pointer;user-select:none;transition:background .14s}
 .kcard-head:hover{background:rgba(255,255,255,.04)}
 .kcard-ic{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-weight:600}
@@ -266,63 +286,70 @@ nav{
 .mob-ti .tcnt{font-size:10px;color:var(--t3);font-family:'IBM Plex Mono',monospace}
 
 @media(max-width:680px){
-  .split{grid-template-columns:1fr}
+  #gnav{left:-156px;transition:transform .26s cubic-bezier(.22,1,.36,1)}
+  #gnav.open{transform:translateX(156px)}
+  #mob-topbar{display:flex}
+  #content{margin-left:0}
+  .split{grid-template-columns:1fr;min-height:calc(100vh - 48px)}
   .sb{display:none}
   .mob-filter-btn{display:flex}
   .main{padding:14px}
   .mhead{margin-bottom:14px}
   .mtitle{font-size:18px}
   .qgrid{grid-template-columns:1fr}
-  .lbbox{max-height:100vh;border-radius:14px 14px 0 0}
+  .kaz-grid{grid-template-columns:1fr}
+  .anal-page{padding:14px}
+  .lbbox{max-height:100dvh;border-radius:16px 16px 0 0}
   .lb{padding:0;align-items:flex-end}
   .lb-nav{width:100%;justify-content:center}
-  .lb-nbtn{flex:1;text-align:center;padding:8px}
+  .lb-nbtn{flex:1;text-align:center;padding:9px}
   .lb-tags{display:none}
   .lb-ans-area{flex:1;justify-content:center}
-  .lb-ans-toggle{width:100%;text-align:center;padding:8px}
-  nav{padding:0 12px;height:48px}
-  .logo{font-size:16px;margin-right:12px}
-  .ntab{padding:4px 10px;font-size:11px}
-  .nav-r{display:none}
+  .lb-ans-toggle{padding:9px 14px}
   .lb-counter{display:none}
   .draw-toolbar{gap:6px;padding-top:8px}
   .clr-btn{width:28px;height:28px}
-  .draw-tool-btn{padding:7px 12px;font-size:12px}
+  .draw-tool-btn{padding:7px 10px;font-size:12px}
   .size-btn{width:30px;height:30px;font-size:16px}
   .lbtop{padding:8px 12px}
   .lb-title{font-size:12px}
+  .mob-filter-btn{bottom:16px}
 }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="logo">YKS Atlas <sup>beta</sup></div>
-  <div class="nav-tabs">
-    <button class="ntab active" onclick="showPage('tyt')" id="nt-tyt">
-      <span class="dot" style="background:#3ecf8e"></span> TYT Geometri
-    </button>
-    <button class="ntab" onclick="showPage('tytaz')" id="nt-tytaz">
-      <span class="dot" style="background:#f5c842"></span> TYT Geo Analiz
-    </button>
-    <button class="ntab" onclick="showPage('ayt')" id="nt-ayt">
-      <span class="dot" style="background:#4b9ef8"></span> AYT Matematik
-    </button>
-    <button class="ntab" onclick="showPage('aytaz')" id="nt-aytaz">
-      <span class="dot" style="background:#9b7fe8"></span> AYT Mat Analiz
-    </button>
-    <button class="ntab" onclick="showPage('aytgeo')" id="nt-aytgeo">
-      <span class="dot" style="background:#f08040"></span> AYT Geometri
-    </button>
-    <button class="ntab" onclick="showPage('aytgeokaz')" id="nt-aytgeokaz">
-      <span class="dot" style="background:#f08040"></span> AYT Geo Analiz
-    </button>
+<aside id="gnav">
+  <div class="gnav-logo">YKS Atlas <sup>beta</sup></div>
+  <div class="ng">
+    <span class="ng-label">TYT</span>
+    <button class="ntab active" onclick="showPage('tyt')" id="nt-tyt"><span class="dot" style="background:#3ecf8e"></span>Geometri</button>
+    <button class="ntab" onclick="showPage('tytaz')" id="nt-tytaz"><span class="dot" style="background:#f5c842"></span>Analiz</button>
   </div>
-  <div class="nav-r">
-    <a class="dl-btn" href="tytgeometri.pdf" download>⬇ TYT Geometri PDF</a>
-    <a class="dl-btn" href="aytmat.pdf" download>⬇ AYT Mat PDF</a>
+  <div class="ng">
+    <span class="ng-label">AYT Matematik</span>
+    <button class="ntab" onclick="showPage('ayt')" id="nt-ayt"><span class="dot" style="background:#4b9ef8"></span>Sorular</button>
+    <button class="ntab" onclick="showPage('aytaz')" id="nt-aytaz"><span class="dot" style="background:#9b7fe8"></span>Analiz</button>
   </div>
-</nav>
+  <div class="ng">
+    <span class="ng-label">AYT Geometri</span>
+    <button class="ntab" onclick="showPage('aytgeo')" id="nt-aytgeo"><span class="dot" style="background:#f08040"></span>Sorular</button>
+    <button class="ntab" onclick="showPage('aytgeokaz')" id="nt-aytgeokaz"><span class="dot" style="background:#f08040"></span>Analiz</button>
+  </div>
+  <div class="gnav-bottom">
+    <a class="dl-btn" href="tytgeometri.pdf" download>↓ TYT PDF</a>
+    <a class="dl-btn" href="aytmat.pdf" download>↓ AYT PDF</a>
+  </div>
+</aside>
+
+<!-- Mobil üst bar + overlay -->
+<div id="mob-topbar">
+  <button id="gnav-toggle" onclick="toggleGnav()">☰</button>
+  <span class="gnav-logo-mob">YKS Atlas</span>
+</div>
+<div id="gnav-overlay" onclick="toggleGnav()"></div>
+
+<div id="content">
 
 <!-- TYT GEO SORULAR -->
 <div class="page active" id="page-tyt">
@@ -480,6 +507,8 @@ nav{
   </div>
 </div>
 
+</div><!-- /content -->
+
 <!-- LİGHTBOX -->
 <div class="lb" id="lb" onclick="lbBgClick(event)">
   <div class="lbbox" onclick="e=>e.stopPropagation()">
@@ -502,9 +531,6 @@ nav{
         <span class="lb-ans-badge" id="lb-ans-badge" style="display:none"></span>
       </div>
       <div class="draw-toolbar" id="draw-toolbar">
-        <button class="draw-tool-btn mode-zoom" id="btn-zoom-mode" onclick="setMode('zoom')" title="Zoom Modu">🔍 Zoom</button>
-        <button class="draw-tool-btn mode-draw active" id="btn-draw-mode" onclick="setMode('draw')" title="Çizim Modu">✏️ Çiz</button>
-        <span class="draw-sep"></span>
         <button class="clr-btn active" id="clr-red" onclick="setDrawColor('#e05555')" style="background:#e05555" title="Kırmızı"></button>
         <button class="clr-btn" id="clr-blue" onclick="setDrawColor('#4b9ef8')" style="background:#4b9ef8" title="Mavi"></button>
         <button class="clr-btn" id="clr-yellow" onclick="setDrawColor('#f5c842')" style="background:#f5c842" title="Sarı"></button>
@@ -512,18 +538,21 @@ nav{
         <button class="clr-btn" id="clr-white" onclick="setDrawColor('#f0f2f8')" style="background:#f0f2f8;border-color:#555" title="Beyaz"></button>
         <span class="draw-sep"></span>
         <div class="size-ctrl">
-          <button class="size-btn" onclick="changePenSize(-1)" title="Küçült">−</button>
+          <button class="size-btn" onclick="changePenSize(-1)">−</button>
           <span class="size-dot" id="size-dot" style="color:var(--t1)"></span>
           <span class="size-label" id="size-label">3</span>
-          <button class="size-btn" onclick="changePenSize(1)" title="Büyüt">+</button>
+          <button class="size-btn" onclick="changePenSize(1)">+</button>
         </div>
         <span class="draw-sep"></span>
-        <button class="draw-tool-btn" id="btn-eraser" onclick="setEraser(true)" title="Silgi">⌫ Silgi</button>
-        <button class="draw-tool-btn" onclick="clearCanvas()" title="Hepsini Temizle">🗑</button>
+        <button class="draw-tool-btn" id="btn-eraser" onclick="setEraser(true)" title="Silgi">⌫</button>
+        <button class="draw-tool-btn" onclick="clearCanvas()" title="Temizle">🗑</button>
+        <span class="draw-sep"></span>
+        <button class="draw-tool-btn" onclick="doUndo()" title="Geri Al (Ctrl+Z)">↩</button>
+        <button class="draw-tool-btn" onclick="doRedo()" title="İleri Al (Ctrl+Y)">↪</button>
         <span class="draw-sep"></span>
         <button class="draw-tool-btn" onclick="shiftPage(-1)">◀</button>
         <button class="draw-tool-btn" onclick="shiftPage(1)">▶</button>
-        <button class="draw-tool-btn" onclick="resetZoom()" title="Zoom Sıfırla">⊙×1</button>
+        <button class="draw-tool-btn" onclick="resetZoom()">⊙×1</button>
       </div>
       <div class="lb-nav">
         <button class="lb-nbtn" onclick="lbNav(-1)">← Önceki</button>
@@ -1085,7 +1114,10 @@ function showPage(id) {
   if(id==='tytaz') buildKaz('tyt-kaz', TYT_KAZ, 'tyt');
   if(id==='aytaz') buildKaz('ayt-kaz', AYT_KAZ, 'ayt');
   if(id==='aytgeokaz') buildKaz('aytgeo-kaz', AYTGEO_KAZ, 'aytgeo');
-  // mobile
+  // close mobile gnav
+  document.getElementById('gnav')?.classList.remove('open');
+  document.getElementById('gnav-overlay')?.classList.remove('open');
+  // mobile fab
   const bankMap = {tyt:'tyt',tytaz:'tyt',ayt:'ayt',aytaz:'ayt',aytgeo:'aytgeo',aytgeokaz:'aytgeo'};
   mobBank = bankMap[id] || 'tyt';
   updateMobFab(mobBank);
@@ -1222,15 +1254,19 @@ function toggleAns() {
 function closeLB() {
   document.getElementById('lb').classList.remove('open');
   document.body.style.overflow = '';
+  isDrawing = false;
 }
 function lbBgClick(e) { if(e.target.id==='lb') closeLB(); }
 function lbNav(d) { lbIdx=(lbIdx+d+lbList.length)%lbList.length; showLB(); }
 
 document.addEventListener('keydown', e => {
-  if (!document.getElementById('lb').classList.contains('open')) return;
+  const open = document.getElementById('lb').classList.contains('open');
+  if (!open) return;
   if (e.key==='Escape') closeLB();
   if (e.key==='ArrowRight') lbNav(1);
   if (e.key==='ArrowLeft') lbNav(-1);
+  if ((e.ctrlKey||e.metaKey) && e.key==='z') { e.preventDefault(); doUndo(); }
+  if ((e.ctrlKey||e.metaKey) && (e.key==='y'||(e.shiftKey&&e.key==='z'))) { e.preventDefault(); doRedo(); }
 });
 
 // ════════════════════════════════════════
@@ -1298,27 +1334,38 @@ function jumpToQ(bank, yr, num) {
 }
 
 // ════════════════════════════════════════
-// MODE (zoom vs draw)
+// GLOBAL NAV (SIDEBAR)
 // ════════════════════════════════════════
-let currentMode = 'draw'; // 'zoom' | 'draw'
-function setMode(m) {
-  currentMode = m;
-  const canvas = document.getElementById('lb-canvas');
-  const btnZ = document.getElementById('btn-zoom-mode');
-  const btnD = document.getElementById('btn-draw-mode');
-  if (m === 'zoom') {
-    canvas.classList.add('zoom-mode');
-    canvas.style.touchAction = 'pan-x pan-y pinch-zoom';
-    canvas.style.pointerEvents = 'none';
-    btnZ.classList.add('active'); btnD.classList.remove('active');
-  } else {
-    canvas.classList.remove('zoom-mode');
-    canvas.style.touchAction = 'none';
-    canvas.style.pointerEvents = 'auto';
-    btnD.classList.add('active'); btnZ.classList.remove('active');
-    isEraser = false;
-    document.getElementById('btn-eraser').classList.remove('active');
-  }
+function toggleGnav() {
+  const g = document.getElementById('gnav');
+  const o = document.getElementById('gnav-overlay');
+  const open = g.classList.toggle('open');
+  o.classList.toggle('open', open);
+}
+
+// ════════════════════════════════════════
+// UNDO / REDO
+// ════════════════════════════════════════
+const undoStack = [], redoStack = [];
+const MAX_HIST = 24;
+function saveHistory() {
+  const c = document.getElementById('lb-canvas');
+  if (!drawCtx || !c.width) return;
+  undoStack.push(drawCtx.getImageData(0, 0, c.width, c.height));
+  if (undoStack.length > MAX_HIST) undoStack.shift();
+  redoStack.length = 0;
+}
+function doUndo() {
+  if (!undoStack.length || !drawCtx) return;
+  const c = document.getElementById('lb-canvas');
+  redoStack.push(drawCtx.getImageData(0, 0, c.width, c.height));
+  drawCtx.putImageData(undoStack.pop(), 0, 0);
+}
+function doRedo() {
+  if (!redoStack.length || !drawCtx) return;
+  const c = document.getElementById('lb-canvas');
+  undoStack.push(drawCtx.getImageData(0, 0, c.width, c.height));
+  drawCtx.putImageData(redoStack.pop(), 0, 0);
 }
 
 // ════════════════════════════════════════
@@ -1329,74 +1376,32 @@ function applyZoom() {
 }
 function resetZoom() {
   imgZoom = 1; applyZoom();
-  const wrap = document.getElementById('lbimg-wrap');
-  wrap.scrollLeft = 0; wrap.scrollTop = 0;
+  const w = document.getElementById('lbimg-wrap');
+  w.scrollLeft = 0; w.scrollTop = 0;
 }
-(function initZoom(){
-  const wrap = document.getElementById('lbimg-wrap');
-  // Mouse wheel zoom (desktop)
-  wrap.addEventListener('wheel', e=>{
-    if (!document.getElementById('lb').classList.contains('open')) return;
-    e.preventDefault();
-    const oldZoom = imgZoom;
-    imgZoom = Math.min(5, Math.max(1, imgZoom * (e.deltaY < 0 ? 1.12 : 0.9)));
-    // Zoom toward cursor position
-    const rect = wrap.getBoundingClientRect();
-    const cx = e.clientX - rect.left;
-    const cy = e.clientY - rect.top;
-    const ratio = imgZoom / oldZoom;
-    wrap.scrollLeft = (wrap.scrollLeft + cx) * ratio - cx;
-    wrap.scrollTop  = (wrap.scrollTop  + cy) * ratio - cy;
-    applyZoom();
-  }, {passive:false});
-  // Touch pinch zoom (works in zoom mode AND draw mode via lbimg-wrap)
-  let t0, t1, baseZoom, baseScrollL, baseScrollT, baseMidX, baseMidY, d0;
-  wrap.addEventListener('touchstart', e=>{
-    if (e.touches.length === 2) {
-      e.preventDefault();
-      t0 = e.touches[0]; t1 = e.touches[1];
-      d0 = Math.hypot(t0.clientX-t1.clientX, t0.clientY-t1.clientY);
-      baseZoom = imgZoom;
-      baseScrollL = wrap.scrollLeft;
-      baseScrollT = wrap.scrollTop;
-      const rect = wrap.getBoundingClientRect();
-      baseMidX = (t0.clientX + t1.clientX)/2 - rect.left;
-      baseMidY = (t0.clientY + t1.clientY)/2 - rect.top;
-    }
-  },{passive:false});
-  wrap.addEventListener('touchmove', e=>{
-    if (e.touches.length === 2) {
-      e.preventDefault();
-      const d = Math.hypot(e.touches[0].clientX-e.touches[1].clientX, e.touches[0].clientY-e.touches[1].clientY);
-      imgZoom = Math.min(5, Math.max(1, baseZoom * d / d0));
-      applyZoom();
-      const ratio = imgZoom / baseZoom;
-      wrap.scrollLeft = (baseScrollL + baseMidX) * ratio - baseMidX;
-      wrap.scrollTop  = (baseScrollT + baseMidY) * ratio - baseMidY;
-    }
-  },{passive:false});
-  // Double-tap to zoom in/out
-  let lastTap = 0;
-  wrap.addEventListener('touchend', e=>{
-    if (e.touches.length > 0) return;
-    const now = Date.now();
-    if (now - lastTap < 300) {
-      if (imgZoom > 1) resetZoom();
-      else { imgZoom = 2.5; applyZoom(); }
-    }
-    lastTap = now;
-  });
-})();
+// Mouse wheel zoom (desktop)
+document.getElementById('lbimg-wrap').addEventListener('wheel', e=>{
+  if (!document.getElementById('lb').classList.contains('open')) return;
+  e.preventDefault();
+  const wrap = e.currentTarget;
+  const oldZoom = imgZoom;
+  imgZoom = Math.min(6, Math.max(1, imgZoom * (e.deltaY < 0 ? 1.12 : 0.9)));
+  const rect = wrap.getBoundingClientRect();
+  const cx = e.clientX - rect.left, cy = e.clientY - rect.top;
+  const r = imgZoom / oldZoom;
+  wrap.scrollLeft = (wrap.scrollLeft + cx) * r - cx;
+  wrap.scrollTop  = (wrap.scrollTop  + cy) * r - cy;
+  applyZoom();
+},{passive:false});
 
 // ════════════════════════════════════════
-// DRAWING
+// PEN SIZE UI
 // ════════════════════════════════════════
 function updateSizeUI() {
   const sz = Math.round(drawSize);
   document.getElementById('size-label').textContent = sz;
   const dot = document.getElementById('size-dot');
   const px = Math.min(22, Math.max(4, sz * 1.8));
-  dot.style.setProperty('--dot-sz', px+'px');
   dot.style.width = px+'px'; dot.style.height = px+'px';
   dot.style.color = isEraser ? 'var(--t3)' : drawColor;
 }
@@ -1405,92 +1410,133 @@ function changePenSize(d) {
   const cur = sizes.findIndex(s => s >= drawSize);
   const ni = Math.min(sizes.length-1, Math.max(0, (cur < 0 ? 2 : cur) + d));
   drawSize = sizes[ni];
-  if (isEraser) { /* keep eraser but update display */ }
-  else { setMode('draw'); }
   updateSizeUI();
 }
+
+// ════════════════════════════════════════
+// DRAWING + PINCH ZOOM (unified pointer API)
+// ════════════════════════════════════════
 (function initCanvas(){
   const canvas = document.getElementById('lb-canvas');
-  const img = document.getElementById('lb-img');
-  // Set initial touch-action for draw mode
+  const img    = document.getElementById('lb-img');
+  const wrap   = document.getElementById('lbimg-wrap');
   canvas.style.touchAction = 'none';
+
   function syncCanvas() {
-    const w = img.naturalWidth || img.clientWidth || 800;
+    const w = img.naturalWidth  || img.clientWidth  || 800;
     const h = img.naturalHeight || img.clientHeight || 600;
-    // Preserve drawing across resync
     let saved = null;
-    if (drawCtx && canvas.width > 0) {
-      saved = drawCtx.getImageData(0, 0, canvas.width, canvas.height);
-    }
+    if (drawCtx && canvas.width > 0) saved = drawCtx.getImageData(0,0,canvas.width,canvas.height);
     canvas.width = w; canvas.height = h;
     drawCtx = canvas.getContext('2d');
-    if (saved) drawCtx.putImageData(saved, 0, 0);
+    if (saved) drawCtx.putImageData(saved,0,0);
+    undoStack.length = 0; redoStack.length = 0;
   }
   img.addEventListener('load', syncCanvas);
+
+  // Track all active pointers for pinch zoom
+  const ptrs = new Map();
+  let pinchBase = {dist:0, zoom:1, scrollL:0, scrollT:0, midX:0, midY:0};
+
+  function getPinchDist() {
+    const v = [...ptrs.values()];
+    return v.length >= 2 ? Math.hypot(v[0].x-v[1].x, v[0].y-v[1].y) : 0;
+  }
+
   canvas.addEventListener('pointerdown', e=>{
-    if (currentMode !== 'draw') return;
-    e.preventDefault();
-    isDrawing = true;
+    ptrs.set(e.pointerId, {x:e.clientX, y:e.clientY});
     canvas.setPointerCapture(e.pointerId);
-    const r = canvas.getBoundingClientRect();
-    const scl = canvas.width / r.width;
-    lastX = (e.clientX - r.left) * scl;
-    lastY = (e.clientY - r.top) * scl;
+
+    if (ptrs.size >= 2) {
+      // Two fingers → pinch zoom; cancel any drawing
+      isDrawing = false;
+      const v = [...ptrs.values()];
+      const rect = wrap.getBoundingClientRect();
+      pinchBase = {
+        dist: getPinchDist(), zoom: imgZoom,
+        scrollL: wrap.scrollLeft, scrollT: wrap.scrollTop,
+        midX: (v[0].x+v[1].x)/2 - rect.left,
+        midY: (v[0].y+v[1].y)/2 - rect.top,
+      };
+      return;
+    }
+
+    // Single finger: draw
+    e.preventDefault();
     if (!drawCtx) syncCanvas();
-    // Draw a dot on click
+    saveHistory();
+    isDrawing = true;
+    const r = canvas.getBoundingClientRect(), sc = canvas.width/r.width;
+    lastX = (e.clientX-r.left)*sc; lastY = (e.clientY-r.top)*sc;
     drawCtx.beginPath();
-    drawCtx.arc(lastX, lastY, (isEraser ? drawSize*3 : drawSize) / 2, 0, Math.PI*2);
+    drawCtx.arc(lastX, lastY, (isEraser ? drawSize*3 : drawSize)/2, 0, Math.PI*2);
     if (isEraser) { drawCtx.globalCompositeOperation='destination-out'; drawCtx.fillStyle='rgba(0,0,0,1)'; }
-    else { drawCtx.globalCompositeOperation='source-over'; drawCtx.fillStyle = drawColor; }
+    else { drawCtx.globalCompositeOperation='source-over'; drawCtx.fillStyle=drawColor; }
     drawCtx.fill();
   });
+
   canvas.addEventListener('pointermove', e=>{
-    if (!isDrawing || !drawCtx || currentMode !== 'draw') return;
-    e.preventDefault();
-    const r = canvas.getBoundingClientRect();
-    const scl = canvas.width / r.width;
-    const x = (e.clientX - r.left) * scl;
-    const y = (e.clientY - r.top) * scl;
-    drawCtx.beginPath();
-    drawCtx.moveTo(lastX, lastY);
-    drawCtx.lineTo(x, y);
-    if (isEraser) {
-      drawCtx.globalCompositeOperation = 'destination-out';
-      drawCtx.strokeStyle = 'rgba(0,0,0,1)';
-      drawCtx.lineWidth = drawSize * 6;
-    } else {
-      drawCtx.globalCompositeOperation = 'source-over';
-      drawCtx.strokeStyle = drawColor;
-      drawCtx.lineWidth = drawSize;
+    ptrs.set(e.pointerId, {x:e.clientX, y:e.clientY});
+
+    if (ptrs.size >= 2 && pinchBase.dist > 0) {
+      // Pinch zoom
+      const d = getPinchDist();
+      imgZoom = Math.min(6, Math.max(1, pinchBase.zoom * d / pinchBase.dist));
+      applyZoom();
+      const r = imgZoom / pinchBase.zoom;
+      wrap.scrollLeft = (pinchBase.scrollL + pinchBase.midX) * r - pinchBase.midX;
+      wrap.scrollTop  = (pinchBase.scrollT + pinchBase.midY) * r - pinchBase.midY;
+      return;
     }
-    drawCtx.lineCap = 'round'; drawCtx.lineJoin = 'round';
-    drawCtx.stroke();
-    lastX = x; lastY = y;
+
+    if (!isDrawing || !drawCtx) return;
+    e.preventDefault();
+    const r = canvas.getBoundingClientRect(), sc = canvas.width/r.width;
+    const x = (e.clientX-r.left)*sc, y = (e.clientY-r.top)*sc;
+    drawCtx.beginPath(); drawCtx.moveTo(lastX,lastY); drawCtx.lineTo(x,y);
+    if (isEraser) { drawCtx.globalCompositeOperation='destination-out'; drawCtx.strokeStyle='rgba(0,0,0,1)'; drawCtx.lineWidth=drawSize*6; }
+    else { drawCtx.globalCompositeOperation='source-over'; drawCtx.strokeStyle=drawColor; drawCtx.lineWidth=drawSize; }
+    drawCtx.lineCap='round'; drawCtx.lineJoin='round'; drawCtx.stroke();
+    lastX=x; lastY=y;
   });
-  canvas.addEventListener('pointerup', () => { isDrawing = false; });
-  canvas.addEventListener('pointercancel', () => { isDrawing = false; });
-  // Init size UI
+
+  canvas.addEventListener('pointerup', e=>{
+    ptrs.delete(e.pointerId);
+    if (ptrs.size < 2) pinchBase.dist = 0;
+    isDrawing = false;
+  });
+  canvas.addEventListener('pointercancel', e=>{ ptrs.delete(e.pointerId); isDrawing=false; });
+
+  // Double-tap to reset zoom
+  let lastTap=0;
+  canvas.addEventListener('touchend', e=>{
+    if(e.touches.length>0) return;
+    const now=Date.now();
+    if(now-lastTap<300){ imgZoom>1?resetZoom():(imgZoom=2.5,applyZoom()); }
+    lastTap=now;
+  });
+
   updateSizeUI();
 })();
+
 function setDrawColor(c) {
-  drawColor = c; isEraser = false;
-  setMode('draw');
-  document.querySelectorAll('.clr-btn').forEach(b => b.classList.remove('active'));
-  const map = {'#e05555':'clr-red','#4b9ef8':'clr-blue','#f5c842':'clr-yellow','#3ecf8e':'clr-green','#f0f2f8':'clr-white'};
-  if (map[c]) document.getElementById(map[c]).classList.add('active');
+  drawColor=c; isEraser=false;
+  document.querySelectorAll('.clr-btn').forEach(b=>b.classList.remove('active'));
   document.getElementById('btn-eraser').classList.remove('active');
+  const map={'#e05555':'clr-red','#4b9ef8':'clr-blue','#f5c842':'clr-yellow','#3ecf8e':'clr-green','#f0f2f8':'clr-white'};
+  if(map[c]) document.getElementById(map[c]).classList.add('active');
   updateSizeUI();
 }
 function setEraser(v) {
-  isEraser = v;
-  if (v) setMode('draw');
-  document.getElementById('btn-eraser').classList.toggle('active', v);
+  isEraser=v;
+  document.getElementById('btn-eraser').classList.toggle('active',v);
   updateSizeUI();
 }
 function clearCanvas() {
-  if (!drawCtx) return;
-  const c = document.getElementById('lb-canvas');
-  drawCtx.clearRect(0, 0, c.width, c.height);
+  if(!drawCtx) return;
+  saveHistory();
+  const c=document.getElementById('lb-canvas');
+  drawCtx.clearRect(0,0,c.width,c.height);
 }
 
 // ════════════════════════════════════════

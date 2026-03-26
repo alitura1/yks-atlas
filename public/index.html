@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>YKS Atlas — Soru Bankası</title>
+<title>YKS Atlas — Soruları Kazanımla İnceleme</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -337,8 +337,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);min-hei
     <button class="ntab" onclick="showPage('aytgeokaz')" id="nt-aytgeokaz"><span class="dot" style="background:#f08040"></span>Analiz</button>
   </div>
   <div class="gnav-bottom">
-    <a class="dl-btn" href="tytgeometri.pdf" download>↓ TYT PDF</a>
-    <a class="dl-btn" href="aytmat.pdf" download>↓ AYT PDF</a>
+    <a class="dl-btn" href="tytgeometri.pdf" download>↓ TYT GEO PDF</a>
+    <a class="dl-btn" href="aytmat.pdf" download>↓ AYT MAT PDF</a>
   </div>
 </aside>
 
@@ -713,7 +713,7 @@ const AYT_TOPIC_MAP = {
 // Curated AYT Mat question info (key questions with titles/descriptions)
 const AYT_Q_INFO = {
   // 2020 key geometry/analysis questions
-  '2020-28':{ title:'Dar Açılı Üçgen Trigonometri',desc:'Dar açılı ABC üçgeninin iç açıları derece cinsinden tam sayılar ve bir koşul. Trigonometrik değer?',topic:'trigon',tags:['trigonometri','üçgen açıları','tam sayı']},
+  '2020-28':{ title:'Dar Açılı Üçgen Trigonometri',desc:'Dar açılı ABC üçgeninin iç açıları derece cinsinden tam sayılar ve bir koşul. Trigonometrik değer?',topic:'geo',tags:['trigonometri','üçgen açıları','tam sayı']},
   '2020-30':{ title:'Yarıçap 1 Birim Çember',desc:'Dik koordinat düzleminde O merkezli r=1 çemberde bir nokta sorunu.',topic:'analitik',tags:['çember','analitik geometri','koordinat']},
   '2020-34':{ title:'Düzgün Altıgen & Kare',desc:'Birer kenarları ortak düzgün altıgen ve kare; kenar uzunlukları ile ilgili soru.',topic:'geo',tags:['düzgün altıgen','kare','kenar']},
   '2020-36':{ title:'Lunapark Tahterevalli',desc:'Düz zeminde tahterevalli; geometrik ilişkiler sorgulanıyor.',topic:'geo',tags:['trigonometri','geometri','tahterevalli']},
@@ -751,6 +751,57 @@ const AYT_Q_INFO = {
   '2025-34':{ title:'C Noktası Şekil',desc:'Şekilde C noktasının koordinat düzlemindeki konumu.',topic:'analitik',tags:['analitik geometri','koordinat','nokta']},
   '2025-37':{ title:'Çember Denklemi',desc:'Dik koordinat düzleminde çizilen çemberin analitik incelenmesi.',topic:'analitik',tags:['çember','denklem','koordinat']},
   '2025-38':{ title:'A Noktası Öteleme & Çevirme',desc:'A noktasının x-ekseni boyunca ötelenmesi sonrası koşul.',topic:'analitik',tags:['öteleme','simetri','dönüşüm']},
+
+  // ── Sinüs/Kosinüs teoremi soruları (topic geo – AYTGEO refs için)
+  '2021-29':{ title:'Sinüs Teoremi Uygulaması',desc:'Ölçüleri verilen bir üçgende sinüs teoremi ile bilinmeyen kenar ya da açı bulunuyor.',topic:'geo',tags:['sinüs teoremi','üçgen','kenar']},
+  '2022-28':{ title:'Kosinüs Teoremi Uygulaması',desc:'Kenarları ve bir açısı verilen üçgende kosinüs teoremiyle hesaplama yapılıyor.',topic:'geo',tags:['kosinüs teoremi','üçgen','alan']},
+  '2024-29':{ title:'Sinüs & Kosinüs Teoremi',desc:'Bir üçgenin kenar/açı ilişkilerini sinüs veya kosinüs teoremiyle inceleyen soru.',topic:'geo',tags:['sinüs teoremi','kosinüs teoremi','üçgen']},
+
+  // ── 2020 – Q31-33 ve 35, 38, 39
+  '2020-31':{ title:'Koordinat Düzlemi: Analitik Uygulama',desc:'Koordinat düzleminde verilen koşulları sağlayan noktanın konumu belirleniyor.',topic:'analitik',tags:['analitik geometri','koordinat','nokta']},
+  '2020-32':{ title:'Doğru Denklemi & Eğim',desc:'Koordinat düzleminde iki nokta arasındaki doğrunun denklemi veya eğim hesabı.',topic:'analitik',tags:['doğru denklemi','eğim','koordinat']},
+  '2020-33':{ title:'Analitik Geometri: Alan',desc:'Koordinat düzleminde geometrik şeklin alan veya çevre hesabı.',topic:'analitik',tags:['analitik geometri','alan','koordinat']},
+  '2020-35':{ title:'Üçgen: Sinüs/Kosinüs Uygulaması',desc:'Üçgende sinüs veya kosinüs teoremiyle kenar ya da açı hesabı yapılıyor.',topic:'geo',tags:['sinüs teoremi','kosinüs teoremi','üçgen']},
+  '2020-38':{ title:'Koordinat Düzlemi: Uzaklık',desc:'Koordinat düzleminde noktanın doğruya uzaklığı veya geometrik konum sorusu.',topic:'analitik',tags:['analitik geometri','uzaklık','koordinat']},
+  '2020-39':{ title:'Analitik Geometri: Doğru',desc:'Koordinat düzleminde doğru denklemi veya iki doğru arasındaki mesafe.',topic:'analitik',tags:['analitik geometri','doğru','mesafe']},
+
+  // ── 2021 – Q32-36, 38-40
+  '2021-32':{ title:'Koordinat Düzlemi: Şekil',desc:'Koordinat düzleminde bir doğru veya geometrik şeklin konumuna dair analitik geometri sorusu.',topic:'analitik',tags:['analitik geometri','koordinat','şekil']},
+  '2021-33':{ title:'Doğruya Uzaklık',desc:'Koordinat düzleminde bir noktanın doğruya uzaklığı veya iki doğrunun kesişim noktası.',topic:'analitik',tags:['analitik geometri','uzaklık','doğru']},
+  '2021-34':{ title:'Analitik Geometri: Doğru Denklemi',desc:'Koordinat düzleminde doğru denklemi, eğim veya alan uygulaması.',topic:'analitik',tags:['analitik geometri','koordinat']},
+  '2021-35':{ title:'Koordinat Düzleminde Alan',desc:'Koordinat düzleminde geometrik şekle ait alan veya özellik hesabı.',topic:'analitik',tags:['analitik geometri','alan','koordinat']},
+  '2021-36':{ title:'Analitik Geometri: Çember/Üçgen',desc:'Koordinat düzleminde üçgen, doğru veya çember uygulaması.',topic:'analitik',tags:['analitik geometri','çember']},
+  '2021-38':{ title:'Dönüşüm & Koordinat',desc:'Koordinat düzleminde nokta veya şeklin öteleme ya da simetri dönüşümü.',topic:'analitik',tags:['dönüşüm','öteleme','koordinat']},
+  '2021-39':{ title:'Analitik Geometri Uygulaması',desc:'Koordinat düzleminde geometrik uygulama sorusu.',topic:'analitik',tags:['analitik geometri','koordinat']},
+  '2021-40':{ title:'Katı Cisimler: Hacim/Yüzey',desc:'Prizma, silindir, koni veya kürenin hacim ya da yüzey alanı hesabı.',topic:'geo',tags:['katı cisimler','hacim','yüzey alanı']},
+
+  // ── 2022 – Q31-33, 35, 36, 38
+  '2022-31':{ title:'Çember ve Üçgen',desc:'Çember veya üçgenle ilgili geometri uygulaması; açı veya uzunluk bulunuyor.',topic:'geo',tags:['geometri','çember','üçgen']},
+  '2022-32':{ title:'Analitik Geometri: Koordinat',desc:'Koordinat düzleminde şeklin veya noktanın analitik incelenmesi.',topic:'analitik',tags:['analitik geometri','koordinat']},
+  '2022-33':{ title:'Doğru & Çember Analitik',desc:'Koordinat düzleminde doğru ile çemberin kesişim, teğet ya da ayrık durumları.',topic:'analitik',tags:['çember','doğru','kesişim']},
+  '2022-35':{ title:'Analitik Geometri: Doğru',desc:'Koordinat düzleminde doğru veya alan hesabına yönelik soru.',topic:'analitik',tags:['analitik geometri','koordinat']},
+  '2022-36':{ title:'Analitik Geometri: Şekil',desc:'Koordinat düzleminde geometrik şekil veya uzaklık uygulaması.',topic:'analitik',tags:['analitik geometri','koordinat']},
+  '2022-38':{ title:'Dönüşüm: Öteleme/Simetri',desc:'Koordinat düzleminde öteleme, dönme veya simetri dönüşümü uygulaması.',topic:'analitik',tags:['dönüşüm','öteleme','simetri']},
+
+  // ── 2023 – Q32, 34, 36, 38, 39
+  '2023-32':{ title:'Geometri Uygulaması',desc:'Üçgen, çember veya dörtgenle ilgili geometri sorusu.',topic:'geo',tags:['geometri','üçgen']},
+  '2023-34':{ title:'Analitik Geometri: Doğru',desc:'Koordinat düzleminde doğru veya şekil incelenmesi.',topic:'analitik',tags:['analitik geometri','koordinat']},
+  '2023-36':{ title:'Analitik Geometri: Alan',desc:'Koordinat düzleminde geometrik konum veya alan hesabı.',topic:'analitik',tags:['analitik geometri','koordinat']},
+  '2023-38':{ title:'Dönüşüm & Simetri',desc:'Koordinat düzleminde öteleme veya simetri dönüşümleri.',topic:'analitik',tags:['dönüşüm','simetri','koordinat']},
+  '2023-39':{ title:'Analitik Geometri',desc:'Koordinat düzleminde geometrik şeklin analitik incelenmesi.',topic:'analitik',tags:['analitik geometri','koordinat']},
+
+  // ── 2024 – Q33, 35, 37, 39, 40
+  '2024-33':{ title:'Çemberde Açı',desc:'Çemberde merkez açı, çevre açısı veya teğet-kiriş açısı uygulaması.',topic:'geo',tags:['çember','açı','teğet']},
+  '2024-35':{ title:'Analitik Geometri: Çember',desc:'Koordinat düzleminde doğru veya çember sorusu.',topic:'analitik',tags:['analitik geometri','doğru','çember']},
+  '2024-37':{ title:'Geometri: Katı Cisimler',desc:'Prizma, silindir, koni veya küreye ait hacim ya da yüzey sorusu.',topic:'geo',tags:['katı cisimler','geometri','hacim']},
+  '2024-39':{ title:'Analitik Geometri: Dönüşüm',desc:'Koordinat düzleminde geometrik konum veya dönüşüm uygulaması.',topic:'analitik',tags:['analitik geometri','dönüşüm','koordinat']},
+  '2024-40':{ title:'Katı Cisimler: Silindir/Koni',desc:'Silindir, koni veya kürenin hacim ya da yüzey alanı hesabı.',topic:'geo',tags:['katı cisimler','silindir','hacim']},
+
+  // ── 2025 – Q35, 36, 39, 40
+  '2025-35':{ title:'Analitik Geometri: Doğru',desc:'Koordinat düzleminde doğru veya çember sorusu.',topic:'analitik',tags:['analitik geometri','doğru']},
+  '2025-36':{ title:'Analitik Geometri: Alan',desc:'Koordinat düzleminde geometrik konum veya alan hesabı.',topic:'analitik',tags:['analitik geometri','koordinat']},
+  '2025-39':{ title:'Analitik Geometri',desc:'Koordinat düzleminde geometrik uygulama sorusu.',topic:'analitik',tags:['analitik geometri','koordinat']},
+  '2025-40':{ title:'Geometri Sorusu',desc:'Geometri veya analitik geometri uygulaması.',topic:'geo',tags:['geometri','analitik geometri']},
 };
 
 // Build AYT Q array
@@ -776,7 +827,7 @@ function getAYTtopic(num) {
   if ([13,14,15,16,17,18,19,20,21,22].includes(num)) return 'fon';
   if ([23,24,25,26].includes(num)) return num<=24?'limit':'dizi';
   if ([27,28,29,30].includes(num)) return 'trigon';
-  if ([31,32,33].includes(num)) return 'limit';
+  if ([31,32,33].includes(num)) return 'geo';
   if ([34,35,36,37,38,39,40].includes(num)) return 'analitik';
   return 'fon';
 }
@@ -951,7 +1002,7 @@ const AYT_KAZ = [
     {name:'Trigonometrik denklemler (12.3.2)',code:'12.3.2',
      desc:'a·sin(x)+b·cos(x)=c biçimindeki denklemler; genel çözüm (sinx=k ⇒ x=arcsin(k)+2kπ); gerçek hayat problemleri.',
      tip:'Sınav: Yılda 1 soru. Genellikle 28–30. sorular aralığında. Formül verilmeden gerçek hayat durumuna uygulanır.',
-     refs:[{yr:2020,n:30},{yr:2021,n:30},{yr:2022,n:30},{yr:2025,n:30}]},
+     refs:[{yr:2020,n:30},{yr:2025,n:30}]},
   ]},
 
   // ─── 8. LİMİT & TÜREV ───────────────────────────────────────────────────
@@ -963,7 +1014,7 @@ const AYT_KAZ = [
     {name:'Türev kavramı & türev kuralları (12.5.2)',code:'12.5.2',
      desc:'Anlık değişim oranı, teğetin eğimi, f\'(x) = lim[f(x+h)−f(x)]/h; f(x)=axⁿ türevi; toplam/fark/çarpım/bölüm kuralları; zincir kuralı; sağdan/soldan türev.',
      tip:'Sınav: Her yıl 2–4 soru. Sadece polinom + rasyonel kuvvetli fonksiyonların türevi alınır (trigonometrik/üstel türev verilmez). Zincir kuralı tuzaklı.',
-     refs:[{yr:2020,n:24},{yr:2021,n:31},{yr:2022,n:31},{yr:2023,n:31},{yr:2024,n:31},{yr:2025,n:31}]},
+     refs:[{yr:2020,n:24},{yr:2021,n:37}]},
     {name:'Artan-azalan aralıklar & ekstremum (12.5.3.1–12.5.3.2)',code:'12.5.3',
      desc:'f\'(x)>0 → artan, f\'(x)<0 → azalan; kritik nokta (f\'=0 veya tanımsız), yerel/mutlak maksimum-minimum; ikinci türev testi.',
      tip:'Sınav: Her yıl 2–3 soru. Grafik üzerinden türev işaret analizi ("f\'(x)\'nin grafiği verilmiş, f(x) monoton aralıkları neler?") en zor format.',
@@ -971,7 +1022,7 @@ const AYT_KAZ = [
     {name:'Fonksiyon grafiği çizimi & optimizasyon (12.5.3.3–12.5.3.4)',code:'12.5.3.4',
      desc:'Polinom fonksiyonun türev yardımıyla grafiğini çizme (kritik noktalar, artan-azalan, eksen kesimleri); maksimum-minimum problemi (optimizasyon).',
      tip:'Sınav: Her yıl 1–2 soru. "Dikdörtgen alan-çevre optimizasyonu" ve "hacim maksimum koşulu" gerçek hayat bağlamında çıkıyor.',
-     refs:[{yr:2021,n:32},{yr:2022,n:32},{yr:2023,n:32},{yr:2024,n:32},{yr:2025,n:32}]},
+     refs:[{yr:2022,n:16}]},
   ]},
 
   // ─── 10. İNTEGRAL ───────────────────────────────────────────────────────
@@ -979,15 +1030,15 @@ const AYT_KAZ = [
     {name:'Belirsiz integral & alma kuralları (12.6.1)',code:'12.6.1',
      desc:'Ters türev kavramı, ∫axⁿ dx = axⁿ⁺¹/(n+1)+C (n≠−1), sabit çarpımı ve toplamının integrali, değişken değiştirme (substitution).',
      tip:'Sınav: Yılda 1–2 soru. "Türevi verilen fonksiyonu bul" formatında belirsiz integral; değişken değiştirme ile iç içe geçmiş fonksiyon integrali sık.',
-     refs:[{yr:2020,n:32},{yr:2021,n:32},{yr:2022,n:32},{yr:2023,n:32},{yr:2024,n:32},{yr:2025,n:32}]},
+     refs:[]},
     {name:'Belirli integral & Riemann toplamı (12.6.2.1–12.6.2.3)',code:'12.6.2',
      desc:'Riemann toplamı ile alan yaklaşımı, ∫ₐᵇf(x)dx = F(b)−F(a), belirli integral özellikleri (tersine sınır, parçalama, sabit çarpım), parçalı fonksiyon integrali.',
      tip:'Sınav: Her yıl 1–2 soru. Belirli integralin "grafik altı alan değil" olduğu durum (negatif bölge): ∫ negatif, A = |∫| tuzağı.',
-     refs:[{yr:2020,n:33},{yr:2021,n:33},{yr:2022,n:33},{yr:2023,n:33},{yr:2024,n:33},{yr:2025,n:33}]},
+     refs:[]},
     {name:'Belirli integral ile alan hesabı (12.6.2.4)',code:'12.6.2.4',
      desc:'Fonksiyon grafiği ile x ekseni arasındaki alan, iki fonksiyon arasındaki alan A = ∫ₐᵇ|f(x)−g(x)|dx, gerçek hayat alan problemleri.',
      tip:'Sınav: Her yıl 1–2 soru. İki parabolün kesişim noktasını bulup aralarındaki alanı hesaplama formatı zor yıllarda çıkıyor.',
-     refs:[{yr:2021,n:34},{yr:2022,n:34},{yr:2023,n:34},{yr:2024,n:34},{yr:2025,n:34}]},
+     refs:[]},
   ]},
 
   // ─── 11. SAYMA & OLASILIK ────────────────────────────────────────────────
@@ -1023,24 +1074,27 @@ const AYTGEO_KAZ = [
      desc:'Kosinüs teoremi: c²=a²+b²−2ab·cosC; Sinüs teoremi: a/sinA=b/sinB=c/sinC=2R. Üçgen alanı = (1/2)ab·sinC. Gerçek hayat bağlamı.',
      tip:'Sınav: Her yıl 1–3 soru. Sinüs teoremi gerçek hayat (ölçüm, mesafe) bağlamında, kosinüs teoremi ise 3 kenar/2 kenar+1 açı verildiğinde çıkıyor.',
      refs:[{yr:2020,n:28},{yr:2021,n:29},{yr:2022,n:28},{yr:2023,n:29},{yr:2024,n:29},{yr:2025,n:29}]},
+  ]},
+  {icon:'◻',bg:'#2d2300',clr:'#f5c842',name:'Dörtgenler & Özel Şekiller (§10.5)',cnt:6,subs:[
     {name:'Özel dörtgenler (10.5.3)',code:'10.5.3',
      desc:'Yamuk (paralel kenar, yükseklik, alan), ikizkenar yamuk, paralelkenar, eşkenar dörtgen (d₁×d₂/2), dikdörtgen, kare; hiyerarşi ve çevresel eleman.',
-     refs:[{yr:2020,n:39},{yr:2021,n:39},{yr:2022,n:38},{yr:2023,n:39},{yr:2024,n:39},{yr:2025,n:39}]},
+     tip:'Sınav: Her yıl 1–2 soru. Dörtgen soruları AYT\'de çoğunlukla alan veya köşegen hesabı olarak karşıma çıkar.',
+     refs:[{yr:2020,n:34},{yr:2021,n:30},{yr:2022,n:30},{yr:2023,n:29},{yr:2024,n:29},{yr:2025,n:29}]},
   ]},
   {icon:'◯',bg:'#0d2744',clr:'#4b9ef8',name:'Çember & Daire (§11.5)',cnt:8,subs:[
     {name:'Çemberde açılar: merkez, çevre, teğet-kiriş (11.5.1–11.5.3)',code:'11.5.2',
      desc:'Merkez açı = 2×çevre açı; aynı yaya dayanan çevre açıları eşit; iç/dış açı özellikleri; teğet-kiriş açısı; dıştan teğet parçaları eşit; kiriş-orta dikme.',
      tip:'Sınav: Her yıl 1–2 soru. "Merkez açısı = 2 × çevre açısı" + çevre açısını çaptan görme (90°) kombinasyonu en sık çıkan soru tipi.',
-     refs:[{yr:2020,n:35},{yr:2022,n:35},{yr:2023,n:31},{yr:2024,n:35},{yr:2025,n:35}]},
+     refs:[{yr:2020,n:30},{yr:2022,n:30},{yr:2023,n:31},{yr:2024,n:31},{yr:2024,n:34},{yr:2025,n:31}]},
     {name:'Dairenin çevresi, alanı & yay (11.5.4)',code:'11.5.4',
      desc:'Çevre C=2πr, alan A=πr², yay uzunluğu l=rθ (θ radyan), daire dilimi alanı A=r²θ/2, yarım daire/çeyrek daire, halkalar.',
-     refs:[{yr:2020,n:36},{yr:2021,n:36},{yr:2022,n:36},{yr:2023,n:35},{yr:2024,n:36},{yr:2025,n:36}]},
+     refs:[{yr:2020,n:30},{yr:2021,n:30},{yr:2022,n:30},{yr:2023,n:35},{yr:2024,n:31},{yr:2025,n:37}]},
   ]},
   {icon:'▲',bg:'#0a2420',clr:'#38b6a8',name:'Katı Cisimler (§11.6)',cnt:6,subs:[
     {name:'Küre, silindir & koni (hacim & yüzey) (11.6.1)',code:'11.6.1',
      desc:'V(silindir)=πr²h, V(koni)=πr²h/3, V(küre)=4πr³/3; yanal alan ve yüzey alanı formülleri; su doldurma/boşaltma problemleri.',
      tip:'Sınav: Her yıl 1–2 soru. Silindir + koni + küre hacminin birleşimi (örn. bir hacim diğerine dönüştürme) yaygın. π iptal eden sorular hızlı çözülür.',
-     refs:[{yr:2020,n:40},{yr:2022,n:40},{yr:2023,n:40},{yr:2024,n:40},{yr:2025,n:40}]},
+     refs:[{yr:2020,n:40},{yr:2021,n:40},{yr:2022,n:40},{yr:2023,n:40},{yr:2024,n:40},{yr:2025,n:40}]},
   ]},
 
   // ─── ANALİTİK GEOMETRİ ──────────────────────────────────────────────────
@@ -1052,7 +1106,7 @@ const AYTGEO_KAZ = [
     {name:'Doğrunun denklemi, eğim & paralel/dik koşul (11.2.1.3–11.2.1.4)',code:'11.2.1.3',
      desc:'Eğim m=tanα=(y₂−y₁)/(x₂−x₁), y=mx+n, ax+by+c=0. Paralel koşul m₁=m₂, dik koşul m₁·m₂=−1. Noktanın doğruya uzaklığı: d=|ax₀+by₀+c|/√(a²+b²).',
      tip:'Sınav: Her yıl 2–3 soru. Koordinat düzleminde geometrik şekil kuran (kare, dikdörtgen, üçgen) ve uzaklık hesaplayan sorular yaygın.',
-     refs:[{yr:2020,n:14},{yr:2021,n:22},{yr:2022,n:22},{yr:2023,n:23},{yr:2024,n:22},{yr:2025,n:22}]},
+     refs:[{yr:2020,n:32},{yr:2021,n:22},{yr:2022,n:22},{yr:2023,n:23},{yr:2024,n:22},{yr:2025,n:22}]},
     {name:'Dönüşümler: öteleme, dönme & simetri (12.4.1)',code:'12.4.1',
      desc:'Öteleme: A(x,y)→A\'(x+a, y+b). Eksene simetri: x-ekseni→(x,−y), y-ekseni→(−x,y), y=x→(y,x), orijine→(−x,−y). Dönme (90°, 180°, 270°) ve bileşke dönüşümler.',
      tip:'Sınav: Her yıl 1–2 soru, son 3 yılda düzenli olarak 38. soru. Birden fazla dönüşümü sırayla uygulama ve koordinat takibi önemli.',
@@ -1065,28 +1119,6 @@ const AYTGEO_KAZ = [
      desc:'Üçgen/kare/dikdörtgenin köşe koordinatlarından alan, çevre ve özelliklerini analitik hesaplama; koordinat düzleminde geometrik locus (yer) problemleri.',
      tip:'Sınav: Her yıl 2–3 soru. "1. bölgede kare" veya "x eksenine paralel kenar" gibi kısıtlamalı koordinat soruları zor yıllarda çıkıyor.',
      refs:[{yr:2020,n:37},{yr:2021,n:37},{yr:2022,n:34},{yr:2023,n:37},{yr:2024,n:36},{yr:2025,n:34}]},
-  ]},
-
-  // ─── GEOMETRİ (AYT) ─────────────────────────────────────────────────────
-  {icon:'△',bg:'#2d0d0d',clr:'#e05555',name:'Geometri — AYT (§9.4 & §10.5 & §11.5–11.6)',cnt:18,subs:[
-    {name:'Üçgen: açı, kenar, benzerlik & alan (9.4.1–9.4.5)',code:'9.4',
-     desc:'İç/dış açı toplamı, kenar-açı ilişkisi, K.A.K./K.K.K./A.A. benzerliği, Thales teoremi, Pisagor+Öklid teoremi, trigonometrik alan (½ab·sinC).',
-     tip:'Sınav: Her yıl 2–3 soru. AYT\'de üçgen soruları gerçek bağlamlı (alan, trigonometri, benzerlik) ve Sinüs/Kosinüs teoremiyle birleşik gelir.',
-     refs:[{yr:2020,n:28},{yr:2021,n:30},{yr:2022,n:30},{yr:2023,n:29},{yr:2024,n:32},{yr:2025,n:32}]},
-    {name:'Çemberde açılar: merkez, çevre, teğet-kiriş (11.5.1–11.5.3)',code:'11.5.2',
-     desc:'Merkez açı = 2×çevre açı; aynı yaya dayanan çevre açıları eşit; iç/dış açı özellikleri; teğet-kiriş açısı; dıştan teğet parçaları eşit; kiriş-orta dikme.',
-     tip:'Sınav: Her yıl 1–2 soru. "Merkez açısı = 2 × çevre açısı" + çevre açısını çaptan görme (90°) kombinasyonu en sık çıkan soru tipi.',
-     refs:[{yr:2020,n:35},{yr:2022,n:35},{yr:2023,n:31},{yr:2024,n:35},{yr:2025,n:35}]},
-    {name:'Dairenin çevresi, alanı & yay (11.5.4)',code:'11.5.4',
-     desc:'Çevre C=2πr, alan A=πr², yay uzunluğu l=rθ (θ radyan), daire dilimi alanı A=r²θ/2, yarım daire/çeyrek daire, halkalar.',
-     refs:[{yr:2020,n:36},{yr:2021,n:36},{yr:2022,n:36},{yr:2023,n:35},{yr:2024,n:36},{yr:2025,n:36}]},
-    {name:'Küre, silindir & koni (hacim & yüzey) (11.6.1)',code:'11.6.1',
-     desc:'V(silindir)=πr²h, V(koni)=πr²h/3, V(küre)=4πr³/3; yanal alan ve yüzey alanı formülleri; su doldurma/boşaltma problemleri.',
-     tip:'Sınav: Her yıl 1–2 soru. Silindir + koni + küre hacminin birleşimi (örn. bir hacim diğerine dönüştürme) yaygın. π iptal eden sorular hızlı çözülür.',
-     refs:[{yr:2020,n:40},{yr:2022,n:40},{yr:2023,n:40},{yr:2024,n:40},{yr:2025,n:40}]},
-    {name:'Özel dörtgenler (10.5.3)',code:'10.5.3',
-     desc:'Yamuk (paralel kenar, yükseklik, alan), ikizkenar yamuk, paralelkenar, eşkenar dörtgen (d₁×d₂/2), dikdörtgen, kare; hiyerarşi ve çevresel eleman.',
-     refs:[{yr:2020,n:39},{yr:2021,n:39},{yr:2022,n:38},{yr:2023,n:39},{yr:2024,n:39},{yr:2025,n:39}]},
   ]},
 ];
 

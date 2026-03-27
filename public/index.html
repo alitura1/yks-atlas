@@ -2751,24 +2751,41 @@ async function renderPdfPage(pdfPageNum, yTopRatio) {
     const doc  = await getPdfDoc();
     const page = await doc.getPage(pdfPageNum);
 
-    // Render at 2× device ratio for sharpness
-    const dpr    = Math.min(window.devicePixelRatio || 1, 2);
-    const vw     = wrap.clientWidth || 360;
-    const vp0    = page.getViewport({ scale: 1 });
-    const scale  = (vw / vp0.width) * dpr * 1.8;   // 1.8× zoom into question area
-    const vp     = page.getViewport({ scale });
+    // --- Step 1: render full page to offscreen canvas at high res ---
+    const dpr   = Math.min(window.devicePixelRatio || 1, 2);
+    const vp0   = page.getViewport({ scale: 1 });
+    // Render at 3x for crisp text
+    const offScale = 3;
+    const offVp    = page.getViewport({ scale: offScale });
+    const offCvs   = document.createElement('canvas');
+    offCvs.width   = offVp.width;
+    offCvs.height  = offVp.height;
+    await page.render({ canvasContext: offCvs.getContext('2d'), viewport: offVp }).promise;
 
-    cvs.width  = vp.width;
-    cvs.height = vp.height;
-    cvs.style.width  = (vp.width  / dpr) + 'px';
-    cvs.style.height = (vp.height / dpr) + 'px';
+    // --- Step 2: crop the question region ---
+    // Show from yTopRatio - 3% to yTopRatio + 55% (enough for most questions)
+    const cropTop    = Math.max(0, yTopRatio - 0.03) * offCvs.height;
+    const cropHeight = Math.min(0.58 * offCvs.height, offCvs.height - cropTop);
 
-    await page.render({ canvasContext: cvs.getContext('2d'), viewport: vp }).promise;
+    // --- Step 3: draw crop onto visible canvas at container width ---
+    const vw         = wrap.clientWidth || 360;
+    const aspect     = offCvs.width / cropHeight;
+    const outW       = vw * dpr;
+    const outH       = outW / aspect;
 
-    // Scroll so the question top is ~15% from top of view
-    const pixelY   = yTopRatio * (vp.height / dpr);
-    const scrollTo = Math.max(0, pixelY - wrap.clientHeight * 0.15);
-    wrap.scrollTop = scrollTo;
+    cvs.width        = outW;
+    cvs.height       = outH;
+    cvs.style.width  = vw + 'px';
+    cvs.style.height = (outH / dpr) + 'px';
+
+    cvs.getContext('2d').drawImage(
+      offCvs,
+      0, cropTop, offCvs.width, cropHeight,  // source rect
+      0, 0,       outW,         outH          // dest rect
+    );
+
+    // Reset scroll to top — the canvas already shows the right region
+    wrap.scrollTop  = 0;
     wrap.scrollLeft = 0;
   } catch(e) {
     console.error('PDF render error', e);
@@ -2983,19 +3000,18 @@ function doRedo() {
 // ════════════════════════════════════════
 function applyZoom() {
   const scaler = document.getElementById('lbimg-scaler');
-  const pdfCvs = document.getElementById('lb-pdf-canvas');
+  const pdfWrap = document.getElementById('lb-pdf-wrap');
   if (scaler.style.display !== 'none') {
     scaler.style.width = (imgZoom * 100) + '%';
-  } else if (pdfCvs && document.getElementById('lb-pdf-wrap').style.display !== 'none') {
-    pdfCvs.style.width = (imgZoom * 100) + '%';
+  } else if (pdfWrap && pdfWrap.style.display !== 'none') {
+    const cvs = document.getElementById('lb-pdf-canvas');
+    if (cvs) cvs.style.width = (imgZoom * 100) + '%';
   }
 }
 function resetZoom() {
   imgZoom = 1; applyZoom();
   const w = document.getElementById('lbimg-wrap');
-  // Don't reset scrollTop when in PDF mode — renderPdfPage sets it to question position
-  const pdfVisible = document.getElementById('lb-pdf-wrap').style.display !== 'none';
-  if (!pdfVisible) { w.scrollLeft = 0; w.scrollTop = 0; }
+  w.scrollLeft = 0; w.scrollTop = 0;
 }
 // Mouse wheel zoom (desktop)
 document.getElementById('lbimg-wrap').addEventListener('wheel', e=>{

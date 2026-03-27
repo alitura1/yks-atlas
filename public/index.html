@@ -323,27 +323,39 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);min-hei
 <aside id="gnav">
   <div class="gnav-logo">YKS Atlas <sup>beta</sup></div>
   <div class="ng">
-    <span class="ng-label">TYT</span>
-    <button class="ntab active" onclick="showPage('tyt')" id="nt-tyt"><span class="dot" style="background:#3ecf8e"></span>Geometri</button>
-    <button class="ntab" onclick="showPage('tytaz')" id="nt-tytaz"><span class="dot" style="background:#f5c842"></span>Analiz</button>
-    <button class="ntab" onclick="showPage('tyttur')" id="nt-tyttur"><span class="dot" style="background:#f5c842"></span>Türkçe DilBilgisi</button>
-    <button class="ntab" onclick="showPage('tytfen')" id="nt-tytfen"><span class="dot" style="background:#9b7fe8"></span>Fen</button>
-    <button class="ntab" onclick="showPage('tytmat')" id="nt-tytmat"><span class="dot" style="background:#e05555"></span>Matematik</button>
-    <button class="ntab" onclick="showPage('tytmataz')" id="nt-tytmataz"><span class="dot" style="background:#e05555"></span>Mat. Analiz</button>
-    <button class="ntab" onclick="showPage('tytsoc')" id="nt-tytsoc"><span class="dot" style="background:#4b9ef8"></span>Sosyal</button>
-    <button class="ntab" onclick="showPage('tytsocaz')" id="nt-tytsocaz"><span class="dot" style="background:#4b9ef8"></span>Sos. Analiz</button>
+    <span class="ng-label">TYT Geometri</span>
+    <button class="ntab active" onclick="showPage('tyt')" id="nt-tyt"><span class="dot" style="background:#3ecf8e"></span>Sorular</button>
+    <button class="ntab" onclick="showPage('tytaz')" id="nt-tytaz"><span class="dot" style="background:#3ecf8e"></span>Analiz</button>
+  </div>
+  <div class="ng">
+    <span class="ng-label">TYT Türkçe</span>
+    <button class="ntab" onclick="showPage('tyttur')" id="nt-tyttur"><span class="dot" style="background:#f5c842"></span>Sorular</button>
+  </div>
+  <div class="ng">
+    <span class="ng-label">TYT Matematik</span>
+    <button class="ntab" onclick="showPage('tytmat')" id="nt-tytmat"><span class="dot" style="background:#e05555"></span>Sorular</button>
+    <button class="ntab" onclick="showPage('tytmataz')" id="nt-tytmataz"><span class="dot" style="background:#e05555"></span>Analiz</button>
+  </div>
+  <div class="ng">
+    <span class="ng-label">TYT Fen</span>
+    <button class="ntab" onclick="showPage('tytfen')" id="nt-tytfen"><span class="dot" style="background:#9b7fe8"></span>Sorular</button>
+    <button class="ntab" onclick="showPage('tytfenaz')" id="nt-tytfenaz"><span class="dot" style="background:#9b7fe8"></span>Analiz</button>
+  </div>
+  <div class="ng">
+    <span class="ng-label">TYT Sosyal</span>
+    <button class="ntab" onclick="showPage('tytsoc')" id="nt-tytsoc"><span class="dot" style="background:#4b9ef8"></span>Sorular</button>
+    <button class="ntab" onclick="showPage('tytsocaz')" id="nt-tytsocaz"><span class="dot" style="background:#4b9ef8"></span>Analiz</button>
   </div>
   <div class="ng">
     <span class="ng-label">AYT Matematik</span>
-    <button class="ntab" onclick="showPage('ayt')" id="nt-ayt"><span class="dot" style="background:#4b9ef8"></span>Sorular</button>
-    <button class="ntab" onclick="showPage('aytaz')" id="nt-aytaz"><span class="dot" style="background:#9b7fe8"></span>Analiz</button>
+    <button class="ntab" onclick="showPage('ayt')" id="nt-ayt"><span class="dot" style="background:#f08040"></span>Sorular</button>
+    <button class="ntab" onclick="showPage('aytaz')" id="nt-aytaz"><span class="dot" style="background:#f08040"></span>Analiz</button>
   </div>
   <div class="ng">
     <span class="ng-label">AYT Geometri</span>
-    <button class="ntab" onclick="showPage('aytgeo')" id="nt-aytgeo"><span class="dot" style="background:#f08040"></span>Sorular</button>
-    <button class="ntab" onclick="showPage('aytgeokaz')" id="nt-aytgeokaz"><span class="dot" style="background:#f08040"></span>Analiz</button>
+    <button class="ntab" onclick="showPage('aytgeo')" id="nt-aytgeo"><span class="dot" style="background:#38b6a8"></span>Sorular</button>
+    <button class="ntab" onclick="showPage('aytgeokaz')" id="nt-aytgeokaz"><span class="dot" style="background:#38b6a8"></span>Analiz</button>
   </div>
-
 </aside>
 
 <!-- Mobil üst bar + overlay -->
@@ -560,6 +572,15 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);min-hei
     <h1 class="kaz-title">TYT Sosyal — MEB 2026 Kazanım Haritası</h1>
     <p class="kaz-sub">Tarih · İnkılap · Coğrafya · Felsefe · Din Kültürü · 2020-2025</p>
     <div id="tytsoc-kaz" class="kaz-list"></div>
+  </div>
+</div>
+
+<!-- TYT FEN ANALİZ -->
+<div class="page" id="page-tytfenaz">
+  <div class="kaz-wrap">
+    <h1 class="kaz-title">TYT Fen Bilimleri — MEB 2026 Kazanım Haritası</h1>
+    <p class="kaz-sub">Fizik · Kimya · Biyoloji · 2020–2025 Soru Dağılımı</p>
+    <div id="tytfen-kaz" class="kaz-list"></div>
   </div>
 </div>
 
@@ -1933,6 +1954,39 @@ const TYT_FEN_Q = [
 
 
 
+
+// ════════════════════════════════════════
+// TYT FEN BİLİMLERİ — KAZANIM HARİTASI
+// ════════════════════════════════════════
+const TYT_FEN_KAZ = [
+  {icon:'⚡',bg:'#0d1a2d',clr:'#4b9ef8',name:'Fizik',cnt:7,subs:[
+    {name:'Fizik Bilimine Giriş & Ölçme',code:'F.9.1',desc:'Fizik ve önemi; SI birim sistemi; ölçme araçları; hata analizi.',tip:'Her yıl 1-2 soru. Birim analizi ve ölçme hataları sık çıkar.',refs:[{yr:2020,n:1},{yr:2021,n:1},{yr:2022,n:1},{yr:2023,n:1},{yr:2024,n:1},{yr:2025,n:1}]},
+    {name:'Madde & Özkütle',code:'F.9.2',desc:'Maddenin fiziksel özellikleri; özkütle hesabı; sıvı-katı özkütle.',tip:'Yılda 1 soru, özellikle özkütle-hacim grafikleri.',refs:[{yr:2020,n:2},{yr:2021,n:2},{yr:2022,n:2},{yr:2023,n:2},{yr:2024,n:2},{yr:2025,n:2}]},
+    {name:'Kuvvet & Hareket',code:'F.9.3',desc:'Vektörler; bileşke kuvvet; Newton yasaları; sürtünme; basit makineler.',tip:'Her yıl 2-3 soru çıkar, en kapsamlı konu.',refs:[{yr:2020,n:3},{yr:2020,n:4},{yr:2021,n:3},{yr:2021,n:4},{yr:2022,n:3},{yr:2022,n:4},{yr:2023,n:3},{yr:2023,n:4},{yr:2024,n:3},{yr:2025,n:3}]},
+    {name:'Enerji & Basınç',code:'F.9.4',desc:'İş-enerji teoremi; potansiyel ve kinetik enerji; basınç; Archimedes.',refs:[{yr:2020,n:5},{yr:2021,n:5},{yr:2022,n:5},{yr:2023,n:5},{yr:2024,n:4},{yr:2025,n:4}]},
+    {name:'Isı & Sıcaklık',code:'F.9.5',desc:'Isı-sıcaklık farkı; özgül ısı; ısı alışverişi; genleşme.',refs:[{yr:2020,n:6},{yr:2021,n:6},{yr:2022,n:6},{yr:2023,n:6},{yr:2024,n:5},{yr:2025,n:5}]},
+    {name:'Elektrik',code:'F.9.6',desc:'Elektrik yükü; coulomb; elektrik alanı; seri-paralel devre; Ohm yasası.',tip:'Her yıl 1-2 soru. Devre problemleri sık çıkar.',refs:[{yr:2020,n:7},{yr:2021,n:7},{yr:2022,n:7},{yr:2023,n:7},{yr:2024,n:6},{yr:2025,n:6}]},
+    {name:'Dalgalar & Optik',code:'F.9.7',desc:'Ses dalgaları; ışığın yansıması-kırılması; mercek ve aynalar.',refs:[{yr:2020,n:8},{yr:2021,n:8},{yr:2022,n:8},{yr:2023,n:8},{yr:2024,n:7},{yr:2025,n:7}]},
+  ]},
+  {icon:'🧪',bg:'#0d2010',clr:'#3ecf8e',name:'Kimya',cnt:7,subs:[
+    {name:'Kimya Bilimine Giriş',code:'K.9.1',desc:'Madde sınıflandırması; saf madde-karışım; kimyasal değişim; laboratuvar güvenliği.',refs:[{yr:2020,n:9},{yr:2021,n:9},{yr:2022,n:9},{yr:2023,n:9},{yr:2024,n:8},{yr:2025,n:8}]},
+    {name:'Atom & Periyodik Tablo',code:'K.9.2',desc:'Atom modelleri; proton-nötron-elektron; periyodik tablo özellikleri.',tip:'Her yıl 1-2 soru. Periyodik tablo trendi soruları sık.',refs:[{yr:2020,n:10},{yr:2021,n:10},{yr:2022,n:10},{yr:2023,n:10},{yr:2024,n:9},{yr:2025,n:9}]},
+    {name:'Kimyasal Bağlar',code:'K.9.3',desc:'İyonik-kovalent-metalik bağ; polar/apolar; elektrik çekiciliği.',refs:[{yr:2020,n:11},{yr:2021,n:11},{yr:2022,n:11},{yr:2023,n:11},{yr:2024,n:10},{yr:2025,n:10}]},
+    {name:'Kimyasal Tepkimeler',code:'K.9.4',desc:'Denklem denkleştirme; asit-baz; nötralizasyon; mol hesapları.',tip:'Her yıl 2-3 soru, en sık çıkan kimya konusu.',refs:[{yr:2020,n:12},{yr:2020,n:13},{yr:2021,n:12},{yr:2021,n:13},{yr:2022,n:12},{yr:2022,n:13},{yr:2023,n:12},{yr:2024,n:11},{yr:2024,n:12},{yr:2025,n:11}]},
+    {name:'Karışımlar',code:'K.9.5',desc:'Çözünürlük; derişim; ayırma yöntemleri (distilasyon, filtrasyon).',refs:[{yr:2020,n:14},{yr:2021,n:14},{yr:2022,n:14},{yr:2023,n:13},{yr:2024,n:13},{yr:2025,n:12}]},
+    {name:'Kimya & Enerji',code:'K.9.6',desc:'Ekzotermik-endotermik reaksiyonlar; yakıt ve enerji.',refs:[{yr:2020,n:15},{yr:2021,n:15},{yr:2022,n:15},{yr:2023,n:14},{yr:2025,n:13}]},
+    {name:'Organik Kimya Temelleri',code:'K.9.7',desc:'Hidrokarbon sınıfları; fonksiyonel gruplar; polimer.',refs:[{yr:2023,n:15},{yr:2024,n:14},{yr:2024,n:15},{yr:2025,n:14}]},
+  ]},
+  {icon:'🧬',bg:'#1a0d2d',clr:'#9b7fe8',name:'Biyoloji',cnt:6,subs:[
+    {name:'Hücre & Organeller',code:'B.9.1',desc:'Prokaryot-ökaryot; hücre organelleri ve görevleri; hücre zarı geçirgenliği.',tip:'Her yıl 2 soru, en sık çıkan biyoloji konusu.',refs:[{yr:2020,n:16},{yr:2020,n:17},{yr:2021,n:16},{yr:2021,n:17},{yr:2022,n:16},{yr:2022,n:17},{yr:2023,n:16},{yr:2024,n:16},{yr:2025,n:15},{yr:2025,n:16}]},
+    {name:'Canlıların Sınıflandırılması',code:'B.9.2',desc:'5 alem; virüs; bakteriler; mantarlar.',refs:[{yr:2020,n:18},{yr:2021,n:18},{yr:2022,n:18},{yr:2023,n:17},{yr:2024,n:17}]},
+    {name:'Fotosentez & Solunum',code:'B.9.3',desc:'Fotosentez reaksiyonları; klorofil; aerobik-anaerobik solunum.',tip:'Her yıl 1-2 soru.',refs:[{yr:2020,n:19},{yr:2021,n:19},{yr:2022,n:19},{yr:2023,n:18},{yr:2023,n:19},{yr:2024,n:18},{yr:2025,n:17}]},
+    {name:'Mitoz & Mayoz',code:'B.9.4',desc:'Hücre döngüsü; mitoz evreleri; mayoz ve genetik çeşitlilik.',refs:[{yr:2020,n:20},{yr:2021,n:20},{yr:2022,n:20},{yr:2024,n:19},{yr:2025,n:18}]},
+    {name:'Sindirim & Dolaşım',code:'B.9.5',desc:'Sindirim sistemi organları; kan grupları; kalp ve dolaşım.',refs:[{yr:2023,n:20},{yr:2024,n:20},{yr:2025,n:19}]},
+    {name:'Kalıtım & DNA',code:'B.9.6',desc:'DNA yapısı; gen-alel; Mendel yasaları; kan grubu kalıtımı.',refs:[{yr:2025,n:20}]},
+  ]},
+];
+
 const AYT_KAZ = [
   // ─── 1. MANTIK & KÜMELER ──────────────────────────────────────────────────
   {icon:'∈',bg:'#0d2744',clr:'#4b9ef8',name:'Mantık & Kümeler (§9.1–9.2)',cnt:12,subs:[
@@ -2627,11 +2681,12 @@ function showPage(id) {
   if(id==='tytmataz') buildKaz('tytmat-kaz', TYT_MAT_KAZ, 'tytmat');
   if(id==='tytsoc') { buildTopics('tytsoc-topics', TYT_SOC_TOPICS, 'tytsoc'); renderGrid('tytsoc'); }
   if(id==='tytsocaz') buildKaz('tytsoc-kaz', TYT_SOC_KAZ, 'tytsoc');
+  if(id==='tytfenaz') buildKaz('tytfen-kaz', TYT_FEN_KAZ, 'tytfen');
   // close mobile gnav
   document.getElementById('gnav')?.classList.remove('open');
   document.getElementById('gnav-overlay')?.classList.remove('open');
   // mobile fab
-  const bankMap = {tyt:'tyt',tytaz:'tyt',tyttur:'tyttur',tytfen:'tytfen',tytmat:'tytmat',tytmataz:'tytmat',tytsoc:'tytsoc',tytsocaz:'tytsoc',ayt:'ayt',aytaz:'ayt',aytgeo:'aytgeo',aytgeokaz:'aytgeo'};
+  const bankMap = {tyt:'tyt',tytaz:'tyt',tyttur:'tyttur',tytfen:'tytfen',tytfenaz:'tytfen',tytmat:'tytmat',tytmataz:'tytmat',tytsoc:'tytsoc',tytsocaz:'tytsoc',ayt:'ayt',aytaz:'ayt',aytgeo:'aytgeo',aytgeokaz:'aytgeo'};
   mobBank = bankMap[id] || 'tyt';
   updateMobFab(mobBank);
 }
@@ -2750,43 +2805,23 @@ async function renderPdfPage(pdfPageNum, yTopRatio) {
   try {
     const doc  = await getPdfDoc();
     const page = await doc.getPage(pdfPageNum);
-
-    // --- Step 1: render full page to offscreen canvas at high res ---
-    const dpr   = Math.min(window.devicePixelRatio || 1, 2);
-    const vp0   = page.getViewport({ scale: 1 });
-    // Render at 3x for crisp text
-    const offScale = 3;
-    const offVp    = page.getViewport({ scale: offScale });
-    const offCvs   = document.createElement('canvas');
-    offCvs.width   = offVp.width;
-    offCvs.height  = offVp.height;
-    await page.render({ canvasContext: offCvs.getContext('2d'), viewport: offVp }).promise;
-
-    // --- Step 2: crop the question region ---
-    // Show from yTopRatio - 3% to yTopRatio + 55% (enough for most questions)
-    const cropTop    = Math.max(0, yTopRatio - 0.03) * offCvs.height;
-    const cropHeight = Math.min(0.58 * offCvs.height, offCvs.height - cropTop);
-
-    // --- Step 3: draw crop onto visible canvas at container width ---
-    const vw         = wrap.clientWidth || 360;
-    const aspect     = offCvs.width / cropHeight;
-    const outW       = vw * dpr;
-    const outH       = outW / aspect;
-
-    cvs.width        = outW;
-    cvs.height       = outH;
-    cvs.style.width  = vw + 'px';
-    cvs.style.height = (outH / dpr) + 'px';
-
-    cvs.getContext('2d').drawImage(
-      offCvs,
-      0, cropTop, offCvs.width, cropHeight,  // source rect
-      0, 0,       outW,         outH          // dest rect
-    );
-
-    // Reset scroll to top — the canvas already shows the right region
-    wrap.scrollTop  = 0;
-    wrap.scrollLeft = 0;
+    const dpr  = Math.min(window.devicePixelRatio || 1, 2);
+    const vw   = wrap.clientWidth || 360;
+    const vp0  = page.getViewport({ scale: 1 });
+    // Render at 2.5× for sharpness, fit width
+    const scale = (vw * dpr * 2.5) / vp0.width;
+    const vp    = page.getViewport({ scale });
+    cvs.width        = vp.width;
+    cvs.height       = vp.height;
+    cvs.style.width  = (vp.width / dpr) + 'px';
+    cvs.style.height = (vp.height / dpr) + 'px';
+    await page.render({ canvasContext: cvs.getContext('2d'), viewport: vp }).promise;
+    // Scroll to question position after layout settles
+    const targetY = Math.max(0, yTopRatio * (vp.height / dpr) - 24);
+    requestAnimationFrame(() => {
+      wrap.scrollTop  = targetY;
+      wrap.scrollLeft = 0;
+    });
   } catch(e) {
     console.error('PDF render error', e);
   } finally {

@@ -1959,31 +1959,101 @@ const TYT_FEN_Q = [
 // TYT FEN BİLİMLERİ — KAZANIM HARİTASI
 // ════════════════════════════════════════
 const TYT_FEN_KAZ = [
-  {icon:'⚡',bg:'#0d1a2d',clr:'#4b9ef8',name:'Fizik',cnt:7,subs:[
-    {name:'Fizik Bilimine Giriş & Ölçme',code:'F.9.1',desc:'Fizik ve önemi; SI birim sistemi; ölçme araçları; hata analizi.',tip:'Her yıl 1-2 soru. Birim analizi ve ölçme hataları sık çıkar.',refs:[{yr:2020,n:1},{yr:2021,n:1},{yr:2022,n:1},{yr:2023,n:1},{yr:2024,n:1},{yr:2025,n:1}]},
-    {name:'Madde & Özkütle',code:'F.9.2',desc:'Maddenin fiziksel özellikleri; özkütle hesabı; sıvı-katı özkütle.',tip:'Yılda 1 soru, özellikle özkütle-hacim grafikleri.',refs:[{yr:2020,n:2},{yr:2021,n:2},{yr:2022,n:2},{yr:2023,n:2},{yr:2024,n:2},{yr:2025,n:2}]},
-    {name:'Kuvvet & Hareket',code:'F.9.3',desc:'Vektörler; bileşke kuvvet; Newton yasaları; sürtünme; basit makineler.',tip:'Her yıl 2-3 soru çıkar, en kapsamlı konu.',refs:[{yr:2020,n:3},{yr:2020,n:4},{yr:2021,n:3},{yr:2021,n:4},{yr:2022,n:3},{yr:2022,n:4},{yr:2023,n:3},{yr:2023,n:4},{yr:2024,n:3},{yr:2025,n:3}]},
-    {name:'Enerji & Basınç',code:'F.9.4',desc:'İş-enerji teoremi; potansiyel ve kinetik enerji; basınç; Archimedes.',refs:[{yr:2020,n:5},{yr:2021,n:5},{yr:2022,n:5},{yr:2023,n:5},{yr:2024,n:4},{yr:2025,n:4}]},
-    {name:'Isı & Sıcaklık',code:'F.9.5',desc:'Isı-sıcaklık farkı; özgül ısı; ısı alışverişi; genleşme.',refs:[{yr:2020,n:6},{yr:2021,n:6},{yr:2022,n:6},{yr:2023,n:6},{yr:2024,n:5},{yr:2025,n:5}]},
-    {name:'Elektrik',code:'F.9.6',desc:'Elektrik yükü; coulomb; elektrik alanı; seri-paralel devre; Ohm yasası.',tip:'Her yıl 1-2 soru. Devre problemleri sık çıkar.',refs:[{yr:2020,n:7},{yr:2021,n:7},{yr:2022,n:7},{yr:2023,n:7},{yr:2024,n:6},{yr:2025,n:6}]},
-    {name:'Dalgalar & Optik',code:'F.9.7',desc:'Ses dalgaları; ışığın yansıması-kırılması; mercek ve aynalar.',refs:[{yr:2020,n:8},{yr:2021,n:8},{yr:2022,n:8},{yr:2023,n:8},{yr:2024,n:7},{yr:2025,n:7}]},
+  // ─── FİZİK ──────────────────────────────────────────────────────────────────
+  // Toplam 44 soru (2020-2025 arası gerçek TYT verisine göre)
+  {icon:'⚡',bg:'#0d1a2d',clr:'#4b9ef8',name:'Fizik',cnt:44,subs:[
+    {name:'Fizik Bilimine Giriş & Ölçme',code:'F.9.1.1',
+     desc:'Fizik ve önemi; SI birim sistemi; skaler-vektörel büyüklükler; bilimsel araştırma merkezleri (TÜBİTAK, CERN, NASA).',
+     tip:'TYT\'de nadir çıkıyor — sadece 2020 ve 2023\'te geldi. Kısaca SI birim sistemi ve birim dönüşümü bilinmeli.',
+     refs:[{yr:2020,n:1},{yr:2023,n:1}]},
+    {name:'Madde & Özkütle',code:'F.9.2.1',
+     desc:'Kütle-hacim-özkütle bağıntısı; kütle-hacim grafiği; yüzey gerilimi; kılcallık; kohezyon-adezyon.',
+     tip:'Her 2 yılda bir çıkıyor. Özkütle-hacim grafik yorumu ve farklı maddelerin karşılaştırılması ağırlıklı.',
+     refs:[{yr:2020,n:2},{yr:2021,n:1},{yr:2022,n:1},{yr:2025,n:3}]},
+    {name:'Kuvvet & Hareket / Newton Yasaları',code:'F.9.3.1',
+     desc:'Bileşke kuvvet; Newton I–II–III yasaları; sürtünme kuvveti; hız-ivme-mesafe ilişkisi; basit makineler.',
+     tip:'Her yıl 2-3 soru — en çok çıkan fizik konusu. Newton III (etki-tepki) ve doğrusal hareket özellikle dikkat. 2022\'den itibaren Q16 civarında ikinci kuvvet sorusu gelmekte.',
+     refs:[{yr:2020,n:6},{yr:2021,n:2},{yr:2022,n:2},{yr:2022,n:16},{yr:2023,n:2},{yr:2023,n:11},{yr:2024,n:1},{yr:2024,n:16},{yr:2025,n:1},{yr:2025,n:12},{yr:2025,n:16}]},
+    {name:'Enerji, İş & Basınç',code:'F.9.4.1',
+     desc:'İş-enerji teoremi; kinetik/potansiyel enerji; verim; sıvı basıncı; Archimedes ilkesi; kaldırma kuvveti.',
+     tip:'Her yıl 1 soru (çoğunlukla kaldırma kuvveti). Farklı sıvılarda özkütle-kaldırma ilişkisi klasik soru tipi.',
+     refs:[{yr:2020,n:3},{yr:2021,n:5},{yr:2022,n:5},{yr:2024,n:3},{yr:2025,n:20}]},
+    {name:'Isı & Sıcaklık',code:'F.9.5.1',
+     desc:'Sıcaklık ölçeği dönüşümü; özgül ısı; ısı alışverişi (Q=mcΔT); ısıl genleşme; hal değişimi.',
+     tip:'Her yıl 1 soru. Özgül ısı hesabı veya ısıl genleşme uygulaması olarak geliyor.',
+     refs:[{yr:2020,n:4},{yr:2021,n:3},{yr:2022,n:3},{yr:2023,n:4},{yr:2024,n:2},{yr:2025,n:2}]},
+    {name:'Elektrik & Manyetizma',code:'F.9.6.1',
+     desc:'Elektrik yükü; Coulomb yasası; elektrostatik; seri-paralel devre; Ohm yasası; manyetik alan.',
+     tip:'Her yıl 1 soru. 2020-2022\'de elektrostatik/devre, 2023\'te manyetizma, 2024-2025\'te elektrostatik olarak çıktı.',
+     refs:[{yr:2020,n:5},{yr:2021,n:4},{yr:2023,n:18},{yr:2024,n:4},{yr:2025,n:4}]},
+    {name:'Dalgalar & Optik',code:'F.9.7.1',
+     desc:'Dalga boyu-frekans-hız bağıntısı; ses dalgası özellikleri; ışığın yansıma/kırılma; düzlem/çukur/tümsek ayna; mercekler.',
+     tip:'Her yıl 2 soru. Optik (ayna/mercek) + dalga frekansı karşılaştırması çifti en sık. Soru genellikle sayfa ortasında 1, sonda 1.',
+     refs:[{yr:2020,n:7},{yr:2020,n:13},{yr:2021,n:6},{yr:2021,n:8},{yr:2021,n:17},{yr:2022,n:4},{yr:2022,n:6},{yr:2023,n:3},{yr:2024,n:5},{yr:2024,n:17},{yr:2025,n:5}]},
   ]},
-  {icon:'🧪',bg:'#0d2010',clr:'#3ecf8e',name:'Kimya',cnt:7,subs:[
-    {name:'Kimya Bilimine Giriş',code:'K.9.1',desc:'Madde sınıflandırması; saf madde-karışım; kimyasal değişim; laboratuvar güvenliği.',refs:[{yr:2020,n:9},{yr:2021,n:9},{yr:2022,n:9},{yr:2023,n:9},{yr:2024,n:8},{yr:2025,n:8}]},
-    {name:'Atom & Periyodik Tablo',code:'K.9.2',desc:'Atom modelleri; proton-nötron-elektron; periyodik tablo özellikleri.',tip:'Her yıl 1-2 soru. Periyodik tablo trendi soruları sık.',refs:[{yr:2020,n:10},{yr:2021,n:10},{yr:2022,n:10},{yr:2023,n:10},{yr:2024,n:9},{yr:2025,n:9}]},
-    {name:'Kimyasal Bağlar',code:'K.9.3',desc:'İyonik-kovalent-metalik bağ; polar/apolar; elektrik çekiciliği.',refs:[{yr:2020,n:11},{yr:2021,n:11},{yr:2022,n:11},{yr:2023,n:11},{yr:2024,n:10},{yr:2025,n:10}]},
-    {name:'Kimyasal Tepkimeler',code:'K.9.4',desc:'Denklem denkleştirme; asit-baz; nötralizasyon; mol hesapları.',tip:'Her yıl 2-3 soru, en sık çıkan kimya konusu.',refs:[{yr:2020,n:12},{yr:2020,n:13},{yr:2021,n:12},{yr:2021,n:13},{yr:2022,n:12},{yr:2022,n:13},{yr:2023,n:12},{yr:2024,n:11},{yr:2024,n:12},{yr:2025,n:11}]},
-    {name:'Karışımlar',code:'K.9.5',desc:'Çözünürlük; derişim; ayırma yöntemleri (distilasyon, filtrasyon).',refs:[{yr:2020,n:14},{yr:2021,n:14},{yr:2022,n:14},{yr:2023,n:13},{yr:2024,n:13},{yr:2025,n:12}]},
-    {name:'Kimya & Enerji',code:'K.9.6',desc:'Ekzotermik-endotermik reaksiyonlar; yakıt ve enerji.',refs:[{yr:2020,n:15},{yr:2021,n:15},{yr:2022,n:15},{yr:2023,n:14},{yr:2025,n:13}]},
-    {name:'Organik Kimya Temelleri',code:'K.9.7',desc:'Hidrokarbon sınıfları; fonksiyonel gruplar; polimer.',refs:[{yr:2023,n:15},{yr:2024,n:14},{yr:2024,n:15},{yr:2025,n:14}]},
+  // ─── KİMYA ──────────────────────────────────────────────────────────────────
+  // Toplam 42 soru (2020-2025 arası gerçek TYT verisine göre)
+  {icon:'🧪',bg:'#0d2010',clr:'#3ecf8e',name:'Kimya',cnt:42,subs:[
+    {name:'Kimya Bilimine Giriş',code:'K.9.1.1',
+     desc:'Madde sınıflandırması (element, bileşik, karışım); fiziksel-kimyasal değişim; laboratuvar güvenliği ve araç-gereç.',
+     tip:'Müfredatta var ama 2020-2025 TYT\'de bu başlıkta bağımsız soru çıkmadı. İçerik diğer kimya sorularına entegre geliyor.',
+     refs:[]},
+    {name:'Atom & Periyodik Tablo',code:'K.9.2.1',
+     desc:'Atom modelleri; proton-nötron-elektron sayısı; elektron dizilişi; izotop; periyodik tablo trendi (atom yarıçapı, iyonlaşma enerjisi, elektronegatiflik).',
+     tip:'Her yıl 2 soru: biri atom yapısı (elektron dizilişi, izotop), diğeri periyodik sistem trendi. İkisi genellikle farklı soru numaralarında.',
+     refs:[{yr:2020,n:8},{yr:2021,n:7},{yr:2022,n:7},{yr:2022,n:17},{yr:2023,n:5},{yr:2023,n:16},{yr:2024,n:6},{yr:2024,n:18},{yr:2025,n:6},{yr:2025,n:17}]},
+    {name:'Kimyasal Bağlar',code:'K.9.3.1',
+     desc:'İyonik-kovalent-metalik bağ; polar/apolar kovalent bağ; elektronegatiflik farkı ve bağ türü; Lewis yapısı.',
+     tip:'Her yıl 1 soru. Polar/apolar molekül tayini ve bağ türü karşılaştırması sık çıkar.',
+     refs:[{yr:2020,n:9},{yr:2022,n:20},{yr:2023,n:17},{yr:2024,n:19},{yr:2025,n:15}]},
+    {name:'Kimyasal Tepkimeler & Asit-Baz',code:'K.9.4.1',
+     desc:'Denklem denkleştirme; tepkime türleri; stokiyometri; mol hesabı; asit-baz tanımları; pH; nötralizasyon; elektrokimya (elektroliz).',
+     tip:'Her yıl 2-3 soru — kimya\'nın en yoğun konusu. Asit-baz pH yorumu ve stokiyometri hesabı en sık alt konu.',
+     refs:[{yr:2020,n:10},{yr:2020,n:11},{yr:2020,n:20},{yr:2021,n:9},{yr:2021,n:10},{yr:2021,n:19},{yr:2022,n:8},{yr:2022,n:9},{yr:2023,n:6},{yr:2023,n:7},{yr:2023,n:19},{yr:2024,n:7},{yr:2024,n:8},{yr:2025,n:7},{yr:2025,n:8}]},
+    {name:'Karışımlar & Çözeltiler',code:'K.9.5.1',
+     desc:'Homojen-heterojen karışım; çözünürlük etkenleri; kütlece yüzde derişim; molalite; ayırma yöntemleri (damıtma, filtrasyon, kromatografi).',
+     tip:'Her yıl 1 soru. Kütlece yüzde veya derişim hesabı olarak geliyor.',
+     refs:[{yr:2020,n:12},{yr:2021,n:11},{yr:2022,n:10},{yr:2023,n:8},{yr:2024,n:10},{yr:2025,n:9}]},
+    {name:'Kimya & Enerji (Termokimya)',code:'K.9.6.1',
+     desc:'Ekzotermik-endotermik tepkimeler; aktifleşme enerjisi; entalpi; yakıt ve enerji kaynakları; fosil yakıt-yenilenebilir enerji.',
+     tip:'Müfredatta yer alıyor; 2020-2025 TYT\'de ayrı soru olarak çıkmamıştır. Tepkime enerjisi tepkime sorusunun içinde sorulabilir.',
+     refs:[]},
+    {name:'Organik Kimya Temelleri',code:'K.9.7.1',
+     desc:'Hidrokarbon sınıfları (alkan, alken, alkin, aren); fonksiyonel gruplar (alkol, aldehit, keton, karboksilik asit, eter, amin); izomerlik; polimer.',
+     tip:'Her yıl 1 soru. Fonksiyonel grup tanımı, izomer sayısı veya sınıf belirleme olarak geliyor.',
+     refs:[{yr:2020,n:14},{yr:2021,n:12},{yr:2022,n:11},{yr:2023,n:9},{yr:2024,n:9},{yr:2025,n:10}]},
   ]},
-  {icon:'🧬',bg:'#1a0d2d',clr:'#9b7fe8',name:'Biyoloji',cnt:6,subs:[
-    {name:'Hücre & Organeller',code:'B.9.1',desc:'Prokaryot-ökaryot; hücre organelleri ve görevleri; hücre zarı geçirgenliği.',tip:'Her yıl 2 soru, en sık çıkan biyoloji konusu.',refs:[{yr:2020,n:16},{yr:2020,n:17},{yr:2021,n:16},{yr:2021,n:17},{yr:2022,n:16},{yr:2022,n:17},{yr:2023,n:16},{yr:2024,n:16},{yr:2025,n:15},{yr:2025,n:16}]},
-    {name:'Canlıların Sınıflandırılması',code:'B.9.2',desc:'5 alem; virüs; bakteriler; mantarlar.',refs:[{yr:2020,n:18},{yr:2021,n:18},{yr:2022,n:18},{yr:2023,n:17},{yr:2024,n:17}]},
-    {name:'Fotosentez & Solunum',code:'B.9.3',desc:'Fotosentez reaksiyonları; klorofil; aerobik-anaerobik solunum.',tip:'Her yıl 1-2 soru.',refs:[{yr:2020,n:19},{yr:2021,n:19},{yr:2022,n:19},{yr:2023,n:18},{yr:2023,n:19},{yr:2024,n:18},{yr:2025,n:17}]},
-    {name:'Mitoz & Mayoz',code:'B.9.4',desc:'Hücre döngüsü; mitoz evreleri; mayoz ve genetik çeşitlilik.',refs:[{yr:2020,n:20},{yr:2021,n:20},{yr:2022,n:20},{yr:2024,n:19},{yr:2025,n:18}]},
-    {name:'Sindirim & Dolaşım',code:'B.9.5',desc:'Sindirim sistemi organları; kan grupları; kalp ve dolaşım.',refs:[{yr:2023,n:20},{yr:2024,n:20},{yr:2025,n:19}]},
-    {name:'Kalıtım & DNA',code:'B.9.6',desc:'DNA yapısı; gen-alel; Mendel yasaları; kan grubu kalıtımı.',refs:[{yr:2025,n:20}]},
+  // ─── BİYOLOJİ ───────────────────────────────────────────────────────────────
+  // Toplam 30 soru (2020-2025 arası gerçek TYT verisine göre)
+  {icon:'🧬',bg:'#1a0d2d',clr:'#9b7fe8',name:'Biyoloji',cnt:30,subs:[
+    {name:'Hücre & Organeller',code:'B.9.1.1',
+     desc:'Prokaryot-ökaryot hücre karşılaştırması; mitokondri, kloroplast, ribozom, ER, Golgi; hücre zarı geçirgenliği (difüzyon, osmoz, aktif taşıma).',
+     tip:'Her yıl 1 soru. Organellerin görevleri ve hücre zarı geçirgenliği en sık çıkan alt konu.',
+     refs:[{yr:2020,n:15},{yr:2021,n:13},{yr:2022,n:12},{yr:2023,n:10},{yr:2024,n:11},{yr:2025,n:11}]},
+    {name:'Canlıların Sınıflandırılması',code:'B.9.2.1',
+     desc:'5 alem (Monera, Protista, Fungi, Plantae, Animalia); virüs yapısı ve özellikleri; bakterilerin önemi; canlıların ortak özellikleri.',
+     tip:'Düzensiz çıkıyor: 2020\'de sınıflandırma, 2021\'de canlıların ortak özellikleri geldi. 2022-2025\'te ayrı soru çıkmadı.',
+     refs:[{yr:2020,n:17},{yr:2021,n:20}]},
+    {name:'Fotosentez & Hücresel Solunum',code:'B.9.3.1',
+     desc:'Fotosentez (ışık ve karanlık evre); kloroplast yapısı; aerobik/anaerobik solunum; ATP sentezi; fermentasyon.',
+     tip:'Müfredatta ayrı başlık; TYT\'de 2020-2025 arası bağımsız soru çıkmadı. Ekosistem ve sindirim sorularına dolaylı giriyor.',
+     refs:[]},
+    {name:'Mitoz & Mayoz / Üreme',code:'B.9.4.1',
+     desc:'Hücre döngüsü; mitoz evreleri (profaz, metafaz, anafaz, telofaz); mayoz I-II; genetik çeşitlilik; eşeyli-eşeysiz üreme.',
+     tip:'Her 2 yılda bir çıkıyor. Mitoz-mayoz farkı ve genetik çeşitlilik en sık biçim.',
+     refs:[{yr:2022,n:19},{yr:2024,n:20},{yr:2025,n:19}]},
+    {name:'Sindirim, Solunum & Dolaşım',code:'B.9.5.1',
+     desc:'Sindirim sistemi organları ve enzimleri; solunum sistemi; kan grupları (ABO, Rh); kalp yapısı; kan dolaşımı; böbrek ve boşaltım.',
+     tip:'Her yıl 1-2 soru. Sindirim-enzim ilişkisi ve kan/dolaşım sistemi soruları en yoğun. 2024\'te sindirim + dolaşım çift çıktı.',
+     refs:[{yr:2020,n:16},{yr:2022,n:18},{yr:2023,n:12},{yr:2023,n:13},{yr:2024,n:12},{yr:2024,n:13},{yr:2025,n:13}]},
+    {name:'Ekosistem & Madde Döngüleri',code:'B.9.5.2',
+     desc:'Biyotik-abiyotik faktörler; besin zinciri ve besin ağı; enerji piramidi; C, N, O döngüleri; popülasyon; biyoçeşitlilik.',
+     tip:'Her yıl 1 soru. Besin zincirinde enerji kaybı oranı ve madde döngüsü soruları klasik.',
+     refs:[{yr:2020,n:18},{yr:2021,n:18},{yr:2022,n:15},{yr:2023,n:15},{yr:2024,n:15},{yr:2025,n:18}]},
+    {name:'Kalıtım & DNA',code:'B.9.6.1',
+     desc:'DNA yapısı ve replikasyonu; gen-alel-lokus; dominant-resesif; Mendel yasaları; kan grubu kalıtımı; fenotip-genotip ilişkisi.',
+     tip:'Her yıl 1 soru. Mendel kalıtımı (tek/çift melez), kan grubu tayini ve DNA replikasyonu en sık biçimler.',
+     refs:[{yr:2020,n:19},{yr:2021,n:16},{yr:2022,n:14},{yr:2023,n:14},{yr:2023,n:20},{yr:2024,n:14},{yr:2025,n:14}]},
   ]},
 ];
 
@@ -2808,12 +2878,12 @@ async function renderPdfPage(pdfPageNum, yTopRatio) {
     const dpr  = Math.min(window.devicePixelRatio || 1, 2);
     const vw   = wrap.clientWidth || 360;
     const vp0  = page.getViewport({ scale: 1 });
-    // Render at 2.5× for sharpness, fit width
-    const scale = (vw * dpr * 2.5) / vp0.width;
+    // Render at dpr× for sharpness; always display at container width
+    const scale = (vw * dpr) / vp0.width;
     const vp    = page.getViewport({ scale });
     cvs.width        = vp.width;
     cvs.height       = vp.height;
-    cvs.style.width  = (vp.width / dpr) + 'px';
+    cvs.style.width  = vw + 'px';                        // fit container, never overflow
     cvs.style.height = (vp.height / dpr) + 'px';
     await page.render({ canvasContext: cvs.getContext('2d'), viewport: vp }).promise;
     // Scroll to question position after layout settles

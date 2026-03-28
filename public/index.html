@@ -1640,80 +1640,88 @@ const TYT_MAT_Q = [
 // TYT MATEMATİK KAZANIM HARİTASI
 // ═══════════════════════════════════════════════════════
 const TYT_MAT_KAZ = [
-  // ─── SAYILAR & TEMEL ─────────────────────────────────────────────────────────
-  {icon:'🔢',bg:'#2d0808',clr:'#e05555',name:'Sayılar & Temel Kavramlar',cnt:'8–10',subs:[
-    {name:'Sayı Kümeleri & Temel İşlemler',code:'MF.9.1.1',
-     desc:'Doğal, tam, rasyonel, irrasyonel, gerçel sayı kümeleri; dört işlem önceliği; sayı sıralaması; ardışık sayılar; tek-çift analizi.',
-     tip:'Her yıl 3–5 soru. 2023-2025 yıllarında "sembol tanımı" (özel işlem) ve "sayı dizisi/tablo" soruları belirgin biçimde arttı.',
-     refs:[{yr:2020,n:1},{yr:2020,n:2},{yr:2020,n:5},{yr:2021,n:1},{yr:2021,n:2},{yr:2021,n:5},{yr:2022,n:1},{yr:2022,n:2},{yr:2023,n:1},{yr:2023,n:2},{yr:2024,n:1},{yr:2024,n:2},{yr:2025,n:1},{yr:2025,n:2},{yr:2025,n:3}]},
-    {name:'Bölünebilme, Üslü & Köklü İfadeler',code:'MF.9.1.2',
-     desc:'2,3,4,5,8,9,10 bölünebilme kuralları; asal çarpanlara ayırma; üslü/köklü ifade sadeleştirme.',
-     tip:'Her yıl 2–3 soru. "Rakam/basamak koşullu bölünebilme" ve "üslü ifadede bilinmeyeni bul" tipi sorular sık geliyor.',
-     refs:[{yr:2020,n:3},{yr:2020,n:9},{yr:2020,n:10},{yr:2021,n:3},{yr:2021,n:9},{yr:2021,n:10},{yr:2022,n:3},{yr:2022,n:9},{yr:2022,n:10},{yr:2023,n:4},{yr:2023,n:5},{yr:2023,n:6},{yr:2024,n:3},{yr:2024,n:10},{yr:2024,n:13},{yr:2025,n:4},{yr:2025,n:10}]},
-    {name:'Rasyonel Sayılar, Mutlak Değer & Birinci Derece',code:'MF.9.1.3',
-     desc:'Devirli ondalık → kesir; kesir sıralama/karşılaştırma; mutlak değerli denklem/eşitsizlik; birinci derece bir/iki bilinmeyenli denklemler.',
-     tip:'Her yıl 3–4 soru. Mutlak değer (|x|) ve birinci derece denklem her yıl kesin çıkar. Eşitsizlik sistemi sorusu da sık görülüyor.',
-     refs:[{yr:2020,n:4},{yr:2020,n:11},{yr:2020,n:12},{yr:2020,n:13},{yr:2020,n:14},{yr:2021,n:4},{yr:2021,n:11},{yr:2021,n:12},{yr:2021,n:13},{yr:2022,n:4},{yr:2022,n:6},{yr:2022,n:11},{yr:2022,n:12},{yr:2022,n:14},{yr:2022,n:16},{yr:2022,n:17},{yr:2022,n:18},{yr:2023,n:3},{yr:2023,n:10},{yr:2023,n:11},{yr:2023,n:12},{yr:2023,n:13},{yr:2024,n:4},{yr:2024,n:6},{yr:2024,n:8},{yr:2024,n:11},{yr:2024,n:15},{yr:2025,n:5},{yr:2025,n:11},{yr:2025,n:12},{yr:2025,n:13},{yr:2025,n:14}]},
+  // --- SAYILAR & TEMEL ---
+  {icon:'🔢',bg:'#2d0808',clr:'#e05555',name:'Sayılar & Temel Kavramlar',cnt:'8-10',subs:[
+    {name:'Sayı Kümeleri, Ardışık Sayılar & Sembol Soruları',code:'9.3.1 · TD.11.1.1',
+     desc:'N ⊂ Z ⊂ Q ⊂ R hiyerarşisi; ardışık doğal/tek/çift sayılar ve toplamları; özel işlem/sembol tanımlı sorular (özellikle 2023-2025 yıllarında yoğun); sayı dizisi-tablo örüntüleri.',
+     tip:'Her yıl 3-5 soru. "Sembol tanımı" ve "sayı dizisi" tipleri 2023\'ten itibaren arttı. Ardışık sayılar toplamı formülü (n×orta terim) ezberleyin.',
+     refs:[{yr:2020,n:1},{yr:2020,n:2},{yr:2020,n:5},{yr:2021,n:1},{yr:2021,n:2},{yr:2021,n:5},{yr:2021,n:8},{yr:2021,n:9},{yr:2022,n:1},{yr:2022,n:2},{yr:2022,n:9},{yr:2023,n:1},{yr:2023,n:2},{yr:2023,n:6},{yr:2024,n:1},{yr:2024,n:2},{yr:2024,n:10},{yr:2025,n:1},{yr:2025,n:2},{yr:2025,n:3},{yr:2025,n:9}]},
+    {name:'Bölünebilme, EBOB-EKOK & Üslü/Köklü İfadeler',code:'9.3.2 · 9.3.4 · TD.11.1.2 · TD.12.1.1',
+     desc:'2,3,4,5,8,9,10 (ve bileşik: 6,12,15) bölünebilme kuralları; asal çarpanlara ayırma; EBOB/EKOK; üslü ifade sadeleştirme (kuvvet kuralları); köklü-üslü dönüşüm x^(m/n).',
+     tip:'Her yıl 2-3 soru. "Basamak koşullu bölünebilme" ve "üslü ifadede bilinmeyeni bul" tipi her yıl çıkıyor.',
+     refs:[{yr:2020,n:3},{yr:2020,n:9},{yr:2020,n:10},{yr:2021,n:3},{yr:2021,n:10},{yr:2022,n:3},{yr:2022,n:10},{yr:2023,n:4},{yr:2023,n:5},{yr:2024,n:3},{yr:2024,n:13},{yr:2025,n:4},{yr:2025,n:10}]},
+    {name:'Rasyonel Sayılar, Mutlak Değer & 1. Derece Denklem/Eşitsizlik',code:'9.3.1 · 9.3.3 · TD.11.3.1',
+     desc:'Devirli ondalık → kesir dönüşümü; kesir sıralama/karşılaştırma; mutlak değerli denklem (|x-a|=b) ve eşitsizlik; birinci dereceden bir/iki bilinmeyenli denklem ve eşitsizlik sistemleri; gerçel sayı aralıkları.',
+     tip:'Her yıl 3-5 soru — bunların içinde mutlak değer ve 1. derece denklem HER YIL kesin çıkıyor. Eşitsizlik sistemlerinde sayı doğrusu çizimi yanlış cevabı önler.',
+     refs:[{yr:2020,n:4},{yr:2020,n:7},{yr:2020,n:8},{yr:2020,n:11},{yr:2020,n:12},{yr:2020,n:13},{yr:2020,n:14},{yr:2021,n:4},{yr:2021,n:11},{yr:2021,n:12},{yr:2021,n:13},{yr:2022,n:4},{yr:2022,n:6},{yr:2022,n:11},{yr:2022,n:12},{yr:2022,n:14},{yr:2022,n:16},{yr:2022,n:17},{yr:2022,n:18},{yr:2023,n:3},{yr:2023,n:10},{yr:2023,n:11},{yr:2023,n:12},{yr:2023,n:13},{yr:2024,n:4},{yr:2024,n:6},{yr:2024,n:7},{yr:2024,n:8},{yr:2024,n:11},{yr:2024,n:15},{yr:2025,n:5},{yr:2025,n:11},{yr:2025,n:12},{yr:2025,n:13},{yr:2025,n:14},{yr:2025,n:26}]},
   ]},
-  // ─── SÖZEL PROBLEMLER ─────────────────────────────────────────────────────────
-  {icon:'📋',bg:'#1a0d00',clr:'#f08040',name:'Sözel Problemler',cnt:'6–8',subs:[
-    {name:'Oran-Orantı & Yüzde Problemleri',code:'MF.9.3.1',
-     desc:'Doğru/ters orantı; yüzde artış-azalış; indirim; kâr-zarar; gerçek bağlamlı oran soruları (fatura, para, ekran, otobüs).',
-     tip:'Her yıl 2–3 soru. En yoğun problem tipi. "Otobüs", "çiçek", "ekran bölümleme", "tablet" gibi güncel bağlamlar geliyor.',
-     refs:[{yr:2020,n:6},{yr:2020,n:15},{yr:2020,n:27},{yr:2021,n:6},{yr:2021,n:7},{yr:2021,n:14},{yr:2022,n:5},{yr:2022,n:7},{yr:2023,n:7},{yr:2023,n:8},{yr:2024,n:5},{yr:2024,n:9},{yr:2025,n:6},{yr:2025,n:8}]},
-    {name:'Sayı, Kesir, Yaş & Koşul Problemleri',code:'MF.9.3.2',
-     desc:'Sayı/yaş/işçi problemleri; kesir uygulamaları; koşullu sayı bulma; bölme-kalan; örüntü-periyodik durum soruları.',
-     tip:'Her yıl 3–5 soru. 2022\'den itibaren "koşullu sayı" ve "mantık bağlamlı" rutin olmayan problemler belirgin biçimde arttı.',
-     refs:[{yr:2020,n:25},{yr:2020,n:26},{yr:2021,n:15},{yr:2021,n:16},{yr:2021,n:17},{yr:2021,n:28},{yr:2022,n:8},{yr:2022,n:13},{yr:2022,n:15},{yr:2023,n:9},{yr:2023,n:14},{yr:2023,n:15},{yr:2023,n:27},{yr:2023,n:28},{yr:2023,n:29},{yr:2024,n:12},{yr:2024,n:14},{yr:2024,n:26},{yr:2024,n:27},{yr:2024,n:29},{yr:2025,n:7},{yr:2025,n:15},{yr:2025,n:26},{yr:2025,n:27},{yr:2025,n:29}]},
+  // --- SÖZEL PROBLEMLER ---
+  {icon:'📋',bg:'#1a0d00',clr:'#f08040',name:'Sözel Problemler',cnt:'6-8',subs:[
+    {name:'Oran-Orantı, Yüzde & Tüketici Problemleri',code:'9.3.5 · TD.11.3.2 · TD.12.1.2',
+     desc:'Doğru/ters orantı; yüzde artış-azalış, indirim, KDV/kâr-zarar; fatura/para/birim fiyat karşılaştırma; gerçek bağlamlı oran soruları. MEB 2026 TD.12.1.2: yatırım getirisi, vade farkı, döviz çevirme bağlamları.',
+     tip:'Her yıl 2-3 soru. TYT\'nin en güncel bağlamlı soru tipi. "Otobüs kapasitesi", "tablet ekran bölümleme", "çiçek kasası", "sıcaklık dönüşümü" gibi yaratıcı bağlamlar 2023\'ten itibaren arttı.',
+     refs:[{yr:2020,n:6},{yr:2020,n:15},{yr:2020,n:27},{yr:2021,n:6},{yr:2021,n:7},{yr:2021,n:14},{yr:2022,n:5},{yr:2022,n:7},{yr:2023,n:7},{yr:2023,n:8},{yr:2024,n:5},{yr:2024,n:7},{yr:2024,n:9},{yr:2025,n:6},{yr:2025,n:8}]},
+    {name:'Sayı, Kesir, Yaş, Koşul & Örüntü Problemleri',code:'9.3.5 · TD.11.3.1',
+     desc:'Sayı/yaş/işçi problemleri; kesir uygulamaları (depo, bardak, kutu doluluk); koşullu sayı bulma; bölme-kalan (Öklid); periyodik durum (kaçıncı günde buluşur?); örüntü-dizi mantığı.',
+     tip:'Her yıl 3-5 soru. 2022\'den itibaren "rutin olmayan" problem sayısı belirgin arttı. MEB 9.3.5c: "farklı problem çözme stratejileri" açıkça yer alıyor. Deneme-yanılma yerine cebir kullanın.',
+     refs:[{yr:2020,n:25},{yr:2020,n:26},{yr:2021,n:15},{yr:2021,n:16},{yr:2021,n:17},{yr:2021,n:28},{yr:2022,n:8},{yr:2022,n:13},{yr:2022,n:15},{yr:2023,n:9},{yr:2023,n:14},{yr:2023,n:15},{yr:2023,n:27},{yr:2023,n:28},{yr:2023,n:29},{yr:2024,n:12},{yr:2024,n:14},{yr:2024,n:26},{yr:2024,n:27},{yr:2024,n:29},{yr:2025,n:7},{yr:2025,n:15},{yr:2025,n:27},{yr:2025,n:29}]},
   ]},
-  // ─── KÜMELER ─────────────────────────────────────────────────────────────────
-  {icon:'⊃',bg:'#1a1a0a',clr:'#f5c842',name:'Kümeler',cnt:'1–2',subs:[
-    {name:'Küme işlemleri & eleman sayısı',code:'MF.9.2',
-     desc:'Birleşim (∪), kesişim (∩), fark (A\\B), tümleyen (A\'); Venn diyagramı; en fazla 3 küme için eleman sayısı formülü.',
-     tip:'Her yıl 1–2 soru. Genellikle Q17 veya Q28 konumunda. Venn diyagramıyla eleman sayısı hesabı en sık çıkan tiptir.',
+  // --- KÜMELER ---
+  {icon:'⊃',bg:'#1a1a0a',clr:'#f5c842',name:'Kümeler',cnt:'1-2',subs:[
+    {name:'Küme İşlemleri & Eleman Sayısı (Venn)',code:'9.2.2',
+     desc:'Birleşim (∪), kesişim (∩), fark (A∖B), tümleme (A\'); De Morgan: (A∩B)\'=A\'∪B\'; s(A∪B)=s(A)+s(B)−s(A∩B); s(A∪B∪C) formülü; Venn diyagramıyla eleman sayısı. MEB 9.2.2.1c: en fazla 3 kümenin birleşim eleman sayısı.',
+     tip:'Her yıl 1-2 soru — genellikle Q17 ve Q28 konumunda. Venn diyagramı çizerek çözmek en güvenli. İki küme sorusunda 4 bölge, üç küme sorusunda 8 bölge kuralını uygulayın.',
      refs:[{yr:2020,n:17},{yr:2020,n:28},{yr:2021,n:20},{yr:2022,n:21},{yr:2023,n:17},{yr:2023,n:18},{yr:2024,n:17},{yr:2024,n:28},{yr:2025,n:17},{yr:2025,n:28}]},
   ]},
-  // ─── MANTIK ──────────────────────────────────────────────────────────────────
+  // --- MANTIK ---
   {icon:'∧',bg:'#1a0d2d',clr:'#9b7fe8',name:'Mantık',cnt:'1',subs:[
-    {name:'Önermeler, bileşik önerme, niceleyici',code:'MF.9.1',
-     desc:'Koşullu önerme (p⇒q), çift koşullu (p⇔q), karşıt/ters/karşıt-ters; De Morgan kuralları; evrensel (∀) ve varlık (∃) niceleyicisi.',
-     tip:'Her yıl kesinlikle 1 soru — genellikle Q16. Koşullu önermenin doğruluk değeri ve eşdeğerlikleri (p⇒q ≡ ¬p∨q) sık çıkar.',
-     refs:[{yr:2020,n:16},{yr:2021,n:21},{yr:2022,n:20},{yr:2023,n:16},{yr:2024,n:16},{yr:2025,n:16}]},
+    {name:'Önermeler, Bileşik Önerme & Niceleyiciler',code:'9.1.1',
+     desc:'Önerme / doğruluk değeri; bileşik önerme (∧,∨); De Morgan kuralları; koşullu önerme (p⇒q ≡ not-p∨q); karşıt/ters/karşıt-ters; çift koşullu p⇔q; evrensel (∀) ve varlık (∃) niceleyicisi. MEB 9.1.1.3c: en fazla 4 bileşenli bileşik önermede eşdeğer buldurma.',
+     tip:'HER YIL kesinlikle 1 soru — genellikle Q16. p⇒q eşdeğeri (not-p∨q) ve karşıt-ters formüllerini ezberleyin. 2022\'de niceleyici (∀, ∃) sorusu geldi.',
+     refs:[{yr:2020,n:16},{yr:2021,n:21},{yr:2022,n:19},{yr:2022,n:20},{yr:2023,n:16},{yr:2024,n:16},{yr:2025,n:16}]},
   ]},
-  // ─── FONKSİYONLAR ────────────────────────────────────────────────────────────
-  {icon:'f(x)',bg:'#0a1f0a',clr:'#3ecf8e',name:'Fonksiyonlar',cnt:'1–2',subs:[
-    {name:'Fonksiyon kavramı, bileşke & ters fonksiyon',code:'MF.10.2',
-     desc:'Tanım/görüntü kümesi; bileşke f∘g; ters fonksiyon f⁻¹; parçalı tanımlı fonksiyon; grafik yorumu (dikey doğru testi).',
-     tip:'Genellikle 2 soru — biri ~Q18-22 arası kavram, biri Q30 grafik yorumu. 2021\'de Q30 olasılığa kaydı; 2022\'de yalnızca 1 fonksiyon sorusu (Q22) geldi.',
+  // --- FONKSİYONLAR ---
+  {icon:'f(x)',bg:'#0a1f0a',clr:'#3ecf8e',name:'Fonksiyonlar',cnt:'1-2',subs:[
+    {name:'Fonksiyon Kavramı, Bileşke (fog) & Ters Fonksiyon',code:'10.2.1 · 10.2.2',
+     desc:'Tanım/görüntü kümesi; bire-bir, örten, parçalı tanımlı fonksiyon; f+g, f-g, f*g, f/g işlemleri; bileşke fog (değişme özelliği yok, birleşme var); ters fonksiyon f⁻¹ (yatay doğru testi); f⁻¹ grafiği y=x\'e göre simetrik.',
+     tip:'Genellikle 2 soru: biri Q18-22 arası kavram/bileşke, biri Q30 grafik yorumu. 2022\'de sadece 1 soru (Q22) geldi. Bileşkede "içten dışa" hesaplama sırasına dikkat edin.',
      refs:[{yr:2020,n:18},{yr:2020,n:30},{yr:2021,n:22},{yr:2022,n:22},{yr:2023,n:19},{yr:2023,n:30},{yr:2024,n:18},{yr:2024,n:30},{yr:2025,n:18},{yr:2025,n:30}]},
   ]},
-  // ─── POLİNOMLAR ──────────────────────────────────────────────────────────────
-  {icon:'P(x)',bg:'#0a2420',clr:'#38b6a8',name:'Polinomlar',cnt:'2',subs:[
-    {name:'Polinom işlemleri & çarpanlara ayırma',code:'MF.10.3',
-     desc:'Polinom toplama/çıkarma/çarpma/bölme; Kalan Teoremi P(a); özdeşliklerle çarpanlara ayırma (tam kare, küp toplamı/farkı).',
-     tip:'Yalnızca 2021\'de 2 soru çıktı (Q23-Q24). Diğer yıllarda polinom sorusu çıkmadı; çarpanlara ayırma konusu İkinci Derece bölümünde ele alınır.',
+  // --- POLİNOMLAR ---
+  {icon:'P(x)',bg:'#0a2420',clr:'#38b6a8',name:'Polinomlar',cnt:'0-2',subs:[
+    {name:'Polinom İşlemleri, Kalan Teoremi & Çarpanlara Ayırma',code:'10.3.1 · 10.3.2',
+     desc:'Polinom toplama/çıkarma/çarpma/bölme; Kalan Teoremi: P(x)÷(x-a) kalanı = P(a); P(a)=0 ise (x-a) çarpan; özdeşliklerle çarpanlara ayırma (tam kare, iki kare farkı, küp toplamı/farkı); değişken değiştirme; rasyonel ifade sadeleştirme.',
+     tip:'Yalnızca 2021\'de 2 soru çıktı (Q23 Kalan Teoremi, Q24 çarpanlara ayırma). Diğer yıllarda polinom sorusu çıkmadı. Kalan Teoremi\'ni bilmek 10.3 sorusunda çok hızlandırır.',
      refs:[{yr:2021,n:23},{yr:2021,n:24}]},
   ]},
-  // ─── İKİNCİ DERECE ───────────────────────────────────────────────────────────
-  {icon:'x²',bg:'#0a0a2d',clr:'#4b9ef8',name:'İkinci Derece Denklemler',cnt:'1–2',subs:[
-    {name:'Kökleri, diskriminant & kök-katsayı bağıntısı',code:'MF.10.4',
-     desc:'ax²+bx+c=0 kökleri; Δ=b²−4ac diskriminant; Vieta: x₁+x₂=−b/a, x₁·x₂=c/a; karmaşık sayı (i²=−1) kavramı.',
-     tip:'Her yıl 2–4 soru (Q19–Q22). Çarpanlara ayırma (özdeşlik) + 2. derece kök/Vieta soruları birlikte gelir. Polinom sorusu TYT\'de yalnızca 2021\'de çıktı.',
-     refs:[{yr:2020,n:19},{yr:2020,n:20},{yr:2020,n:21},{yr:2021,n:25},{yr:2022,n:23},{yr:2022,n:24},{yr:2022,n:25},{yr:2023,n:19},{yr:2023,n:20},{yr:2023,n:21},{yr:2023,n:22},{yr:2024,n:19},{yr:2024,n:20},{yr:2024,n:21},{yr:2025,n:19},{yr:2025,n:20},{yr:2025,n:21}]},
+  // --- İKİNCİ DERECE ---
+  {icon:'x²',bg:'#0a0a2d',clr:'#4b9ef8',name:'İkinci Derece Denklemler',cnt:'2-4',subs:[
+    {name:'Çarpanlara Ayırma & Özdeşlikler (ikinci derece bağlamında)',code:'10.3.2 · 10.4.1',
+     desc:'ax²+bx+c çarpanlara ayırma; tam kare özdeşliği (a±b)²; iki kare farkı (a²-b²); küp özdeşlikleri; rasyonel ifade sadeleştirme; polinomun sıfırları ile çarpan ilişkisi (P(a)=0 ise (x-a) çarpan).',
+     tip:'Her yıl 2 soru (Q19-Q20 bandı). Özdeşlik tablosunu tam ezberleyin: (a+b)²=a²+2ab+b², a³±b³=(a±b)(a²∓ab+b²). 2022-2025 arası çok tutarlı.',
+     refs:[{yr:2020,n:19},{yr:2020,n:20},{yr:2022,n:23},{yr:2022,n:24},{yr:2023,n:20},{yr:2024,n:19},{yr:2024,n:20},{yr:2025,n:19},{yr:2025,n:20}]},
+    {name:'İkinci Derece Denklem Kökleri, Diskriminant & Kök-Katsayı',code:'10.4.1',
+     desc:'ax²+bx+c=0 kökleri; discriminant D=b²-4ac (D>0: iki gerçel kök, D=0: çakışık, D<0: karmaşık); Vieta: x₁+x₂=-b/a, x₁·x₂=c/a; kökleri verilen denklem oluşturma; karmaşık sayı i²=-1.',
+     tip:'Her yıl 1-2 soru (Q21-Q22). Kök-katsayı bağıntısı (Vieta) çok sık çıkıyor; x₁·x₂ ve x₁+x₂ bir soruda birlikte kullanılıyor. Diskriminant işareti yeterlilik soruları da var.',
+     refs:[{yr:2020,n:21},{yr:2021,n:25},{yr:2022,n:25},{yr:2023,n:21},{yr:2023,n:22},{yr:2024,n:21},{yr:2025,n:21}]},
   ]},
-  // ─── VERİ & İSTATİSTİK ───────────────────────────────────────────────────────
+  // --- VERİ & İSTATİSTİK ---
   {icon:'📊',bg:'#2d0d00',clr:'#e05555',name:'Veri & İstatistik',cnt:'2',subs:[
-    {name:'Merkezi eğilim, yayılım ölçüleri & grafik yorumu',code:'MF.9.5.1',
-     desc:'Aritmetik ortalama, ortanca (medyan), tepe değer (mod), açıklık, standart sapma; histogram, sütun/çizgi/daire grafiği yorumu.',
-     tip:'Her yıl kesinlikle 2 soru — genellikle Q22-Q23 veya Q26-Q27 konumunda. "Eleman eklenince/çıkarınca ortalama ne olur?" tipi sık çıkar.',
+    {name:'Merkezi Eğilim, Standart Sapma & Grafik Yorumu',code:'9.5.1 · 9.5.2 · TD.12.2.1',
+     desc:'Aritmetik ortalama (X̄), ortanca (medyan), tepe değer (mod), açıklık, standart sapma (en fazla 5 veri için hesap); histogram ve sütun/çizgi/daire grafiği yorumu. MEB 9.5.1: eleman eklenince/çıkarınca ortalama değişimi.',
+     tip:'HER YIL kesinlikle 2 soru — genellikle Q22-Q23 veya Q26-Q27 bandı. "n eleman eklenince ortalama k olur, n=?" tipi en sık çıkan. Standart sapmanın ne yönde değişeceğini kavramsal düşünün.',
      refs:[{yr:2020,n:22},{yr:2020,n:23},{yr:2021,n:26},{yr:2021,n:27},{yr:2022,n:26},{yr:2022,n:30},{yr:2023,n:23},{yr:2023,n:24},{yr:2024,n:22},{yr:2024,n:23},{yr:2025,n:22},{yr:2025,n:23}]},
   ]},
-  // ─── SAYMA & OLASILIK ────────────────────────────────────────────────────────
-  {icon:'🎲',bg:'#002d1a',clr:'#3ecf8e',name:'Sayma & Olasılık',cnt:'2–4',subs:[
-    {name:'Permütasyon, kombinasyon & temel olasılık',code:'MF.10.1',
-     desc:'Çarpma ilkesi, faktöriyel; P(n,r) sıralama; C(n,r) seçme; Pascal üçgeni; binom açılımı; eş olası olaylar; tümleyen; ayrık olay olasılığı.',
-     tip:'Genellikle 2 soru — ancak 2021\'de Q18+Q29+Q30 olmak üzere 3 olasılık sorusu geldi. Kombinasyon (seçme) ağırlıklı; tümleyen yöntemi çok işe yarar.',
-     refs:[{yr:2020,n:24},{yr:2020,n:29},{yr:2021,n:18},{yr:2021,n:29},{yr:2021,n:30},{yr:2022,n:28},{yr:2022,n:29},{yr:2023,n:25},{yr:2023,n:26},{yr:2024,n:24},{yr:2024,n:25},{yr:2025,n:24},{yr:2025,n:25}]},
+  // --- SAYMA & OLASILIK ---
+  {icon:'🎲',bg:'#002d1a',clr:'#3ecf8e',name:'Sayma & Olasılık',cnt:'2-4',subs:[
+    {name:'Permütasyon, Kombinasyon & Pascal Üçgeni',code:'10.1.1',
+     desc:'Çarpma ilkesi; faktöriyel n!; P(n,r)=n!/(n-r)! diziliş; tekrarlı permütasyon (özdeş nesneler); C(n,r)=n!/(r!(n-r)!) seçme; C(n,r)=C(n,n-r) simetrisi; Pascal üçgeni; binom açılımı (a+b)^n.',
+     tip:'Genellikle 1-2 soru. Kombinasyon (seçme) ağırlıklı. 2021\'de 3 soru geldi (Q18, Q29, Q30). "Sıra önemli mi?" sorusu P mi C mi sorusunu belirler.',
+     refs:[{yr:2020,n:29},{yr:2021,n:18},{yr:2021,n:29},{yr:2022,n:28},{yr:2023,n:25},{yr:2024,n:24},{yr:2025,n:24}]},
+    {name:'Temel Olasılık, Tümleyen & Ayrık Olay',code:'10.1.2',
+     desc:'Örnek uzay, eş olası olay; P(A)=n(A)/n(S); tümleyen P(A\')=1-P(A); ayrık olayda P(A∪B)=P(A)+P(B); ayrık olmayan olayda P(A∪B)=P(A)+P(B)-P(A∩B). MEB 10.1.2.2: eş olası olmayan olaylar da dahil.',
+     tip:'Genellikle 1-2 soru. Tümleyen yöntemi (1-P(en az 1)) çok işe yarar. Fotoğraf, kutu, zar gibi somut bağlamlar. 2021\'de olasılıktan 3 soru (Q18, Q29, Q30) çıktı.',
+     refs:[{yr:2020,n:24},{yr:2021,n:30},{yr:2022,n:29},{yr:2023,n:26},{yr:2024,n:25},{yr:2025,n:25}]},
   ]},
 ];
 

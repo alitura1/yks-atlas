@@ -198,43 +198,51 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);min-hei
 /* ─── ANALYSIS PAGE ─── */
 .anal-page{padding:22px;max-width:1100px;width:100%}
 .anal-hero{
-  background:linear-gradient(135deg,var(--bg2),var(--bg3));
-  border:1px solid var(--border2);border-radius:var(--rl);
-  padding:22px 24px;margin-bottom:28px;display:flex;gap:18px;align-items:flex-start;
+  background:linear-gradient(135deg,var(--bg3) 0%,var(--bg4) 60%,rgba(245,200,66,.06) 100%);
+  border:1px solid var(--border2);border-radius:20px;
+  padding:26px 28px;margin-bottom:24px;display:flex;gap:20px;align-items:flex-start;
+  position:relative;overflow:hidden;
 }
-.anal-hero-icon{font-size:38px;flex-shrink:0;margin-top:2px}
-.anal-hero h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin-bottom:7px;color:var(--t1)}
-.anal-hero p{font-size:12px;color:var(--t2);line-height:1.7}
-.kaz-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;align-items:start}
-.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden}
-.kcard-head{display:flex;align-items:center;gap:10px;padding:14px;cursor:pointer;user-select:none;transition:background .14s}
-.kcard-head:hover{background:rgba(255,255,255,.04)}
-.kcard-ic{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-weight:600}
+.anal-hero::before{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(245,200,66,.08) 0%,transparent 70%);pointer-events:none}
+.anal-hero-icon{font-size:42px;flex-shrink:0;margin-top:2px;line-height:1}
+.anal-hero h2{font-family:'Syne',sans-serif;font-size:21px;font-weight:800;margin-bottom:8px;color:var(--t1);letter-spacing:-.3px}
+.anal-hero p{font-size:12px;color:var(--t2);line-height:1.75}
+.anal-hero-stats{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.astat{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:8px;padding:6px 12px;text-align:center}
+.astat-val{font-family:'IBM Plex Mono',monospace;font-size:16px;font-weight:700;color:var(--a1);display:block;line-height:1}
+.astat-lbl{font-size:9px;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-top:3px;display:block}
+.kaz-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-items:start}
+.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color .15s}
+.kcard:hover{border-color:var(--border2)}
+.kcard-head{display:flex;align-items:center;gap:11px;padding:14px 16px;cursor:pointer;user-select:none;transition:background .14s}
+.kcard-head:hover{background:rgba(255,255,255,.035)}
+.kcard-ic{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-weight:700;letter-spacing:-.04em}
 .kcard-meta{flex:1;min-width:0}
-.kcard-name{font-size:13px;font-weight:600;margin-bottom:2px;line-height:1.3}
+.kcard-name{font-size:13px;font-weight:700;margin-bottom:2px;line-height:1.3;color:var(--t1)}
 .kcard-sub{font-size:10px;color:var(--t3)}
-.kcard-badge{font-size:10px;padding:3px 9px;border-radius:12px;font-family:'IBM Plex Mono',monospace;font-weight:700;flex-shrink:0;letter-spacing:.02em}
+.kcard-badge{font-size:10px;padding:4px 10px;border-radius:20px;font-family:'IBM Plex Mono',monospace;font-weight:700;flex-shrink:0;letter-spacing:.02em;white-space:nowrap}
 .kcard-chev{color:var(--t3);font-size:10px;transition:transform .2s;flex-shrink:0;margin-left:2px}
 .kcard.open .kcard-chev{transform:rotate(180deg)}
 .kcard-body{display:none;border-top:1px solid var(--border)}
 .kcard.open .kcard-body{display:block}
-.ksub{padding:11px 14px;border-bottom:1px solid var(--border);transition:background .12s}
+.ksub{padding:12px 16px;border-bottom:1px solid var(--border);transition:background .12s}
 .ksub:last-child{border-bottom:none}
 .ksub:hover{background:rgba(255,255,255,.02)}
 .ksub-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:5px}
-.ksub-name{font-size:11px;font-weight:600;line-height:1.35;flex:1;color:var(--t1)}
-.ksub-code{font-size:9px;font-family:'IBM Plex Mono',monospace;color:var(--t3);background:var(--bg4);padding:2px 6px;border-radius:3px;flex-shrink:0;margin-top:2px;border:1px solid var(--border)}
-.ksub-desc{font-size:10.5px;color:var(--t2);line-height:1.6;margin-bottom:7px}
-.ksub-tip{font-size:10px;color:var(--t2);background:rgba(245,200,66,.05);border-left:2px solid rgba(245,200,66,.35);padding:6px 9px;margin-bottom:6px;line-height:1.6;border-radius:0 4px 4px 0}
+.ksub-name{font-size:11.5px;font-weight:700;line-height:1.35;flex:1;color:var(--t1)}
+.ksub-code{font-size:9px;font-family:'IBM Plex Mono',monospace;color:var(--t3);background:var(--bg4);padding:2px 7px;border-radius:4px;flex-shrink:0;margin-top:2px;border:1px solid var(--border)}
+.ksub-desc{font-size:10.5px;color:var(--t2);line-height:1.65;margin-bottom:7px}
+.ksub-tip{font-size:10px;color:var(--t2);background:rgba(245,200,66,.06);border-left:2px solid rgba(245,200,66,.4);padding:6px 10px;margin-bottom:8px;line-height:1.6;border-radius:0 6px 6px 0}
 .ksub-tip strong{color:var(--a1);font-weight:600}
 .qrefs{display:flex;flex-wrap:wrap;gap:4px}
 .qref{
-  font-size:9px;padding:2px 8px;border-radius:4px;cursor:pointer;
+  font-size:9px;padding:2px 8px;border-radius:5px;cursor:pointer;
   font-family:'IBM Plex Mono',monospace;font-weight:600;border:1px solid transparent;
-  transition:filter .13s, transform .1s;
+  transition:filter .13s, transform .1s, box-shadow .13s;
 }
-.qref:hover{filter:brightness(1.3);transform:translateY(-1px)}
+.qref:hover{filter:brightness(1.35);transform:translateY(-1px);box-shadow:0 3px 8px rgba(0,0,0,.3)}
 .qref.none{color:var(--t3);font-style:italic;cursor:default;filter:none;transform:none}
+.kaz-list{display:flex;flex-direction:column;gap:10px}
 
 /* ─── COMING SOON ─── */
 .cs{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 52px);gap:14px;text-align:center;padding:40px}
@@ -315,6 +323,12 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);min-hei
   .lbtop{padding:8px 12px}
   .lb-title{font-size:12px}
   .mob-filter-btn{bottom:16px}
+
+  .anal-hero{flex-direction:column;gap:12px;padding:18px}
+  .anal-hero-icon{font-size:32px}
+  .anal-hero-stats{gap:8px}
+  .astat{padding:5px 10px}
+  .kaz-list{gap:8px}
 }
 </style>
 </head>
@@ -330,6 +344,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);min-hei
   <div class="ng">
     <span class="ng-label">TYT Türkçe</span>
     <button class="ntab" onclick="showPage('tyttur')" id="nt-tyttur"><span class="dot" style="background:#f5c842"></span>Sorular</button>
+    <button class="ntab" onclick="showPage('tytturaz')" id="nt-tytturaz"><span class="dot" style="background:#f5c842"></span>Analiz</button>
   </div>
   <div class="ng">
     <span class="ng-label">TYT Matematik</span>
@@ -443,6 +458,25 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);min-hei
   </div>
 </div>
 
+<!-- TYT TÜRKÇE ANALİZ -->
+<div class="page" id="page-tytturaz">
+  <div class="anal-page">
+    <div class="anal-hero">
+      <div class="anal-hero-icon">📝</div>
+      <div>
+        <h2>TYT Türkçe — Dil Bilgisi Kazanım Haritası</h2>
+        <p>MEB 2026 müfredatına göre TYT Türkçe dil bilgisi kazanımları ve 2020–2025 sınav sorularıyla eşleştirilmiş analiz. Her karta tıklayarak alt kazanımları ve geçmiş sınav sorularını gör.</p>
+        <div class="anal-hero-stats">
+          <div class="astat"><span class="astat-val">42</span><span class="astat-lbl">Toplam Soru</span></div>
+          <div class="astat"><span class="astat-val">6</span><span class="astat-lbl">Konu Grubu</span></div>
+          <div class="astat"><span class="astat-val">7/yıl</span><span class="astat-lbl">Ort. Soru</span></div>
+        </div>
+      </div>
+    </div>
+    <div id="tyttur-kaz" class="kaz-list"></div>
+  </div>
+</div>
+
 <!-- TYT FEN BİLİMLERİ -->
 <div class="page" id="page-tytfen">
   <div class="split">
@@ -521,9 +555,19 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);min-hei
 
 <!-- TYT MATEMATİK ANALİZ -->
 <div class="page" id="page-tytmataz">
-  <div class="kaz-wrap">
-    <h1 class="kaz-title">TYT Matematik — MEB 2026 Kazanım Haritası</h1>
-    <p class="kaz-sub">Temel Matematik Q1-30 · 2020-2025 Soru Dağılımı</p>
+  <div class="anal-page">
+    <div class="anal-hero">
+      <div class="anal-hero-icon">🔢</div>
+      <div>
+        <h2>TYT Matematik — MEB 2026 Kazanım Haritası</h2>
+        <p>Temel Matematik Q1–30 · Her yıl 30 soru · 8 ana konu grubunda dağılım. Polinomlar TYT'de yılda <strong>~2 soru</strong>, Sözel Problemler ise <strong>6–8 soru</strong> ile en yoğun gruptur.</p>
+        <div class="anal-hero-stats">
+          <div class="astat"><span class="astat-val">180</span><span class="astat-lbl">Toplam Soru</span></div>
+          <div class="astat"><span class="astat-val">8</span><span class="astat-lbl">Konu Grubu</span></div>
+          <div class="astat"><span class="astat-val">30/yıl</span><span class="astat-lbl">Soru Sayısı</span></div>
+        </div>
+      </div>
+    </div>
     <div id="tytmat-kaz" class="kaz-list"></div>
   </div>
 </div>
@@ -568,18 +612,38 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);min-hei
 
 <!-- TYT SOSYAL ANALİZ -->
 <div class="page" id="page-tytsocaz">
-  <div class="kaz-wrap">
-    <h1 class="kaz-title">TYT Sosyal — MEB 2026 Kazanım Haritası</h1>
-    <p class="kaz-sub">Tarih · İnkılap · Coğrafya · Felsefe · Din Kültürü · 2020-2025</p>
+  <div class="anal-page">
+    <div class="anal-hero">
+      <div class="anal-hero-icon">🌍</div>
+      <div>
+        <h2>TYT Sosyal — MEB 2026 Kazanım Haritası</h2>
+        <p>Tarih · İnkılap · Coğrafya · Felsefe · Din Kültürü · 2020–2025 soru dağılımı. Her ders yaklaşık 4–5 soru ile temsil edilir.</p>
+        <div class="anal-hero-stats">
+          <div class="astat"><span class="astat-val">120</span><span class="astat-lbl">Toplam Soru</span></div>
+          <div class="astat"><span class="astat-val">5</span><span class="astat-lbl">Alt Ders</span></div>
+          <div class="astat"><span class="astat-val">20/yıl</span><span class="astat-lbl">Soru Sayısı</span></div>
+        </div>
+      </div>
+    </div>
     <div id="tytsoc-kaz" class="kaz-list"></div>
   </div>
 </div>
 
 <!-- TYT FEN ANALİZ -->
 <div class="page" id="page-tytfenaz">
-  <div class="kaz-wrap">
-    <h1 class="kaz-title">TYT Fen Bilimleri — MEB 2026 Kazanım Haritası</h1>
-    <p class="kaz-sub">Fizik · Kimya · Biyoloji · 2020–2025 Soru Dağılımı</p>
+  <div class="anal-page">
+    <div class="anal-hero">
+      <div class="anal-hero-icon">🧬</div>
+      <div>
+        <h2>TYT Fen Bilimleri — MEB 2026 Kazanım Haritası</h2>
+        <p>Fizik · Kimya · Biyoloji · Q1–20 · 2020–2025 soru dağılımı. Fizik ~7, Kimya ~7, Biyoloji ~6 soru her yıl çıkar.</p>
+        <div class="anal-hero-stats">
+          <div class="astat"><span class="astat-val">120</span><span class="astat-lbl">Toplam Soru</span></div>
+          <div class="astat"><span class="astat-val">3</span><span class="astat-lbl">Ders</span></div>
+          <div class="astat"><span class="astat-val">20/yıl</span><span class="astat-lbl">Soru Sayısı</span></div>
+        </div>
+      </div>
+    </div>
     <div id="tytfen-kaz" class="kaz-list"></div>
   </div>
 </div>
@@ -592,9 +656,14 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);min-hei
       <div>
         <h2>TYT Geometri — MEB Kazanım Haritası</h2>
         <p>2026 YKS Kazanım Kitabına göre her konunun alt dalları ve 2020–2025 gerçek sınav soruları. Soru piline tıkla → soruyu aç.</p>
+        <div class="anal-hero-stats">
+          <div class="astat"><span class="astat-val">60</span><span class="astat-lbl">Toplam Soru</span></div>
+          <div class="astat"><span class="astat-val">7</span><span class="astat-lbl">Konu Grubu</span></div>
+          <div class="astat"><span class="astat-val">10/yıl</span><span class="astat-lbl">Soru Sayısı</span></div>
+        </div>
       </div>
     </div>
-    <div class="kaz-grid" id="tyt-kaz"></div>
+    <div id="tyt-kaz" class="kaz-list"></div>
   </div>
 </div>
 
@@ -643,10 +712,10 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);min-hei
       <div class="anal-hero-icon">📐</div>
       <div>
         <h2>AYT Matematik — MEB 2026 Kazanım Haritası</h2>
-        <p>ÖSYM 2026 Kazanım Kitabına göre 10 ana konu alanı, 30+ alt kazanım ve 2020–2025 gerçek sınav soruları. Her kazanımın MEB kodu, açıklaması, sınav ipuçları ve soru referansları. Pill'e tıkla → soruya atla. (Geometri & Analitik Geometri konuları AYT Geo Analiz sekmesinde.)</p>
+        <p>ÖSYM 2026 Kazanım Kitabına göre 10 ana konu alanı, 30+ alt kazanım ve 2020–2025 gerçek sınav soruları. Her kazanımın MEB kodu, açıklaması, sınav ipuçları ve soru referansları. Pill\'e tıkla → soruya atla. (Geometri & Analitik Geometri konuları AYT Geo Analiz sekmesinde.)</p>
       </div>
     </div>
-    <div class="kaz-grid" id="ayt-kaz"></div>
+    <div id="ayt-kaz" class="kaz-list"></div>
   </div>
 </div>
 
@@ -696,9 +765,14 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);min-hei
       <div>
         <h2>AYT Geometri — MEB 2026 Kazanım Haritası</h2>
         <p>§9.4 Üçgenler, §10.5 Dörtgenler, §11.5–11.6 Çember & Katı Cisimler ve §11.2 & §12.4 & §12.7 Analitik Geometri kapsamında alt kazanımlar ve 2020–2025 gerçek sınav soruları.</p>
+        <div class="anal-hero-stats">
+          <div class="astat"><span class="astat-val">60</span><span class="astat-lbl">Toplam Soru</span></div>
+          <div class="astat"><span class="astat-val">6</span><span class="astat-lbl">Konu Grubu</span></div>
+          <div class="astat"><span class="astat-val">10/yıl</span><span class="astat-lbl">Soru Sayısı</span></div>
+        </div>
       </div>
     </div>
-    <div class="kaz-grid" id="aytgeo-kaz"></div>
+    <div id="aytgeo-kaz" class="kaz-list"></div>
   </div>
 </div>
 
@@ -1346,15 +1420,16 @@ const TYT_KAZ = [
 // TYT MATEMATİK (Q1–30, Temel) — 2020-2025
 // ═══════════════════════════════════════════════════════
 const TYT_MAT_TOPICS = [
-  {id:'all',   name:'Tümü',              dot:'#4b9ef8'},
-  {id:'denklem', name:'Denklem & Eşitsizlik', dot:'#e05555'},
-  {id:'kume',    name:'Kümeler',          dot:'#f5c842'},
-  {id:'mantik',  name:'Mantık',           dot:'#9b7fe8'},
-  {id:'fonk',    name:'Fonksiyonlar',     dot:'#3ecf8e'},
-  {id:'pol',     name:'Polinomlar',       dot:'#f08040'},
-  {id:'ikd',     name:'İkinci Derece',    dot:'#4b9ef8'},
-  {id:'veri',    name:'Veri & İstatistik',dot:'#e05555'},
-  {id:'olasilik',name:'Sayma & Olasılık', dot:'#3ecf8e'},
+  {id:'all',     name:'Tümü',              dot:'#4b9ef8'},
+  {id:'denklem', name:'Sayılar & Temel',   dot:'#e05555'},
+  {id:'problem', name:'Sözel Problemler',  dot:'#f08040'},
+  {id:'kume',    name:'Kümeler',           dot:'#f5c842'},
+  {id:'mantik',  name:'Mantık',            dot:'#9b7fe8'},
+  {id:'fonk',    name:'Fonksiyonlar',      dot:'#3ecf8e'},
+  {id:'pol',     name:'Polinomlar',        dot:'#38b6a8'},
+  {id:'ikd',     name:'İkinci Derece',     dot:'#4b9ef8'},
+  {id:'veri',    name:'Veri & İstatistik', dot:'#e05555'},
+  {id:'olasilik',name:'Sayma & Olasılık',  dot:'#3ecf8e'},
 ];
 const TYT_MAT_Q = [
   // ── 2020 ──────────────────────────────────────────
@@ -1363,7 +1438,7 @@ const TYT_MAT_Q = [
   {yr:2020,num:3, topic:'denklem',sub:'Sayı Basamakları',tags:['basamak','rakam'],        ans:'C',desc:'Sayı basamakları uygulaması.'},
   {yr:2020,num:4, topic:'denklem',sub:'Düzgün Çokgen Sembolü',tags:['sembol','çokgen','üslü'],ans:'D',desc:'n kenarlı çokgen sembol sorusu.'},
   {yr:2020,num:5, topic:'denklem',sub:'Tek-Çift Sayılar',tags:['tek','çift','a(b+c)'],   ans:'B',desc:'Cebirsel ifadede tek-çift analizi.'},
-  {yr:2020,num:6, topic:'denklem',sub:'Kesir & Oran',    tags:['kesir','oran','silindir'],ans:'C',desc:'Oran-kesir uygulaması (su şişesi).'},
+  {yr:2020,num:6, topic:'problem', sub:'Kesir & Oran Problemi',tags:['kesir','oran','su şişesi'],ans:'C',desc:'Oran-kesir uygulaması (su şişesi).'},
   {yr:2020,num:7, topic:'denklem',sub:'Kutu İşlemleri',  tags:['sembol','dört işlem'],   ans:'D',desc:'Kutulara sayı yerleştirme.'},
   {yr:2020,num:8, topic:'denklem',sub:'Birinci Derece Denklem',tags:['denklem','bilinmeyenli'],ans:'E',desc:'Birinci derece denklem.'},
   {yr:2020,num:9, topic:'denklem',sub:'Üslü İfadeler',   tags:['üs','kuvvet'],           ans:'A',desc:'Üslü ifadeler.'},
@@ -1372,7 +1447,7 @@ const TYT_MAT_Q = [
   {yr:2020,num:12,topic:'denklem',sub:'Mutlak Değer',    tags:['mutlak değer','eşitsizlik'],ans:'D',desc:'Mutlak değer uygulaması.'},
   {yr:2020,num:13,topic:'denklem',sub:'Eşitsizlik',      tags:['eşitsizlik','kutu'],      ans:'C',desc:'Kutulara sayı yerleştirme eşitsizlik.'},
   {yr:2020,num:14,topic:'denklem',sub:'Rasyonel Sayılar',tags:['rasyonel','devirli'],     ans:'A',desc:'Rasyonel sayılar.'},
-  {yr:2020,num:15,topic:'denklem',sub:'Oran-Orantı (Büyüme)',tags:['oran','büyüme','grafik'],ans:'B',desc:'Oran-orantı, boy büyümesi.'},
+  {yr:2020,num:15,topic:'problem', sub:'Oran-Orantı (Büyüme)',tags:['oran','büyüme','grafik'],ans:'B',desc:'Oran-orantı, boy büyümesi.'},
   {yr:2020,num:16,topic:'mantik', sub:'Önermeler',        tags:['önerme','bileşik'],       ans:'D',desc:'Bileşik önermeler.'},
   {yr:2020,num:17,topic:'kume',   sub:'Küme İşlemleri',  tags:['küme','birleşim','kesişim'],ans:'A',desc:'Küme işlemleri.'},
   {yr:2020,num:18,topic:'fonk',   sub:'Fonksiyon Kavramı',tags:['fonksiyon','bileşke'],   ans:'E',desc:'Fonksiyon ve bileşke.'},
@@ -1382,9 +1457,9 @@ const TYT_MAT_Q = [
   {yr:2020,num:22,topic:'veri',   sub:'Merkezi Eğilim',   tags:['ortalama','ortanca'],     ans:'A',desc:'Ortalama ve ortanca.'},
   {yr:2020,num:23,topic:'veri',   sub:'Grafik Yorumu',    tags:['grafik','histogram'],     ans:'C',desc:'Verilerin grafikle gösterimi.'},
   {yr:2020,num:24,topic:'olasilik',sub:'Temel Olasılık',  tags:['olasılık','olay'],        ans:'E',desc:'Basit olay olasılığı.'},
-  {yr:2020,num:25,topic:'denklem',sub:'Sayı Problemleri', tags:['problem','yaş'],          ans:'B',desc:'Sayı/yaş problemi.'},
-  {yr:2020,num:26,topic:'denklem',sub:'Kesir Problemleri',tags:['kesir','işçi'],           ans:'A',desc:'Kesir/işçi problemi.'},
-  {yr:2020,num:27,topic:'denklem',sub:'Yüzde-Faiz',       tags:['yüzde','artış'],          ans:'D',desc:'Yüzde ve faiz.'},
+  {yr:2020,num:25,topic:'problem', sub:'Sayı & Yaş Problemi',tags:['problem','yaş'],       ans:'B',desc:'Sayı/yaş problemi.'},
+  {yr:2020,num:26,topic:'problem', sub:'Kesir & İşçi Problemi',tags:['kesir','işçi'],      ans:'A',desc:'Kesir/işçi problemi.'},
+  {yr:2020,num:27,topic:'problem', sub:'Yüzde & Faiz',    tags:['yüzde','artış'],          ans:'D',desc:'Yüzde ve faiz.'},
   {yr:2020,num:28,topic:'kume',   sub:'Kümelerde Sayma',  tags:['küme','eleman sayısı'],   ans:'C',desc:'Kümelerde eleman sayısı.'},
   {yr:2020,num:29,topic:'olasilik',sub:'Sıralama-Seçme',  tags:['permütasyon','kombinasyon'],ans:'B',desc:'Sıralama ve seçme.'},
   {yr:2020,num:30,topic:'fonk',   sub:'Fonksiyon Grafiği',tags:['grafik','f(x)'],          ans:'E',desc:'Fonksiyon grafik yorumu.'},
@@ -1394,18 +1469,18 @@ const TYT_MAT_Q = [
   {yr:2021,num:3, topic:'denklem',sub:'Bölünebilme',       tags:['bölünebilme','rakam'],    ans:'D',desc:'Basamak ve bölünebilme.'},
   {yr:2021,num:4, topic:'denklem',sub:'Rasyonel Sayılar', tags:['rasyonel','sayı doğrusu'],ans:'B',desc:'Rasyonel sayı karşılaştırma.'},
   {yr:2021,num:5, topic:'denklem',sub:'Tek-Çift Sayılar', tags:['tek','çift','çarpım'],    ans:'E',desc:'Çarpım tek/çift analizi.'},
-  {yr:2021,num:6, topic:'denklem',sub:'Kesir',             tags:['kesir','tartı'],          ans:'A',desc:'Kesir uygulaması (tartı).'},
-  {yr:2021,num:7, topic:'denklem',sub:'Oran-Orantı',       tags:['oran','dağıtım'],         ans:'C',desc:'Oran-orantı problemi.'},
+  {yr:2021,num:6, topic:'problem', sub:'Kesir (tartı)',     tags:['kesir','tartı'],          ans:'A',desc:'Kesir uygulaması (tartı).'},
+  {yr:2021,num:7, topic:'problem', sub:'Oran-Orantı Problemi',tags:['oran','dağıtım'],      ans:'C',desc:'Oran-orantı problemi.'},
   {yr:2021,num:8, topic:'denklem',sub:'Ardışık Sayılar',   tags:['ardışık','toplam'],       ans:'B',desc:'Ardışık doğal sayılar.'},
   {yr:2021,num:9, topic:'denklem',sub:'Sayı Basamakları',  tags:['basamak','koşul'],        ans:'D',desc:'Koşullu basamak sorusu.'},
   {yr:2021,num:10,topic:'denklem',sub:'Üslü İfadeler',     tags:['üs','doğal sayı'],        ans:'E',desc:'Üslü ifade ve doğal sayı.'},
   {yr:2021,num:11,topic:'denklem',sub:'Mutlak Değer',      tags:['mutlak değer'],           ans:'A',desc:'Mutlak değer.'},
   {yr:2021,num:12,topic:'denklem',sub:'Birinci Derece',    tags:['denklem','1.derece'],     ans:'C',desc:'Birinci derece denklem.'},
   {yr:2021,num:13,topic:'denklem',sub:'Eşitsizlik',        tags:['eşitsizlik'],             ans:'B',desc:'Eşitsizlik çözümü.'},
-  {yr:2021,num:14,topic:'denklem',sub:'Yüzde-Kâr/Zarar',  tags:['yüzde','kâr'],            ans:'D',desc:'Yüzde ve kâr-zarar.'},
-  {yr:2021,num:15,topic:'denklem',sub:'Problem (Depo/Doluluk)',tags:['oran','depo'],        ans:'E',desc:'Depo doluluk oranı.'},
-  {yr:2021,num:16,topic:'denklem',sub:'Kesir Problemi',    tags:['kesir','bardak'],         ans:'A',desc:'Kesir uygulaması (bardak doluluğu).'},
-  {yr:2021,num:17,topic:'denklem',sub:'Market Alışverişi', tags:['kesir','para'],           ans:'C',desc:'Market/alışveriş problemi.'},
+  {yr:2021,num:14,topic:'problem', sub:'Yüzde-Kâr/Zarar', tags:['yüzde','kâr'],            ans:'D',desc:'Yüzde ve kâr-zarar.'},
+  {yr:2021,num:15,topic:'problem', sub:'Problem (Depo/Doluluk)',tags:['oran','depo'],       ans:'E',desc:'Depo doluluk oranı.'},
+  {yr:2021,num:16,topic:'problem', sub:'Kesir Problemi',   tags:['kesir','bardak'],         ans:'A',desc:'Kesir uygulaması (bardak doluluğu).'},
+  {yr:2021,num:17,topic:'problem', sub:'Market Alışverişi',tags:['kesir','para'],           ans:'C',desc:'Market/alışveriş problemi.'},
   {yr:2021,num:18,topic:'olasilik',sub:'Sıralama-Seçme',   tags:['kombinasyon','okul'],     ans:'B',desc:'Kombinasyon (okul/derslik).'},
   {yr:2021,num:19,topic:'denklem',sub:'Rakam Toplamı',     tags:['rakam','üslü','doğal'],   ans:'D',desc:'Üslü ifadede rakam toplamı.'},
   {yr:2021,num:20,topic:'kume',   sub:'Küme İşlemleri',    tags:['küme','kare renk'],       ans:'E',desc:'Küme işlemleri (kare renklendirme).'},
@@ -1424,17 +1499,17 @@ const TYT_MAT_Q = [
   {yr:2022,num:2, topic:'denklem',sub:'Temel İşlemler',    tags:['işlem','tamsayı'],        ans:'A',desc:'Tamsayılarla işlem.'},
   {yr:2022,num:3, topic:'denklem',sub:'Bölünebilme',        tags:['bölünebilme','koşul'],    ans:'D',desc:'Bölünebilme koşulu.'},
   {yr:2022,num:4, topic:'denklem',sub:'Rasyonel Sayılar',  tags:['rasyonel','devirli'],     ans:'B',desc:'Devirli ondalık sayı.'},
-  {yr:2022,num:5, topic:'denklem',sub:'Oran (Otobüs Durağı)',tags:['oran','durak'],         ans:'E',desc:'Oran problemi (otobüs).'},
+  {yr:2022,num:5, topic:'problem', sub:'Oran Problemi',     tags:['oran','otobüs'],         ans:'E',desc:'Oran problemi (otobüs).'},
   {yr:2022,num:6, topic:'denklem',sub:'Kesir Karşılaştırma',tags:['kesir','anket'],         ans:'C',desc:'Kesir karşılaştırma.'},
-  {yr:2022,num:7, topic:'denklem',sub:'Yüzde',             tags:['yüzde','artış-azalış'],   ans:'A',desc:'Yüzde artış-azalış.'},
-  {yr:2022,num:8, topic:'denklem',sub:'Problem (Eleman)',  tags:['problem','hata'],         ans:'D',desc:'Problem çözme stratejisi.'},
+  {yr:2022,num:7, topic:'problem', sub:'Yüzde Artış-Azalış',tags:['yüzde','artış-azalış'], ans:'A',desc:'Yüzde artış-azalış.'},
+  {yr:2022,num:8, topic:'problem', sub:'Problem Çözme',    tags:['problem','hata'],         ans:'D',desc:'Problem çözme stratejisi.'},
   {yr:2022,num:9, topic:'denklem',sub:'Ardışık Sayılar',   tags:['ardışık','çift'],         ans:'B',desc:'Ardışık çift sayılar.'},
   {yr:2022,num:10,topic:'denklem',sub:'Üslü İfadeler',     tags:['üs','kuvvet'],            ans:'E',desc:'Üslü ifadeler.'},
   {yr:2022,num:11,topic:'denklem',sub:'Birinci Derece Eşitsizlik',tags:['eşitsizlik','grafik'],ans:'A',desc:'Birinci derece eşitsizlik.'},
   {yr:2022,num:12,topic:'denklem',sub:'Mutlak Değer',      tags:['mutlak değer','denklem'], ans:'C',desc:'Mutlak değerli denklem.'},
   {yr:2022,num:13,topic:'denklem',sub:'Problem (Hayat)',   tags:['problem','sayı'],         ans:'B',desc:'Gerçek hayat problemi.'},
   {yr:2022,num:14,topic:'denklem',sub:'Rasyonel İfadeler', tags:['rasyonel','sadeleştirme'],ans:'D',desc:'Rasyonel ifade sadeleştirme.'},
-  {yr:2022,num:15,topic:'denklem',sub:'Sayı Problemi (Elma)',tags:['problem','elma'],       ans:'E',desc:'Bölme ve kalan problemi.'},
+  {yr:2022,num:15,topic:'problem', sub:'Sayı Problemi (Elma)',tags:['problem','elma'],      ans:'E',desc:'Bölme ve kalan problemi.'},
   {yr:2022,num:16,topic:'denklem',sub:'Rasyonel Karşılaştırma',tags:['rasyonel','öğretmen'],ans:'B',desc:'Rasyonel sayı sıralama.'},
   {yr:2022,num:17,topic:'denklem',sub:'Ondalık Sayı',      tags:['ondalık','karşılaştırma'],ans:'A',desc:'Ondalık sayı işlemleri.'},
   {yr:2022,num:18,topic:'denklem',sub:'Birinci Derece Denklem',tags:['denklem','problem'],  ans:'C',desc:'Birinci derece denklem.'},
@@ -1457,15 +1532,15 @@ const TYT_MAT_Q = [
   {yr:2023,num:4, topic:'denklem',sub:'Üslü İfadeler',     tags:['üs','oran'],              ans:'B',desc:'Üslü ifadeler.'},
   {yr:2023,num:5, topic:'denklem',sub:'Bölünebilme',        tags:['bölünebilme','rakam'],    ans:'E',desc:'Bölünebilme kuralı.'},
   {yr:2023,num:6, topic:'denklem',sub:'Ardışık Sayılar',   tags:['ardışık','toplam'],       ans:'D',desc:'Ardışık sayı toplamı.'},
-  {yr:2023,num:7, topic:'denklem',sub:'Oran-Orantı',        tags:['oran','süs'],             ans:'A',desc:'Oran-orantı problemi.'},
-  {yr:2023,num:8, topic:'denklem',sub:'Yüzde',              tags:['yüzde','indirim'],        ans:'C',desc:'Yüzde ve indirim.'},
-  {yr:2023,num:9, topic:'denklem',sub:'Problem (Bina Merdiveni)',tags:['problem','uzunluk'], ans:'B',desc:'Oran-uzunluk problemi.'},
+  {yr:2023,num:7, topic:'problem', sub:'Oran-Orantı Problemi',tags:['oran','süs'],           ans:'A',desc:'Oran-orantı problemi.'},
+  {yr:2023,num:8, topic:'problem', sub:'Yüzde & İndirim',   tags:['yüzde','indirim'],        ans:'C',desc:'Yüzde ve indirim.'},
+  {yr:2023,num:9, topic:'problem', sub:'Problem (Oran-Uzunluk)',tags:['problem','uzunluk'],  ans:'B',desc:'Oran-uzunluk problemi.'},
   {yr:2023,num:10,topic:'denklem',sub:'Kesir İşlemleri',   tags:['kesir','eşitlik'],        ans:'E',desc:'Kesir eşitliği.'},
   {yr:2023,num:11,topic:'denklem',sub:'Birinci Derece',     tags:['denklem','bilinmeyen'],   ans:'D',desc:'Birinci derece denklem.'},
   {yr:2023,num:12,topic:'denklem',sub:'Eşitsizlik',         tags:['eşitsizlik','çözüm'],     ans:'A',desc:'Eşitsizlik çözüm kümesi.'},
   {yr:2023,num:13,topic:'denklem',sub:'Mutlak Değer',       tags:['mutlak değer'],           ans:'C',desc:'Mutlak değer.'},
-  {yr:2023,num:14,topic:'denklem',sub:'Problem (Su)',       tags:['problem','su'],           ans:'B',desc:'Oran-orantı (su problemi).'},
-  {yr:2023,num:15,topic:'denklem',sub:'Sayı Problemi',      tags:['farklı rakam','sayı'],    ans:'E',desc:'Farklı rakamlı sayı.'},
+  {yr:2023,num:14,topic:'problem', sub:'Problem (Su)',      tags:['problem','su'],           ans:'B',desc:'Oran-orantı (su problemi).'},
+  {yr:2023,num:15,topic:'problem', sub:'Sayı Problemi',     tags:['farklı rakam','sayı'],    ans:'E',desc:'Farklı rakamlı sayı.'},
   {yr:2023,num:16,topic:'mantik', sub:'Önermeler',           tags:['önerme','bileşik'],       ans:'D',desc:'Bileşik önerme.'},
   {yr:2023,num:17,topic:'kume',   sub:'Küme İşlemleri',     tags:['küme','diyagram'],        ans:'A',desc:'Venn diyagramı.'},
   {yr:2023,num:18,topic:'kume',   sub:'Kümelerde Sayma',    tags:['eleman','sayma'],         ans:'C',desc:'Küme eleman sayısı.'},
@@ -1486,16 +1561,16 @@ const TYT_MAT_Q = [
   {yr:2024,num:2, topic:'denklem',sub:'Temel İşlemler',     tags:['dört işlem','grup'],      ans:'A',desc:'İkişer elemanlı grup.'},
   {yr:2024,num:3, topic:'denklem',sub:'Bölünebilme',         tags:['bölünebilme','elma'],     ans:'D',desc:'Bölünebilme (elma dağıtım).'},
   {yr:2024,num:4, topic:'denklem',sub:'Rasyonel Sayılar',   tags:['rasyonel','devirli'],     ans:'C',desc:'Devirli ondalık → kesir.'},
-  {yr:2024,num:5, topic:'denklem',sub:'Oran-Orantı',         tags:['oran','çiçek'],           ans:'E',desc:'Oran-orantı sorusu.'},
+  {yr:2024,num:5, topic:'problem', sub:'Oran-Orantı Problemi',tags:['oran','çiçek'],          ans:'E',desc:'Oran-orantı sorusu.'},
   {yr:2024,num:6, topic:'denklem',sub:'Kesir',               tags:['kesir','parça'],          ans:'A',desc:'Kesir uygulaması.'},
   {yr:2024,num:7, topic:'denklem',sub:'Sıcaklık Dönüşümü',  tags:['sıcaklık','dönüşüm'],     ans:'C',desc:'°C-°F dönüşüm formülü.'},
   {yr:2024,num:8, topic:'denklem',sub:'Birinci Derece',      tags:['denklem','bilinmeyen'],   ans:'B',desc:'Birinci derece denklem.'},
-  {yr:2024,num:9, topic:'denklem',sub:'Yüzde',               tags:['yüzde','oran'],           ans:'D',desc:'Yüzde uygulaması.'},
+  {yr:2024,num:9, topic:'problem', sub:'Yüzde Problemi',     tags:['yüzde','oran'],           ans:'D',desc:'Yüzde uygulaması.'},
   {yr:2024,num:10,topic:'denklem',sub:'Ardışık Sayılar',     tags:['ardışık','toplam'],       ans:'E',desc:'Ardışık sayılar.'},
   {yr:2024,num:11,topic:'denklem',sub:'Mutlak Değer',        tags:['mutlak değer'],           ans:'A',desc:'Mutlak değer.'},
   {yr:2024,num:12,topic:'denklem',sub:'Problem (Mandal)',    tags:['problem','dizi'],         ans:'C',desc:'Dizi-örüntü (mandal sorusu).'},
   {yr:2024,num:13,topic:'denklem',sub:'Üslü İfadeler',       tags:['üs','gerçel sayı'],       ans:'B',desc:'Gerçel sayı ve üslü ifade.'},
-  {yr:2024,num:14,topic:'denklem',sub:'Sayı Problemi',       tags:['sayı','koşul'],           ans:'D',desc:'Koşullu sayı sorusu.'},
+  {yr:2024,num:14,topic:'problem', sub:'Sayı & Koşul Problemi',tags:['sayı','koşul'],         ans:'D',desc:'Koşullu sayı sorusu.'},
   {yr:2024,num:15,topic:'denklem',sub:'Eşitsizlik Sistemi',  tags:['eşitsizlik','çözüm'],     ans:'E',desc:'Eşitsizlik sistemi.'},
   {yr:2024,num:16,topic:'mantik', sub:'Önermeler',            tags:['önerme','koşullu'],       ans:'A',desc:'Koşullu önerme.'},
   {yr:2024,num:17,topic:'kume',   sub:'Küme İşlemleri',      tags:['küme','tümleyen'],        ans:'C',desc:'Küme işlemleri.'},
@@ -1507,8 +1582,8 @@ const TYT_MAT_Q = [
   {yr:2024,num:23,topic:'veri',   sub:'Grafik',               tags:['grafik','histogram'],     ans:'B',desc:'Histogram yorumu.'},
   {yr:2024,num:24,topic:'olasilik',sub:'Sıralama-Seçme',     tags:['kombinasyon','sıralama'],  ans:'D',desc:'Permütasyon/kombinasyon.'},
   {yr:2024,num:25,topic:'olasilik',sub:'Temel Olasılık',     tags:['olasılık','tümleyen'],    ans:'E',desc:'Olasılık hesabı.'},
-  {yr:2024,num:26,topic:'denklem',sub:'Problem (Yaş)',       tags:['yaş','bilinmeyen'],       ans:'A',desc:'Yaş problemi.'},
-  {yr:2024,num:27,topic:'denklem',sub:'Problem (Kesir)',     tags:['kesir','problem'],        ans:'C',desc:'Kesir problemi.'},
+  {yr:2024,num:26,topic:'problem', sub:'Yaş Problemi',       tags:['yaş','bilinmeyen'],       ans:'A',desc:'Yaş problemi.'},
+  {yr:2024,num:27,topic:'problem', sub:'Kesir Problemi',     tags:['kesir','problem'],        ans:'C',desc:'Kesir problemi.'},
   {yr:2024,num:28,topic:'kume',   sub:'Kümelerde Sayma',     tags:['küme','eleman sayısı'],   ans:'B',desc:'Küme eleman sayısı.'},
   {yr:2024,num:29,topic:'denklem',sub:'Rasyonel İfade',      tags:['rasyonel','sadeleştirme'],ans:'D',desc:'Rasyonel ifade.'},
   {yr:2024,num:30,topic:'fonk',   sub:'Fonksiyon Grafiği',   tags:['fonksiyon','grafik'],     ans:'E',desc:'Fonksiyon grafiği.'},
@@ -1518,16 +1593,16 @@ const TYT_MAT_Q = [
   {yr:2025,num:3, topic:'denklem',sub:'Temel İşlemler',       tags:['tam sayı','işlem'],       ans:'D',desc:'Tam sayı işlemleri.'},
   {yr:2025,num:4, topic:'denklem',sub:'Bölünebilme',          tags:['bölünebilme','ardışık'],  ans:'B',desc:'Ardışık sayıda bölünebilme.'},
   {yr:2025,num:5, topic:'denklem',sub:'Rasyonel Sayılar',     tags:['rasyonel','karşılaştırma'],ans:'E',desc:'Rasyonel sayı karşılaştırma.'},
-  {yr:2025,num:6, topic:'denklem',sub:'Oran-Orantı',          tags:['oran','tablet'],          ans:'A',desc:'Ekran bölümleme oranı.'},
-  {yr:2025,num:7, topic:'denklem',sub:'Kesir',                tags:['kesir','taşıma'],         ans:'C',desc:'Kesir problemi.'},
-  {yr:2025,num:8, topic:'denklem',sub:'Yüzde',                tags:['yüzde','artış'],          ans:'B',desc:'Yüzde artış.'},
+  {yr:2025,num:6, topic:'problem', sub:'Oran-Orantı (Ekran)', tags:['oran','tablet'],          ans:'A',desc:'Ekran bölümleme oranı.'},
+  {yr:2025,num:7, topic:'problem', sub:'Kesir Problemi',      tags:['kesir','taşıma'],         ans:'C',desc:'Kesir problemi.'},
+  {yr:2025,num:8, topic:'problem', sub:'Yüzde Artış',         tags:['yüzde','artış'],          ans:'B',desc:'Yüzde artış.'},
   {yr:2025,num:9, topic:'denklem',sub:'Ardışık Sayılar',      tags:['ardışık','fark'],         ans:'D',desc:'Ardışık sayı farkı.'},
   {yr:2025,num:10,topic:'denklem',sub:'Üslü İfadeler',        tags:['üs','bilinmeyen'],        ans:'E',desc:'Üslü denklem.'},
   {yr:2025,num:11,topic:'denklem',sub:'Mutlak Değer',         tags:['mutlak değer'],           ans:'A',desc:'Mutlak değer uygulaması.'},
   {yr:2025,num:12,topic:'denklem',sub:'Birinci Derece',       tags:['denklem','problem'],      ans:'C',desc:'Birinci derece denklem.'},
   {yr:2025,num:13,topic:'denklem',sub:'Eşitsizlik',           tags:['eşitsizlik','çözüm'],     ans:'B',desc:'Eşitsizlik çözümü.'},
   {yr:2025,num:14,topic:'denklem',sub:'Gerçel Sayı',          tags:['gerçel','irrasyonel'],    ans:'D',desc:'İrrasyonel sayı tanıma.'},
-  {yr:2025,num:15,topic:'denklem',sub:'Problem (Sude)',       tags:['kesir','yazı'],           ans:'E',desc:'Kesir problemi (Sude sorusu).'},
+  {yr:2025,num:15,topic:'problem', sub:'Problem (Kesir-Sude)',tags:['kesir','yazı'],           ans:'E',desc:'Kesir problemi (Sude sorusu).'},
   {yr:2025,num:16,topic:'mantik', sub:'Önermeler',             tags:['önerme','koşullu'],       ans:'A',desc:'Koşullu önerme uygulaması.'},
   {yr:2025,num:17,topic:'kume',   sub:'Küme İşlemleri',       tags:['küme','birleşim'],        ans:'C',desc:'Küme işlemleri.'},
   {yr:2025,num:18,topic:'fonk',   sub:'Fonksiyon Kavramı',    tags:['fonksiyon','bileşke'],    ans:'B',desc:'Fonksiyon bileşkesi.'},
@@ -1539,7 +1614,7 @@ const TYT_MAT_Q = [
   {yr:2025,num:24,topic:'olasilik',sub:'Sıralama-Seçme',      tags:['kombinasyon','seçim'],    ans:'D',desc:'Kombinasyon.'},
   {yr:2025,num:25,topic:'olasilik',sub:'Temel Olasılık',      tags:['olasılık','tümleyen'],    ans:'E',desc:'Olasılık.'},
   {yr:2025,num:26,topic:'denklem',sub:'Tek-Çift Analiz',      tags:['tek','çift','ifade'],     ans:'A',desc:'Cebirsel ifadede tek-çift.'},
-  {yr:2025,num:27,topic:'denklem',sub:'Problem (Kaz Problemi)',tags:['problem','mantık'],      ans:'C',desc:'Sayı problemi.'},
+  {yr:2025,num:27,topic:'problem', sub:'Sayı Problemi (Mantık)',tags:['problem','mantık'],     ans:'C',desc:'Sayı problemi.'},
   {yr:2025,num:28,topic:'kume',   sub:'Kümelerde Sayma',      tags:['küme','eleman'],          ans:'B',desc:'Küme eleman sayısı.'},
   {yr:2025,num:29,topic:'denklem',sub:'Rasyonel İfade',       tags:['rasyonel','sadeleştirme'],ans:'D',desc:'Rasyonel ifade işlemi.'},
   {yr:2025,num:30,topic:'fonk',   sub:'Fonksiyon Grafiği',    tags:['fonksiyon','grafik'],     ans:'E',desc:'Fonksiyon grafiği sorusu.'},
@@ -1549,31 +1624,35 @@ const TYT_MAT_Q = [
 // TYT MATEMATİK KAZANIM HARİTASI
 // ═══════════════════════════════════════════════════════
 const TYT_MAT_KAZ = [
-  {icon:'🔢',bg:'#2d0808',clr:'#e05555',name:'Denklem & Eşitsizlikler',cnt:15,subs:[
-    {name:'Sayı Kümeleri & Temel İşlemler',code:'MF.9.1',desc:'Doğal, tam, rasyonel, irrasyonel, gerçel sayı kümeleri; bölünebilme, ardışık sayılar, üslü ifadeler.',tip:'Her yıl 8-12 soru bu konudan çıkar. Günlük hayat bağlamı: market, yaş, doluluk oranı.',refs:[{yr:2020,n:1},{yr:2020,n:2},{yr:2021,n:1},{yr:2022,n:1},{yr:2023,n:1},{yr:2024,n:1},{yr:2025,n:1}]},
-    {name:'Birinci Derece Denklemler & Eşitsizlikler',code:'MF.9.2',desc:'ax+b=0, ax+b>0 çözüm kümeleri; mutlak değerli denklem/eşitsizlik.',tip:'Hemen her yıl 1-2 soru. Eşitsizlikte sayı doğrusu gösterimi.',refs:[{yr:2020,n:8},{yr:2021,n:12},{yr:2021,n:13},{yr:2022,n:11},{yr:2023,n:11},{yr:2024,n:8},{yr:2025,n:12}]},
-    {name:'Oran-Orantı, Yüzde, Problem',code:'MF.9.3',desc:'Oran-orantı, yüzde artış-azalış, kâr-zarar, işçi-havuz-yaş-kesir problemleri.',tip:'Her yıl 2-4 problem sorusu. Gerçek hayat senaryosu zorunlu.',refs:[{yr:2020,n:15},{yr:2021,n:6},{yr:2021,n:7},{yr:2022,n:5},{yr:2023,n:7},{yr:2024,n:7},{yr:2025,n:6}]},
+  {icon:'🔢',bg:'#2d0808',clr:'#e05555',name:'Sayılar & Temel Kavramlar',cnt:'8–10',subs:[
+    {name:'Sayı Kümeleri & Temel İşlemler',code:'MF.9.1.1',desc:'Doğal, tam, rasyonel, irrasyonel, gerçel sayı kümeleri; dört işlem önceliği; sayı sıralaması; ardışık sayılar; tek-çift analizi.',tip:'Her yıl 3–5 soru. "Sayı dizisi/tablo" ve "sembol tanımı" soruları 2023-2025\'te arttı.',refs:[{yr:2020,n:1},{yr:2020,n:2},{yr:2020,n:5},{yr:2021,n:1},{yr:2021,n:2},{yr:2022,n:1},{yr:2022,n:2},{yr:2023,n:1},{yr:2023,n:2},{yr:2024,n:1},{yr:2024,n:2},{yr:2025,n:1},{yr:2025,n:2},{yr:2025,n:3}]},
+    {name:'Bölünebilme, Üslü & Köklü İfadeler',code:'MF.9.1.2',desc:'2,3,4,5,9 bölünebilme kuralları; asal sayılar; üslü ifade sadeleştirme; köklü ifadeler.',tip:'Her yıl 2–3 soru. Rakam/basamak koşullu bölünebilme sık çıkıyor.',refs:[{yr:2020,n:3},{yr:2020,n:9},{yr:2020,n:10},{yr:2021,n:3},{yr:2021,n:9},{yr:2021,n:10},{yr:2022,n:3},{yr:2022,n:9},{yr:2022,n:10},{yr:2023,n:3},{yr:2023,n:4},{yr:2023,n:5},{yr:2024,n:3},{yr:2024,n:10},{yr:2024,n:13},{yr:2025,n:4},{yr:2025,n:10}]},
+    {name:'Rasyonel Sayılar, Kesirler & Mutlak Değer',code:'MF.9.1.3',desc:'Devirli ondalık → kesir dönüşümü; kesir sıralama/karşılaştırma; mutlak değerli denklem/eşitsizlik; birinci derece denklemler.',tip:'Her yıl 2–3 soru. Mutlak değer ve birinci derece her yıl kesin çıkar.',refs:[{yr:2020,n:4},{yr:2020,n:11},{yr:2020,n:12},{yr:2020,n:13},{yr:2020,n:14},{yr:2021,n:4},{yr:2021,n:11},{yr:2021,n:12},{yr:2021,n:13},{yr:2022,n:4},{yr:2022,n:6},{yr:2022,n:11},{yr:2022,n:12},{yr:2022,n:14},{yr:2022,n:16},{yr:2022,n:17},{yr:2023,n:3},{yr:2023,n:10},{yr:2023,n:11},{yr:2023,n:12},{yr:2023,n:13},{yr:2024,n:4},{yr:2024,n:8},{yr:2024,n:11},{yr:2024,n:15},{yr:2025,n:5},{yr:2025,n:11},{yr:2025,n:12},{yr:2025,n:13},{yr:2025,n:14}]},
   ]},
-  {icon:'⊃',bg:'#1a1a0a',clr:'#f5c842',name:'Kümeler',cnt:2,subs:[
-    {name:'Küme işlemleri & eleman sayısı',code:'MF.9.4',desc:'Birleşim, kesişim, fark, tümleyen; Venn diyagramı; eleman sayısı formülü.',tip:'Her yıl 1-2 soru. Venn diyagramı veya formülle çözüm.',refs:[{yr:2020,n:17},{yr:2020,n:28},{yr:2021,n:17},{yr:2022,n:21},{yr:2023,n:17},{yr:2024,n:17},{yr:2025,n:17}]},
+  {icon:'📋',bg:'#1a0d00',clr:'#f08040',name:'Sözel Problemler',cnt:'6–8',subs:[
+    {name:'Oran-Orantı & Yüzde Problemleri',code:'MF.9.3.1',desc:'Doğru/ters orantı; yüzde artış-azalış; indirim; kâr-zarar; gerçek hayat bağlamlı oran soruları.',tip:'Her yıl 2–3 soru. En yoğun problem tipi. "Ekran bölümleme", "otobüs", "çiçek" gibi güncel bağlamlar geliyor.',refs:[{yr:2020,n:6},{yr:2020,n:15},{yr:2020,n:27},{yr:2021,n:6},{yr:2021,n:7},{yr:2021,n:14},{yr:2022,n:5},{yr:2022,n:7},{yr:2023,n:7},{yr:2023,n:8},{yr:2024,n:5},{yr:2024,n:9},{yr:2025,n:6},{yr:2025,n:8}]},
+    {name:'Sayı, Kesir & Koşul Problemleri',code:'MF.9.3.2',desc:'Sayı/yaş/işçi problemleri; kesir uygulamaları; koşul içeren sayı bulma; bölme-kalan soruları.',tip:'Her yıl 2–4 soru. Rutin olmayan "koşullu sayı" ve "mantık bağlamlı" problemler 2022\'den itibaren artıyor.',refs:[{yr:2020,n:25},{yr:2020,n:26},{yr:2021,n:15},{yr:2021,n:16},{yr:2021,n:17},{yr:2022,n:8},{yr:2022,n:13},{yr:2022,n:15},{yr:2022,n:27},{yr:2023,n:9},{yr:2023,n:14},{yr:2023,n:15},{yr:2023,n:27},{yr:2023,n:28},{yr:2023,n:29},{yr:2024,n:12},{yr:2024,n:14},{yr:2024,n:26},{yr:2024,n:27},{yr:2024,n:29},{yr:2025,n:7},{yr:2025,n:15},{yr:2025,n:26},{yr:2025,n:27},{yr:2025,n:29}]},
   ]},
-  {icon:'∧',bg:'#1a0d2d',clr:'#9b7fe8',name:'Mantık',cnt:1,subs:[
-    {name:'Önermeler, bileşik önerme, niceleyici',code:'MF.9.5',desc:'Koşullu önerme, çift koşullu, karşıt/terslem; evrensel-varlık niceleyicisi; ispat yöntemleri.',tip:'Her yıl 1 soru. Doğru-yanlış tablo analizi ya da günlük dil.',refs:[{yr:2020,n:16},{yr:2021,n:21},{yr:2022,n:20},{yr:2023,n:16},{yr:2024,n:16},{yr:2025,n:16}]},
+  {icon:'⊃',bg:'#1a1a0a',clr:'#f5c842',name:'Kümeler',cnt:'1–2',subs:[
+    {name:'Küme işlemleri & eleman sayısı',code:'MF.9.4',desc:'Birleşim, kesişim, fark, tümleyen; Venn diyagramı; eleman sayısı formülü.',tip:'Her yıl 1–2 soru. Venn diyagramı veya formülle çözüm.',refs:[{yr:2020,n:17},{yr:2020,n:28},{yr:2021,n:20},{yr:2021,n:29},{yr:2022,n:19},{yr:2022,n:21},{yr:2023,n:17},{yr:2023,n:18},{yr:2024,n:17},{yr:2024,n:28},{yr:2025,n:17},{yr:2025,n:28}]},
   ]},
-  {icon:'f(x)',bg:'#0a1f0a',clr:'#3ecf8e',name:'Fonksiyonlar',cnt:2,subs:[
-    {name:'Fonksiyon kavramı & bileşke & ters',code:'MF.10.2',desc:'Tanım-görüntü kümesi, bileşke f∘g, ters fonksiyon, parçalı tanımlı; grafik yorumu.',tip:'Her yıl 1-2 soru. Bileşke hesabı ve grafik soruları.',refs:[{yr:2020,n:18},{yr:2020,n:30},{yr:2021,n:22},{yr:2022,n:22},{yr:2023,n:19},{yr:2024,n:18},{yr:2025,n:18}]},
+  {icon:'∧',bg:'#1a0d2d',clr:'#9b7fe8',name:'Mantık',cnt:'1',subs:[
+    {name:'Önermeler, bileşik önerme, niceleyici',code:'MF.9.5',desc:'Koşullu önerme, çift koşullu, karşıt/terslem; evrensel-varlık niceleyicisi.',tip:'Her yıl kesinlikle 1 soru. Koşullu önermenin doğruluk değeri sık çıkar.',refs:[{yr:2020,n:16},{yr:2021,n:21},{yr:2022,n:20},{yr:2023,n:16},{yr:2024,n:16},{yr:2025,n:16}]},
   ]},
-  {icon:'P(x)',bg:'#1a1000',clr:'#f08040',name:'Polinomlar',cnt:2,subs:[
-    {name:'Polinom işlemleri & çarpanlara ayırma',code:'MF.10.3',desc:'Polinom toplama/çarpma/bölme; kalan teoremi; özdeşliklerle çarpanlara ayırma.',tip:'Her yıl 2 soru. Kalan teoremi P(a)=0 çok çıkıyor.',refs:[{yr:2020,n:19},{yr:2020,n:20},{yr:2021,n:23},{yr:2021,n:24},{yr:2022,n:23},{yr:2023,n:20},{yr:2024,n:19},{yr:2025,n:19}]},
+  {icon:'f(x)',bg:'#0a1f0a',clr:'#3ecf8e',name:'Fonksiyonlar',cnt:'1–2',subs:[
+    {name:'Fonksiyon kavramı & bileşke & ters',code:'MF.10.2',desc:'Tanım-görüntü kümesi, bileşke f∘g, ters fonksiyon, parçalı tanımlı; grafik yorumu.',tip:'Her yıl 2 soru (Q18 + Q30 formatında). Bileşke fonksiyon ve grafik soruları.',refs:[{yr:2020,n:18},{yr:2020,n:30},{yr:2021,n:22},{yr:2021,n:30},{yr:2022,n:22},{yr:2022,n:30},{yr:2023,n:19},{yr:2023,n:30},{yr:2024,n:18},{yr:2024,n:30},{yr:2025,n:18},{yr:2025,n:30}]},
   ]},
-  {icon:'x²',bg:'#0a0a2d',clr:'#4b9ef8',name:'İkinci Derece Denklemler',cnt:1,subs:[
-    {name:'Kökleri, diskriminant, kök-katsayı',code:'MF.10.4',desc:'ax²+bx+c=0 kökleri; diskriminant (Δ); Vieta formülleri; karmaşık sayıya giriş.',tip:'Her yıl 1-2 soru. Kök-katsayı bağıntısı (Vieta) çok çıkıyor.',refs:[{yr:2020,n:21},{yr:2021,n:25},{yr:2022,n:25},{yr:2023,n:21},{yr:2023,n:22},{yr:2024,n:21},{yr:2025,n:21}]},
+  {icon:'P(x)',bg:'#0a2420',clr:'#38b6a8',name:'Polinomlar',cnt:'2',subs:[
+    {name:'Polinom işlemleri & çarpanlara ayırma',code:'MF.10.3',desc:'Polinom toplama/çarpma/bölme; kalan teoremi P(a); özdeşliklerle çarpanlara ayırma; rasyonel ifade sadeleştirme.',tip:'Her yıl tam 2 soru (genellikle Q19-Q20). Kalan teoremi ve çarpanlara ayırma en sık çıkan sorular.',refs:[{yr:2020,n:19},{yr:2020,n:20},{yr:2021,n:23},{yr:2021,n:24},{yr:2022,n:23},{yr:2022,n:24},{yr:2023,n:20},{yr:2024,n:19},{yr:2024,n:20},{yr:2025,n:19},{yr:2025,n:20}]},
   ]},
-  {icon:'📊',bg:'#2d0d00',clr:'#e05555',name:'Veri & İstatistik',cnt:2,subs:[
-    {name:'Merkezi eğilim, yayılım, grafik',code:'MF.9.5.1',desc:'Ortalama, medyan, mod, açıklık, standart sapma; histogram, sütun/çizgi grafiği yorumu.',tip:'Her yıl 2 soru. Ortalama bozulması (eleman çıkarma/ekleme) sık sorulur.',refs:[{yr:2020,n:22},{yr:2020,n:23},{yr:2021,n:26},{yr:2021,n:27},{yr:2022,n:26},{yr:2023,n:23},{yr:2024,n:22},{yr:2025,n:22}]},
+  {icon:'x²',bg:'#0a0a2d',clr:'#4b9ef8',name:'İkinci Derece Denklemler',cnt:'1–2',subs:[
+    {name:'Kökleri, diskriminant, kök-katsayı bağıntısı',code:'MF.10.4',desc:'ax²+bx+c=0 kökleri; diskriminant (Δ); Vieta formülleri (x₁+x₂, x₁·x₂); kök-katsayı uygulamaları.',tip:'Her yıl 1–2 soru. Vieta formülleri (kök toplamı/çarpımı) çok sık çıkıyor.',refs:[{yr:2020,n:21},{yr:2021,n:25},{yr:2022,n:25},{yr:2023,n:21},{yr:2023,n:22},{yr:2024,n:21},{yr:2025,n:21}]},
   ]},
-  {icon:'🎲',bg:'#002d1a',clr:'#3ecf8e',name:'Sayma & Olasılık',cnt:2,subs:[
-    {name:'Permütasyon, kombinasyon, temel olasılık',code:'MF.10.1',desc:'Sıralama (P), seçme (C), Pascal üçgeni, binom; eş olası olaylar, tümleyen, ayrık olay olasılığı.',tip:'Her yıl 2 soru. Seçme (kombinasyon) soruları ağırlıklı.',refs:[{yr:2020,n:24},{yr:2020,n:29},{yr:2021,n:18},{yr:2021,n:28},{yr:2022,n:28},{yr:2022,n:29},{yr:2023,n:25},{yr:2024,n:24},{yr:2025,n:24}]},
+  {icon:'📊',bg:'#2d0d00',clr:'#e05555',name:'Veri & İstatistik',cnt:'2',subs:[
+    {name:'Merkezi eğilim, yayılım & grafik yorumu',code:'MF.9.5.1',desc:'Ortalama, medyan, mod, açıklık, standart sapma; histogram, sütun/çizgi grafiği yorumu.',tip:'Her yıl kesinlikle 2 soru. Ortalamadan eleman çıkarma/ekleme sonucu değişim sık sorulur.',refs:[{yr:2020,n:22},{yr:2020,n:23},{yr:2021,n:26},{yr:2021,n:27},{yr:2022,n:26},{yr:2022,n:30},{yr:2023,n:23},{yr:2023,n:24},{yr:2024,n:22},{yr:2024,n:23},{yr:2025,n:22},{yr:2025,n:23}]},
+  ]},
+  {icon:'🎲',bg:'#002d1a',clr:'#3ecf8e',name:'Sayma & Olasılık',cnt:'2',subs:[
+    {name:'Permütasyon, kombinasyon & temel olasılık',code:'MF.10.1',desc:'Sıralama (P), seçme (C), Pascal üçgeni; eş olası olaylar, tümleyen, ayrık olay olasılığı.',tip:'Her yıl kesinlikle 2 soru. Kombinasyon (seçme) soruları ağırlıklı. Olasılıkta tümleyen yöntemi hız kazandırır.',refs:[{yr:2020,n:24},{yr:2020,n:29},{yr:2021,n:18},{yr:2021,n:28},{yr:2022,n:28},{yr:2022,n:29},{yr:2023,n:25},{yr:2023,n:26},{yr:2024,n:24},{yr:2024,n:25},{yr:2025,n:24},{yr:2025,n:25}]},
   ]},
 ];
 
@@ -1810,6 +1889,29 @@ const TYT_TUR_Q = [
   {yr:2025,num:25,topic:'cumle', sub:'Cümle Öğeleri',         tags:['cümle','nesne'],          ans:'E',desc:'Cümle öğeleri sorusu.'},
   {yr:2025,num:26,topic:'cumle', sub:'Fiiller',               tags:['fiil','kip'],             ans:'D',desc:'Fiil kipleri sorusu.'},
   {yr:2025,num:27,topic:'cumle', sub:'Anlatım Bozukluğu',     tags:['bozukluk'],               ans:'B',desc:'Anlatım bozukluğu sorusu.'},
+];
+
+// ═══════════════════════════════════════════════════════
+// TYT TÜRKÇE DİL BİLGİSİ KAZANIM HARİTASI
+// ═══════════════════════════════════════════════════════
+const TYT_TUR_KAZ = [
+  {icon:'🔊',bg:'#2d0808',clr:'#e05555',name:'Ses Bilgisi',cnt:'1',subs:[
+    {name:'Ses olayları: ünlü & ünsüz kuralları',code:'TUR.9.1',desc:'Ünlü uyumları (büyük/küçük); ünlü düşmesi, ünsüz benzeşmesi (sertleşme/yumuşama); kaynaşma; hece yapısı.',tip:'Her yıl 1 soru (genellikle Q21). Ünsüz yumuşaması/sertleşmesi soruları sık çıkıyor.',refs:[{yr:2020,n:21},{yr:2021,n:21},{yr:2022,n:21},{yr:2023,n:21},{yr:2024,n:21},{yr:2025,n:21}]},
+  ]},
+  {icon:'✍️',bg:'#2d2000',clr:'#f5c842',name:'Yazım Kuralları',cnt:'1',subs:[
+    {name:'Büyük harf, birleşik sözcük, sayı yazımı',code:'TUR.9.2',desc:'Büyük harf kullanımı (özel isim, cümle başı, ünvan); birleşik sözcüklerin yazımı; eklerin yazımı; sayıların yazılışı.',tip:'Her yıl 1 soru (Q22). Özel isimlerin yazımı ve büyük harf kuralları en sık yanlış yapılan konular.',refs:[{yr:2020,n:22},{yr:2021,n:22},{yr:2022,n:22},{yr:2023,n:22},{yr:2024,n:22},{yr:2025,n:22}]},
+  ]},
+  {icon:',.!',bg:'#1a0d2d',clr:'#9b7fe8',name:'Noktalama İşaretleri',cnt:'1',subs:[
+    {name:'Virgül, noktalı virgül, iki nokta, tire kullanımı',code:'TUR.9.3',desc:'Virgülün kullanım alanları; iki noktanın kullanımı; noktalı virgül; kesme işareti; tırnak işareti.',tip:'Her yıl 1 soru (Q23). Virgül kullanımı tuzak içeren sorular oluşturuyor.',refs:[{yr:2020,n:23},{yr:2021,n:23},{yr:2022,n:23},{yr:2023,n:23},{yr:2024,n:23},{yr:2025,n:23}]},
+  ]},
+  {icon:'ek',bg:'#0a1f0a',clr:'#3ecf8e',name:'Biçim Bilgisi',cnt:'1',subs:[
+    {name:'Yapım & çekim ekleri, sözcük türleri',code:'TUR.9.4',desc:'Yapım ekleri (isimden isim, isimden fiil, fiilden isim, fiilden fiil); çekim ekleri (hal ekleri, iyelik, kip); sözcük türleri (sıfat, zarf, bağlaç).',tip:'Her yıl 1 soru (Q24). Yapım eklerinin işlevi ve sözcük türü belirleme soruları sık çıkıyor.',refs:[{yr:2020,n:24},{yr:2021,n:24},{yr:2022,n:24},{yr:2023,n:24},{yr:2024,n:24},{yr:2025,n:24}]},
+  ]},
+  {icon:'≡',bg:'#0a0a2d',clr:'#4b9ef8',name:'Cümle Bilgisi',cnt:'3',subs:[
+    {name:'Cümle öğeleri (özne, yüklem, tümleçler)',code:'TUR.10.1',desc:'Temel öğeler (özne, yüklem); yardımcı öğeler (nesne, yer tamlayıcısı, zarf tümleci); dolaylı tümleç analizi.',tip:'Her yıl 1 soru (Q25). Dolaylı tümleç ile nesne ayrımı sık tuzak içeriyor.',refs:[{yr:2020,n:25},{yr:2021,n:25},{yr:2022,n:25},{yr:2023,n:25},{yr:2024,n:25},{yr:2025,n:25}]},
+    {name:'Fiiller: kip, çatı, birleşik fiil',code:'TUR.10.2',desc:'Haber/dilek kipleri; geçişli-geçişsiz; etken-edilgen-dönüşlü-işteş çatı; birleşik fiiller.',tip:'Her yıl 1 soru (Q26). Fiil çatısı soruları yanıltıcı seçeneklerle geliyor.',refs:[{yr:2020,n:26},{yr:2021,n:26},{yr:2022,n:26},{yr:2023,n:26},{yr:2024,n:26},{yr:2025,n:26}]},
+    {name:'Anlatım bozuklukları',code:'TUR.10.3',desc:'Anlam kayması, sözcük yanlışlığı, sıfat/zarf kullanım hatası, özne-yüklem uyumsuzluğu, gereksiz sözcük.',tip:'Her yıl 1 soru (Q27). Anlatım bozukluğu soruları tüm TYT Türkçe içinde en çok öğrenciyi yanıltan sorular arasında.',refs:[{yr:2020,n:27},{yr:2021,n:27},{yr:2022,n:27},{yr:2023,n:27},{yr:2024,n:27},{yr:2025,n:27}]},
+  ]},
 ];
 
 // ═══════════════════════════════════════════════════════
@@ -2973,6 +3075,7 @@ let state = {
   tyttur:{ year:'all', topic:'all' },
   tytfen:{ year:'all', topic:'all' },
   tytmat:{ year:'all', topic:'all' },
+  tytturaz:{ year:'all', topic:'all' },
   tytmataz:{ year:'all', topic:'all' },
   tytsoc:{ year:'all', topic:'all' },
   tytsocaz:{ year:'all', topic:'all' },
@@ -2993,6 +3096,7 @@ function showPage(id) {
   document.getElementById('page-'+id).classList.add('active');
   document.getElementById('nt-'+id).classList.add('active');
   if(id==='tytaz') buildKaz('tyt-kaz', TYT_KAZ, 'tyt');
+  if(id==='tytturaz') buildKaz('tyttur-kaz', TYT_TUR_KAZ, 'tyttur');
   if(id==='aytaz') buildKaz('ayt-kaz', AYT_KAZ, 'ayt');
   if(id==='aytgeokaz') buildKaz('aytgeo-kaz', AYTGEO_KAZ, 'aytgeo');
   if(id==='tyttur') { buildTopics('tyttur-topics', TYT_TUR_TOPICS, 'tyttur'); renderGrid('tyttur'); }
@@ -3152,7 +3256,7 @@ async function renderPdfPage(pdfPageNum, yTopRatio) {
 // Return PDF map key for current question + bank
 function getPdfMapKey(bank, q) {
   const bankKey = {
-    tytfen:'fen', tytmat:'mat', tytsoc:'soc', tyttur:'tur',
+    tytfen:'fen', tytmat:'mat', tytmataz:'mat', tytsoc:'soc', tyttur:'tur', tytturaz:'tur',
   }[bank];
   if (!bankKey) return null;
   return `${bankKey}_${q.yr}_${q.num}`;
